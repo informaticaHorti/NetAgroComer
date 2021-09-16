@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+   <!-- tcampo: 0=Texto, 1=Cuadro, 2=LineaV, 3=LineaH, 4=Logo -->
+   <documento>
+     <default>
+		<alineacion>0</alineacion>
+		<altolineas>5</altolineas>
+		<fuente>Arial</fuente>
+		<tamañofuente>10</tamañofuente>
+		<neg>N</neg>
+		<sub>N</sub>
+		<cur>N</cur>
+		<tcampo>0</tcampo>
+		<apaisado>N</apaisado>
+		<papel>A4</papel>
+		<!-- Margenes(en orden): superior, derecho, inferior, izquierdo -->
+		<margenes>0,0,0,0</margenes>
+	 </default>
+     <cabecera altura="50">
+       <campo nombre="cliente" posx="10" posy="8" longitud="20" fuente="Tahoma" tamañofuente="11" neg="S" sub="S" cur="S">CLIENTE</campo>
+	   <campo nombre="_cliente" posx="31" posy="8" longitud="80" tcampo="0"></campo>
+	   <campo nombre="l1" posx="10" posy="14" longitud="190" tcampo="3"></campo>
+	   <campo nombre="cuadro_detalle" posx="10" posy="51" longitud="190" altura="-1" tcampo="1"></campo>
+     </cabecera>
+     <lineas altura="210">
+       <sublinea altura="5">
+			<campo nombre="pedido" posx="10" longitud="20" fuente="Tahoma" tamañofuente="11" neg="S" sub="S" cur="S">PEDIDO AÑO</campo>
+			<campo nombre="_pedido" posx="31" longitud="20" tcampo="0"></campo>
+	   </sublinea>
+	   <sublinea altura="4">
+			<campo nombre="articulo" posx="50" longitud="27" fuente="Tahoma" tamañofuente="11" neg="S" sub="S" cur="S">ARTÍCULO</campo>
+			<campo nombre="_articulo" posx="78" longitud="100" tcampo="0"></campo>
+	   </sublinea>
+	   <sublinea altura="3">
+			<campo nombre="total" posx="180" longitud="27" fuente="Tahoma" tamañofuente="11" neg="S" sub="S">TOTAL</campo>
+	   </sublinea>
+     </lineas>
+     <pie altura="45">
+       <campo nombre="observaciones" posx="10" posy="8" longitud="40" fuente="Tahoma" tamañofuente="11" neg="S" sub="S" cur="S">OBSERVACIONES</campo>
+	   <campo nombre="_observaciones" posx="51" posy="8" longitud="150" tcampo="0"></campo>
+     </pie>
+   </documento>

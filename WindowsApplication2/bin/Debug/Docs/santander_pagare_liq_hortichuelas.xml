@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+<!-- SANTANDER - PAGARE LIQUIDACIONES-->
+<!-- posicion: x, y -->
+<!-- formato: Nombre de fuente, tamaño, negrita, cursiva, subrayada -->
+  <Etiqueta>
+    <campo>DiaPag</campo>
+    <posicion>62, 237</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesPag</campo>
+    <posicion>74, 237</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoPag</campo>
+    <posicion>102, 237</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Importe</campo>
+    <posicion>155, 237</posicion>
+    <formato>Arial, 14, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Nombre</campo>
+    <posicion>55, 246</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletA</campo>
+    <posicion>58, 251</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletB</campo>
+    <posicion>58, 255</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <texto>ROQUETAS DE MAR, </texto>
+    <posicion>55, 259</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>DiaFin</campo>
+    <posicion>110, 259</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesFin</campo>
+    <posicion>153, 259</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoFin</campo>
+    <posicion>192, 259</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  </DocumentElement>

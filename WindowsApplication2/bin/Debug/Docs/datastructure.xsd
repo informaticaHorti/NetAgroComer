@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Etiqueta" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Etiqueta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="campo" type="xs:string" minOccurs="0" />
+			  <xs:element name="texto" type="xs:string" minOccurs="0" />
+              <xs:element name="posicion" type="xs:string" minOccurs="0" />
+              <xs:element name="formato" type="xs:string" minOccurs="0" />
+			  <xs:element name="mascara" type="xs:string" minOccurs="0" />
+			  <xs:element name="ancho" type="xs:string" minOccurs="0" />
+			  <xs:element name="alineacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

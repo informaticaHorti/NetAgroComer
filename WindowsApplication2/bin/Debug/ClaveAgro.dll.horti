@@ -1,0 +1,26 @@
+ConexionNetAgro=Driver={SQL Server Native Client 11.0};Server=SAT2015;Database=NETAGROCOMER;Uid=sa;Persist Security Info=true;
+ConexionComun=Driver={SQL Server Native Client 11.0};server=SAT2015;database=Comun;uid=sa;Persist Security Info=true;
+ConexionCTB=Driver={SQL Server Native Client 11.0};server=SAT2015;database=Contabilidad;uid=sa;Persist Security INfo=true;
+ConexionCTB_1=Driver={SQL Server Native Client 11.0};server=SAT2015;database=Contabilidad;uid=sa;Persist Security INfo=true;
+ConexionCTB_2=Driver={SQL Server Native Client 11.0};server=SAT2015;database=Contabilidad_2;uid=sa;Persist Security INfo=true;
+ConexionCTB_10=Driver={SQL Server Native Client 11.0};server=SAT2015;database=Contabilidad_10;uid=sa;Persist Security INfo=true;
+ConexionDoc=Driver={SQL Server Native Client 11.0};Server=SAT2015;Database=Documentos;Uid=sa;Persist Security Info=true;
+ConexionFinanciero=Driver={SQL Server Native Client 11.0};server=SAT2015;database=CobrosPagos;uid=sa;Persist Security Info=true;
+ConexionFincas=Driver={SQL Server Native Client 11.0};Server=SAT2015;Database=TecnicosSql;Uid=sa;Persist Security Info=true;
+ConexionFincasNET=Driver={SQL Server Native Client 11.0};Server=SAT2015;Database=TecnicosNet;Uid=sa;Persist Security Info=true;
+ConexionCalidad=Driver={SQL Server Native Client 11.0};Server=SAT2015;Database=CalidadNet;Uid=sa;Persist Security Info=true;
+NombreBdCtb=Contabilidad
+NombreBdCtb_1=Contabilidad
+NombreBdCtb_2=Contabilidad_2
+NombreBdCtb_10=Contabilidad_10
+BloqueoUsuarios=0
+procesosusuarios=0
+PathDocumentos=\\192.168.2.1\netagrodocs
+Documental=0
+ConectarFinancieroContabilidad=S
+ImpresionDePrueba=N
+ImpresionDirectaVB6=N
+PuertoRFID=COM1
+AjusteTag=+0100
+SeparadorCtb=|
+DigitosRfid=14

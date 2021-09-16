@@ -1,0 +1,12 @@
+ConexionNetAgro=Driver={SQL Server Native Client 11.0};Server=LENOVO\SQL2012;Database=NETAGROCOMER;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionComun=Driver={SQL Server Native Client 11.0};server=LENOVO\SQL2012;database=Comun;uid=sa;pwd=Adminis;Persist Security Info=true;
+ConexionCTB=Driver={SQL Server Native Client 11.0};server=LENOVO\SQL2012;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security INfo=true;
+ConexionDoc=Driver={SQL Server Native Client 11.0};Server=LENOVO\SQL2012;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+NombreBdCtb=Contabilidad
+BloqueoUsuarios=1
+procesosusuarios=1
+SeparadorCtb=|
+PathDocumentos=c:\bddocs
+Documental=0
+ConexionFincas=Driver={SQL Server Native Client 11.0};Server=LENOVO\SQL2012;Database=TecnicosSql;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConectarFinancieroContabilidad=S

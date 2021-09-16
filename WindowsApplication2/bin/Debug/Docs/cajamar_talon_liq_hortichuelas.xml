@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+<!-- CAJAMAR - TALON LIQUIDACIONES-->
+<!-- posicion: x, y -->
+<!-- formato: Nombre de fuente, tamaño, negrita, cursiva, subrayada -->
+  <Etiqueta>
+    <campo>Importe</campo>
+    <posicion>155, 237</posicion>
+    <formato>Arial, 14, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Nombre</campo>
+    <posicion>81, 241</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletA</campo>
+    <posicion>55, 245</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletB</campo>
+    <posicion>55, 249</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>DiaFin</campo>
+    <posicion>110, 254</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesFin</campo>
+    <posicion>153, 254</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoFin</campo>
+    <posicion>193, 254</posicion>
+    <formato>Arial, 12, N, N, N</formato>
+  </Etiqueta>
+  </DocumentElement>

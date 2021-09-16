@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuracion>
+	<path>C:\Programacion\Bddocs\</path>
+	<usuariofichero>JuanAlberto</usuariofichero>
+	<passwordfichero>JuanAlberto</passwordfichero>
+	<tipodoc>fichero</tipodoc>
+	<pathnuxeo>http://192.168.0.45/nuxeo/doc/subida.php</pathnuxeo>
+	<pathvisualiza>C:\Programacion\Bddocs\</pathvisualiza>
+	<conexionbd>Data Source=localhost\sa;Initial Catalog=documentos;User ID=sa;password=Adminis</conexionbd>
+	<conexionnet>Data Source=localhost\sa;Initial Catalog=documentos;User ID=sa;password=Adminis</conexionnet>
+</configuracion>

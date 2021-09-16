@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+<!-- SANTANDER - PAGARE MATRICIAL-->
+<!-- posicion: x, y -->
+<!-- formato: Nombre de fuente, tamaño, negrita, cursiva, subrayada -->
+  <Etiqueta>
+    <campo>DiaPag</campo>
+    <posicion>26, 21</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesPag</campo>
+    <posicion>38, 21</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoPag</campo>
+    <posicion>73, 21</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Importe</campo>
+    <posicion>131, 18</posicion>
+    <formato>Courier New, 14, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Nombre</campo>
+    <posicion>15, 29</posicion>
+    <formato>Courier New, 14, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletA</campo>
+    <posicion>13, 35</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletB</campo>
+    <posicion>13, 39</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <texto>ROQUETAS DE MAR, </texto>
+    <posicion>13, 44</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>DiaFin</campo>
+    <posicion>65, 44</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesFin</campo>
+    <posicion>128, 44</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoFin</campo>
+    <posicion>167, 44</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  </DocumentElement>

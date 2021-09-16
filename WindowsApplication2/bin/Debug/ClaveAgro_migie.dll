@@ -1,0 +1,18 @@
+ConexionNetAgro=Driver={SQL Server Native Client 10.0};Server=hpmiguel\sqlexpress;Database=NETAGROCOMER;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionComun=Driver={SQL Server Native Client 10.0};server=hpmiguel\sqlexpress;database=Comun;uid=sa;pwd=Adminis;Persist Security Info=true;
+ConexionCTB_1=Driver={SQL Server Native Client 10.0};server=hpmiguel\sqlexpress;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security INfo=true;
+ConexionCTB_2=Driver={SQL Server Native Client 10.0};server=hpmiguel\sqlexpress;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security INfo=true;
+ConexionDoc=Driver={SQL Server Native Client 10.0};Server=hpmiguel\sqlexpress;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionCalidad=Driver={SQL Server Native Client 10.0};Server=hpmiguel\sqlexpress;Database=CalidadNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionFincasNET=Driver={SQL Server Native Client 10.0};Server=hpmiguel\sqlexpress;Database=TecnicosNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+SeparadorCtb=|
+BloqueoUsuarios=0
+procesosusuarios=1
+PathDocumentos=c:\bddocs
+Documental=0
+ConectarFinancieroContabilidad=S
+ImpresionDePrueba=S
+ImpresionDirectaVB6=N
+PuertoRFID=COM1
+AjusteTag=+0100
+DigitosRfid=14

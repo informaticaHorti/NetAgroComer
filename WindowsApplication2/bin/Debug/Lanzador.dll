@@ -1,0 +1,5 @@
+ComunBDString=Driver={SQL Server Native Client 10.0};server=192.168.24.40\sql2016;database=Comun;uid=sa;pwd=Adminis;Persist Security Info=true;
+ContabilidadBDString=Driver={SQL Server Native Client 10.0};server=192.168.24.40\sql2016;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security Info=true;
+CodigoAplicacion=198
+
+

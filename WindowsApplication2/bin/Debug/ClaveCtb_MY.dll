@@ -1,0 +1,11 @@
+GestorBD=6
+ComunBDString=Driver={MySQL ODBC 5.3 ANSI Driver};Server=192.168.24.27;UID=sa;PWD=Adminis;Database=Comun;Port=3306;
+ContabilidadBDString=Driver={MySQL ODBC 5.3 ANSI Driver};Server=192.168.24.27;UID=sa;PWD=Adminis;Database=Contabilidad;Port=3306;
+ConexionDoc=Driver={MySQL ODBC 5.3 ANSI Driver};Server=192.168.24.27;UID=sa;PWD=Adminis;Database=Documentos;Port=3306;
+ContabilidadVB6=DSN=CTB001;
+ContabilidadVB6Generica=DSN=CtbGenerica;
+NombreBdCtb=Contabilidad
+Modelo340=c:\aeat2\prevalidacion 340 v2.0
+PathDocumentos=c:\bddocs
+Documental=0
+RutaFormatos=C:\Formatos

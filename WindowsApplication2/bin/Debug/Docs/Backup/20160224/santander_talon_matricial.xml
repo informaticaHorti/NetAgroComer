@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+<!-- SANTANDER - TALON MATRICIAL-->
+<!-- posicion: x, y -->
+<!-- formato: Nombre de fuente, tamaño, negrita, cursiva, subrayada -->
+  <Etiqueta>
+    <campo>Importe</campo>
+    <posicion>128, 18</posicion>
+    <formato>Courier New, 14, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Nombre</campo>
+    <posicion>40, 23</posicion>
+    <formato>Courier New, 14, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletA</campo>
+    <posicion>23, 30</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletB</campo>
+    <posicion>23, 35</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>DiaFin</campo>
+    <posicion>70, 39</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesFin</campo>
+    <posicion>128, 39</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoFin</campo>
+    <posicion>167, 39</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  </DocumentElement>

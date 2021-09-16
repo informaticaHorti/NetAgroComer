@@ -1,0 +1,11 @@
+ComunBDString=Driver={SQL Server Native Client 10.0};server=192.168.24.13\sql2012;database=Comun;uid=sa;pwd=Adminis;Persist Security Info=true;
+ContabilidadBDString=Driver={SQL Server Native Client 10.0};server=192.168.24.13\sql2012;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security Info=true;
+ContabilidadVB6=Driver={SQL Server Native Client 10.0};server=192.168.24.13\sql2012;database=Ctb001;uid=sa;pwd=Adminis;Persist Security Info=true;
+ContabilidadVB6Generica=Driver={SQL Server Native Client 10.0};server=192.168.24.13\sql2012;database=CtbGenerica;uid=sa;pwd=Adminis;Persist Security Info=true;
+ConexionDoc=Driver={SQL Server Native Client 10.0};Server=192.168.24.13\sql2012;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+Modelo340=c:\aeat2\prevalidacion 340 v2.0
+NombreBdCtb=Contabilidad
+PathDocumentos=c:\bddocs
+Documental=0
+PathTemp=c:\temp
+SeparadorCtb=|

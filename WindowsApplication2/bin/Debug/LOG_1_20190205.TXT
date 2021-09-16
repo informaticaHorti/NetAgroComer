@@ -1,0 +1,1107 @@
+10:44:41 - Inicio borrapan
+10:44:41 - Terminado borrado etiquetas
+10:44:41 - Inicio borrado control TxPedido
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxFecha
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxFeSalida
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxFechaLlegada
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxCliente
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxDomicilio
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxTransportista
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxMatricula
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxRemolque
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxMovilChofer
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxTransporteRapido
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxReferencia
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxTipoPorte
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxDivisa
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxValorCambio
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxBESTELLNR
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObs1
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObs2
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObs3
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxGenero
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxCategoria
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxNomCategoria
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxConfeccion
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPresentacion
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxTipoPalet
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxMarca
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPalets
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxBulPalet
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxBultos
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxKilBul
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxKilos
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxKilosBrutos
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPiezaBul
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPiezas
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPrecio
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxKBP
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObslote
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObsCon1
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObscon2
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxCalidad
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxMaxDias
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxReserva
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxAlma1
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPalet1
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxAlma2
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPalet2
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxAlma3
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPalet3
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxAlma4
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPalet4
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxProveedor
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPaletProveedor
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxPrecioProveedor
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObsEti1
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxObseti2
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control ChkGeneraTrabajo
+10:44:41 - Inicio borrado control ChkRequierAprobacion
+10:44:41 - Inicio borrado control TxMarcaEti
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Inicio borrado control TxMarcaMaterial
+10:44:41 - Borrado grid
+10:44:41 - Fin borrado grid
+10:44:41 - Terminado borrado de controles
+10:44:41 - Inicio bloquearcampos
+10:44:41 - Inicio bloquearclaves
+10:44:41 - Inicio bloquearbotones
+10:44:41 - Inicio Vaciaentidad
+10:44:41 - Inicio Foco primer control de la lista
+10:44:41 - Inicio liberación de memoria
+10:44:41 - Cambio imagen botón
+10:44:41 - Terminado borrapan clase base
+10:45:50 - Inicio borrapan
+10:45:50 - Terminado borrado etiquetas
+10:45:50 - Inicio borrado control TxPedido
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxFecha
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxFeSalida
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxFechaLlegada
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxCliente
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxDomicilio
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxTransportista
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxMatricula
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxRemolque
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxMovilChofer
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxTransporteRapido
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxReferencia
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxTipoPorte
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxDivisa
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxValorCambio
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxBESTELLNR
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObs1
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObs2
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObs3
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxGenero
+10:45:50 - Borrado grid
+10:45:50 - Borralin
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxCategoria
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxNomCategoria
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxConfeccion
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPresentacion
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxTipoPalet
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxMarca
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPalets
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxBulPalet
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxBultos
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxKilBul
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxKilos
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxKilosBrutos
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPiezaBul
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPiezas
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPrecio
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxKBP
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObslote
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObsCon1
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObscon2
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxCalidad
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxMaxDias
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxReserva
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxAlma1
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPalet1
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxAlma2
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPalet2
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxAlma3
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPalet3
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxAlma4
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPalet4
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxProveedor
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPaletProveedor
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxPrecioProveedor
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObsEti1
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxObseti2
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control ChkGeneraTrabajo
+10:45:50 - Inicio borrado control ChkRequierAprobacion
+10:45:50 - Inicio borrado control TxMarcaEti
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Inicio borrado control TxMarcaMaterial
+10:45:50 - Borrado grid
+10:45:50 - Fin borrado grid
+10:45:50 - Terminado borrado de controles
+10:45:50 - Inicio bloquearcampos
+10:45:50 - Inicio bloquearclaves
+10:45:50 - Inicio bloquearbotones
+10:45:50 - Inicio Vaciaentidad
+10:45:50 - Inicio Foco primer control de la lista
+10:45:50 - Inicio liberación de memoria
+10:45:50 - Cambio imagen botón
+10:45:50 - Terminado borrapan clase base
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrapan
+----------------------------------------------------------------------------
+10:47:34 - Terminado borrado etiquetas
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPedido
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxFecha
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxFeSalida
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxFechaLlegada
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxCliente
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxDomicilio
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxTransportista
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxMatricula
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxRemolque
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxMovilChofer
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxTransporteRapido
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxReferencia
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxTipoPorte
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxDivisa
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxValorCambio
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxBESTELLNR
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObs1
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObs2
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObs3
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxGenero
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxCategoria
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxNomCategoria
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxConfeccion
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPresentacion
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxTipoPalet
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxMarca
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPalets
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxBulPalet
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxBultos
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxKilBul
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxKilos
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxKilosBrutos
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPiezaBul
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPiezas
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPrecio
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxKBP
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObslote
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObsCon1
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObscon2
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxCalidad
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxMaxDias
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxReserva
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxAlma1
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPalet1
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxAlma2
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPalet2
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxAlma3
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPalet3
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxAlma4
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPalet4
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxProveedor
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPaletProveedor
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxPrecioProveedor
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObsEti1
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxObseti2
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control ChkGeneraTrabajo
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control ChkRequierAprobacion
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxMarcaEti
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Inicio borrado control TxMarcaMaterial
+----------------------------------------------------------------------------
+10:47:34 - Borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Fin borrado grid
+----------------------------------------------------------------------------
+10:47:34 - Terminado borrado de controles
+----------------------------------------------------------------------------
+10:47:34 - Inicio bloquearcampos
+----------------------------------------------------------------------------
+10:47:34 - Inicio bloquearclaves
+----------------------------------------------------------------------------
+10:47:34 - Inicio bloquearbotones
+----------------------------------------------------------------------------
+10:47:34 - Inicio Vaciaentidad
+----------------------------------------------------------------------------
+10:47:34 - Inicio Foco primer control de la lista
+----------------------------------------------------------------------------
+10:47:34 - Inicio liberación de memoria
+----------------------------------------------------------------------------
+10:47:34 - Cambio imagen botón
+----------------------------------------------------------------------------
+10:47:34 - Terminado borrapan clase base
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrapan
+----------------------------------------------------------------------------
+10:48:21 - Terminado borrado etiquetas
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPedido
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxFecha
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxFeSalida
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxFechaLlegada
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxCliente
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxDomicilio
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxTransportista
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxMatricula
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxRemolque
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxMovilChofer
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxTransporteRapido
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxReferencia
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxTipoPorte
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxDivisa
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxValorCambio
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxBESTELLNR
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObs1
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObs2
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObs3
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxGenero
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Borralin
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxCategoria
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxNomCategoria
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxConfeccion
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPresentacion
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxTipoPalet
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxMarca
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPalets
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxBulPalet
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxBultos
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxKilBul
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxKilos
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxKilosBrutos
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPiezaBul
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPiezas
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPrecio
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxKBP
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObslote
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObsCon1
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObscon2
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxCalidad
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxMaxDias
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxReserva
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxAlma1
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPalet1
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxAlma2
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPalet2
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxAlma3
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPalet3
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxAlma4
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPalet4
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxProveedor
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPaletProveedor
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxPrecioProveedor
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObsEti1
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxObseti2
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control ChkGeneraTrabajo
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control ChkRequierAprobacion
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxMarcaEti
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Inicio borrado control TxMarcaMaterial
+----------------------------------------------------------------------------
+10:48:21 - Borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Fin borrado grid
+----------------------------------------------------------------------------
+10:48:21 - Terminado borrado de controles
+----------------------------------------------------------------------------
+10:48:21 - Inicio bloquearcampos
+----------------------------------------------------------------------------
+10:48:21 - Inicio bloquearclaves
+----------------------------------------------------------------------------
+10:48:21 - Inicio bloquearbotones
+----------------------------------------------------------------------------
+10:48:21 - Inicio Vaciaentidad
+----------------------------------------------------------------------------
+10:48:21 - Inicio Foco primer control de la lista
+----------------------------------------------------------------------------
+10:48:21 - Inicio liberación de memoria
+----------------------------------------------------------------------------
+10:48:21 - Cambio imagen botón
+----------------------------------------------------------------------------
+10:48:21 - Terminado borrapan clase base

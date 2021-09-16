@@ -1,0 +1,23 @@
+ConexionNetAgro=Driver={SQL Server Native Client 10.0};Server=127.0.0.1\sql2012;Database=NETAGROCOMER;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionComun=Driver={SQL Server Native Client 10.0};server=127.0.0.1\sql2012;database=Comun;uid=sa;pwd=Adminis;Persist Security Info=true;
+-----ConexionCTB=Driver={SQL Server Native Client 10.0};server=127.0.0.1\sql2012;database=ContabilidadCosta;uid=sa;pwd=Adminis;Persist Security INfo=true;
+ConexionCTB_1=Driver={SQL Server Native Client 10.0};server=127.0.0.1\sql2012;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security INfo=true;
+ConexionCTB_2=Driver={SQL Server Native Client 10.0};server=127.0.0.1\sql2012;database=Contabilidad_2;uid=sa;pwd=Adminis;Persist Security INfo=true;
+ConexionCTB_10=Driver={SQL Server Native Client 10.0};server=127.0.0.1\sql2012;database=Contabilidad_10;uid=sa;pwd=Adminis;Persist Security INfo=true;
+--ConexionDoc=Driver={SQL Server Native Client 10.0};Server=127.0.0.1\sa;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionDoc=Driver={SQL Server Native Client 10.0};Server=127.0.0.1\sql2012;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionFinanciero=Driver={SQL Server Native Client 10.0};server=127.0.0.1\sa;database=CobrosPagos;uid=sa;pwd=Adminis;Persist Security Info=true;
+ConexionFincas=Driver={SQL Server Native Client 10.0};Server=127.0.0.1\sql2012;Database=TecnicosSql;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionCalidad=Driver={SQL Server Native Client 10.0};Server=127.0.0.1\sql2012;Database=CalidadNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionFincasNET=Driver={SQL Server Native Client 10.0};Server=127.0.0.1\sql2012;Database=TecnicosNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+SeparadorCtb=|
+BloqueoUsuarios=0
+procesosusuarios=1
+PathDocumentos=c:\bddocs
+Documental=0
+ConectarFinancieroContabilidad=S
+ImpresionDePrueba=S
+ImpresionDirectaVB6=N
+PuertoRFID=COM1
+AjusteTag=+0100
+DigitosRfid=14

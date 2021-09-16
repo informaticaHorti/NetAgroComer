@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+<!-- CAJAMAR - TALON MATRICIAL-->
+<!-- posicion: x, y -->
+<!-- formato: Nombre de fuente, tamaño, negrita, cursiva, subrayada -->
+  <Etiqueta>
+    <campo>Importe</campo>
+    <posicion>131, 19</posicion>
+    <formato>Courier New, 14, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>Nombre</campo>
+    <posicion>50, 24</posicion>
+    <formato>Courier New, 14, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletA</campo>
+    <posicion>20, 30</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>NumletB</campo>
+    <posicion>16, 35</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>DiaFin</campo>
+    <posicion>55, 40</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>MesFin</campo>
+    <posicion>125, 40</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  <Etiqueta>
+    <campo>AnoFin</campo>
+    <posicion>167, 40</posicion>
+    <formato>Courier New, 10, S, N, N</formato>
+  </Etiqueta>
+  </DocumentElement>

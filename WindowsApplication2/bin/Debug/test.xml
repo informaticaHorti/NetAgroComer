@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Test>
+    <IdPrograma>1</IdPrograma>
+    <Programa>PRODUCTO CONTROLADO</Programa>
+    <Bultos>20</Bultos>
+    <Codigo>40</Codigo>
+    <Genero>PIMIENTO ITALIANO</Genero>
+    <Partida>2900</Partida>
+    <Kilos>300.00</Kilos>
+    <Precio>0.2000</Precio>
+    <GastosPorKilo>0.00</GastosPorKilo>
+    <TotalGastos>9.0000</TotalGastos>
+    <TotalEnvases>53.0000</TotalEnvases>
+    <Importe>0.00</Importe>
+    <IdEnvase>7</IdEnvase>
+    <Envase>EUROPEA GRANDE</Envase>
+    <PrecioEnv>2.6500</PrecioEnv>
+    <EnvaseRetornable>S</EnvaseRetornable>
+  </Test>
+  <Test>
+    <IdPrograma>1</IdPrograma>
+    <Programa>PRODUCTO CONTROLADO</Programa>
+    <Bultos>40</Bultos>
+    <Codigo>70</Codigo>
+    <Genero>BERENGENA SEMI LARGA</Genero>
+    <Partida>3000</Partida>
+    <Kilos>500.00</Kilos>
+    <Precio>0.3000</Precio>
+    <GastosPorKilo>0.00</GastosPorKilo>
+    <TotalGastos>15.0000</TotalGastos>
+    <TotalEnvases>88.0000</TotalEnvases>
+    <Importe>0.00</Importe>
+    <IdEnvase>5</IdEnvase>
+    <Envase>E.U. MEDIA</Envase>
+    <PrecioEnv>2.2000</PrecioEnv>
+    <EnvaseRetornable>S</EnvaseRetornable>
+  </Test>
+</DocumentElement>
