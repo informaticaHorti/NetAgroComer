@@ -91,7 +91,7 @@ Public Class FrmSalidasFianzasEnvases
         End If
 
 
-        Dim sql As String = "SELECT VEV_Fecha as Fecha, VEV_Concepto as Concepto, ASA_Albaran as Albaran, ASA_Referencia as Referencia,ASA_MatriculaRemolque as Matricula,ASA_IdCliente as IdCliente, CLI_Nombre as Cliente," & vbCrLf
+        Dim sql As String = "SELECT VEV_Fecha as Fecha, VEV_Idcentro as CE, VEV_Concepto as Concepto, ASA_Albaran as Albaran, ASA_Referencia as Referencia,ASA_MatriculaRemolque as Matricula,ASA_IdCliente as IdCliente, CLI_Nombre as Cliente," & vbCrLf
         sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira," & vbCrLf
         sql = sql & " VEL_PrecioEntrega as PrecioEntrega, VEL_PrecioRetira as PrecioRetira, CLD_Domicilio as DomicilioDescarga," & vbCrLf
         sql = sql & " COALESCE(VEL_Retira * VEL_PrecioRetira, 0) - COALESCE(VEL_Entrega * VEL_PrecioEntrega, 0) as Importe," & vbCrLf
@@ -139,7 +139,7 @@ Public Class FrmSalidasFianzasEnvases
         End Select
         sql = sql & " UNION ALL" & vbCrLf
 
-        sql = sql & " SELECT VEV_Fecha as Fecha, VEV_Concepto as Concepto, 0 as Albaran,VEV_Referencia as Referencia,VEV_Matricula as Matricula,VEV_Codigo as IdCliente, CLI_Nombre as Cliente," & vbCrLf
+        sql = sql & " SELECT VEV_Fecha as Fecha, VEV_Idcentro as CE, VEV_Concepto as Concepto, 0 as Albaran,VEV_Referencia as Referencia,VEV_Matricula as Matricula,VEV_Codigo as IdCliente, CLI_Nombre as Cliente," & vbCrLf
         sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira," & vbCrLf
         sql = sql & " VEL_PrecioEntrega as PrecioEntrega, VEL_PrecioRetira as PrecioRetira, '' as DomicilioDescarga," & vbCrLf
         sql = sql & " COALESCE(VEL_Retira * VEL_PrecioRetira, 0) - COALESCE(VEL_Entrega * VEL_PrecioEntrega, 0) as Importe," & vbCrLf
@@ -186,11 +186,11 @@ Public Class FrmSalidasFianzasEnvases
         End Select
 
 
-        sql = "SELECT Fecha, Concepto, Albaran, Referencia,Matricula,IdCliente, Cliente, DomicilioDescarga, IdEnvase, Envase, CodFianza, SUM(Entrega) as Entrega, SUM(Retira) as Retira, " & vbCrLf & _
+        sql = "SELECT Fecha, CE, Concepto, Albaran, Referencia,Matricula,IdCliente, Cliente, DomicilioDescarga, IdEnvase, Envase, CodFianza, SUM(Entrega) as Entrega, SUM(Retira) as Retira, " & vbCrLf & _
             " PrecioEntrega, PrecioRetira, SUM(Importe) as Importe, IdFactura, Factura, IdFacturaRecibida, FacturaR, FechaFac, CodFianzaDom" & vbCrLf & _
             " FROM ( " & vbCrLf & sql & vbCrLf & " ) as G" & vbCrLf & _
-            " GROUP BY Fecha, Concepto, Albaran,Referencia,Matricula,IdCliente, Cliente, DomicilioDescarga, IdEnvase, Envase, CodFianza, PrecioEntrega, PrecioRetira, IdFactura, factura, IdFacturaRecibida, FacturaR, FechaFac, CodFianzaDom" & vbCrLf
-        sql = sql & " ORDER BY Fecha" & vbCrLf
+            " GROUP BY Fecha, CE, Concepto, Albaran,Referencia,Matricula,IdCliente, Cliente, DomicilioDescarga, IdEnvase, Envase, CodFianza, PrecioEntrega, PrecioRetira, IdFactura, factura, IdFacturaRecibida, FacturaR, FechaFac, CodFianzaDom" & vbCrLf
+        sql = sql & " ORDER BY Fecha, CE" & vbCrLf
 
 
         GridView1.Columns.Clear()
@@ -217,6 +217,10 @@ Public Class FrmSalidasFianzasEnvases
 
         For Each c As DevExpress.XtraGrid.Columns.GridColumn In GridView1.Columns
             Select Case c.FieldName.ToUpper.Trim
+
+                Case "CE"
+                    c.MinWidth = 25
+                    c.MaxWidth = 25
 
                 Case "ENTREGA", "RETIRA"
                     c.Width = 90
