@@ -190,6 +190,12 @@
     <Compile Include="Aplicacion\Agro.vb" />
     <Compile Include="Aplicacion\Combos.vb" />
     <Compile Include="Aplicacion\Comer\AcumuladorCampos.vb" />
+    <Compile Include="Aplicacion\Comer\FrmDATPeriodosAgricultor.Designer.vb">
+      <DependentUpon>FrmDATPeriodosAgricultor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Comer\FrmDATPeriodosAgricultor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Comer\FrmActualizarReferenciaVEV.Designer.vb">
       <DependentUpon>FrmActualizarReferenciaVEV.vb</DependentUpon>
     </Compile>
@@ -1194,6 +1200,8 @@
     </Compile>
     <Compile Include="Componentes\Twain\TwainDefs.vb" />
     <Compile Include="Componentes\Twain\TwainLib.vb" />
+    <Compile Include="DAT\E_DAT_ENTRADAS_PERIODOS.vb" />
+    <Compile Include="DAT\E_DAT_PERIODOS.vb" />
     <Compile Include="DAT\E_DAT_ENTRADAS.vb" />
     <Compile Include="DAT\E_DAT_OPERADORES.vb" />
     <Compile Include="EDI\Comun\Comun.vb" />
@@ -2516,6 +2524,9 @@
       <DependentUpon>frmActuBD.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Comer\FrmDATPeriodosAgricultor.resx">
+      <DependentUpon>FrmDATPeriodosAgricultor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Comer\FrmActualizarReferenciaVEV.resx">
       <DependentUpon>FrmActualizarReferenciaVEV.vb</DependentUpon>
     </EmbeddedResource>
@@ -3604,6 +3615,7 @@
     <None Include="Resources\App-kservices_16x16-32.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-replicate-rows-16.png" />
     <None Include="Resources\icons8-cardboard-box-16.png" />
     <None Include="Resources\icons8-new-document-16.png" />
     <None Include="Resources\icons8-cardboard-box-32 %282%29.png" />
