@@ -13,8 +13,15 @@ Public Class FrmEnvioFianzasEnvases
     Dim ValeEnvases As New E_ValeEnvases(Idusuario, cn)
     Dim Clientes As New E_Clientes(Idusuario, cn)
     Dim Envase As New E_Envases(Idusuario, cn)
+    Dim ConfigDiv As New E_ConfiguracionesDiversas(Idusuario, cn)
+
 
     Dim err As New Errores
+
+
+
+    Dim MiCodigoIFCO As String = ""
+
 
     Private Sub ParametrosFrm()
 
@@ -62,6 +69,10 @@ Public Class FrmEnvioFianzasEnvases
         Dim fuente As Font = GridView1.Appearance.GroupRow.Font
         GridView1.Appearance.GroupRow.Font = New Font(fuente.FontFamily, fuente.Size, FontStyle.Bold)
 
+
+
+        MiCodigoIFCO = ConfigDiv.xDameValor(E_ConfiguracionesDiversas.eClaves.IFCO_NR)
+
     End Sub
 
 
@@ -93,7 +104,8 @@ Public Class FrmEnvioFianzasEnvases
         sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira," & vbCrLf
         sql = sql & " CLD_Domicilio as DomicilioDescarga," & vbCrLf
         sql = sql & " DFZ_CodigoFianza as CodFianzaDom, " & vbCrLf
-        sql = sql & " ACR_CodigoFianza as CodFianzaAcr " & vbCrLf
+        sql = sql & " ACR_CodigoFianza as CodFianzaAcr, " & vbCrLf
+        sql = sql & " ASA_Referencia as Referencia, ASA_MatriculaRemolque as Remolque" & vbCrLf
         sql = sql & " FROM AlbSalida" & vbCrLf
         sql = sql & " LEFT JOIN ValeEnvases_Lineas ON ASA_IdValeEnvase = VEL_IdVale" & vbCrLf
         sql = sql & " LEFT JOIN ValeEnvases ON VEV_IdVale = VEL_IdVale" & vbCrLf
@@ -152,7 +164,9 @@ Public Class FrmEnvioFianzasEnvases
         Dim dt As DataTable = ValeEnvases.MiConexion.ConsultaSQL(sql)
 
         For Each rw In dt.Rows
+
             If VaInt(rw("Retira")) > 0 Then
+
                 If RbChep.Checked = True Then
                     Dim RowF As DataRow = DtFinal.NewRow
                     RowF("Ubicacion") = rw("CodFianzaAcr").ToString
@@ -163,6 +177,8 @@ Public Class FrmEnvioFianzasEnvases
                     RowF("Otra_Referencia") = rw("Referencia").ToString
                     RowF("Equipo") = rw("CodFianza").ToString
                     RowF("Cantidad") = VaInt(rw("retira"))
+                    RowF("NumeroPedido") = rw("Referencia")
+                    RowF("Matricula") = rw("Remolque")
                     DtFinal.Rows.Add(RowF)
                 ElseIf RbIfco.Checked = True Then
                     Dim RowF As DataRow = DtFinal.NewRow
@@ -173,14 +189,15 @@ Public Class FrmEnvioFianzasEnvases
                     RowF("Material") = rw("CodFianza").ToString
                     RowF("Cantidad") = VaInt(rw("retira"))
                     RowF("Ifco-NR") = rw("CodFianzaDom").ToString
-                    RowF("Mi_Ifco-NR") = rw("CodFianzaAcr").ToString
+                    'RowF("Mi_Ifco-NR") = rw("CodFianzaAcr").ToString
+                    RowF("Mi_Ifco-NR") = MiCodigoIFCO
+                    RowF("NumeroPedido") = (rw("Referencia"))
+                    RowF("Matricula") = rw("Remolque")
                     DtFinal.Rows.Add(RowF)
-
-
-
-
                 End If
+
             End If
+
         Next
 
         Grid.DataSource = DtFinal

@@ -67,6 +67,9 @@
         SITUACION_FONDOOPERATIVO_CARTERA                    '3
 
 
+        IFCO_NR                                             '601883
+
+
     End Enum
 
 

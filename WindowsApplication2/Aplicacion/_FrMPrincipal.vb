@@ -2976,12 +2976,14 @@
     End Sub
 
     Private Sub BarButtonItem238_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem238.ItemClick
+        'Envases / Consultas / Salidas Fianzas
         Dim frm As New FrmSalidasFianzasEnvases
         frm.MdiParent = Me
         frm.Show()
     End Sub
 
     Private Sub BarButtonItem239_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem239.ItemClick
+        'Envases / Consultas / Envio Fianzas
         Dim frm As New FrmEnvioFianzasEnvases
         frm.MdiParent = Me
         frm.Show()
