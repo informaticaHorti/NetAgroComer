@@ -141,6 +141,7 @@ Public Class FrmEnvioFianzasEnvases
             DtFinal.Columns.Add(New DataColumn("Otra_referencia", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("Equipo", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("Cantidad", GetType(Int32)))
+            DtFinal.Columns.Add(New DataColumn("Matricula", GetType(String)))
         ElseIf RbIfco.Checked = True Then
             DtFinal.Columns.Add(New DataColumn("Direccion", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("FechaRegistro", GetType(String)))
@@ -177,7 +178,6 @@ Public Class FrmEnvioFianzasEnvases
                     RowF("Otra_Referencia") = rw("Referencia").ToString
                     RowF("Equipo") = rw("CodFianza").ToString
                     RowF("Cantidad") = VaInt(rw("retira"))
-                    RowF("NumeroPedido") = rw("Referencia")
                     RowF("Matricula") = rw("Remolque")
                     DtFinal.Rows.Add(RowF)
                 ElseIf RbIfco.Checked = True Then

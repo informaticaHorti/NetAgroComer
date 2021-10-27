@@ -1,4 +1,6 @@
-﻿Public Class E_DAT_ENTRADAS_PERIODOS
+﻿Imports NetAgro.E_DAT_ENTRADAS
+
+Public Class E_DAT_ENTRADAS_PERIODOS
     Inherits Cdatos.Entidad
 
 
