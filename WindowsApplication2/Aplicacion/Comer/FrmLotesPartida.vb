@@ -214,6 +214,11 @@ Public Class FrmLotesPartida
             End If
         End If
 
+
+        If NuevoRegistro Then
+            lotes.LTE_IdUbicacionPV.Valor = MiMaletin.IdPuntoVenta.ToString
+        End If
+
         lotes.LTE_Idlote.Valor = LbId.Text
         lotes.LTE_Campa.Valor = LbCampa.Text
         Lotes_lineas.LTL_Idlote.Valor = LbId.Text

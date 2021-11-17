@@ -261,6 +261,7 @@ Public Class FrmLotesProduccion
         Dim r As Boolean
 
 
+
         If TxPartida.Text.Trim = "" And TxLotePartidas.Text.Trim = "" Then
             MsgBox("Debe introducir una partida o un lote")
             TxPartida.MiError = True
@@ -274,6 +275,11 @@ Public Class FrmLotesProduccion
             If TxNumero.Text = "+" Then
                 TxNumero.Text = LotesProduccion.MaxIdCampa(Val(LbCampa.Text))
             End If
+        End If
+
+
+        If NuevoRegistro Then
+            LotesProduccion.LPD_IdUbicacionPV.Valor = MiMaletin.IdPuntoVenta.ToString
         End If
 
         LotesProduccion.LPD_Idlote.Valor = LbId.Text
