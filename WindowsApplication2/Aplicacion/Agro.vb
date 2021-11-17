@@ -840,7 +840,6 @@ Module Agro
 
                         txt = ty.FullName
 
-
                         Dim Entidad As Cdatos.Entidad = DirectCast(Activator.CreateInstance(asm.GetType(ty.FullName), p.ToArray), Cdatos.Entidad)
 
                         If Entidad.NombreBd.ToUpper.Trim = "NETAGROCOMER" And Not Entidad.EsVista Then
@@ -1089,11 +1088,13 @@ Module Agro
         DcCodigosEntidad("DAT_ENTRADAS") = "DAT"
         DcCodigosEntidad("DOCUMENTOSBANCOS") = "DDB"
         DcCodigosEntidad("DEVENVASES_LINEAS") = "DEL"
+        DcCodigosEntidad("DAT_ENTRADAS_PERIODOS") = "DEP"
         DcCodigosEntidad("DEVENVASES") = "DEV"
         DcCodigosEntidad("DOMICILIOSFIANZAS") = "DFZ"
         DcCodigosEntidad("DESCRIPCIONGENEROPORIDIOMA") = "DGI"
         DcCodigosEntidad("DOMICILIOS") = "DOM"
         DcCodigosEntidad("DAT_OPERADORES") = "DOP"
+        DcCodigosEntidad("DAT_PERIODOS") = "DPE"
         DcCodigosEntidad("DEPARTAMENTOSCONTACTOS") = "DPT"
 
         'E
