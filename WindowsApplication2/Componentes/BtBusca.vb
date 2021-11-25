@@ -193,6 +193,17 @@ Public Class BtBusca
     End Property
 
 
+    Private _bBuscarEnTodosLosCampos As Boolean = False
+    Public Property CL_BuscarEnTodosLosCampos As Boolean
+        Get
+            Return _bBuscarEnTodosLosCampos
+        End Get
+        Set(value As Boolean)
+            _bBuscarEnTodosLosCampos = value
+        End Set
+    End Property
+
+
     'Private _Formulario As FrMantenimiento
     'Public Property CL_Formulario As FrMantenimiento
     '    Set(ByVal value As FrMantenimiento)
@@ -349,7 +360,7 @@ Public Class BtBusca
 
                 'FRb.InitCol(cl_ListaW)
                 FRb.InitCol(_DcParametros, _clAncho)
-                FRb.InitDta(dt, CL_CampoOrden, CL_Filtro, CL_ch1000)
+                FRb.InitDta(dt, CL_CampoOrden, CL_Filtro, CL_ch1000, CL_BuscarEnTodosLosCampos)
                 FRb.ShowDialog()
                 If Not BuscarRow Is Nothing Then
 

@@ -161,6 +161,8 @@ Public Class FrmPedidos
 
 
         AsociarControles(TxCliente, BtBuscaCliente, Clientes.btBusca, Clientes, Clientes.CLI_Nombre, LbNomCliente)
+        BtBuscaCliente.CL_BuscarEnTodosLosCampos = True
+
         AsociarControles(TxDomicilio, BtBuscaDestino, Clientes_descargas.btBusca, Clientes_descargas)
 
         AsociarControles(TxGenero, BtBuscaGenero, Generos.btBusca, Generos, Generos.GEN_NombreGenero, LbNomGenero)

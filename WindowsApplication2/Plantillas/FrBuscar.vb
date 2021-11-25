@@ -14,12 +14,15 @@ Public Class FrBuscar
 
     Dim _DcParametros As New Dictionary(Of String, Parametros)
 
-    Public Sub InitDta(ByVal Dt As DataTable, ByVal ColumnaBusqueda As String, Optional ByVal Filtro As String = "", Optional ByVal ch1000 As Boolean = False)
+    Public Sub InitDta(ByVal Dt As DataTable, ByVal ColumnaBusqueda As String, Optional ByVal Filtro As String = "", Optional ByVal ch1000 As Boolean = False,
+                       Optional bBuscarEnTodosLosCampos As Boolean = False)
 
         _Dt = Dt
         _ColumnaBusqueda = ColumnaBusqueda & ""
         _Filtro = Filtro & ""
         _ch1000 = ch1000
+
+        ChBusca.Checked = bBuscarEnTodosLosCampos
 
 
         CargaGrid()
