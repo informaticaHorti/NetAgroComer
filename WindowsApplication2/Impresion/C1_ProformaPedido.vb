@@ -641,6 +641,38 @@ Module C1_ProformaPedido
         Dim BaseAltura As Integer = altura
 
 
+
+
+        'Instrucciones para el pedido y carga
+        Dim instrucciones1 As String = (Pedidos.PED_obs1.Valor & "").Trim
+        Dim instrucciones2 As String = (Pedidos.PED_obs2.Valor & "").Trim
+        Dim instrucciones3 As String = (Pedidos.PED_obs3.Valor & "").Trim
+
+        If instrucciones1.Trim <> "" Or instrucciones2.Trim <> "" Or instrucciones3.Trim <> "" Then
+
+            Dim altura_instrucciones As Integer = altura + 1
+            Impreso.Detalle.Titulo("Instrucciones para el pedido y carga:", margen_izquierdo, altura_instrucciones, 73, 4, Estilos.ReducidaBold)
+
+            If instrucciones1.Trim <> "" Then
+                altura_instrucciones = altura_instrucciones + 4
+                Impreso.Detalle.Titulo(instrucciones1, margen_izquierdo + 3, altura_instrucciones, 110, 4, Estilos.Reducida)
+            End If
+            If instrucciones2.Trim <> "" Then
+                altura_instrucciones = altura_instrucciones + 4
+                Impreso.Detalle.Titulo(instrucciones2, margen_izquierdo + 3, altura_instrucciones, 110, 4, Estilos.Reducida)
+            End If
+            If instrucciones3.Trim <> "" Then
+                altura_instrucciones = altura_instrucciones + 4
+                Impreso.Detalle.Titulo(instrucciones3, margen_izquierdo + 3, altura_instrucciones, 110, 4, Estilos.Reducida)
+            End If
+
+        End If
+
+
+
+
+
+
         'Instrucciones de pago
 
 
