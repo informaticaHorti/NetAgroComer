@@ -47,12 +47,20 @@ Partial Class FrmEnvioFianzasEnvases
         Me.RbIfco = New System.Windows.Forms.RadioButton()
         Me.RbChep = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btSelNinguno = New System.Windows.Forms.Button()
+        Me.btSelTodos = New System.Windows.Forms.Button()
+        Me.GridExcel = New DevExpress.XtraGrid.GridControl()
+        Me.GridViewExcel = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.PanelCabecera.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.GridExcel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridViewExcel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelCabecera
         '
+        Me.PanelCabecera.Controls.Add(Me.btSelNinguno)
+        Me.PanelCabecera.Controls.Add(Me.btSelTodos)
         Me.PanelCabecera.Controls.Add(Me.LbNomAEnvase)
         Me.PanelCabecera.Controls.Add(Me.TxAEnvase)
         Me.PanelCabecera.Controls.Add(Me.BtBuscaAEnvase)
@@ -112,7 +120,9 @@ Partial Class FrmEnvioFianzasEnvases
         'TxDesdeProveedor
         '
         Me.TxDesdeProveedor.Autonumerico = False
+        Me.TxDesdeProveedor.Bloqueado = False
         Me.TxDesdeProveedor.Buscando = False
+        Me.TxDesdeProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDesdeProveedor.ClForm = Nothing
         Me.TxDesdeProveedor.ClParam = Nothing
         Me.TxDesdeProveedor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -136,6 +146,7 @@ Partial Class FrmEnvioFianzasEnvases
         '
         Me.BtBuscaDesdeProveedor.CL_Ancho = 0
         Me.BtBuscaDesdeProveedor.CL_BuscaAlb = False
+        Me.BtBuscaDesdeProveedor.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDesdeProveedor.CL_campocodigo = Nothing
         Me.BtBuscaDesdeProveedor.CL_camponombre = Nothing
         Me.BtBuscaDesdeProveedor.CL_CampoOrden = "Nombre"
@@ -189,7 +200,9 @@ Partial Class FrmEnvioFianzasEnvases
         'TxHastaFecha
         '
         Me.TxHastaFecha.Autonumerico = False
+        Me.TxHastaFecha.Bloqueado = False
         Me.TxHastaFecha.Buscando = False
+        Me.TxHastaFecha.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxHastaFecha.ClForm = Nothing
         Me.TxHastaFecha.ClParam = Nothing
         Me.TxHastaFecha.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -226,7 +239,9 @@ Partial Class FrmEnvioFianzasEnvases
         'TxDesdeFecha
         '
         Me.TxDesdeFecha.Autonumerico = False
+        Me.TxDesdeFecha.Bloqueado = False
         Me.TxDesdeFecha.Buscando = False
+        Me.TxDesdeFecha.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDesdeFecha.ClForm = Nothing
         Me.TxDesdeFecha.ClParam = Nothing
         Me.TxDesdeFecha.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -277,7 +292,9 @@ Partial Class FrmEnvioFianzasEnvases
         'TxIdCliente
         '
         Me.TxIdCliente.Autonumerico = False
+        Me.TxIdCliente.Bloqueado = False
         Me.TxIdCliente.Buscando = False
+        Me.TxIdCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxIdCliente.ClForm = Nothing
         Me.TxIdCliente.ClParam = Nothing
         Me.TxIdCliente.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -301,6 +318,7 @@ Partial Class FrmEnvioFianzasEnvases
         '
         Me.BtBuscaCliente.CL_Ancho = 0
         Me.BtBuscaCliente.CL_BuscaAlb = False
+        Me.BtBuscaCliente.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCliente.CL_campocodigo = Nothing
         Me.BtBuscaCliente.CL_camponombre = Nothing
         Me.BtBuscaCliente.CL_CampoOrden = "Nombre"
@@ -354,7 +372,9 @@ Partial Class FrmEnvioFianzasEnvases
         'TxDEnvase
         '
         Me.TxDEnvase.Autonumerico = False
+        Me.TxDEnvase.Bloqueado = False
         Me.TxDEnvase.Buscando = False
+        Me.TxDEnvase.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDEnvase.ClForm = Nothing
         Me.TxDEnvase.ClParam = Nothing
         Me.TxDEnvase.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -378,6 +398,7 @@ Partial Class FrmEnvioFianzasEnvases
         '
         Me.BtBuscaDEnvase.CL_Ancho = 0
         Me.BtBuscaDEnvase.CL_BuscaAlb = False
+        Me.BtBuscaDEnvase.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDEnvase.CL_campocodigo = Nothing
         Me.BtBuscaDEnvase.CL_camponombre = Nothing
         Me.BtBuscaDEnvase.CL_CampoOrden = "Nombre"
@@ -431,7 +452,9 @@ Partial Class FrmEnvioFianzasEnvases
         'TxAEnvase
         '
         Me.TxAEnvase.Autonumerico = False
+        Me.TxAEnvase.Bloqueado = False
         Me.TxAEnvase.Buscando = False
+        Me.TxAEnvase.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxAEnvase.ClForm = Nothing
         Me.TxAEnvase.ClParam = Nothing
         Me.TxAEnvase.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -455,6 +478,7 @@ Partial Class FrmEnvioFianzasEnvases
         '
         Me.BtBuscaAEnvase.CL_Ancho = 0
         Me.BtBuscaAEnvase.CL_BuscaAlb = False
+        Me.BtBuscaAEnvase.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAEnvase.CL_campocodigo = Nothing
         Me.BtBuscaAEnvase.CL_camponombre = Nothing
         Me.BtBuscaAEnvase.CL_CampoOrden = "Nombre"
@@ -530,20 +554,90 @@ Partial Class FrmEnvioFianzasEnvases
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Formato"
         '
+        'btSelNinguno
+        '
+        Me.btSelNinguno.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btSelNinguno.Image = Global.NetAgro.My.Resources.Resources.Action_db_remove_16x16_32
+        Me.btSelNinguno.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btSelNinguno.Location = New System.Drawing.Point(1170, 95)
+        Me.btSelNinguno.Name = "btSelNinguno"
+        Me.btSelNinguno.Size = New System.Drawing.Size(28, 25)
+        Me.btSelNinguno.TabIndex = 100310
+        Me.btSelNinguno.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btSelNinguno.UseVisualStyleBackColor = True
+        '
+        'btSelTodos
+        '
+        Me.btSelTodos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btSelTodos.Image = Global.NetAgro.My.Resources.Resources.Action_db_add_16x16_32
+        Me.btSelTodos.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btSelTodos.Location = New System.Drawing.Point(1197, 95)
+        Me.btSelTodos.Name = "btSelTodos"
+        Me.btSelTodos.Size = New System.Drawing.Size(31, 25)
+        Me.btSelTodos.TabIndex = 100309
+        Me.btSelTodos.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btSelTodos.UseVisualStyleBackColor = True
+        '
+        'GridExcel
+        '
+        Me.GridExcel.Cursor = System.Windows.Forms.Cursors.Default
+        Me.GridExcel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridExcel.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridExcel.Location = New System.Drawing.Point(0, 0)
+        Me.GridExcel.LookAndFeel.SkinName = "Black"
+        Me.GridExcel.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat
+        Me.GridExcel.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.GridExcel.MainView = Me.GridViewExcel
+        Me.GridExcel.Name = "GridExcel"
+        Me.GridExcel.Size = New System.Drawing.Size(1234, 562)
+        Me.GridExcel.TabIndex = 14
+        Me.GridExcel.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewExcel})
+        Me.GridExcel.Visible = False
+        '
+        'GridViewExcel
+        '
+        Me.GridViewExcel.Appearance.FooterPanel.BackColor = System.Drawing.Color.White
+        Me.GridViewExcel.Appearance.FooterPanel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewExcel.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Black
+        Me.GridViewExcel.Appearance.FooterPanel.Options.UseBackColor = True
+        Me.GridViewExcel.Appearance.FooterPanel.Options.UseFont = True
+        Me.GridViewExcel.Appearance.FooterPanel.Options.UseForeColor = True
+        Me.GridViewExcel.Appearance.GroupFooter.BackColor = System.Drawing.Color.White
+        Me.GridViewExcel.Appearance.GroupFooter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewExcel.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Black
+        Me.GridViewExcel.Appearance.GroupFooter.Options.UseBackColor = True
+        Me.GridViewExcel.Appearance.GroupFooter.Options.UseFont = True
+        Me.GridViewExcel.Appearance.GroupFooter.Options.UseForeColor = True
+        Me.GridViewExcel.Appearance.Row.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewExcel.Appearance.Row.ForeColor = System.Drawing.Color.Blue
+        Me.GridViewExcel.Appearance.Row.Options.UseFont = True
+        Me.GridViewExcel.Appearance.Row.Options.UseForeColor = True
+        Me.GridViewExcel.GridControl = Me.GridExcel
+        Me.GridViewExcel.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways
+        Me.GridViewExcel.Name = "GridViewExcel"
+        Me.GridViewExcel.OptionsView.AutoCalcPreviewLineCount = True
+        '
         'FrmEnvioFianzasEnvases
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1234, 562)
         Me.Controls.Add(Me._PanelCargando)
+        Me.Controls.Add(Me.GridExcel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.ListaEtiquetas = CType(resources.GetObject("$this.ListaEtiquetas"), System.Collections.Generic.List(Of Object))
         Me.Name = "FrmEnvioFianzasEnvases"
         Me.Text = "Envio Fianzas de Envases"
+        Me.Controls.SetChildIndex(Me.GridExcel, 0)
+        Me.Controls.SetChildIndex(Me._PanelCargando, 0)
+        Me.Controls.SetChildIndex(Me.PanelCabecera, 0)
+        Me.Controls.SetChildIndex(Me.PanelConsulta, 0)
         Me.PanelCabecera.ResumeLayout(False)
         Me.PanelCabecera.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.GridExcel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridViewExcel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -570,4 +664,8 @@ Partial Class FrmEnvioFianzasEnvases
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents RbChep As System.Windows.Forms.RadioButton
     Friend WithEvents RbIfco As System.Windows.Forms.RadioButton
+    Friend WithEvents btSelNinguno As Button
+    Friend WithEvents btSelTodos As Button
+    Public WithEvents GridExcel As DevExpress.XtraGrid.GridControl
+    Public WithEvents GridViewExcel As DevExpress.XtraGrid.Views.Grid.GridView
 End Class

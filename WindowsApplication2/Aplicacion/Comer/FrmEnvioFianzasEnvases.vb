@@ -100,9 +100,9 @@ Public Class FrmEnvioFianzasEnvases
         End If
 
 
-        Dim sql As String = "SELECT VEV_Fecha as Fecha, VEV_Concepto as Concepto, ASA_Albaran as Albaran, ASA_Referencia as Referencia,ASA_IdCliente as IdCliente, CLI_Nombre as Cliente," & vbCrLf
-        sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira," & vbCrLf
-        sql = sql & " CLD_Domicilio as DomicilioDescarga," & vbCrLf
+        Dim sql As String = "SELECT VEV_Fecha as Fecha, VEV_Concepto as Concepto, ASA_Albaran as Albaran, ASA_Referencia as Referencia, ASA_IdCliente as IdCliente, CLI_Nombre as Cliente," & vbCrLf
+        sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira, ENV_IdSubFamilia as IdSubFamiliaEnvase," & vbCrLf
+        sql = sql & " ASA_IdAlbaran as IdAlbaran, ASA_iddomicilio as IdDomicilio, CLD_Domicilio as DomicilioDescarga," & vbCrLf
         sql = sql & " DFZ_CodigoFianza as CodFianzaDom, " & vbCrLf
         sql = sql & " ACR_CodigoFianza as CodFianzaAcr, " & vbCrLf
         sql = sql & " ASA_Referencia as Referencia, ASA_MatriculaRemolque as Remolque" & vbCrLf
@@ -114,6 +114,7 @@ Public Class FrmEnvioFianzasEnvases
         sql = sql & " LEFT JOIN Acreedores ON ENV_IdAcreedorFianza = ACR_Codigo" & vbCrLf
         sql = sql & " LEFT JOIN ClientesDescargas ON CLD_Id = ASA_iddomicilio" & vbCrLf
         sql = sql & " LEFT JOIN DomiciliosFianzas ON (DFZ_IdDomicilio = ASA_iddomicilio AND DFZ_IdEnvase = VEL_IdEnvase)" & vbCrLf
+        sql = sql & " LEFT JOIN SubFamiliaEnvases ON SFE_IdsubFamilia = ENV_idsubfamilia" & vbCrLf
         sql = sql & " WHERE VEV_Fecha >= '" & TxDesdeFecha.Text & "'" & vbCrLf
         sql = sql & " AND VEV_Fecha <= '" & TxHastaFecha.Text & "'" & vbCrLf
 
@@ -133,6 +134,9 @@ Public Class FrmEnvioFianzasEnvases
         Dim DtFinal As New DataTable
         If RbChep.Checked = True Then
 
+            DtFinal.Columns.Add(New DataColumn("IdCliente", GetType(Integer)))
+            DtFinal.Columns.Add(New DataColumn("Cliente", GetType(String)))
+            DtFinal.Columns.Add(New DataColumn("IdAlbaran", GetType(Integer)))
             DtFinal.Columns.Add(New DataColumn("Ubicacion", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("Contrapartida", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("Tipo_de_Transferencia", GetType(String)))
@@ -142,7 +146,12 @@ Public Class FrmEnvioFianzasEnvases
             DtFinal.Columns.Add(New DataColumn("Equipo", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("Cantidad", GetType(Int32)))
             DtFinal.Columns.Add(New DataColumn("Matricula", GetType(String)))
+
         ElseIf RbIfco.Checked = True Then
+
+            DtFinal.Columns.Add(New DataColumn("IdCliente", GetType(Integer)))
+            DtFinal.Columns.Add(New DataColumn("Cliente", GetType(String)))
+            DtFinal.Columns.Add(New DataColumn("IdAlbaran", GetType(Integer)))
             DtFinal.Columns.Add(New DataColumn("Direccion", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("FechaRegistro", GetType(String)))
             DtFinal.Columns.Add(New DataColumn("FechaEntrega", GetType(String)))
@@ -162,39 +171,73 @@ Public Class FrmEnvioFianzasEnvases
         End If
 
 
+        Dim colSel As New DataColumn("S", GetType(Boolean))
+        colSel.DefaultValue = True
+        DtFinal.Columns.Add(colSel)
+
+
+
         Dim dt As DataTable = ValeEnvases.MiConexion.ConsultaSQL(sql)
 
         For Each rw In dt.Rows
 
             If VaInt(rw("Retira")) > 0 Then
 
-                If RbChep.Checked = True Then
-                    Dim RowF As DataRow = DtFinal.NewRow
-                    RowF("Ubicacion") = rw("CodFianzaAcr").ToString
-                    RowF("Contrapartida") = rw("CodfianzaDom").ToString
-                    RowF("Tipo_de_transferencia") = "SALIDA"
-                    RowF("Fecha_de_Entrega") = Format(rw("Fecha"), "yyyyMMdd")
-                    RowF("Ref") = rw("Albaran").ToString
-                    RowF("Otra_Referencia") = rw("Referencia").ToString
-                    RowF("Equipo") = rw("CodFianza").ToString
-                    RowF("Cantidad") = VaInt(rw("retira"))
-                    RowF("Matricula") = rw("Remolque")
-                    DtFinal.Rows.Add(RowF)
-                ElseIf RbIfco.Checked = True Then
-                    Dim RowF As DataRow = DtFinal.NewRow
-                    RowF("Direccion") = "S"
-                    RowF("FechaRegistro") = Format(rw("Fecha"), "dd.MM.yyyy")
-                    RowF("FechaEntrega") = Format(rw("Fecha"), "dd.MM.yyyy")
-                    RowF("Albaran") = rw("Albaran").ToString
-                    RowF("Material") = rw("CodFianza").ToString
-                    RowF("Cantidad") = VaInt(rw("retira"))
-                    RowF("Ifco-NR") = rw("CodFianzaDom").ToString
-                    'RowF("Mi_Ifco-NR") = rw("CodFianzaAcr").ToString
-                    RowF("Mi_Ifco-NR") = MiCodigoIFCO
-                    RowF("NumeroPedido") = (rw("Referencia"))
-                    RowF("Matricula") = rw("Remolque")
-                    DtFinal.Rows.Add(RowF)
+
+                Dim IdCliente As String = (rw("IdCliente").ToString & "").Trim
+                Dim Cliente As String = (rw("Cliente").ToString & "").Trim
+                Dim IdSubFamiliaEnvase As String = (rw("IdSubFamiliaEnvase").ToString & "").Trim
+                Dim IdDomicilio As String = (rw("IdDomicilio").ToString & "").Trim
+
+
+                'Sólo mostrar envases tipo C (No facturar)
+                Dim TipoEnvase As String = E_FianzasEnvases.TipoEnvase(IdCliente, IdDomicilio, IdSubFamiliaEnvase)
+                If TipoEnvase = E_FianzasEnvases.TipoFacturacion.NoFacturar Then
+
+
+                    If RbChep.Checked = True Then
+
+                        Dim RowF As DataRow = DtFinal.NewRow
+                        RowF("IdCliente") = VaInt(IdCliente)
+                        RowF("Cliente") = Cliente
+                        RowF("IdAlbaran") = rw("IdAlbaran")
+                        RowF("Ubicacion") = rw("CodFianzaAcr").ToString
+                        RowF("Contrapartida") = rw("CodfianzaDom").ToString
+                        RowF("Tipo_de_transferencia") = "SALIDA"
+                        RowF("Fecha_de_Entrega") = Format(rw("Fecha"), "yyyyMMdd")
+                        RowF("Ref") = rw("Albaran").ToString
+                        RowF("Otra_Referencia") = rw("Referencia").ToString
+                        RowF("Equipo") = rw("CodFianza").ToString
+                        RowF("Cantidad") = VaInt(rw("retira"))
+                        RowF("Matricula") = rw("Remolque")
+                        DtFinal.Rows.Add(RowF)
+
+                    ElseIf RbIfco.Checked = True Then
+
+                        Dim RowF As DataRow = DtFinal.NewRow
+                        RowF("IdCliente") = VaInt(IdCliente)
+                        RowF("Cliente") = Cliente
+                        RowF("IdAlbaran") = rw("IdAlbaran")
+                        RowF("Direccion") = "S"
+                        RowF("FechaRegistro") = Format(rw("Fecha"), "dd.MM.yyyy")
+                        RowF("FechaEntrega") = Format(rw("Fecha"), "dd.MM.yyyy")
+                        RowF("Albaran") = rw("Albaran").ToString
+                        RowF("Material") = rw("CodFianza").ToString
+                        RowF("Cantidad") = VaInt(rw("retira"))
+                        RowF("Ifco-NR") = rw("CodFianzaDom").ToString
+                        'RowF("Mi_Ifco-NR") = rw("CodFianzaAcr").ToString
+                        RowF("Mi_Ifco-NR") = MiCodigoIFCO
+                        RowF("NumeroPedido") = (rw("Referencia"))
+                        RowF("Matricula") = rw("Remolque")
+                        DtFinal.Rows.Add(RowF)
+
+                    End If
+
+
                 End If
+
+
+
 
             End If
 
@@ -210,13 +253,66 @@ Public Class FrmEnvioFianzasEnvases
     Private Sub AjustaColumnas()
 
 
+        For Each c As DevExpress.XtraGrid.Columns.GridColumn In GridView1.Columns
+
+            Select Case c.FieldName.ToUpper.Trim
+                Case "IDCLIENTE", "CLIENTE", "IDALBARAN"
+                    c.Visible = False
+            End Select
+
+        Next
+
         GridView1.BestFitColumns()
 
-        'For Each c As DevExpress.XtraGrid.Columns.GridColumn In GridView1.Columns
-        '    Select Case c.FieldName.ToUpper.Trim
+        For Each c As DevExpress.XtraGrid.Columns.GridColumn In GridView1.Columns
+            Select Case c.FieldName.ToUpper.Trim
+                Case "S"
+                    c.MinWidth = 30
+                    c.MaxWidth = 30
+                    c.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+                    c.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+            End Select
+        Next
 
-        '    End Select
-        'Next
+
+    End Sub
+
+
+    Public Overrides Sub GridClik(row As DataRow, column As GridColumn)
+        MyBase.GridClik(row, column)
+
+        If Not IsNothing(row) Then
+
+            Dim IdAlbaran As String = ""
+
+            Select Case column.FieldName.Trim.ToUpper
+
+                Case "ALBARAN"
+                    If RbIfco.Checked Then
+                        IdAlbaran = (row("IdAlbaran").ToString & "").Trim
+                    End If
+
+                Case "REF"
+                    If RbChep.Checked Then
+                        IdAlbaran = (row("IdAlbaran").ToString & "").Trim
+                    End If
+
+                Case "S"
+                    row("S") = Not row("S")
+
+
+            End Select
+
+
+            If VaDec(IdAlbaran) > 0 Then
+                Dim frm As New FrmCargaPalets
+                frm.init(IdAlbaran)
+                frm.ShowDialog()
+            End If
+
+
+        End If
+
     End Sub
 
 
@@ -239,7 +335,99 @@ Public Class FrmEnvioFianzasEnvases
     End Sub
 
 
+    Private Sub btSelNinguno_Click(sender As Object, e As EventArgs) Handles btSelNinguno.Click
+        For indice As Integer = 0 To GridView1.RowCount - 1
+            Dim row As DataRow = GridView1.GetDataRow(indice)
+            If Not IsNothing(row) Then
+                row("S") = False
+            End If
+        Next
+    End Sub
+
+    Private Sub btSelTodos_Click(sender As Object, e As EventArgs) Handles btSelTodos.Click
+        For indice As Integer = 0 To GridView1.RowCount - 1
+            Dim row As DataRow = GridView1.GetDataRow(indice)
+            If Not IsNothing(row) Then
+                row("S") = True
+            End If
+        Next
+    End Sub
 
 
-   
+    Public Overrides Sub ExportarAExcel()
+        'MyBase.ExportarAExcel()
+
+
+        Dim dt As DataTable = Grid.DataSource
+        If Not IsNothing(dt) Then
+            Dim dv As New DataView(dt)
+            dv.RowFilter = "S = True"
+            dt = dv.ToTable
+        End If
+
+        If dt.Rows.Count = 0 Then
+            MsgBox("No se ha seleccionado ningún registro para exportar a excel")
+            Exit Sub
+        End If
+
+        GridExcel.DataSource = dt
+
+
+
+        If Not IsNothing(dt) Then
+            If dt.Rows.Count > 0 Then
+
+
+                Dim sd As SaveFileDialog = New SaveFileDialog()
+
+                sd.Title = "Guardar datos como..."
+                sd.Filter = "Excel 1997-2003 (*.xls)|*.xls"
+                sd.FilterIndex = 1
+                If sd.ShowDialog() = DialogResult.OK Then
+
+                    Try
+
+                        Dim fichero As String = sd.FileName
+
+
+                        Dim options As New DevExpress.XtraPrinting.XlsExportOptions
+                        options.SheetName = "Hoja1"
+                        options.TextExportMode = DevExpress.XtraPrinting.TextExportMode.Value
+                        options.ExportMode = DevExpress.XtraPrinting.XlsExportMode.SingleFile
+
+
+
+                        'Dim options as New XlsExportOptions() With { Key .SheetName = "Hoja1", 
+                        '                                            Key .TextExportMode = TextExportMode.Text, 
+                        '                                            Key .RawDataMode = True, 
+                        '                                            Key .ExportMode = XlsExportMode.SingleFile }
+
+                        GridExcel.ExportToXls(fichero, options)
+                        Try
+                            System.Diagnostics.Process.Start(fichero)
+                        Catch ex As Exception
+                            MsgBox("Error al abrir la hoja de excel en " & fichero)
+                        End Try
+
+
+
+
+
+                    Catch ex As Exception
+                        MsgBox("Error al exportar a Excel: " & ex.Message)
+                    End Try
+
+
+                End If
+
+            Else
+                MsgBox("No hay datos que exportar")
+            End If
+        Else
+            MsgBox("No hay datos para exportar")
+        End If
+
+    End Sub
+
+
 End Class

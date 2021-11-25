@@ -1328,6 +1328,13 @@ Public Class FrConsulta
 
     Private Sub BtExportarExcel_Click(sender As System.Object, e As System.EventArgs) Handles BtExportarExcel.Click
 
+        ExportarAExcel()
+
+    End Sub
+
+
+    Public Overridable Sub ExportarAExcel()
+
         Dim dt As DataTable = Grid.DataSource
         If Not IsNothing(dt) Then
             If dt.Rows.Count > 0 Then
@@ -1383,4 +1390,5 @@ Public Class FrConsulta
         End If
 
     End Sub
+
 End Class
