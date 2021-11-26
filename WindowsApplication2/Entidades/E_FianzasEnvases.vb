@@ -79,7 +79,9 @@
 
 
         Dim sql As String = "SELECT FZE_TipoFacturacion as Tipo FROM FianzasEnvases WHERE FZE_IdCliente = " & IdCliente & " AND COALESCE(FZE_IdDomicilio,0) = " & VaInt(IdDomicilio).ToString & " AND FZE_IdSubFamiliaEnvase = " & IdSubFamilia & vbCrLf
-        sql = sql & " UNION ALL " & vbCrLf & vbCrLf 
+        sql = sql & " UNION ALL " & vbCrLf & vbCrLf
+        sql = sql & "SELECT FZE_TipoFacturacion as Tipo FROM FianzasEnvases WHERE FZE_IdCliente = " & IdCliente & " AND COALESCE(FZE_IdDomicilio,0) = 0 AND FZE_IdSubFamiliaEnvase = " & IdSubFamilia & vbCrLf
+        sql = sql & " UNION ALL " & vbCrLf & vbCrLf
         sql = sql & " SELECT CASE CLI_FacturaEnvaseComercio WHEN 'S' THEN '" & TipoFacturacion.FacturarEnAlbaran & "' ELSE '" & TipoFacturacion.NoFacturar & "' END as Tipo FROM Clientes WHERE CLI_IdCliente = " & IdCliente & vbCrLf
 
         Dim dt As DataTable = cn.ConsultaSQL(sql)
