@@ -222,9 +222,13 @@ Module C1_CMR_Internacional
     Private Sub ImprimeDatosConsignatario(ByRef Impreso As Impreso, ByVal Cliente As E_Clientes, ByVal Pais As String)
         Dim Altura As Integer = 51
 
+
+        Dim cif As String = ""
+        If (Cliente.CLI_Nif.Valor & "").Trim <> "" Then cif = "  CIF: " & Cliente.CLI_Nif.Valor
+
         Impreso.Detalle.Titulo(Cliente.CLI_Nombre.Valor & "", margen_izquierdo, Altura, 85, 4, Estilos.Custom, , , fuente)
         Impreso.Detalle.Titulo(Cliente.CLI_Domicilio.Valor & "", margen_izquierdo, Altura + 4, 85, 4, Estilos.Custom, , , fuente)
-        Impreso.Detalle.Titulo(Cliente.CLI_Poblacion.Valor & " - " & Pais, margen_izquierdo, Altura + 4 + 4, 85, 4, Estilos.Custom, , , fuente_menor)
+        Impreso.Detalle.Titulo(Cliente.CLI_Poblacion.Valor & " - " & Pais & cif, margen_izquierdo, Altura + 4 + 4, 85, 4, Estilos.Custom, , , fuente_menor)
 
     End Sub
 
