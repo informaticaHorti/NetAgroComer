@@ -300,12 +300,25 @@ Public Class FrmClientes
         ' llenar el grid
 
 
-        CargaGridFRm()
+        Me.Enabled = False
 
-        CargaAsociados()
-        CargaLineasDescargas()
-        CargaLineasGridGastosCom()
-        cargafacturas()
+        Try
+
+            CargaGridFRm()
+
+            CargaAsociados()
+            CargaLineasDescargas()
+            CargaLineasGridGastosCom()
+            CargaFacturas()
+
+
+        Catch ex As Exception
+        End Try
+
+
+        Me.Enabled = True
+
+
 
         If VaInt(TxDato8.Text) = 0 Then
             TxDato8.Text = ""
@@ -977,4 +990,6 @@ Public Class FrmClientes
             frm.ShowDialog()
         End If
     End Sub
+
+
 End Class

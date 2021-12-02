@@ -36,6 +36,8 @@
     Public ENV_EnvaseRevisado As Cdatos.bdcampo
     Public ENV_EnvaseObsoleto As Cdatos.bdcampo
 
+    Public ENV_DescriptorFichero As Cdatos.bdcampo
+
     Public ENV_IdUsuarioLog As Cdatos.bdcampo
     Public ENV_FechaLog As Cdatos.bdcampo
     Public ENV_HoraLog As Cdatos.bdcampo
@@ -99,6 +101,8 @@
             'ENV_Revisado = New Cdatos.bdcampo(CodigoEntidad & "Revisado", Cdatos.TiposCampo.Cadena, 1)
             ENV_EnvaseRevisado = New Cdatos.bdcampo(CodigoEntidad & "EnvaseRevisado", Cdatos.TiposCampo.EnteroPositivo, 1)
             ENV_EnvaseObsoleto = New Cdatos.bdcampo(CodigoEntidad & "EnvaseObsoleto", Cdatos.TiposCampo.Cadena, 1)
+
+            ENV_DescriptorFichero = New Cdatos.bdcampo(CodigoEntidad & "DescriptorFichero", Cdatos.TiposCampo.Cadena, 10)
 
 
             ENV_IdUsuarioLog = New Cdatos.bdcampo(CodigoEntidad & "IdUsuarioLog", Cdatos.TiposCampo.EnteroPositivo, 4)

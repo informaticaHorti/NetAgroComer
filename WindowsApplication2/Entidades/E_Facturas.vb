@@ -1911,47 +1911,66 @@ Public Class E_Facturas
         Total = 0
 
         Dim cobroslineas As New E_CobrosLineas(Idusuario, cn)
-        Dim Consulta As New Cdatos.E_select
-        Consulta.SelCampo(Me.FRA_idfactura, "IdFactura")
-
-        Consulta.SelCampo(Me.FRA_fecha, "Fecha")
-        Consulta.SelCampo(Me.FRA_serie, "Serie")
-        Consulta.SelCampo(Me.FRA_factura, "Factura")
-        Consulta.SelCampo(Me.FRA_totalfactura, "Importe")
-        Consulta.SelCampo(Me.FRA_RefCliente, "Referencia")
-        Consulta.SelCampo(Me.FRA_valorcambio, "Cambio")
-        Consulta.WheCampo(Me.FRA_idcliente, "=", Idcliente.ToString)
 
 
-        Dim sql As String = Consulta.SQL & vbCrLf
+
+        'Dim Consulta As New Cdatos.E_select
+        'Consulta.SelCampo(Me.FRA_idfactura, "IdFactura")
+        'Consulta.SelCampo(Me.FRA_fecha, "Fecha")
+        'Consulta.SelCampo(Me.FRA_serie, "Serie")
+        'Consulta.SelCampo(Me.FRA_factura, "Factura")
+        'Consulta.SelCampo(Me.FRA_totalfactura, "Importe")
+        'Consulta.SelCampo(Me.FRA_RefCliente, "Referencia")
+        'Consulta.SelCampo(Me.FRA_valorcambio, "Cambio")
+        'Consulta.WheCampo(Me.FRA_idcliente, "=", Idcliente.ToString)
+
+
+        'Dim sql As String = Consulta.SQL & vbCrLf
+        'sql = sql & " ORDER BY Fecha, Serie, Factura" & vbCrLf
+
+
+
+        Dim sql As String = "SELECT IdFactura, Fecha, Serie, Factura, Importe, Referencia, Cambio, Importe - Cobrado as Pendiente"
+        sql = sql & " FROM " & vbCrLf
+        sql = sql & " (" & vbCrLf
+        sql = sql & " SELECT FRA_IdFactura as IdFactura, FRA_Fecha as Fecha, FRA_Serie as Serie, FRA_Factura as Factura, COALESCE(FRA_TotalFactura,0.00) as Importe, FRA_RefCliente as Referencia," & vbCrLf
+        sql = sql & " FRA_ValorCambio as Cambio, COALESCE((SELECT SUM(CBL_importecobradodivisa) as Cobrado FROM CobrosLineas WHERE CBL_IdFactura = FRA_IdFactura),0.00) as Cobrado" & vbCrLf
+        sql = sql & " FROM Facturas" & vbCrLf
+        sql = sql & " WHERE FRA_IdCliente = " & Idcliente.ToString & vbCrLf
+        sql = sql & " ) as C" & vbCrLf
+        sql = sql & " WHERE Importe - Cobrado <> 0" & vbCrLf
         sql = sql & " ORDER BY Fecha, Serie, Factura" & vbCrLf
 
+
         Dim dt As DataTable = Me.MiConexion.ConsultaSQL(sql)
+        If Not IsNothing(dt) Then
+            Total = VaDec(dt.Compute("SUM(Pendiente)", ""))
+        End If
 
 
-        Dim colPte As New DataColumn("Pendiente", GetType(Decimal))
-        dt.Columns.Add(colPte)
+        'Dim colPte As New DataColumn("Pendiente", GetType(Decimal))
+        'dt.Columns.Add(colPte)
 
 
 
 
-        For Each row As DataRow In dt.Rows
+        'For Each row As DataRow In dt.Rows
 
-            Dim IdFactura As String = row("IdFactura").ToString & ""
-            Dim cobrado As Decimal = cobroslineas.CobradoFactura(IdFactura)
-            Dim Pte As Decimal = VaDec(row("Importe")) - cobrado
-            Pte = Pte * VaDec(row("cambio"))
+        '    Dim IdFactura As String = row("IdFactura").ToString & ""
+        '    Dim cobrado As Decimal = cobroslineas.CobradoFactura(IdFactura)
+        '    Dim Pte As Decimal = VaDec(row("Importe")) - cobrado
+        '    Pte = Pte * VaDec(row("cambio"))
 
-            row("Pendiente") = Pte
+        '    row("Pendiente") = Pte
 
-            Total = Total + Pte
+        '    Total = Total + Pte
 
-        Next
+        'Next
 
 
-        Dim dv As New DataView(dt)
-        dv.RowFilter = "Pendiente <> 0"
-        dt = dv.ToTable
+        'Dim dv As New DataView(dt)
+        'dv.RowFilter = "Pendiente <> 0"
+        'dt = dv.ToTable
 
 
 

@@ -62,6 +62,8 @@
         ParamTx(TxCdFianza, Envases.ENV_CodigoFianza, LbcdFianza)
         ParamTx(TxPrecioFianza, Envases.ENV_PrecioFianza, LbPrecioFianza)
 
+        ParamTx(TxDescriptorFichero, Envases.ENV_DescriptorFichero, LbDescriptorFichero)
+
 
         ParamTx(TxCtaDevolucionFianzas, Envases.ENV_CtaDevFianzas, Lb33)
         ParamTx(TxDato5, Envases.ENV_CosteSalida, Lb5)

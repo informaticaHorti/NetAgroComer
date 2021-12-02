@@ -101,7 +101,8 @@ Public Class FrmEnvioFianzasEnvases
 
 
         Dim sql As String = "SELECT VEV_Fecha as Fecha, VEV_Concepto as Concepto, ASA_Albaran as Albaran, ASA_Referencia as Referencia, ASA_IdCliente as IdCliente, CLI_Nombre as Cliente," & vbCrLf
-        sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira, ENV_IdSubFamilia as IdSubFamiliaEnvase," & vbCrLf
+        'sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_CodigoFianza as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira, ENV_IdSubFamilia as IdSubFamiliaEnvase," & vbCrLf
+        sql = sql & " VEL_IdEnvase as IdEnvase, ENV_Nombre as Envase, ENV_DescriptorFichero as CodFianza, VEL_Entrega as Entrega, VEL_Retira as Retira, ENV_IdSubFamilia as IdSubFamiliaEnvase," & vbCrLf
         sql = sql & " ASA_IdAlbaran as IdAlbaran, ASA_iddomicilio as IdDomicilio, CLD_Domicilio as DomicilioDescarga," & vbCrLf
         sql = sql & " DFZ_CodigoFianza as CodFianzaDom, " & vbCrLf
         sql = sql & " ACR_CodigoFianza as CodFianzaAcr, " & vbCrLf

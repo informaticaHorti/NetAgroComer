@@ -308,6 +308,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaCliente.CL_Ancho = 0
         Me.BtBuscaCliente.CL_BuscaAlb = False
+        Me.BtBuscaCliente.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCliente.CL_campocodigo = Nothing
         Me.BtBuscaCliente.CL_camponombre = Nothing
         Me.BtBuscaCliente.CL_CampoOrden = "Nombre"
@@ -333,6 +334,7 @@ Partial Class FrmClientes
         'TxDato1
         '
         Me.TxDato1.Autonumerico = False
+        Me.TxDato1.Bloqueado = False
         Me.TxDato1.Buscando = False
         Me.TxDato1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato1.ClForm = Nothing
@@ -373,6 +375,7 @@ Partial Class FrmClientes
         'TxDato3
         '
         Me.TxDato3.Autonumerico = False
+        Me.TxDato3.Bloqueado = False
         Me.TxDato3.Buscando = False
         Me.TxDato3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato3.ClForm = Nothing
@@ -413,6 +416,7 @@ Partial Class FrmClientes
         'TxDato2
         '
         Me.TxDato2.Autonumerico = False
+        Me.TxDato2.Bloqueado = False
         Me.TxDato2.Buscando = False
         Me.TxDato2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato2.ClForm = Nothing
@@ -584,6 +588,7 @@ Partial Class FrmClientes
         'TxNumeroRegistro
         '
         Me.TxNumeroRegistro.Autonumerico = False
+        Me.TxNumeroRegistro.Bloqueado = False
         Me.TxNumeroRegistro.Buscando = False
         Me.TxNumeroRegistro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNumeroRegistro.ClForm = Nothing
@@ -663,6 +668,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscadf_30.CL_Ancho = 0
         Me.BtBuscadf_30.CL_BuscaAlb = False
+        Me.BtBuscadf_30.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscadf_30.CL_campocodigo = Nothing
         Me.BtBuscadf_30.CL_camponombre = Nothing
         Me.BtBuscadf_30.CL_CampoOrden = "Nombre"
@@ -688,6 +694,7 @@ Partial Class FrmClientes
         'TxDf_30
         '
         Me.TxDf_30.Autonumerico = False
+        Me.TxDf_30.Bloqueado = False
         Me.TxDf_30.Buscando = False
         Me.TxDf_30.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDf_30.ClForm = Nothing
@@ -853,6 +860,7 @@ Partial Class FrmClientes
         'TxDf_29
         '
         Me.TxDf_29.Autonumerico = False
+        Me.TxDf_29.Bloqueado = False
         Me.TxDf_29.Buscando = False
         Me.TxDf_29.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDf_29.ClForm = Nothing
@@ -903,6 +911,7 @@ Partial Class FrmClientes
         'TxDf_27
         '
         Me.TxDf_27.Autonumerico = False
+        Me.TxDf_27.Bloqueado = False
         Me.TxDf_27.Buscando = False
         Me.TxDf_27.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDf_27.ClForm = Nothing
@@ -958,6 +967,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaDF_24.CL_Ancho = 0
         Me.BtBuscaDF_24.CL_BuscaAlb = False
+        Me.BtBuscaDF_24.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDF_24.CL_campocodigo = Nothing
         Me.BtBuscaDF_24.CL_camponombre = Nothing
         Me.BtBuscaDF_24.CL_CampoOrden = "Nombre"
@@ -983,6 +993,7 @@ Partial Class FrmClientes
         'TxDF_24
         '
         Me.TxDF_24.Autonumerico = False
+        Me.TxDF_24.Bloqueado = False
         Me.TxDF_24.Buscando = False
         Me.TxDF_24.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_24.ClForm = Nothing
@@ -1024,6 +1035,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaDF_23.CL_Ancho = 0
         Me.BtBuscaDF_23.CL_BuscaAlb = False
+        Me.BtBuscaDF_23.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDF_23.CL_campocodigo = Nothing
         Me.BtBuscaDF_23.CL_camponombre = Nothing
         Me.BtBuscaDF_23.CL_CampoOrden = "Nombre"
@@ -1049,6 +1061,7 @@ Partial Class FrmClientes
         'TxDF_23
         '
         Me.TxDF_23.Autonumerico = False
+        Me.TxDF_23.Bloqueado = False
         Me.TxDF_23.Buscando = False
         Me.TxDF_23.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_23.ClForm = Nothing
@@ -1075,6 +1088,7 @@ Partial Class FrmClientes
         'TxDF_21
         '
         Me.TxDF_21.Autonumerico = False
+        Me.TxDF_21.Bloqueado = False
         Me.TxDF_21.Buscando = False
         Me.TxDF_21.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_21.ClForm = Nothing
@@ -1101,6 +1115,7 @@ Partial Class FrmClientes
         'TxDF_20
         '
         Me.TxDF_20.Autonumerico = False
+        Me.TxDF_20.Bloqueado = False
         Me.TxDF_20.Buscando = False
         Me.TxDF_20.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_20.ClForm = Nothing
@@ -1127,6 +1142,7 @@ Partial Class FrmClientes
         'TxDF_19
         '
         Me.TxDF_19.Autonumerico = False
+        Me.TxDF_19.Bloqueado = False
         Me.TxDF_19.Buscando = False
         Me.TxDF_19.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_19.ClForm = Nothing
@@ -1153,6 +1169,7 @@ Partial Class FrmClientes
         'TxDF_22
         '
         Me.TxDF_22.Autonumerico = False
+        Me.TxDF_22.Bloqueado = False
         Me.TxDF_22.Buscando = False
         Me.TxDF_22.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_22.ClForm = Nothing
@@ -1194,6 +1211,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaDF_18.CL_Ancho = 0
         Me.BtBuscaDF_18.CL_BuscaAlb = False
+        Me.BtBuscaDF_18.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDF_18.CL_campocodigo = Nothing
         Me.BtBuscaDF_18.CL_camponombre = Nothing
         Me.BtBuscaDF_18.CL_CampoOrden = "Nombre"
@@ -1219,6 +1237,7 @@ Partial Class FrmClientes
         'TxPaisCliente
         '
         Me.TxPaisCliente.Autonumerico = False
+        Me.TxPaisCliente.Bloqueado = False
         Me.TxPaisCliente.Buscando = False
         Me.TxPaisCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPaisCliente.ClForm = Nothing
@@ -1260,6 +1279,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaDF_17.CL_Ancho = 0
         Me.BtBuscaDF_17.CL_BuscaAlb = False
+        Me.BtBuscaDF_17.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDF_17.CL_campocodigo = Nothing
         Me.BtBuscaDF_17.CL_camponombre = Nothing
         Me.BtBuscaDF_17.CL_CampoOrden = "Nombre"
@@ -1285,6 +1305,7 @@ Partial Class FrmClientes
         'TxDF_17
         '
         Me.TxDF_17.Autonumerico = False
+        Me.TxDF_17.Bloqueado = False
         Me.TxDF_17.Buscando = False
         Me.TxDF_17.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_17.ClForm = Nothing
@@ -1311,6 +1332,7 @@ Partial Class FrmClientes
         'TxDF_16
         '
         Me.TxDF_16.Autonumerico = False
+        Me.TxDF_16.Bloqueado = False
         Me.TxDF_16.Buscando = False
         Me.TxDF_16.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_16.ClForm = Nothing
@@ -1337,6 +1359,7 @@ Partial Class FrmClientes
         'TxDF_15
         '
         Me.TxDF_15.Autonumerico = False
+        Me.TxDF_15.Bloqueado = False
         Me.TxDF_15.Buscando = False
         Me.TxDF_15.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_15.ClForm = Nothing
@@ -1363,6 +1386,7 @@ Partial Class FrmClientes
         'TxDF_14
         '
         Me.TxDF_14.Autonumerico = False
+        Me.TxDF_14.Bloqueado = False
         Me.TxDF_14.Buscando = False
         Me.TxDF_14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_14.ClForm = Nothing
@@ -1389,6 +1413,7 @@ Partial Class FrmClientes
         'TxDF_13
         '
         Me.TxDF_13.Autonumerico = False
+        Me.TxDF_13.Bloqueado = False
         Me.TxDF_13.Buscando = False
         Me.TxDF_13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_13.ClForm = Nothing
@@ -1500,6 +1525,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaDF_25.CL_Ancho = 0
         Me.BtBuscaDF_25.CL_BuscaAlb = False
+        Me.BtBuscaDF_25.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDF_25.CL_campocodigo = Nothing
         Me.BtBuscaDF_25.CL_camponombre = Nothing
         Me.BtBuscaDF_25.CL_CampoOrden = "Nombre"
@@ -1525,6 +1551,7 @@ Partial Class FrmClientes
         'TxDF_25
         '
         Me.TxDF_25.Autonumerico = False
+        Me.TxDF_25.Bloqueado = False
         Me.TxDF_25.Buscando = False
         Me.TxDF_25.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_25.ClForm = Nothing
@@ -1580,6 +1607,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaDF_26.CL_Ancho = 0
         Me.BtBuscaDF_26.CL_BuscaAlb = False
+        Me.BtBuscaDF_26.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDF_26.CL_campocodigo = Nothing
         Me.BtBuscaDF_26.CL_camponombre = Nothing
         Me.BtBuscaDF_26.CL_CampoOrden = "Nombre"
@@ -1605,6 +1633,7 @@ Partial Class FrmClientes
         'TxDF_26
         '
         Me.TxDF_26.Autonumerico = False
+        Me.TxDF_26.Bloqueado = False
         Me.TxDF_26.Buscando = False
         Me.TxDF_26.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDF_26.ClForm = Nothing
@@ -1976,6 +2005,7 @@ Partial Class FrmClientes
         'TxRiesgoMax
         '
         Me.TxRiesgoMax.Autonumerico = False
+        Me.TxRiesgoMax.Bloqueado = False
         Me.TxRiesgoMax.Buscando = False
         Me.TxRiesgoMax.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxRiesgoMax.ClForm = Nothing
@@ -2100,6 +2130,7 @@ Partial Class FrmClientes
         'TxImpConcedido
         '
         Me.TxImpConcedido.Autonumerico = False
+        Me.TxImpConcedido.Bloqueado = False
         Me.TxImpConcedido.Buscando = False
         Me.TxImpConcedido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxImpConcedido.ClForm = Nothing
@@ -2140,6 +2171,7 @@ Partial Class FrmClientes
         'TxImpSolicitado
         '
         Me.TxImpSolicitado.Autonumerico = False
+        Me.TxImpSolicitado.Bloqueado = False
         Me.TxImpSolicitado.Buscando = False
         Me.TxImpSolicitado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxImpSolicitado.ClForm = Nothing
@@ -2180,6 +2212,7 @@ Partial Class FrmClientes
         'TxFechaSolicitud
         '
         Me.TxFechaSolicitud.Autonumerico = False
+        Me.TxFechaSolicitud.Bloqueado = False
         Me.TxFechaSolicitud.Buscando = False
         Me.TxFechaSolicitud.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxFechaSolicitud.ClForm = Nothing
@@ -2220,6 +2253,7 @@ Partial Class FrmClientes
         'TxContrato
         '
         Me.TxContrato.Autonumerico = False
+        Me.TxContrato.Bloqueado = False
         Me.TxContrato.Buscando = False
         Me.TxContrato.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxContrato.ClForm = Nothing
@@ -2275,6 +2309,7 @@ Partial Class FrmClientes
         'TxMailFacturasCliente3
         '
         Me.TxMailFacturasCliente3.Autonumerico = False
+        Me.TxMailFacturasCliente3.Bloqueado = False
         Me.TxMailFacturasCliente3.Buscando = False
         Me.TxMailFacturasCliente3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailFacturasCliente3.ClForm = Nothing
@@ -2299,6 +2334,7 @@ Partial Class FrmClientes
         'TxMailAlbaranesCliente3
         '
         Me.TxMailAlbaranesCliente3.Autonumerico = False
+        Me.TxMailAlbaranesCliente3.Bloqueado = False
         Me.TxMailAlbaranesCliente3.Buscando = False
         Me.TxMailAlbaranesCliente3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailAlbaranesCliente3.ClForm = Nothing
@@ -2323,6 +2359,7 @@ Partial Class FrmClientes
         'TxMailFacturasCliente2
         '
         Me.TxMailFacturasCliente2.Autonumerico = False
+        Me.TxMailFacturasCliente2.Bloqueado = False
         Me.TxMailFacturasCliente2.Buscando = False
         Me.TxMailFacturasCliente2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailFacturasCliente2.ClForm = Nothing
@@ -2347,6 +2384,7 @@ Partial Class FrmClientes
         'TxMailFacturasCliente1
         '
         Me.TxMailFacturasCliente1.Autonumerico = False
+        Me.TxMailFacturasCliente1.Bloqueado = False
         Me.TxMailFacturasCliente1.Buscando = False
         Me.TxMailFacturasCliente1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailFacturasCliente1.ClForm = Nothing
@@ -2385,6 +2423,7 @@ Partial Class FrmClientes
         'TxMailAlbaranesCliente2
         '
         Me.TxMailAlbaranesCliente2.Autonumerico = False
+        Me.TxMailAlbaranesCliente2.Bloqueado = False
         Me.TxMailAlbaranesCliente2.Buscando = False
         Me.TxMailAlbaranesCliente2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailAlbaranesCliente2.ClForm = Nothing
@@ -2409,6 +2448,7 @@ Partial Class FrmClientes
         'TxMailAlbaranesCliente1
         '
         Me.TxMailAlbaranesCliente1.Autonumerico = False
+        Me.TxMailAlbaranesCliente1.Bloqueado = False
         Me.TxMailAlbaranesCliente1.Buscando = False
         Me.TxMailAlbaranesCliente1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailAlbaranesCliente1.ClForm = Nothing
@@ -2447,6 +2487,7 @@ Partial Class FrmClientes
         'TxOrigenDestinoCliente
         '
         Me.TxOrigenDestinoCliente.Autonumerico = False
+        Me.TxOrigenDestinoCliente.Bloqueado = False
         Me.TxOrigenDestinoCliente.Buscando = False
         Me.TxOrigenDestinoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxOrigenDestinoCliente.ClForm = Nothing
@@ -2489,6 +2530,7 @@ Partial Class FrmClientes
         '
         Me.BtTipoPorte.CL_Ancho = 0
         Me.BtTipoPorte.CL_BuscaAlb = False
+        Me.BtTipoPorte.CL_BuscarEnTodosLosCampos = False
         Me.BtTipoPorte.CL_campocodigo = Nothing
         Me.BtTipoPorte.CL_camponombre = Nothing
         Me.BtTipoPorte.CL_CampoOrden = "Nombre"
@@ -2514,6 +2556,7 @@ Partial Class FrmClientes
         'TxTipoPorteCliente
         '
         Me.TxTipoPorteCliente.Autonumerico = False
+        Me.TxTipoPorteCliente.Bloqueado = False
         Me.TxTipoPorteCliente.Buscando = False
         Me.TxTipoPorteCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoPorteCliente.ClForm = Nothing
@@ -2590,6 +2633,7 @@ Partial Class FrmClientes
         'TxFacturaEnvases
         '
         Me.TxFacturaEnvases.Autonumerico = False
+        Me.TxFacturaEnvases.Bloqueado = False
         Me.TxFacturaEnvases.Buscando = False
         Me.TxFacturaEnvases.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxFacturaEnvases.ClForm = Nothing
@@ -2630,6 +2674,7 @@ Partial Class FrmClientes
         'TxTipoPrecio
         '
         Me.TxTipoPrecio.Autonumerico = False
+        Me.TxTipoPrecio.Bloqueado = False
         Me.TxTipoPrecio.Buscando = False
         Me.TxTipoPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoPrecio.ClForm = Nothing
@@ -2670,6 +2715,7 @@ Partial Class FrmClientes
         'TxTipoFC
         '
         Me.TxTipoFC.Autonumerico = False
+        Me.TxTipoFC.Bloqueado = False
         Me.TxTipoFC.Buscando = False
         Me.TxTipoFC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoFC.ClForm = Nothing
@@ -2770,6 +2816,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaAcreedor.CL_Ancho = 0
         Me.BtBuscaAcreedor.CL_BuscaAlb = False
+        Me.BtBuscaAcreedor.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAcreedor.CL_campocodigo = Nothing
         Me.BtBuscaAcreedor.CL_camponombre = Nothing
         Me.BtBuscaAcreedor.CL_CampoOrden = "Nombre"
@@ -2795,6 +2842,7 @@ Partial Class FrmClientes
         'TxDato_44
         '
         Me.TxDato_44.Autonumerico = False
+        Me.TxDato_44.Bloqueado = False
         Me.TxDato_44.Buscando = False
         Me.TxDato_44.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_44.ClForm = Nothing
@@ -2836,6 +2884,7 @@ Partial Class FrmClientes
         'TxDato7
         '
         Me.TxDato7.Autonumerico = False
+        Me.TxDato7.Bloqueado = False
         Me.TxDato7.Buscando = False
         Me.TxDato7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato7.ClForm = Nothing
@@ -2892,6 +2941,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaGastoFac.CL_Ancho = 0
         Me.BtBuscaGastoFac.CL_BuscaAlb = False
+        Me.BtBuscaGastoFac.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaGastoFac.CL_campocodigo = Nothing
         Me.BtBuscaGastoFac.CL_camponombre = Nothing
         Me.BtBuscaGastoFac.CL_CampoOrden = "Nombre"
@@ -2917,6 +2967,7 @@ Partial Class FrmClientes
         'TxDato8
         '
         Me.TxDato8.Autonumerico = False
+        Me.TxDato8.Bloqueado = False
         Me.TxDato8.Buscando = False
         Me.TxDato8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato8.ClForm = Nothing
@@ -3072,6 +3123,7 @@ Partial Class FrmClientes
         'TxLugarEntrega
         '
         Me.TxLugarEntrega.Autonumerico = False
+        Me.TxLugarEntrega.Bloqueado = False
         Me.TxLugarEntrega.Buscando = False
         Me.TxLugarEntrega.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLugarEntrega.ClForm = Nothing
@@ -3096,6 +3148,7 @@ Partial Class FrmClientes
         'TxTransporteRapido
         '
         Me.TxTransporteRapido.Autonumerico = False
+        Me.TxTransporteRapido.Bloqueado = False
         Me.TxTransporteRapido.Buscando = False
         Me.TxTransporteRapido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTransporteRapido.ClForm = Nothing
@@ -3152,6 +3205,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaTransportista.CL_Ancho = 0
         Me.BtBuscaTransportista.CL_BuscaAlb = False
+        Me.BtBuscaTransportista.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaTransportista.CL_campocodigo = Nothing
         Me.BtBuscaTransportista.CL_camponombre = Nothing
         Me.BtBuscaTransportista.CL_CampoOrden = "Nombre"
@@ -3177,6 +3231,7 @@ Partial Class FrmClientes
         'TxTransportista
         '
         Me.TxTransportista.Autonumerico = False
+        Me.TxTransportista.Bloqueado = False
         Me.TxTransportista.Buscando = False
         Me.TxTransportista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTransportista.ClForm = Nothing
@@ -3247,6 +3302,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaTipoPalet.CL_Ancho = 0
         Me.BtBuscaTipoPalet.CL_BuscaAlb = False
+        Me.BtBuscaTipoPalet.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaTipoPalet.CL_campocodigo = Nothing
         Me.BtBuscaTipoPalet.CL_camponombre = Nothing
         Me.BtBuscaTipoPalet.CL_CampoOrden = "Nombre"
@@ -3272,6 +3328,7 @@ Partial Class FrmClientes
         'TxTipoPaletDescarga
         '
         Me.TxTipoPaletDescarga.Autonumerico = False
+        Me.TxTipoPaletDescarga.Bloqueado = False
         Me.TxTipoPaletDescarga.Buscando = False
         Me.TxTipoPaletDescarga.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoPaletDescarga.ClForm = Nothing
@@ -3328,6 +3385,7 @@ Partial Class FrmClientes
         '
         Me.BtTarifa.CL_Ancho = 0
         Me.BtTarifa.CL_BuscaAlb = False
+        Me.BtTarifa.CL_BuscarEnTodosLosCampos = False
         Me.BtTarifa.CL_campocodigo = Nothing
         Me.BtTarifa.CL_camponombre = Nothing
         Me.BtTarifa.CL_CampoOrden = "Nombre"
@@ -3353,6 +3411,7 @@ Partial Class FrmClientes
         'TxTarifaPorteDescargas
         '
         Me.TxTarifaPorteDescargas.Autonumerico = False
+        Me.TxTarifaPorteDescargas.Bloqueado = False
         Me.TxTarifaPorteDescargas.Buscando = False
         Me.TxTarifaPorteDescargas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTarifaPorteDescargas.ClForm = Nothing
@@ -3394,6 +3453,7 @@ Partial Class FrmClientes
         'TxOpEnvio
         '
         Me.TxOpEnvio.Autonumerico = False
+        Me.TxOpEnvio.Bloqueado = False
         Me.TxOpEnvio.Buscando = False
         Me.TxOpEnvio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxOpEnvio.ClForm = Nothing
@@ -3448,6 +3508,7 @@ Partial Class FrmClientes
         'TxReserva
         '
         Me.TxReserva.Autonumerico = False
+        Me.TxReserva.Bloqueado = False
         Me.TxReserva.Buscando = False
         Me.TxReserva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxReserva.ClForm = Nothing
@@ -3474,6 +3535,7 @@ Partial Class FrmClientes
         'TxMaxDias
         '
         Me.TxMaxDias.Autonumerico = False
+        Me.TxMaxDias.Bloqueado = False
         Me.TxMaxDias.Buscando = False
         Me.TxMaxDias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMaxDias.ClForm = Nothing
@@ -3516,6 +3578,7 @@ Partial Class FrmClientes
         'TxCalidad
         '
         Me.TxCalidad.Autonumerico = False
+        Me.TxCalidad.Bloqueado = False
         Me.TxCalidad.Buscando = False
         Me.TxCalidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCalidad.ClForm = Nothing
@@ -3601,6 +3664,7 @@ Partial Class FrmClientes
         'TxMailFacturasDescargas3
         '
         Me.TxMailFacturasDescargas3.Autonumerico = False
+        Me.TxMailFacturasDescargas3.Bloqueado = False
         Me.TxMailFacturasDescargas3.Buscando = False
         Me.TxMailFacturasDescargas3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailFacturasDescargas3.ClForm = Nothing
@@ -3625,6 +3689,7 @@ Partial Class FrmClientes
         'TxMailAlbaranesDescargas3
         '
         Me.TxMailAlbaranesDescargas3.Autonumerico = False
+        Me.TxMailAlbaranesDescargas3.Bloqueado = False
         Me.TxMailAlbaranesDescargas3.Buscando = False
         Me.TxMailAlbaranesDescargas3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailAlbaranesDescargas3.ClForm = Nothing
@@ -3649,6 +3714,7 @@ Partial Class FrmClientes
         'TxOrigenDestinoDescarga
         '
         Me.TxOrigenDestinoDescarga.Autonumerico = False
+        Me.TxOrigenDestinoDescarga.Bloqueado = False
         Me.TxOrigenDestinoDescarga.Buscando = False
         Me.TxOrigenDestinoDescarga.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxOrigenDestinoDescarga.ClForm = Nothing
@@ -3691,6 +3757,7 @@ Partial Class FrmClientes
         '
         Me.BtTipoPorte2.CL_Ancho = 0
         Me.BtTipoPorte2.CL_BuscaAlb = False
+        Me.BtTipoPorte2.CL_BuscarEnTodosLosCampos = False
         Me.BtTipoPorte2.CL_campocodigo = Nothing
         Me.BtTipoPorte2.CL_camponombre = Nothing
         Me.BtTipoPorte2.CL_CampoOrden = "Nombre"
@@ -3716,6 +3783,7 @@ Partial Class FrmClientes
         'TxTipoPorteDescarga
         '
         Me.TxTipoPorteDescarga.Autonumerico = False
+        Me.TxTipoPorteDescarga.Bloqueado = False
         Me.TxTipoPorteDescarga.Buscando = False
         Me.TxTipoPorteDescarga.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoPorteDescarga.ClForm = Nothing
@@ -3757,6 +3825,7 @@ Partial Class FrmClientes
         'TxMailFacturasDescargas2
         '
         Me.TxMailFacturasDescargas2.Autonumerico = False
+        Me.TxMailFacturasDescargas2.Bloqueado = False
         Me.TxMailFacturasDescargas2.Buscando = False
         Me.TxMailFacturasDescargas2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailFacturasDescargas2.ClForm = Nothing
@@ -3781,6 +3850,7 @@ Partial Class FrmClientes
         'TxMailFacturasDescargas1
         '
         Me.TxMailFacturasDescargas1.Autonumerico = False
+        Me.TxMailFacturasDescargas1.Bloqueado = False
         Me.TxMailFacturasDescargas1.Buscando = False
         Me.TxMailFacturasDescargas1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailFacturasDescargas1.ClForm = Nothing
@@ -3819,6 +3889,7 @@ Partial Class FrmClientes
         'TxMailAlbaranesDescargas2
         '
         Me.TxMailAlbaranesDescargas2.Autonumerico = False
+        Me.TxMailAlbaranesDescargas2.Bloqueado = False
         Me.TxMailAlbaranesDescargas2.Buscando = False
         Me.TxMailAlbaranesDescargas2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailAlbaranesDescargas2.ClForm = Nothing
@@ -3843,6 +3914,7 @@ Partial Class FrmClientes
         'TxMailAlbaranesDescargas1
         '
         Me.TxMailAlbaranesDescargas1.Autonumerico = False
+        Me.TxMailAlbaranesDescargas1.Bloqueado = False
         Me.TxMailAlbaranesDescargas1.Buscando = False
         Me.TxMailAlbaranesDescargas1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMailAlbaranesDescargas1.ClForm = Nothing
@@ -3922,6 +3994,7 @@ Partial Class FrmClientes
         'TxDato_28
         '
         Me.TxDato_28.Autonumerico = False
+        Me.TxDato_28.Bloqueado = False
         Me.TxDato_28.Buscando = False
         Me.TxDato_28.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_28.ClForm = Nothing
@@ -3960,6 +4033,7 @@ Partial Class FrmClientes
         'TxDato_26
         '
         Me.TxDato_26.Autonumerico = False
+        Me.TxDato_26.Bloqueado = False
         Me.TxDato_26.Buscando = False
         Me.TxDato_26.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_26.ClForm = Nothing
@@ -3998,6 +4072,7 @@ Partial Class FrmClientes
         'TxDato_25
         '
         Me.TxDato_25.Autonumerico = False
+        Me.TxDato_25.Bloqueado = False
         Me.TxDato_25.Buscando = False
         Me.TxDato_25.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_25.ClForm = Nothing
@@ -4037,6 +4112,7 @@ Partial Class FrmClientes
         '
         Me.BtBuscaPais.CL_Ancho = 0
         Me.BtBuscaPais.CL_BuscaAlb = False
+        Me.BtBuscaPais.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaPais.CL_campocodigo = Nothing
         Me.BtBuscaPais.CL_camponombre = Nothing
         Me.BtBuscaPais.CL_CampoOrden = "Nombre"
@@ -4062,6 +4138,7 @@ Partial Class FrmClientes
         'TxPaisDescarga
         '
         Me.TxPaisDescarga.Autonumerico = False
+        Me.TxPaisDescarga.Bloqueado = False
         Me.TxPaisDescarga.Buscando = False
         Me.TxPaisDescarga.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPaisDescarga.ClForm = Nothing
@@ -4116,6 +4193,7 @@ Partial Class FrmClientes
         'TxDato_23
         '
         Me.TxDato_23.Autonumerico = False
+        Me.TxDato_23.Bloqueado = False
         Me.TxDato_23.Buscando = False
         Me.TxDato_23.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_23.ClForm = Nothing
@@ -4154,6 +4232,7 @@ Partial Class FrmClientes
         'TxDato_22
         '
         Me.TxDato_22.Autonumerico = False
+        Me.TxDato_22.Bloqueado = False
         Me.TxDato_22.Buscando = False
         Me.TxDato_22.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_22.ClForm = Nothing
@@ -4192,6 +4271,7 @@ Partial Class FrmClientes
         'TxDato_20
         '
         Me.TxDato_20.Autonumerico = False
+        Me.TxDato_20.Bloqueado = False
         Me.TxDato_20.Buscando = False
         Me.TxDato_20.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_20.ClForm = Nothing

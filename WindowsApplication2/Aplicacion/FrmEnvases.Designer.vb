@@ -114,6 +114,8 @@ Partial Class FrmEnvases
         Me.LbAcreedor = New NetAgro.Lb(Me.components)
         Me.ChkEnvaseRevisado = New System.Windows.Forms.CheckBox()
         Me.chkObsoleto = New System.Windows.Forms.CheckBox()
+        Me.TxDescriptorFichero = New NetAgro.TxDato(Me.components)
+        Me.LbDescriptorFichero = New NetAgro.Lb(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,6 +135,7 @@ Partial Class FrmEnvases
         '
         Me.BtBuscaEnvase.CL_Ancho = 0
         Me.BtBuscaEnvase.CL_BuscaAlb = False
+        Me.BtBuscaEnvase.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaEnvase.CL_campocodigo = Nothing
         Me.BtBuscaEnvase.CL_camponombre = Nothing
         Me.BtBuscaEnvase.CL_CampoOrden = "Nombre"
@@ -149,7 +152,7 @@ Partial Class FrmEnvases
         Me.BtBuscaEnvase.cl_ListaW = Nothing
         Me.BtBuscaEnvase.CL_xCentro = False
         Me.BtBuscaEnvase.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBuscaEnvase.Location = New System.Drawing.Point(175, 8)
+        Me.BtBuscaEnvase.Location = New System.Drawing.Point(180, 9)
         Me.BtBuscaEnvase.Name = "BtBuscaEnvase"
         Me.BtBuscaEnvase.Size = New System.Drawing.Size(33, 23)
         Me.BtBuscaEnvase.TabIndex = 39
@@ -163,7 +166,7 @@ Partial Class FrmEnvases
         Me.Lb2.ClForm = Nothing
         Me.Lb2.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb2.ForeColor = System.Drawing.Color.Teal
-        Me.Lb2.Location = New System.Drawing.Point(12, 42)
+        Me.Lb2.Location = New System.Drawing.Point(8, 39)
         Me.Lb2.Name = "Lb2"
         Me.Lb2.Size = New System.Drawing.Size(65, 16)
         Me.Lb2.TabIndex = 38
@@ -172,6 +175,7 @@ Partial Class FrmEnvases
         'TxDato2
         '
         Me.TxDato2.Autonumerico = False
+        Me.TxDato2.Bloqueado = False
         Me.TxDato2.Buscando = False
         Me.TxDato2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato2.ClForm = Nothing
@@ -180,7 +184,7 @@ Partial Class FrmEnvases
         Me.TxDato2.GridLin = Nothing
         Me.TxDato2.HaCambiado = False
         Me.TxDato2.lbbusca = Nothing
-        Me.TxDato2.Location = New System.Drawing.Point(106, 40)
+        Me.TxDato2.Location = New System.Drawing.Point(111, 36)
         Me.TxDato2.MiError = False
         Me.TxDato2.Name = "TxDato2"
         Me.TxDato2.Orden = 0
@@ -201,7 +205,7 @@ Partial Class FrmEnvases
         Me.Lb1.ClForm = Nothing
         Me.Lb1.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb1.ForeColor = System.Drawing.Color.Teal
-        Me.Lb1.Location = New System.Drawing.Point(12, 15)
+        Me.Lb1.Location = New System.Drawing.Point(8, 12)
         Me.Lb1.Name = "Lb1"
         Me.Lb1.Size = New System.Drawing.Size(58, 16)
         Me.Lb1.TabIndex = 36
@@ -210,6 +214,7 @@ Partial Class FrmEnvases
         'TxDato1
         '
         Me.TxDato1.Autonumerico = False
+        Me.TxDato1.Bloqueado = False
         Me.TxDato1.Buscando = False
         Me.TxDato1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato1.ClForm = Nothing
@@ -218,7 +223,7 @@ Partial Class FrmEnvases
         Me.TxDato1.GridLin = Nothing
         Me.TxDato1.HaCambiado = False
         Me.TxDato1.lbbusca = Nothing
-        Me.TxDato1.Location = New System.Drawing.Point(106, 9)
+        Me.TxDato1.Location = New System.Drawing.Point(111, 9)
         Me.TxDato1.MiError = False
         Me.TxDato1.Name = "TxDato1"
         Me.TxDato1.Orden = 0
@@ -239,7 +244,7 @@ Partial Class FrmEnvases
         Me.Lb3.ClForm = Nothing
         Me.Lb3.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb3.ForeColor = System.Drawing.Color.Teal
-        Me.Lb3.Location = New System.Drawing.Point(12, 70)
+        Me.Lb3.Location = New System.Drawing.Point(8, 64)
         Me.Lb3.Name = "Lb3"
         Me.Lb3.Size = New System.Drawing.Size(93, 16)
         Me.Lb3.TabIndex = 42
@@ -248,6 +253,7 @@ Partial Class FrmEnvases
         'TxDato3
         '
         Me.TxDato3.Autonumerico = False
+        Me.TxDato3.Bloqueado = False
         Me.TxDato3.Buscando = False
         Me.TxDato3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato3.ClForm = Nothing
@@ -256,7 +262,7 @@ Partial Class FrmEnvases
         Me.TxDato3.GridLin = Nothing
         Me.TxDato3.HaCambiado = False
         Me.TxDato3.lbbusca = Nothing
-        Me.TxDato3.Location = New System.Drawing.Point(106, 67)
+        Me.TxDato3.Location = New System.Drawing.Point(111, 61)
         Me.TxDato3.MiError = False
         Me.TxDato3.Name = "TxDato3"
         Me.TxDato3.Orden = 0
@@ -272,6 +278,7 @@ Partial Class FrmEnvases
         'TxDato4
         '
         Me.TxDato4.Autonumerico = False
+        Me.TxDato4.Bloqueado = False
         Me.TxDato4.Buscando = False
         Me.TxDato4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato4.ClForm = Nothing
@@ -280,7 +287,7 @@ Partial Class FrmEnvases
         Me.TxDato4.GridLin = Nothing
         Me.TxDato4.HaCambiado = False
         Me.TxDato4.lbbusca = Nothing
-        Me.TxDato4.Location = New System.Drawing.Point(106, 96)
+        Me.TxDato4.Location = New System.Drawing.Point(111, 86)
         Me.TxDato4.MiError = False
         Me.TxDato4.Name = "TxDato4"
         Me.TxDato4.Orden = 0
@@ -297,6 +304,7 @@ Partial Class FrmEnvases
         '
         Me.BtBuscaFamEnvase.CL_Ancho = 0
         Me.BtBuscaFamEnvase.CL_BuscaAlb = False
+        Me.BtBuscaFamEnvase.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaFamEnvase.CL_campocodigo = Nothing
         Me.BtBuscaFamEnvase.CL_camponombre = Nothing
         Me.BtBuscaFamEnvase.CL_CampoOrden = "Nombre"
@@ -313,7 +321,7 @@ Partial Class FrmEnvases
         Me.BtBuscaFamEnvase.cl_ListaW = Nothing
         Me.BtBuscaFamEnvase.CL_xCentro = False
         Me.BtBuscaFamEnvase.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBuscaFamEnvase.Location = New System.Drawing.Point(150, 96)
+        Me.BtBuscaFamEnvase.Location = New System.Drawing.Point(155, 86)
         Me.BtBuscaFamEnvase.Name = "BtBuscaFamEnvase"
         Me.BtBuscaFamEnvase.Size = New System.Drawing.Size(33, 23)
         Me.BtBuscaFamEnvase.TabIndex = 44
@@ -327,7 +335,7 @@ Partial Class FrmEnvases
         Me.Lb4.ClForm = Nothing
         Me.Lb4.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb4.ForeColor = System.Drawing.Color.Teal
-        Me.Lb4.Location = New System.Drawing.Point(12, 102)
+        Me.Lb4.Location = New System.Drawing.Point(8, 89)
         Me.Lb4.Name = "Lb4"
         Me.Lb4.Size = New System.Drawing.Size(60, 16)
         Me.Lb4.TabIndex = 43
@@ -341,7 +349,7 @@ Partial Class FrmEnvases
         Me.Lb10.CL_ValorFijo = False
         Me.Lb10.ClForm = Nothing
         Me.Lb10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb10.Location = New System.Drawing.Point(189, 96)
+        Me.Lb10.Location = New System.Drawing.Point(194, 86)
         Me.Lb10.Name = "Lb10"
         Me.Lb10.Size = New System.Drawing.Size(236, 23)
         Me.Lb10.TabIndex = 67
@@ -354,7 +362,7 @@ Partial Class FrmEnvases
         Me.Lb16.ClForm = Nothing
         Me.Lb16.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb16.ForeColor = System.Drawing.Color.Teal
-        Me.Lb16.Location = New System.Drawing.Point(282, 13)
+        Me.Lb16.Location = New System.Drawing.Point(287, 12)
         Me.Lb16.Name = "Lb16"
         Me.Lb16.Size = New System.Drawing.Size(38, 16)
         Me.Lb16.TabIndex = 82
@@ -367,7 +375,7 @@ Partial Class FrmEnvases
         Me.CbTipoEnv.DeshabilitarRuedaRaton = False
         Me.CbTipoEnv.FormattingEnabled = True
         Me.CbTipoEnv.GridLin = Nothing
-        Me.CbTipoEnv.Location = New System.Drawing.Point(326, 10)
+        Me.CbTipoEnv.Location = New System.Drawing.Point(331, 10)
         Me.CbTipoEnv.MiEntidad = Nothing
         Me.CbTipoEnv.MiError = False
         Me.CbTipoEnv.Name = "CbTipoEnv"
@@ -385,7 +393,7 @@ Partial Class FrmEnvases
         Me.ChRetornable.ForeColor = System.Drawing.Color.Teal
         Me.ChRetornable.GridLin = Nothing
         Me.ChRetornable.HaCambiado = False
-        Me.ChRetornable.Location = New System.Drawing.Point(15, 213)
+        Me.ChRetornable.Location = New System.Drawing.Point(20, 195)
         Me.ChRetornable.MiEntidad = Nothing
         Me.ChRetornable.MiError = False
         Me.ChRetornable.Name = "ChRetornable"
@@ -415,6 +423,7 @@ Partial Class FrmEnvases
         'TxDato7
         '
         Me.TxDato7.Autonumerico = False
+        Me.TxDato7.Bloqueado = False
         Me.TxDato7.Buscando = False
         Me.TxDato7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato7.ClForm = Nothing
@@ -453,6 +462,7 @@ Partial Class FrmEnvases
         'TxDato6
         '
         Me.TxDato6.Autonumerico = False
+        Me.TxDato6.Bloqueado = False
         Me.TxDato6.Buscando = False
         Me.TxDato6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato6.ClForm = Nothing
@@ -491,6 +501,7 @@ Partial Class FrmEnvases
         'TxDato5
         '
         Me.TxDato5.Autonumerico = False
+        Me.TxDato5.Bloqueado = False
         Me.TxDato5.Buscando = False
         Me.TxDato5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato5.ClForm = Nothing
@@ -529,6 +540,7 @@ Partial Class FrmEnvases
         'TxDato8
         '
         Me.TxDato8.Autonumerico = False
+        Me.TxDato8.Bloqueado = False
         Me.TxDato8.Buscando = False
         Me.TxDato8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato8.ClForm = Nothing
@@ -537,7 +549,7 @@ Partial Class FrmEnvases
         Me.TxDato8.GridLin = Nothing
         Me.TxDato8.HaCambiado = False
         Me.TxDato8.lbbusca = Nothing
-        Me.TxDato8.Location = New System.Drawing.Point(133, 239)
+        Me.TxDato8.Location = New System.Drawing.Point(111, 221)
         Me.TxDato8.MiError = False
         Me.TxDato8.Name = "TxDato8"
         Me.TxDato8.Orden = 0
@@ -558,7 +570,7 @@ Partial Class FrmEnvases
         Me.Lb8.ClForm = Nothing
         Me.Lb8.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb8.ForeColor = System.Drawing.Color.Teal
-        Me.Lb8.Location = New System.Drawing.Point(12, 245)
+        Me.Lb8.Location = New System.Drawing.Point(8, 224)
         Me.Lb8.Name = "Lb8"
         Me.Lb8.Size = New System.Drawing.Size(75, 16)
         Me.Lb8.TabIndex = 85
@@ -572,7 +584,7 @@ Partial Class FrmEnvases
         Me.Lb9.ClForm = Nothing
         Me.Lb9.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb9.ForeColor = System.Drawing.Color.Teal
-        Me.Lb9.Location = New System.Drawing.Point(12, 272)
+        Me.Lb9.Location = New System.Drawing.Point(8, 251)
         Me.Lb9.Name = "Lb9"
         Me.Lb9.Size = New System.Drawing.Size(66, 16)
         Me.Lb9.TabIndex = 88
@@ -585,7 +597,7 @@ Partial Class FrmEnvases
         Me.CbTipoIva.DeshabilitarRuedaRaton = False
         Me.CbTipoIva.FormattingEnabled = True
         Me.CbTipoIva.GridLin = Nothing
-        Me.CbTipoIva.Location = New System.Drawing.Point(133, 267)
+        Me.CbTipoIva.Location = New System.Drawing.Point(111, 249)
         Me.CbTipoIva.MiEntidad = Nothing
         Me.CbTipoIva.MiError = False
         Me.CbTipoIva.Name = "CbTipoIva"
@@ -597,6 +609,7 @@ Partial Class FrmEnvases
         'TxDato10
         '
         Me.TxDato10.Autonumerico = False
+        Me.TxDato10.Bloqueado = False
         Me.TxDato10.Buscando = False
         Me.TxDato10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato10.ClForm = Nothing
@@ -605,7 +618,7 @@ Partial Class FrmEnvases
         Me.TxDato10.GridLin = Nothing
         Me.TxDato10.HaCambiado = False
         Me.TxDato10.lbbusca = Nothing
-        Me.TxDato10.Location = New System.Drawing.Point(400, 267)
+        Me.TxDato10.Location = New System.Drawing.Point(366, 248)
         Me.TxDato10.MiError = False
         Me.TxDato10.Name = "TxDato10"
         Me.TxDato10.Orden = 0
@@ -626,7 +639,7 @@ Partial Class FrmEnvases
         Me.Lb12.ClForm = Nothing
         Me.Lb12.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb12.ForeColor = System.Drawing.Color.Teal
-        Me.Lb12.Location = New System.Drawing.Point(279, 273)
+        Me.Lb12.Location = New System.Drawing.Point(245, 251)
         Me.Lb12.Name = "Lb12"
         Me.Lb12.Size = New System.Drawing.Size(95, 16)
         Me.Lb12.TabIndex = 89
@@ -635,6 +648,7 @@ Partial Class FrmEnvases
         'TxDato9
         '
         Me.TxDato9.Autonumerico = False
+        Me.TxDato9.Bloqueado = False
         Me.TxDato9.Buscando = False
         Me.TxDato9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato9.ClForm = Nothing
@@ -643,7 +657,7 @@ Partial Class FrmEnvases
         Me.TxDato9.GridLin = Nothing
         Me.TxDato9.HaCambiado = False
         Me.TxDato9.lbbusca = Nothing
-        Me.TxDato9.Location = New System.Drawing.Point(400, 239)
+        Me.TxDato9.Location = New System.Drawing.Point(366, 221)
         Me.TxDato9.MiError = False
         Me.TxDato9.Name = "TxDato9"
         Me.TxDato9.Orden = 0
@@ -664,7 +678,7 @@ Partial Class FrmEnvases
         Me.Lb11.ClForm = Nothing
         Me.Lb11.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb11.ForeColor = System.Drawing.Color.Teal
-        Me.Lb11.Location = New System.Drawing.Point(276, 241)
+        Me.Lb11.Location = New System.Drawing.Point(242, 224)
         Me.Lb11.Name = "Lb11"
         Me.Lb11.Size = New System.Drawing.Size(109, 16)
         Me.Lb11.TabIndex = 87
@@ -679,7 +693,7 @@ Partial Class FrmEnvases
         Me.ChkStockMarca.ForeColor = System.Drawing.Color.Teal
         Me.ChkStockMarca.GridLin = Nothing
         Me.ChkStockMarca.HaCambiado = False
-        Me.ChkStockMarca.Location = New System.Drawing.Point(192, 213)
+        Me.ChkStockMarca.Location = New System.Drawing.Point(192, 195)
         Me.ChkStockMarca.MiEntidad = Nothing
         Me.ChkStockMarca.MiError = False
         Me.ChkStockMarca.Name = "ChkStockMarca"
@@ -776,7 +790,7 @@ Partial Class FrmEnvases
         Me.ChkInventariable.ForeColor = System.Drawing.Color.Teal
         Me.ChkInventariable.GridLin = Nothing
         Me.ChkInventariable.HaCambiado = False
-        Me.ChkInventariable.Location = New System.Drawing.Point(412, 213)
+        Me.ChkInventariable.Location = New System.Drawing.Point(412, 195)
         Me.ChkInventariable.MiEntidad = Nothing
         Me.ChkInventariable.MiError = False
         Me.ChkInventariable.Name = "ChkInventariable"
@@ -823,6 +837,7 @@ Partial Class FrmEnvases
         'TxDato14
         '
         Me.TxDato14.Autonumerico = False
+        Me.TxDato14.Bloqueado = False
         Me.TxDato14.Buscando = False
         Me.TxDato14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato14.ClForm = Nothing
@@ -848,6 +863,7 @@ Partial Class FrmEnvases
         '
         Me.BtBusca1.CL_Ancho = 0
         Me.BtBusca1.CL_BuscaAlb = False
+        Me.BtBusca1.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca1.CL_campocodigo = Nothing
         Me.BtBusca1.CL_camponombre = Nothing
         Me.BtBusca1.CL_CampoOrden = "Nombre"
@@ -942,6 +958,7 @@ Partial Class FrmEnvases
         'TxDato17
         '
         Me.TxDato17.Autonumerico = False
+        Me.TxDato17.Bloqueado = False
         Me.TxDato17.Buscando = False
         Me.TxDato17.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato17.ClForm = Nothing
@@ -980,6 +997,7 @@ Partial Class FrmEnvases
         'TxDato16
         '
         Me.TxDato16.Autonumerico = False
+        Me.TxDato16.Bloqueado = False
         Me.TxDato16.Buscando = False
         Me.TxDato16.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato16.ClForm = Nothing
@@ -1031,6 +1049,7 @@ Partial Class FrmEnvases
         'TxDato15
         '
         Me.TxDato15.Autonumerico = False
+        Me.TxDato15.Bloqueado = False
         Me.TxDato15.Buscando = False
         Me.TxDato15.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato15.ClForm = Nothing
@@ -1056,6 +1075,7 @@ Partial Class FrmEnvases
         '
         Me.BtBusca2.CL_Ancho = 0
         Me.BtBusca2.CL_BuscaAlb = False
+        Me.BtBusca2.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca2.CL_campocodigo = Nothing
         Me.BtBusca2.CL_camponombre = Nothing
         Me.BtBusca2.CL_CampoOrden = "Nombre"
@@ -1096,6 +1116,7 @@ Partial Class FrmEnvases
         '
         Me.TxDato13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxDato13.Autonumerico = False
+        Me.TxDato13.Bloqueado = False
         Me.TxDato13.Buscando = False
         Me.TxDato13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato13.ClForm = Nothing
@@ -1121,6 +1142,7 @@ Partial Class FrmEnvases
         '
         Me.TxDato11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxDato11.Autonumerico = False
+        Me.TxDato11.Bloqueado = False
         Me.TxDato11.Buscando = False
         Me.TxDato11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato11.ClForm = Nothing
@@ -1191,6 +1213,7 @@ Partial Class FrmEnvases
         '
         Me.TxDato12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxDato12.Autonumerico = False
+        Me.TxDato12.Bloqueado = False
         Me.TxDato12.Buscando = False
         Me.TxDato12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato12.ClForm = Nothing
@@ -1220,7 +1243,7 @@ Partial Class FrmEnvases
         Me.Lb25.CL_ValorFijo = False
         Me.Lb25.ClForm = Nothing
         Me.Lb25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb25.Location = New System.Drawing.Point(189, 125)
+        Me.Lb25.Location = New System.Drawing.Point(194, 112)
         Me.Lb25.Name = "Lb25"
         Me.Lb25.Size = New System.Drawing.Size(236, 23)
         Me.Lb25.TabIndex = 110
@@ -1228,6 +1251,7 @@ Partial Class FrmEnvases
         'TxDato18
         '
         Me.TxDato18.Autonumerico = False
+        Me.TxDato18.Bloqueado = False
         Me.TxDato18.Buscando = False
         Me.TxDato18.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato18.ClForm = Nothing
@@ -1236,7 +1260,7 @@ Partial Class FrmEnvases
         Me.TxDato18.GridLin = Nothing
         Me.TxDato18.HaCambiado = False
         Me.TxDato18.lbbusca = Nothing
-        Me.TxDato18.Location = New System.Drawing.Point(106, 125)
+        Me.TxDato18.Location = New System.Drawing.Point(111, 112)
         Me.TxDato18.MiError = False
         Me.TxDato18.Name = "TxDato18"
         Me.TxDato18.Orden = 0
@@ -1253,6 +1277,7 @@ Partial Class FrmEnvases
         '
         Me.BtBusca3.CL_Ancho = 0
         Me.BtBusca3.CL_BuscaAlb = False
+        Me.BtBusca3.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca3.CL_campocodigo = Nothing
         Me.BtBusca3.CL_camponombre = Nothing
         Me.BtBusca3.CL_CampoOrden = "Nombre"
@@ -1269,7 +1294,7 @@ Partial Class FrmEnvases
         Me.BtBusca3.cl_ListaW = Nothing
         Me.BtBusca3.CL_xCentro = False
         Me.BtBusca3.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBusca3.Location = New System.Drawing.Point(150, 125)
+        Me.BtBusca3.Location = New System.Drawing.Point(155, 112)
         Me.BtBusca3.Name = "BtBusca3"
         Me.BtBusca3.Size = New System.Drawing.Size(33, 23)
         Me.BtBusca3.TabIndex = 108
@@ -1283,7 +1308,7 @@ Partial Class FrmEnvases
         Me.Lb26.ClForm = Nothing
         Me.Lb26.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb26.ForeColor = System.Drawing.Color.Teal
-        Me.Lb26.Location = New System.Drawing.Point(12, 131)
+        Me.Lb26.Location = New System.Drawing.Point(8, 115)
         Me.Lb26.Name = "Lb26"
         Me.Lb26.Size = New System.Drawing.Size(83, 16)
         Me.Lb26.TabIndex = 107
@@ -1297,7 +1322,7 @@ Partial Class FrmEnvases
         Me.Lb27.CL_ValorFijo = False
         Me.Lb27.ClForm = Nothing
         Me.Lb27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb27.Location = New System.Drawing.Point(189, 154)
+        Me.Lb27.Location = New System.Drawing.Point(194, 137)
         Me.Lb27.Name = "Lb27"
         Me.Lb27.Size = New System.Drawing.Size(236, 23)
         Me.Lb27.TabIndex = 114
@@ -1305,6 +1330,7 @@ Partial Class FrmEnvases
         'TxDato19
         '
         Me.TxDato19.Autonumerico = False
+        Me.TxDato19.Bloqueado = False
         Me.TxDato19.Buscando = False
         Me.TxDato19.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato19.ClForm = Nothing
@@ -1313,7 +1339,7 @@ Partial Class FrmEnvases
         Me.TxDato19.GridLin = Nothing
         Me.TxDato19.HaCambiado = False
         Me.TxDato19.lbbusca = Nothing
-        Me.TxDato19.Location = New System.Drawing.Point(106, 154)
+        Me.TxDato19.Location = New System.Drawing.Point(111, 137)
         Me.TxDato19.MiError = False
         Me.TxDato19.Name = "TxDato19"
         Me.TxDato19.Orden = 0
@@ -1330,6 +1356,7 @@ Partial Class FrmEnvases
         '
         Me.BtBusca4.CL_Ancho = 0
         Me.BtBusca4.CL_BuscaAlb = False
+        Me.BtBusca4.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca4.CL_campocodigo = Nothing
         Me.BtBusca4.CL_camponombre = Nothing
         Me.BtBusca4.CL_CampoOrden = "Nombre"
@@ -1346,7 +1373,7 @@ Partial Class FrmEnvases
         Me.BtBusca4.cl_ListaW = Nothing
         Me.BtBusca4.CL_xCentro = False
         Me.BtBusca4.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBusca4.Location = New System.Drawing.Point(150, 154)
+        Me.BtBusca4.Location = New System.Drawing.Point(155, 137)
         Me.BtBusca4.Name = "BtBusca4"
         Me.BtBusca4.Size = New System.Drawing.Size(33, 23)
         Me.BtBusca4.TabIndex = 112
@@ -1360,7 +1387,7 @@ Partial Class FrmEnvases
         Me.Lb28.ClForm = Nothing
         Me.Lb28.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb28.ForeColor = System.Drawing.Color.Teal
-        Me.Lb28.Location = New System.Drawing.Point(12, 160)
+        Me.Lb28.Location = New System.Drawing.Point(8, 140)
         Me.Lb28.Name = "Lb28"
         Me.Lb28.Size = New System.Drawing.Size(74, 16)
         Me.Lb28.TabIndex = 111
@@ -1374,7 +1401,7 @@ Partial Class FrmEnvases
         Me.Lb29.CL_ValorFijo = False
         Me.Lb29.ClForm = Nothing
         Me.Lb29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb29.Location = New System.Drawing.Point(189, 183)
+        Me.Lb29.Location = New System.Drawing.Point(194, 162)
         Me.Lb29.Name = "Lb29"
         Me.Lb29.Size = New System.Drawing.Size(146, 23)
         Me.Lb29.TabIndex = 118
@@ -1382,6 +1409,7 @@ Partial Class FrmEnvases
         'TxDato20
         '
         Me.TxDato20.Autonumerico = False
+        Me.TxDato20.Bloqueado = False
         Me.TxDato20.Buscando = False
         Me.TxDato20.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato20.ClForm = Nothing
@@ -1390,7 +1418,7 @@ Partial Class FrmEnvases
         Me.TxDato20.GridLin = Nothing
         Me.TxDato20.HaCambiado = False
         Me.TxDato20.lbbusca = Nothing
-        Me.TxDato20.Location = New System.Drawing.Point(106, 183)
+        Me.TxDato20.Location = New System.Drawing.Point(111, 162)
         Me.TxDato20.MiError = False
         Me.TxDato20.Name = "TxDato20"
         Me.TxDato20.Orden = 0
@@ -1407,6 +1435,7 @@ Partial Class FrmEnvases
         '
         Me.BtBusca5.CL_Ancho = 0
         Me.BtBusca5.CL_BuscaAlb = False
+        Me.BtBusca5.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca5.CL_campocodigo = Nothing
         Me.BtBusca5.CL_camponombre = Nothing
         Me.BtBusca5.CL_CampoOrden = "Nombre"
@@ -1423,7 +1452,7 @@ Partial Class FrmEnvases
         Me.BtBusca5.cl_ListaW = Nothing
         Me.BtBusca5.CL_xCentro = False
         Me.BtBusca5.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBusca5.Location = New System.Drawing.Point(150, 183)
+        Me.BtBusca5.Location = New System.Drawing.Point(155, 162)
         Me.BtBusca5.Name = "BtBusca5"
         Me.BtBusca5.Size = New System.Drawing.Size(33, 23)
         Me.BtBusca5.TabIndex = 116
@@ -1437,7 +1466,7 @@ Partial Class FrmEnvases
         Me.Lb30.ClForm = Nothing
         Me.Lb30.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb30.ForeColor = System.Drawing.Color.Teal
-        Me.Lb30.Location = New System.Drawing.Point(12, 189)
+        Me.Lb30.Location = New System.Drawing.Point(8, 165)
         Me.Lb30.Name = "Lb30"
         Me.Lb30.Size = New System.Drawing.Size(96, 16)
         Me.Lb30.TabIndex = 115
@@ -1451,7 +1480,7 @@ Partial Class FrmEnvases
         Me.Lb31.ClForm = Nothing
         Me.Lb31.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb31.ForeColor = System.Drawing.Color.Teal
-        Me.Lb31.Location = New System.Drawing.Point(496, 241)
+        Me.Lb31.Location = New System.Drawing.Point(462, 224)
         Me.Lb31.Name = "Lb31"
         Me.Lb31.Size = New System.Drawing.Size(26, 16)
         Me.Lb31.TabIndex = 119
@@ -1465,7 +1494,7 @@ Partial Class FrmEnvases
         Me.Lb32.ClForm = Nothing
         Me.Lb32.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb32.ForeColor = System.Drawing.Color.Teal
-        Me.Lb32.Location = New System.Drawing.Point(496, 271)
+        Me.Lb32.Location = New System.Drawing.Point(462, 251)
         Me.Lb32.Name = "Lb32"
         Me.Lb32.Size = New System.Drawing.Size(26, 16)
         Me.Lb32.TabIndex = 120
@@ -1502,6 +1531,7 @@ Partial Class FrmEnvases
         '
         Me.BtBusca12.CL_Ancho = 0
         Me.BtBusca12.CL_BuscaAlb = False
+        Me.BtBusca12.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca12.CL_campocodigo = Nothing
         Me.BtBusca12.CL_camponombre = Nothing
         Me.BtBusca12.CL_CampoOrden = "Nombre"
@@ -1527,6 +1557,7 @@ Partial Class FrmEnvases
         'TxCtaDevolucionFianzas
         '
         Me.TxCtaDevolucionFianzas.Autonumerico = False
+        Me.TxCtaDevolucionFianzas.Bloqueado = False
         Me.TxCtaDevolucionFianzas.Buscando = False
         Me.TxCtaDevolucionFianzas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCtaDevolucionFianzas.ClForm = Nothing
@@ -1552,7 +1583,7 @@ Partial Class FrmEnvases
         '
         'btRecomponerTara
         '
-        Me.btRecomponerTara.Location = New System.Drawing.Point(433, 174)
+        Me.btRecomponerTara.Location = New System.Drawing.Point(462, 154)
         Me.btRecomponerTara.Name = "btRecomponerTara"
         Me.btRecomponerTara.Size = New System.Drawing.Size(98, 31)
         Me.btRecomponerTara.TabIndex = 125
@@ -1562,6 +1593,8 @@ Partial Class FrmEnvases
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.GroupBox1.Controls.Add(Me.TxDescriptorFichero)
+        Me.GroupBox1.Controls.Add(Me.LbDescriptorFichero)
         Me.GroupBox1.Controls.Add(Me.TxPrecioFianza)
         Me.GroupBox1.Controls.Add(Me.LbPrecioFianza)
         Me.GroupBox1.Controls.Add(Me.TxCdFianza)
@@ -1570,9 +1603,9 @@ Partial Class FrmEnvases
         Me.GroupBox1.Controls.Add(Me.TxIdAcreedor)
         Me.GroupBox1.Controls.Add(Me.BtAcreedor)
         Me.GroupBox1.Controls.Add(Me.LbAcreedor)
-        Me.GroupBox1.Location = New System.Drawing.Point(11, 302)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 276)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(521, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(521, 107)
         Me.GroupBox1.TabIndex = 100400
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ifco, Chep, Europool ..."
@@ -1580,6 +1613,7 @@ Partial Class FrmEnvases
         'TxPrecioFianza
         '
         Me.TxPrecioFianza.Autonumerico = False
+        Me.TxPrecioFianza.Bloqueado = False
         Me.TxPrecioFianza.Buscando = False
         Me.TxPrecioFianza.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPrecioFianza.ClForm = Nothing
@@ -1588,7 +1622,7 @@ Partial Class FrmEnvases
         Me.TxPrecioFianza.GridLin = Nothing
         Me.TxPrecioFianza.HaCambiado = False
         Me.TxPrecioFianza.lbbusca = Nothing
-        Me.TxPrecioFianza.Location = New System.Drawing.Point(405, 49)
+        Me.TxPrecioFianza.Location = New System.Drawing.Point(405, 48)
         Me.TxPrecioFianza.MiError = False
         Me.TxPrecioFianza.Name = "TxPrecioFianza"
         Me.TxPrecioFianza.Orden = 0
@@ -1609,7 +1643,7 @@ Partial Class FrmEnvases
         Me.LbPrecioFianza.ClForm = Nothing
         Me.LbPrecioFianza.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbPrecioFianza.ForeColor = System.Drawing.Color.Teal
-        Me.LbPrecioFianza.Location = New System.Drawing.Point(299, 52)
+        Me.LbPrecioFianza.Location = New System.Drawing.Point(299, 51)
         Me.LbPrecioFianza.Name = "LbPrecioFianza"
         Me.LbPrecioFianza.Size = New System.Drawing.Size(100, 16)
         Me.LbPrecioFianza.TabIndex = 134
@@ -1618,6 +1652,7 @@ Partial Class FrmEnvases
         'TxCdFianza
         '
         Me.TxCdFianza.Autonumerico = False
+        Me.TxCdFianza.Bloqueado = False
         Me.TxCdFianza.Buscando = False
         Me.TxCdFianza.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCdFianza.ClForm = Nothing
@@ -1647,7 +1682,7 @@ Partial Class FrmEnvases
         Me.LbcdFianza.ClForm = Nothing
         Me.LbcdFianza.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbcdFianza.ForeColor = System.Drawing.Color.Teal
-        Me.LbcdFianza.Location = New System.Drawing.Point(8, 51)
+        Me.LbcdFianza.Location = New System.Drawing.Point(9, 51)
         Me.LbcdFianza.Name = "LbcdFianza"
         Me.LbcdFianza.Size = New System.Drawing.Size(115, 16)
         Me.LbcdFianza.TabIndex = 132
@@ -1669,6 +1704,7 @@ Partial Class FrmEnvases
         'TxIdAcreedor
         '
         Me.TxIdAcreedor.Autonumerico = False
+        Me.TxIdAcreedor.Bloqueado = False
         Me.TxIdAcreedor.Buscando = False
         Me.TxIdAcreedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxIdAcreedor.ClForm = Nothing
@@ -1694,6 +1730,7 @@ Partial Class FrmEnvases
         '
         Me.BtAcreedor.CL_Ancho = 0
         Me.BtAcreedor.CL_BuscaAlb = False
+        Me.BtAcreedor.CL_BuscarEnTodosLosCampos = False
         Me.BtAcreedor.CL_campocodigo = Nothing
         Me.BtAcreedor.CL_camponombre = Nothing
         Me.BtAcreedor.CL_CampoOrden = "Nombre"
@@ -1734,7 +1771,7 @@ Partial Class FrmEnvases
         '
         Me.ChkEnvaseRevisado.AutoSize = True
         Me.ChkEnvaseRevisado.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.ChkEnvaseRevisado.Location = New System.Drawing.Point(413, 68)
+        Me.ChkEnvaseRevisado.Location = New System.Drawing.Point(416, 62)
         Me.ChkEnvaseRevisado.Name = "ChkEnvaseRevisado"
         Me.ChkEnvaseRevisado.Size = New System.Drawing.Size(147, 20)
         Me.ChkEnvaseRevisado.TabIndex = 100401
@@ -1745,12 +1782,51 @@ Partial Class FrmEnvases
         '
         Me.chkObsoleto.AutoSize = True
         Me.chkObsoleto.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.chkObsoleto.Location = New System.Drawing.Point(437, 97)
+        Me.chkObsoleto.Location = New System.Drawing.Point(440, 87)
         Me.chkObsoleto.Name = "chkObsoleto"
         Me.chkObsoleto.Size = New System.Drawing.Size(123, 20)
         Me.chkObsoleto.TabIndex = 100402
         Me.chkObsoleto.Text = "Dado de baja"
         Me.chkObsoleto.UseVisualStyleBackColor = True
+        '
+        'TxDescriptorFichero
+        '
+        Me.TxDescriptorFichero.Autonumerico = False
+        Me.TxDescriptorFichero.Bloqueado = False
+        Me.TxDescriptorFichero.Buscando = False
+        Me.TxDescriptorFichero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxDescriptorFichero.ClForm = Nothing
+        Me.TxDescriptorFichero.ClParam = Nothing
+        Me.TxDescriptorFichero.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxDescriptorFichero.GridLin = Nothing
+        Me.TxDescriptorFichero.HaCambiado = False
+        Me.TxDescriptorFichero.lbbusca = Nothing
+        Me.TxDescriptorFichero.Location = New System.Drawing.Point(168, 75)
+        Me.TxDescriptorFichero.MiError = False
+        Me.TxDescriptorFichero.Name = "TxDescriptorFichero"
+        Me.TxDescriptorFichero.Orden = 0
+        Me.TxDescriptorFichero.SaltoAlfinal = False
+        Me.TxDescriptorFichero.Siguiente = 0
+        Me.TxDescriptorFichero.Size = New System.Drawing.Size(110, 22)
+        Me.TxDescriptorFichero.TabIndex = 137
+        Me.TxDescriptorFichero.TeclaRepetida = False
+        Me.TxDescriptorFichero.TxDatoFinalSemana = Nothing
+        Me.TxDescriptorFichero.TxDatoInicioSemana = Nothing
+        Me.TxDescriptorFichero.UltimoValorValidado = Nothing
+        '
+        'LbDescriptorFichero
+        '
+        Me.LbDescriptorFichero.AutoSize = True
+        Me.LbDescriptorFichero.CL_ControlAsociado = Nothing
+        Me.LbDescriptorFichero.CL_ValorFijo = False
+        Me.LbDescriptorFichero.ClForm = Nothing
+        Me.LbDescriptorFichero.Font = New System.Drawing.Font("Verdana", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbDescriptorFichero.ForeColor = System.Drawing.Color.Teal
+        Me.LbDescriptorFichero.Location = New System.Drawing.Point(9, 78)
+        Me.LbDescriptorFichero.Name = "LbDescriptorFichero"
+        Me.LbDescriptorFichero.Size = New System.Drawing.Size(139, 16)
+        Me.LbDescriptorFichero.TabIndex = 136
+        Me.LbDescriptorFichero.Text = "Descriptor Fichero"
         '
         'FrmEnvases
         '
@@ -1973,4 +2049,6 @@ Partial Class FrmEnvases
     Friend WithEvents LbAcreedor As NetAgro.Lb
     Friend WithEvents ChkEnvaseRevisado As System.Windows.Forms.CheckBox
     Friend WithEvents chkObsoleto As System.Windows.Forms.CheckBox
+    Friend WithEvents TxDescriptorFichero As TxDato
+    Friend WithEvents LbDescriptorFichero As Lb
 End Class
