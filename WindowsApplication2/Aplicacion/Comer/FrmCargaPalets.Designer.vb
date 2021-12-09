@@ -325,6 +325,7 @@ Partial Class FrmCargaPalets
         'TxHoraSalida
         '
         Me.TxHoraSalida.Autonumerico = False
+        Me.TxHoraSalida.Bloqueado = False
         Me.TxHoraSalida.Buscando = False
         Me.TxHoraSalida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxHoraSalida.ClForm = Nothing
@@ -399,6 +400,7 @@ Partial Class FrmCargaPalets
         'TxNumRegTemp
         '
         Me.TxNumRegTemp.Autonumerico = False
+        Me.TxNumRegTemp.Bloqueado = False
         Me.TxNumRegTemp.Buscando = False
         Me.TxNumRegTemp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNumRegTemp.ClForm = Nothing
@@ -439,6 +441,7 @@ Partial Class FrmCargaPalets
         'TxMovilChofer
         '
         Me.TxMovilChofer.Autonumerico = False
+        Me.TxMovilChofer.Bloqueado = False
         Me.TxMovilChofer.Buscando = False
         Me.TxMovilChofer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMovilChofer.ClForm = Nothing
@@ -490,6 +493,7 @@ Partial Class FrmCargaPalets
         'TxValorCambio
         '
         Me.TxValorCambio.Autonumerico = False
+        Me.TxValorCambio.Bloqueado = False
         Me.TxValorCambio.Buscando = False
         Me.TxValorCambio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxValorCambio.ClForm = Nothing
@@ -531,6 +535,7 @@ Partial Class FrmCargaPalets
         '
         Me.BtBuscaDivisa.CL_Ancho = 0
         Me.BtBuscaDivisa.CL_BuscaAlb = False
+        Me.BtBuscaDivisa.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDivisa.CL_campocodigo = Nothing
         Me.BtBuscaDivisa.CL_camponombre = Nothing
         Me.BtBuscaDivisa.CL_CampoOrden = "Nombre"
@@ -569,6 +574,7 @@ Partial Class FrmCargaPalets
         'TxDivisa
         '
         Me.TxDivisa.Autonumerico = False
+        Me.TxDivisa.Bloqueado = False
         Me.TxDivisa.Buscando = False
         Me.TxDivisa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDivisa.ClForm = Nothing
@@ -610,6 +616,7 @@ Partial Class FrmCargaPalets
         '
         Me.BtBuscaPorte.CL_Ancho = 0
         Me.BtBuscaPorte.CL_BuscaAlb = False
+        Me.BtBuscaPorte.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaPorte.CL_campocodigo = Nothing
         Me.BtBuscaPorte.CL_camponombre = Nothing
         Me.BtBuscaPorte.CL_CampoOrden = "Nombre"
@@ -648,6 +655,7 @@ Partial Class FrmCargaPalets
         'TxTipoPorte
         '
         Me.TxTipoPorte.Autonumerico = False
+        Me.TxTipoPorte.Bloqueado = False
         Me.TxTipoPorte.Buscando = False
         Me.TxTipoPorte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoPorte.ClForm = Nothing
@@ -702,6 +710,7 @@ Partial Class FrmCargaPalets
         '
         Me.BtBuscaDestino.CL_Ancho = 0
         Me.BtBuscaDestino.CL_BuscaAlb = False
+        Me.BtBuscaDestino.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDestino.CL_campocodigo = Nothing
         Me.BtBuscaDestino.CL_camponombre = Nothing
         Me.BtBuscaDestino.CL_CampoOrden = "Nombre"
@@ -727,6 +736,7 @@ Partial Class FrmCargaPalets
         'TxDomicilio
         '
         Me.TxDomicilio.Autonumerico = False
+        Me.TxDomicilio.Bloqueado = False
         Me.TxDomicilio.Buscando = False
         Me.TxDomicilio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDomicilio.ClForm = Nothing
@@ -780,6 +790,7 @@ Partial Class FrmCargaPalets
         'TxDato4
         '
         Me.TxDato4.Autonumerico = False
+        Me.TxDato4.Bloqueado = False
         Me.TxDato4.Buscando = False
         Me.TxDato4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato4.ClForm = Nothing
@@ -849,6 +860,7 @@ Partial Class FrmCargaPalets
         '
         Me.BtBuscaAlbaran.CL_Ancho = 0
         Me.BtBuscaAlbaran.CL_BuscaAlb = False
+        Me.BtBuscaAlbaran.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAlbaran.CL_campocodigo = Nothing
         Me.BtBuscaAlbaran.CL_camponombre = Nothing
         Me.BtBuscaAlbaran.CL_CampoOrden = "Nombre"
@@ -874,6 +886,7 @@ Partial Class FrmCargaPalets
         'TxFc
         '
         Me.TxFc.Autonumerico = False
+        Me.TxFc.Bloqueado = False
         Me.TxFc.Buscando = False
         Me.TxFc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxFc.ClForm = Nothing
@@ -900,6 +913,7 @@ Partial Class FrmCargaPalets
         'TxDato_8
         '
         Me.TxDato_8.Autonumerico = False
+        Me.TxDato_8.Bloqueado = False
         Me.TxDato_8.Buscando = False
         Me.TxDato_8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_8.ClForm = Nothing
@@ -940,6 +954,7 @@ Partial Class FrmCargaPalets
         'TxDato_7
         '
         Me.TxDato_7.Autonumerico = False
+        Me.TxDato_7.Bloqueado = False
         Me.TxDato_7.Buscando = False
         Me.TxDato_7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_7.ClForm = Nothing
@@ -994,6 +1009,7 @@ Partial Class FrmCargaPalets
         '
         Me.BtBusca_6.CL_Ancho = 0
         Me.BtBusca_6.CL_BuscaAlb = False
+        Me.BtBusca_6.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca_6.CL_campocodigo = Nothing
         Me.BtBusca_6.CL_camponombre = Nothing
         Me.BtBusca_6.CL_CampoOrden = "Nombre"
@@ -1019,6 +1035,7 @@ Partial Class FrmCargaPalets
         'TxDato_6
         '
         Me.TxDato_6.Autonumerico = False
+        Me.TxDato_6.Bloqueado = False
         Me.TxDato_6.Buscando = False
         Me.TxDato_6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_6.ClForm = Nothing
@@ -1111,6 +1128,7 @@ Partial Class FrmCargaPalets
         'TxPedido
         '
         Me.TxPedido.Autonumerico = False
+        Me.TxPedido.Bloqueado = False
         Me.TxPedido.Buscando = False
         Me.TxPedido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPedido.ClForm = Nothing
@@ -1137,6 +1155,7 @@ Partial Class FrmCargaPalets
         'TxDato_5
         '
         Me.TxDato_5.Autonumerico = False
+        Me.TxDato_5.Bloqueado = False
         Me.TxDato_5.Buscando = False
         Me.TxDato_5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_5.ClForm = Nothing
@@ -1283,6 +1302,7 @@ Partial Class FrmCargaPalets
         'TxDato_1
         '
         Me.TxDato_1.Autonumerico = False
+        Me.TxDato_1.Bloqueado = False
         Me.TxDato_1.Buscando = False
         Me.TxDato_1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_1.ClForm = Nothing
@@ -1310,6 +1330,7 @@ Partial Class FrmCargaPalets
         '
         Me.BtBuscaCliente.CL_Ancho = 0
         Me.BtBuscaCliente.CL_BuscaAlb = False
+        Me.BtBuscaCliente.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCliente.CL_campocodigo = Nothing
         Me.BtBuscaCliente.CL_camponombre = Nothing
         Me.BtBuscaCliente.CL_CampoOrden = "Nombre"
@@ -1335,6 +1356,7 @@ Partial Class FrmCargaPalets
         'TxDato_4
         '
         Me.TxDato_4.Autonumerico = False
+        Me.TxDato_4.Bloqueado = False
         Me.TxDato_4.Buscando = False
         Me.TxDato_4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_4.ClForm = Nothing
@@ -1389,6 +1411,7 @@ Partial Class FrmCargaPalets
         'TxDato_2
         '
         Me.TxDato_2.Autonumerico = False
+        Me.TxDato_2.Bloqueado = False
         Me.TxDato_2.Buscando = False
         Me.TxDato_2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_2.ClForm = Nothing
@@ -1415,6 +1438,7 @@ Partial Class FrmCargaPalets
         'TxDato_10
         '
         Me.TxDato_10.Autonumerico = False
+        Me.TxDato_10.Bloqueado = False
         Me.TxDato_10.Buscando = False
         Me.TxDato_10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_10.ClForm = Nothing
@@ -1599,6 +1623,7 @@ Partial Class FrmCargaPalets
         'TxCampa
         '
         Me.TxCampa.Autonumerico = False
+        Me.TxCampa.Bloqueado = False
         Me.TxCampa.Buscando = False
         Me.TxCampa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa.ClForm = Nothing

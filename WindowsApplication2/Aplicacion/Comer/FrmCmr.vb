@@ -701,5 +701,20 @@ Public Class FrmCmr
 
     End Sub
 
+    Private Sub TxDato_2_AntesDeValidar(edicion As Boolean) Handles TxDato_2.AntesDeValidar
+
+        If edicion Then
+            If VaDate(TxDato_2.Text) > VaDate("") Then
+                Dim HoraActual As Integer = Now.Hour
+                If HoraActual < 5 And VaDate(TxDato_2.Text) = Now.Date Then
+
+                    TxDato_2.Text = DateAdd(DateInterval.Day, -1, VaDate(TxDato_2.Text))
+
+                End If
+            End If
+        End If
+
+    End Sub
+
 End Class
 

@@ -1423,7 +1423,7 @@ Module Funciones
             hora = Replace(hora, ":", "")
 
 
-            Select Case hora.Trim.Length
+            Select Case (hora & "").Replace(":", "").Trim.Length
                 Case 2
                     HH = VaInt(hora).ToString("00")
                 Case 4
@@ -1435,6 +1435,7 @@ Module Funciones
                     ss = VaInt(hora.Substring(4, 2)).ToString("00")
                 Case Else
                     res = ""
+                    Return res
             End Select
 
 

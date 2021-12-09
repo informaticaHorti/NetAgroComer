@@ -192,6 +192,7 @@ Partial Class FrmCmr
         'TxNumRegTemp
         '
         Me.TxNumRegTemp.Autonumerico = False
+        Me.TxNumRegTemp.Bloqueado = False
         Me.TxNumRegTemp.Buscando = False
         Me.TxNumRegTemp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNumRegTemp.ClForm = Nothing
@@ -232,6 +233,7 @@ Partial Class FrmCmr
         'TxMovilChofer
         '
         Me.TxMovilChofer.Autonumerico = False
+        Me.TxMovilChofer.Bloqueado = False
         Me.TxMovilChofer.Buscando = False
         Me.TxMovilChofer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMovilChofer.ClForm = Nothing
@@ -272,6 +274,7 @@ Partial Class FrmCmr
         'TxDato_13
         '
         Me.TxDato_13.Autonumerico = False
+        Me.TxDato_13.Bloqueado = False
         Me.TxDato_13.Buscando = False
         Me.TxDato_13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_13.ClForm = Nothing
@@ -312,6 +315,7 @@ Partial Class FrmCmr
         'TxDato_8
         '
         Me.TxDato_8.Autonumerico = False
+        Me.TxDato_8.Bloqueado = False
         Me.TxDato_8.Buscando = False
         Me.TxDato_8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_8.ClForm = Nothing
@@ -359,13 +363,14 @@ Partial Class FrmCmr
         Me.Lb6.ForeColor = System.Drawing.Color.Teal
         Me.Lb6.Location = New System.Drawing.Point(160, 146)
         Me.Lb6.Name = "Lb6"
-        Me.Lb6.Size = New System.Drawing.Size(84, 52)
+        Me.Lb6.Size = New System.Drawing.Size(83, 52)
         Me.Lb6.TabIndex = 149
         Me.Lb6.Text = "C=CMR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "T=Transitario" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "D=DCTMC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'TxDato_7
         '
         Me.TxDato_7.Autonumerico = False
+        Me.TxDato_7.Bloqueado = False
         Me.TxDato_7.Buscando = False
         Me.TxDato_7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_7.ClForm = Nothing
@@ -406,6 +411,7 @@ Partial Class FrmCmr
         'TxDato_12
         '
         Me.TxDato_12.Autonumerico = False
+        Me.TxDato_12.Bloqueado = False
         Me.TxDato_12.Buscando = False
         Me.TxDato_12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_12.ClForm = Nothing
@@ -432,6 +438,7 @@ Partial Class FrmCmr
         'TxDato_11
         '
         Me.TxDato_11.Autonumerico = False
+        Me.TxDato_11.Bloqueado = False
         Me.TxDato_11.Buscando = False
         Me.TxDato_11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_11.ClForm = Nothing
@@ -458,6 +465,7 @@ Partial Class FrmCmr
         'TxDato_10
         '
         Me.TxDato_10.Autonumerico = False
+        Me.TxDato_10.Bloqueado = False
         Me.TxDato_10.Buscando = False
         Me.TxDato_10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_10.ClForm = Nothing
@@ -484,6 +492,7 @@ Partial Class FrmCmr
         'TxDato_9
         '
         Me.TxDato_9.Autonumerico = False
+        Me.TxDato_9.Bloqueado = False
         Me.TxDato_9.Buscando = False
         Me.TxDato_9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_9.ClForm = Nothing
@@ -524,6 +533,7 @@ Partial Class FrmCmr
         'TxDato_6
         '
         Me.TxDato_6.Autonumerico = False
+        Me.TxDato_6.Bloqueado = False
         Me.TxDato_6.Buscando = False
         Me.TxDato_6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_6.ClForm = Nothing
@@ -577,6 +587,7 @@ Partial Class FrmCmr
         'TxDato_4
         '
         Me.TxDato_4.Autonumerico = False
+        Me.TxDato_4.Bloqueado = False
         Me.TxDato_4.Buscando = False
         Me.TxDato_4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_4.ClForm = Nothing
@@ -603,6 +614,7 @@ Partial Class FrmCmr
         'TxDato_5
         '
         Me.TxDato_5.Autonumerico = False
+        Me.TxDato_5.Bloqueado = False
         Me.TxDato_5.Buscando = False
         Me.TxDato_5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_5.ClForm = Nothing
@@ -725,6 +737,7 @@ Partial Class FrmCmr
         'TxDato_2
         '
         Me.TxDato_2.Autonumerico = False
+        Me.TxDato_2.Bloqueado = False
         Me.TxDato_2.Buscando = False
         Me.TxDato_2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_2.ClForm = Nothing
@@ -779,6 +792,7 @@ Partial Class FrmCmr
         '
         Me.BtBuscaAlbaran.CL_Ancho = 0
         Me.BtBuscaAlbaran.CL_BuscaAlb = False
+        Me.BtBuscaAlbaran.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAlbaran.CL_campocodigo = Nothing
         Me.BtBuscaAlbaran.CL_camponombre = Nothing
         Me.BtBuscaAlbaran.CL_CampoOrden = "Nombre"
@@ -804,6 +818,7 @@ Partial Class FrmCmr
         'TxDato_1
         '
         Me.TxDato_1.Autonumerico = False
+        Me.TxDato_1.Bloqueado = False
         Me.TxDato_1.Buscando = False
         Me.TxDato_1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_1.ClForm = Nothing
@@ -892,6 +907,7 @@ Partial Class FrmCmr
         'TxDato_52
         '
         Me.TxDato_52.Autonumerico = False
+        Me.TxDato_52.Bloqueado = False
         Me.TxDato_52.Buscando = False
         Me.TxDato_52.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_52.ClForm = Nothing
@@ -933,6 +949,7 @@ Partial Class FrmCmr
         '
         Me.BtBusca_52.CL_Ancho = 0
         Me.BtBusca_52.CL_BuscaAlb = False
+        Me.BtBusca_52.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca_52.CL_campocodigo = Nothing
         Me.BtBusca_52.CL_camponombre = Nothing
         Me.BtBusca_52.CL_CampoOrden = "Nombre"
@@ -972,6 +989,7 @@ Partial Class FrmCmr
         'TxDato_57
         '
         Me.TxDato_57.Autonumerico = False
+        Me.TxDato_57.Bloqueado = False
         Me.TxDato_57.Buscando = False
         Me.TxDato_57.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_57.ClForm = Nothing
@@ -1011,6 +1029,7 @@ Partial Class FrmCmr
         'TxDato_51
         '
         Me.TxDato_51.Autonumerico = False
+        Me.TxDato_51.Bloqueado = False
         Me.TxDato_51.Buscando = False
         Me.TxDato_51.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_51.ClForm = Nothing
@@ -1052,6 +1071,7 @@ Partial Class FrmCmr
         '
         Me.BtBusca_51.CL_Ancho = 0
         Me.BtBusca_51.CL_BuscaAlb = False
+        Me.BtBusca_51.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca_51.CL_campocodigo = Nothing
         Me.BtBusca_51.CL_camponombre = Nothing
         Me.BtBusca_51.CL_CampoOrden = "Nombre"
@@ -1077,6 +1097,7 @@ Partial Class FrmCmr
         'TxDato_53
         '
         Me.TxDato_53.Autonumerico = False
+        Me.TxDato_53.Bloqueado = False
         Me.TxDato_53.Buscando = False
         Me.TxDato_53.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_53.ClForm = Nothing
@@ -1153,6 +1174,7 @@ Partial Class FrmCmr
         'TxDato_55
         '
         Me.TxDato_55.Autonumerico = False
+        Me.TxDato_55.Bloqueado = False
         Me.TxDato_55.Buscando = False
         Me.TxDato_55.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_55.ClForm = Nothing
@@ -1193,6 +1215,7 @@ Partial Class FrmCmr
         'TxDato_54
         '
         Me.TxDato_54.Autonumerico = False
+        Me.TxDato_54.Bloqueado = False
         Me.TxDato_54.Buscando = False
         Me.TxDato_54.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_54.ClForm = Nothing
@@ -1232,6 +1255,7 @@ Partial Class FrmCmr
         'TxDato_50
         '
         Me.TxDato_50.Autonumerico = False
+        Me.TxDato_50.Bloqueado = False
         Me.TxDato_50.Buscando = False
         Me.TxDato_50.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_50.ClForm = Nothing
@@ -1273,6 +1297,7 @@ Partial Class FrmCmr
         '
         Me.BtBusca_50.CL_Ancho = 0
         Me.BtBusca_50.CL_BuscaAlb = False
+        Me.BtBusca_50.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca_50.CL_campocodigo = Nothing
         Me.BtBusca_50.CL_camponombre = Nothing
         Me.BtBusca_50.CL_CampoOrden = "Nombre"
@@ -1312,6 +1337,7 @@ Partial Class FrmCmr
         'TxDato_56
         '
         Me.TxDato_56.Autonumerico = False
+        Me.TxDato_56.Bloqueado = False
         Me.TxDato_56.Buscando = False
         Me.TxDato_56.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_56.ClForm = Nothing

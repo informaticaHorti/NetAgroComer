@@ -1181,6 +1181,13 @@ Public Class FrmCargaPalets
         If Fedia = "" Then
             Fedia = Format(Now, "dd/MM/yyyy")
         End If
+
+        Dim HoraActual As Integer = Now.Hour
+        If HoraActual < 5 And VaDate(Fedia) = Now.Date Then
+            Fedia = DateAdd(DateInterval.Day, -1, VaDate(Fedia)).ToString("dd/MM/yyyy")
+        End If
+
+
         Dim dt As DataTable = Pedidos.PedidosPteCarga(Fedia)
 
 
@@ -1205,6 +1212,7 @@ Public Class FrmCargaPalets
                 TxDato_4.Focus()
             End If
         End If
+
     End Sub
 
     
@@ -1280,6 +1288,23 @@ Public Class FrmCargaPalets
         ChkImprimirEtiquetaCMR.Checked = ChkImprimirCMR.Checked
     End Sub
 
+
+    Private Sub TxDato_2_AntesDeValidar(edicion As Boolean) Handles TxDato_2.AntesDeValidar
+
+        If edicion Then
+            If VaDate(TxDato_2.Text) > VaDate("") Then
+                Dim HoraActual As Integer = Now.Hour
+                If HoraActual < 5 And VaDate(TxDato_2.Text) = Now.Date Then
+
+                    TxDato_2.Text = DateAdd(DateInterval.Day, -1, VaDate(TxDato_2.Text))
+                    TxHoraSalida.Text = "23:59:59"
+
+                End If
+            End If
+        End If
+
+    End Sub
+
     Private Sub TxDato_2_Valida(edicion As System.Boolean) Handles TxDato_2.Valida
 
         If edicion = True Then
@@ -1353,5 +1378,7 @@ Public Class FrmCargaPalets
         End If
 
     End Sub
-    
+
+
+
 End Class

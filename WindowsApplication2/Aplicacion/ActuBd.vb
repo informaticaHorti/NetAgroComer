@@ -432,6 +432,10 @@
         Actualizador.CreaCampo(ValoresEjercicio.VEJ_Bloqueada, "N")
 
 
+        Actualizador.CreaCampo(Envases.ENV_DescriptorFichero)
+
+
+
         If Not Actualizador.RealizaActualizaciones() Then
             bErrorFatal = True
         End If
