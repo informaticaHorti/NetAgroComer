@@ -25,7 +25,7 @@ Partial Class FrmConsultaGastosAlbSalida
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsultaGastosEntrada))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsultaGastosAlbSalida))
         Me.TxDato1 = New NetAgro.TxDato(Me.components)
         Me.BtBusca1 = New NetAgro.BtBusca(Me.components)
         Me.Lb1 = New NetAgro.Lb(Me.components)
@@ -50,7 +50,7 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel2
+        'PanelCabecera
         '
         Me.PanelCabecera.Controls.Add(Me.chkMostrarOrigenGastos)
         Me.PanelCabecera.Controls.Add(Me.GroupBox4)
@@ -62,7 +62,7 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.PanelCabecera.Controls.Add(Me.TxDato3)
         Me.PanelCabecera.Size = New System.Drawing.Size(1234, 117)
         '
-        'Panel3
+        'PanelConsulta
         '
         Me.PanelConsulta.Location = New System.Drawing.Point(0, 123)
         Me.PanelConsulta.Size = New System.Drawing.Size(1234, 399)
@@ -95,6 +95,7 @@ Partial Class FrmConsultaGastosAlbSalida
         'TxDato1
         '
         Me.TxDato1.Autonumerico = False
+        Me.TxDato1.Bloqueado = False
         Me.TxDato1.Buscando = False
         Me.TxDato1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato1.ClForm = Nothing
@@ -112,10 +113,15 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.TxDato1.Size = New System.Drawing.Size(63, 22)
         Me.TxDato1.TabIndex = 51
         Me.TxDato1.TeclaRepetida = False
+        Me.TxDato1.TxDatoFinalSemana = Nothing
+        Me.TxDato1.TxDatoInicioSemana = Nothing
+        Me.TxDato1.UltimoValorValidado = Nothing
         '
         'BtBusca1
         '
+        Me.BtBusca1.CL_Ancho = 0
         Me.BtBusca1.CL_BuscaAlb = False
+        Me.BtBusca1.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca1.CL_campocodigo = Nothing
         Me.BtBusca1.CL_camponombre = Nothing
         Me.BtBusca1.CL_CampoOrden = "Nombre"
@@ -125,6 +131,7 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.BtBusca1.CL_DevuelveCampo = "Idfamilia"
         Me.BtBusca1.CL_dfecha = Nothing
         Me.BtBusca1.CL_Entidad = Nothing
+        Me.BtBusca1.CL_EsId = True
         Me.BtBusca1.CL_Filtro = Nothing
         Me.BtBusca1.cl_formu = Nothing
         Me.BtBusca1.CL_hfecha = Nothing
@@ -180,6 +187,7 @@ Partial Class FrmConsultaGastosAlbSalida
         'TxDato2
         '
         Me.TxDato2.Autonumerico = False
+        Me.TxDato2.Bloqueado = False
         Me.TxDato2.Buscando = False
         Me.TxDato2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato2.ClForm = Nothing
@@ -197,10 +205,15 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.TxDato2.Size = New System.Drawing.Size(63, 22)
         Me.TxDato2.TabIndex = 78
         Me.TxDato2.TeclaRepetida = False
+        Me.TxDato2.TxDatoFinalSemana = Nothing
+        Me.TxDato2.TxDatoInicioSemana = Nothing
+        Me.TxDato2.UltimoValorValidado = Nothing
         '
         'BtBusca2
         '
+        Me.BtBusca2.CL_Ancho = 0
         Me.BtBusca2.CL_BuscaAlb = False
+        Me.BtBusca2.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca2.CL_campocodigo = Nothing
         Me.BtBusca2.CL_camponombre = Nothing
         Me.BtBusca2.CL_CampoOrden = "Nombre"
@@ -210,6 +223,7 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.BtBusca2.CL_DevuelveCampo = "Idfamilia"
         Me.BtBusca2.CL_dfecha = Nothing
         Me.BtBusca2.CL_Entidad = Nothing
+        Me.BtBusca2.CL_EsId = True
         Me.BtBusca2.CL_Filtro = Nothing
         Me.BtBusca2.cl_formu = Nothing
         Me.BtBusca2.CL_hfecha = Nothing
@@ -239,6 +253,7 @@ Partial Class FrmConsultaGastosAlbSalida
         'TxDato4
         '
         Me.TxDato4.Autonumerico = False
+        Me.TxDato4.Bloqueado = False
         Me.TxDato4.Buscando = False
         Me.TxDato4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato4.ClForm = Nothing
@@ -256,6 +271,9 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.TxDato4.Size = New System.Drawing.Size(102, 22)
         Me.TxDato4.TabIndex = 83
         Me.TxDato4.TeclaRepetida = False
+        Me.TxDato4.TxDatoFinalSemana = Nothing
+        Me.TxDato4.TxDatoInicioSemana = Nothing
+        Me.TxDato4.UltimoValorValidado = Nothing
         '
         'Lb4
         '
@@ -274,6 +292,7 @@ Partial Class FrmConsultaGastosAlbSalida
         'TxDato3
         '
         Me.TxDato3.Autonumerico = False
+        Me.TxDato3.Bloqueado = False
         Me.TxDato3.Buscando = False
         Me.TxDato3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato3.ClForm = Nothing
@@ -291,6 +310,9 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.TxDato3.Size = New System.Drawing.Size(102, 22)
         Me.TxDato3.TabIndex = 81
         Me.TxDato3.TeclaRepetida = False
+        Me.TxDato3.TxDatoFinalSemana = Nothing
+        Me.TxDato3.TxDatoInicioSemana = Nothing
+        Me.TxDato3.UltimoValorValidado = Nothing
         '
         'Lb3
         '
@@ -405,7 +427,7 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.chkMostrarOrigenGastos.ValorCampoTrue = Nothing
         Me.chkMostrarOrigenGastos.ValorDefecto = False
         '
-        'FrmConsultaGastosEntrada
+        'FrmConsultaGastosAlbSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -420,8 +442,8 @@ Partial Class FrmConsultaGastosAlbSalida
         Me.Controls.Add(Me.Lb1)
         Me.Controls.Add(Me._PanelCargando)
         Me.ListaEtiquetas = CType(resources.GetObject("$this.ListaEtiquetas"), System.Collections.Generic.List(Of Object))
-        Me.Name = "FrmConsultaGastosEntrada"
-        Me.Text = "Consulta  gastos entrada"
+        Me.Name = "FrmConsultaGastosAlbSalida"
+        Me.Text = "Consulta  gastos salidas"
         Me.Controls.SetChildIndex(Me._PanelCargando, 0)
         Me.Controls.SetChildIndex(Me.PanelCabecera, 0)
         Me.Controls.SetChildIndex(Me.PanelConsulta, 0)

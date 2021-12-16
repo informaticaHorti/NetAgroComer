@@ -1193,6 +1193,8 @@
             IdAlbaran = AlbEntrada_his.AEH_idalbaran.Valor
             If AlbEntrada.LeerId(IdAlbaran) = True Then
 
+                Cr = VaInt(AlbEntrada.AEN_IdRecogida.Valor)
+
                 IdTransportista = AlbEntrada.AEN_IdTransportista.Valor
 
                 Dim consulta3 As New Cdatos.E_select
