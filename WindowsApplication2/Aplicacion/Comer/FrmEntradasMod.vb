@@ -276,7 +276,7 @@ Public Class FrmEntradasMod
                 If TxDato16.Text = "" Then
                     TxDato16.Text = Agricultores.AGR_tipofcs.Valor
                 End If
-                DatosGasto()
+                'DatosGasto()
                 If Agricultores.AGR_TextoMensaje1.Valor.Trim <> "" Or Agricultores.AGR_TextoMensaje2.Valor.Trim <> "" Then
                     MsgBox(Agricultores.AGR_TextoMensaje1.Valor & Chr(13) & Chr(10) + Agricultores.AGR_TextoMensaje2.Valor)
                 End If
@@ -330,151 +330,151 @@ Public Class FrmEntradasMod
     End Sub
 
 
-    Private Sub DatosGasto()
+    'Private Sub DatosGasto()
 
-        Dim Consulta As New Cdatos.E_select
-        Dim i As Integer = 0
+    '    Dim Consulta As New Cdatos.E_select
+    '    Dim i As Integer = 0
 
-        Consulta.SelCampo(AgricultorGastos.AGG_IdGasto)
-        Consulta.SelCampo(Tiposdegastoagri.TGA_Nombre, "gasto", AgricultorGastos.AGG_IdGasto)
-        Consulta.SelCampo(AgricultorGastos.AGG_Valor, "valor")
-        Consulta.SelCampo(AgricultorGastos.AGG_TipoFC)
-        Consulta.SelCampo(Tiposdegastoagri.TGA_Tipo, "tipo")
-        Consulta.SelCampo(Origengastos.ORG_tipo, "origen", Tiposdegastoagri.TGA_idgrupo)
-        Consulta.SelCampo(AgricultorGastos.AGG_IdAcreedor)
-        Consulta.WheCampo(AgricultorGastos.AGG_IdAgricultor, "=", TxDato3.Text)
-        Consulta.WheCampo(AgricultorGastos.AGG_PedirEntrada, "=", "S")
+    '    Consulta.SelCampo(AgricultorGastos.AGG_IdGasto)
+    '    Consulta.SelCampo(Tiposdegastoagri.TGA_Nombre, "gasto", AgricultorGastos.AGG_IdGasto)
+    '    Consulta.SelCampo(AgricultorGastos.AGG_Valor, "valor")
+    '    Consulta.SelCampo(AgricultorGastos.AGG_TipoFC)
+    '    Consulta.SelCampo(Tiposdegastoagri.TGA_Tipo, "tipo")
+    '    Consulta.SelCampo(Origengastos.ORG_tipo, "origen", Tiposdegastoagri.TGA_idgrupo)
+    '    Consulta.SelCampo(AgricultorGastos.AGG_IdAcreedor)
+    '    Consulta.WheCampo(AgricultorGastos.AGG_IdAgricultor, "=", TxDato3.Text)
+    '    Consulta.WheCampo(AgricultorGastos.AGG_PedirEntrada, "=", "S")
 
-        Dim sql As String = Consulta.SQL
-        sql = sql + " AND (AGG_idcentrorec=0 or AGG_Idcentrorec=" + Mi_idcentroRecogida + ") "
-        sql = sql + " order by AGG_id"
-        Dim dt As New DataTable
-        dt = AgricultorGastos.MiConexion.ConsultaSQL(sql)
-        If Not dt Is Nothing Then
-            For Each rw In dt.Rows
-                i = i + 1
-                Select Case i
-                    Case 1
-                        TxIdGasto1.Text = rw("AGG_idgasto").ToString
-                        LbNomGasto1.Text = rw("gasto")
-                        LbTipGasto1.Text = rw("tipo")
-                        TxVgasto1.Text = rw("valor")
-                        BtBuscaAcreedor1.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
+    '    Dim sql As String = Consulta.SQL
+    '    sql = sql + " AND (AGG_idcentrorec=0 or AGG_Idcentrorec=" + Mi_idcentroRecogida + ") "
+    '    sql = sql + " order by AGG_id"
+    '    Dim dt As New DataTable
+    '    dt = AgricultorGastos.MiConexion.ConsultaSQL(sql)
+    '    If Not dt Is Nothing Then
+    '        For Each rw In dt.Rows
+    '            i = i + 1
+    '            Select Case i
+    '                Case 1
+    '                    TxIdGasto1.Text = rw("AGG_idgasto").ToString
+    '                    LbNomGasto1.Text = rw("gasto")
+    '                    LbTipGasto1.Text = rw("tipo")
+    '                    TxVgasto1.Text = rw("valor")
+    '                    BtBuscaAcreedor1.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
 
-                        LbDto1.Text = rw("AGG_tipofc").ToString
-
-
-                        TxAcreedor1.Text = rw("AGG_idacreedor").ToString
-                        If VaInt(TxAcreedor1.Text) > 0 Then
-                            TxAcreedor1.Validar(False)
-                        Else
-                            TxAcreedor1.Text = ""
-                        End If
-                        'BtBuscaGasto1.CL_Filtro = "ORIGEN='" + LbOrigenGasto1.Text + "'"
-                    Case 2
-                        TxIdGasto2.Text = rw("AGG_idgasto").ToString
-                        LbNomGasto2.Text = rw("gasto")
-                        LbTipGasto2.Text = rw("tipo")
-                        TxVgasto2.Text = rw("valor")
-                        BtBuscaAcreedor2.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
-
-                        LbDto2.Text = rw("AGG_tipofc").ToString
-
-                        TxAcreedor2.Text = rw("AGG_idacreedor").ToString
-                        If VaInt(TxAcreedor2.Text) > 0 Then
-                            TxAcreedor2.Validar(False)
-                        Else
-                            TxAcreedor2.Text = ""
-
-                        End If
-                        'BtBuscaGasto2.CL_Filtro = "ORIGEN='" + LbOrigenGasto2.Text + "'"
-                    Case 3
-                        TxIdGasto3.Text = rw("AGG_idgasto").ToString
-                        LbNomGasto3.Text = rw("gasto")
-                        LbTipGasto3.Text = rw("tipo")
-                        LbDto3.Text = rw("AGG_tipofc").ToString
-
-                        TxVgasto3.Text = rw("valor")
-                        BtBuscaAcreedor3.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
-
-                        TxAcreedor3.Text = rw("AGG_idacreedor").ToString
-                        If VaInt(TxAcreedor3.Text) > 0 Then
-                            TxAcreedor3.Validar(False)
-                        Else
-                            TxAcreedor3.Text = ""
-
-                        End If
-
-                        'BtBuscaGasto3.CL_Filtro = "ORIGEN='" + LbOrigenGasto3.Text + "'"
-                    Case 4
-                        TxIdGasto4.Text = rw("AGG_idgasto").ToString
-                        LbNomGasto4.Text = rw("gasto")
-                        LbTipGasto4.Text = rw("tipo")
-                        TxVgasto4.Text = rw("valor")
-                        BtBuscaAcreedor4.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
-                        LbDto4.Text = rw("AGG_tipofc").ToString
-
-                        TxAcreedor4.Text = rw("AGG_idacreedor").ToString
-                        If VaInt(TxAcreedor4.Text) > 0 Then
-                            TxAcreedor4.Validar(False)
-                        Else
-                            TxAcreedor4.Text = ""
-                        End If
-
-                        'BtBuscaGasto4.CL_Filtro = "origen='" + LbOrigenGasto4.Text + "'"
-
-                End Select
-            Next
-            Dim o As Integer = 0
-            If TxIdGasto1.Text = "" Then
-                o = TxIdGasto1.Orden
-            End If
-            If o = 0 Then
-                If TxAcreedor1.Text = "" Then
-                    o = TxAcreedor1.Orden
-                End If
-            End If
-            If o = 0 Then
-                If TxIdGasto2.Text = "" Then
-                    o = TxIdGasto2.Orden
-                End If
-            End If
-
-            If o = 0 Then
-                If TxAcreedor2.Text = "" Then
-                    o = TxAcreedor2.Orden
-                End If
-            End If
-            If o = 0 Then
-                If TxIdGasto3.Text = "" Then
-                    o = TxIdGasto3.Orden
-                End If
-            End If
-            If o = 0 Then
-                If TxAcreedor3.Text = "" Then
-                    o = TxAcreedor3.Orden
-                End If
-            End If
-            If o = 0 Then
-                If TxIdGasto4.Text = "" Then
-                    o = TxIdGasto4.Orden
-                End If
-            End If
-            If o = 0 Then
-                If TxAcreedor4.Text = "" Then
-                    o = TxAcreedor4.Orden
-                End If
-            End If
-            If o > 0 Then
-
-                TxDato6.Siguiente = o
-
-            End If
-
-        End If
+    '                    LbDto1.Text = rw("AGG_tipofc").ToString
 
 
-    End Sub
+    '                    TxAcreedor1.Text = rw("AGG_idacreedor").ToString
+    '                    If VaInt(TxAcreedor1.Text) > 0 Then
+    '                        TxAcreedor1.Validar(False)
+    '                    Else
+    '                        TxAcreedor1.Text = ""
+    '                    End If
+    '                    'BtBuscaGasto1.CL_Filtro = "ORIGEN='" + LbOrigenGasto1.Text + "'"
+    '                Case 2
+    '                    TxIdGasto2.Text = rw("AGG_idgasto").ToString
+    '                    LbNomGasto2.Text = rw("gasto")
+    '                    LbTipGasto2.Text = rw("tipo")
+    '                    TxVgasto2.Text = rw("valor")
+    '                    BtBuscaAcreedor2.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
+
+    '                    LbDto2.Text = rw("AGG_tipofc").ToString
+
+    '                    TxAcreedor2.Text = rw("AGG_idacreedor").ToString
+    '                    If VaInt(TxAcreedor2.Text) > 0 Then
+    '                        TxAcreedor2.Validar(False)
+    '                    Else
+    '                        TxAcreedor2.Text = ""
+
+    '                    End If
+    '                    'BtBuscaGasto2.CL_Filtro = "ORIGEN='" + LbOrigenGasto2.Text + "'"
+    '                Case 3
+    '                    TxIdGasto3.Text = rw("AGG_idgasto").ToString
+    '                    LbNomGasto3.Text = rw("gasto")
+    '                    LbTipGasto3.Text = rw("tipo")
+    '                    LbDto3.Text = rw("AGG_tipofc").ToString
+
+    '                    TxVgasto3.Text = rw("valor")
+    '                    BtBuscaAcreedor3.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
+
+    '                    TxAcreedor3.Text = rw("AGG_idacreedor").ToString
+    '                    If VaInt(TxAcreedor3.Text) > 0 Then
+    '                        TxAcreedor3.Validar(False)
+    '                    Else
+    '                        TxAcreedor3.Text = ""
+
+    '                    End If
+
+    '                    'BtBuscaGasto3.CL_Filtro = "ORIGEN='" + LbOrigenGasto3.Text + "'"
+    '                Case 4
+    '                    TxIdGasto4.Text = rw("AGG_idgasto").ToString
+    '                    LbNomGasto4.Text = rw("gasto")
+    '                    LbTipGasto4.Text = rw("tipo")
+    '                    TxVgasto4.Text = rw("valor")
+    '                    BtBuscaAcreedor4.CL_Filtro = "TIPO='" + rw("origen").ToString + "'"
+    '                    LbDto4.Text = rw("AGG_tipofc").ToString
+
+    '                    TxAcreedor4.Text = rw("AGG_idacreedor").ToString
+    '                    If VaInt(TxAcreedor4.Text) > 0 Then
+    '                        TxAcreedor4.Validar(False)
+    '                    Else
+    '                        TxAcreedor4.Text = ""
+    '                    End If
+
+    '                    'BtBuscaGasto4.CL_Filtro = "origen='" + LbOrigenGasto4.Text + "'"
+
+    '            End Select
+    '        Next
+    '        Dim o As Integer = 0
+    '        If TxIdGasto1.Text = "" Then
+    '            o = TxIdGasto1.Orden
+    '        End If
+    '        If o = 0 Then
+    '            If TxAcreedor1.Text = "" Then
+    '                o = TxAcreedor1.Orden
+    '            End If
+    '        End If
+    '        If o = 0 Then
+    '            If TxIdGasto2.Text = "" Then
+    '                o = TxIdGasto2.Orden
+    '            End If
+    '        End If
+
+    '        If o = 0 Then
+    '            If TxAcreedor2.Text = "" Then
+    '                o = TxAcreedor2.Orden
+    '            End If
+    '        End If
+    '        If o = 0 Then
+    '            If TxIdGasto3.Text = "" Then
+    '                o = TxIdGasto3.Orden
+    '            End If
+    '        End If
+    '        If o = 0 Then
+    '            If TxAcreedor3.Text = "" Then
+    '                o = TxAcreedor3.Orden
+    '            End If
+    '        End If
+    '        If o = 0 Then
+    '            If TxIdGasto4.Text = "" Then
+    '                o = TxIdGasto4.Orden
+    '            End If
+    '        End If
+    '        If o = 0 Then
+    '            If TxAcreedor4.Text = "" Then
+    '                o = TxAcreedor4.Orden
+    '            End If
+    '        End If
+    '        If o > 0 Then
+
+    '            TxDato6.Siguiente = o
+
+    '        End If
+
+    '    End If
+
+
+    'End Sub
 
 
     Private Sub TxIdGasto4_Valida(ByVal edicion As Boolean) Handles TxIdGasto4.Valida
