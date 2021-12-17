@@ -1207,6 +1207,7 @@
 
 
                 Dim dt3 As DataTable = AlbEntrada_gastos.MiConexion.ConsultaSQL(consulta3.SQL)
+
                 If Not dt3 Is Nothing Then
                     For Each rw In dt3.Rows
                         I = 0
@@ -1279,6 +1280,7 @@
         Consulta.SelCampo(AgricultorGastos.AGG_TipoFC, "tipofc")
         Consulta.SelCampo(AgricultorGastos.AGG_IdAcreedor, "idacreedor")
         Consulta.SelCampo(AgricultorGastos.AGG_AsignarAcreedorAlbaran, "AsignarAcreedor")
+        Consulta.SelCampo(AgricultorGastos.AGG_idcentrorec, "IdCentroRecogida")
         Consulta.WheCampo(AgricultorGastos.AGG_IdAgricultor, "=", IdAgricultor)
         Consulta.WheCampo(AgricultorGastos.AGG_PedirEntrada, "<>", "S")
 
@@ -1288,39 +1290,93 @@
 
 
         dt = AgricultorGastos.MiConexion.ConsultaSQL(sqlg)
-        If Not dt Is Nothing Then
-            For Each rw In dt.Rows
-
-                I = 0
-
-                Dim vg As Decimal = VaDec(rw("valor"))
-                Dim bAsignarAcreedor As Boolean = ((rw("AsignarAcreedor").ToString & "").Trim = "S")
 
 
-                Select Case rw("tipo")
-                    Case "K"
-                        I = Tk * rw("valor")
-                    Case "B"
-                        I = Tb * rw("valor")
-                    Case "P"
-                        I = Tp * rw("valor")
-                    Case "%"
-                        I = Ti * rw("valor") / 100
-                    Case "I"
-                        vg = vg * porcentaje / 100
-                        I = vg
-                End Select
+
+        'Explicación del comportamiento de la generación de los gastos (16/12/2021) según cambios pedidos por Manolo
+        'Los gastos sin centro de recogida se aplican para todos los centros
+        'Los gastos con centro de recogida se aplican sólo si el albarán de entrada tiene ese centro de recogida especificado
+        'Si se da el caso de que hay un gasto con el mismo IdGasto y el mismo IdAcreeedor pero distinto centro de recogida y el centro de recogida es el mismo del albarán de entrada, se usa el que tiene el centro de recogida, el que no tiene centro de recogida no se usa
+        'Se validará desde el grid de gastos de la ficha de agricultor que no pueda existir un gasto con mismo IdGasto, IdAcreedor e IdCentroRecogida
+
+        Dim DcGastos As New Dictionary(Of String, DataRow)          'Almacena como clave el IdGasto y el IdAcreedor y guarda el Centro de recogida que tiene que aplicar
+        If Not IsNothing(dt) Then
+
+            Dim dtGastos As DataTable = dt.Copy
 
 
-                Dim IdAcreedor As String = rw("idacreedor").ToString
+            'Primero añadimos todos los que no tengan centro de recogida
+            For Each row As DataRow In dt.Rows
 
-                If bAsignarAcreedor = True Then
-                    IdAcreedor = IdTransportista
+                Dim IdCentroRecogida As String = (row("IdCentroRecogida").ToString & "").Trim
+                If VaInt(IdCentroRecogida) = 0 Then
+
+                    Dim IdGasto As String = (row("IdGasto").ToString & "").Trim
+                    Dim IdAcreedor As String = (row("IdAcreedor").ToString & "").Trim
+                    Dim clave As String = IdGasto & "|" & IdAcreedor
+
+                    DcGastos(clave) = row
+
                 End If
-                AñadirLineaGastoshis(idalbhis, IdAlbaran, rw("idgasto"), vg, rw("tipo"), rw("tipofc"), I, IdAcreedor, dcfacturas)
 
             Next
+
+            'Después sobreeescribimos los que tengan el mismo idgasto e idacreedor, pero con el centro de recogida actual
+            For Each row As DataRow In dt.Rows
+
+                Dim IdCentroRecogida As String = (row("IdCentroRecogida").ToString & "").Trim
+                If VaInt(IdCentroRecogida) = Cr Then
+
+                    Dim IdGasto As String = (row("IdGasto").ToString & "").Trim
+                    Dim IdAcreedor As String = (row("IdAcreedor").ToString & "").Trim
+                    Dim clave As String = IdGasto & "|" & IdAcreedor
+
+                    DcGastos(clave) = row
+
+                End If
+
+            Next
+
+
         End If
+
+
+
+        'If Not dt Is Nothing Then
+        'For Each rw In dt.Rows
+
+        For Each rw As DataRow In DcGastos.Values
+
+            I = 0
+
+            Dim vg As Decimal = VaDec(rw("valor"))
+            Dim bAsignarAcreedor As Boolean = ((rw("AsignarAcreedor").ToString & "").Trim = "S")
+
+
+            Select Case rw("tipo")
+                Case "K"
+                    I = Tk * rw("valor")
+                Case "B"
+                    I = Tb * rw("valor")
+                Case "P"
+                    I = Tp * rw("valor")
+                Case "%"
+                    I = Ti * rw("valor") / 100
+                Case "I"
+                    vg = vg * porcentaje / 100
+                    I = vg
+            End Select
+
+
+            Dim IdAcreedor As String = rw("idacreedor").ToString
+
+            If bAsignarAcreedor = True Then
+                IdAcreedor = IdTransportista
+            End If
+            AñadirLineaGastoshis(idalbhis, IdAlbaran, rw("idgasto"), vg, rw("tipo"), rw("tipofc"), I, IdAcreedor, dcfacturas)
+
+        Next
+        'End If
     End Sub
 
     Private Sub AñadirLineaGastoshis(ByVal idalbhis As Integer, ByVal idalbaran As Integer, ByVal idgasto As Integer, ByVal valor As Decimal, ByVal tipo As String, ByVal tipofc As String, ByVal importe As Double, ByVal idacreedor As String, dcfacturas As Dictionary(Of Integer, Integer))

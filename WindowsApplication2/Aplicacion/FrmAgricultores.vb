@@ -154,6 +154,30 @@ Public Class FrmAgricultores
 
 
     Public Overrides Function GuardarLineas(ByVal Gr As ClGrid) As Boolean
+
+
+        If Gr Is ClGrid1 Then
+
+
+            Dim IdLinea As String = ""
+            Dim IdGasto As String = TxDato_42.Text
+            Dim IdAcreedor As String = TxDato_44.Text
+            Dim IdCentroRecogida As String = TxDato_45.Text
+
+
+            Dim row As DataRow = ClGrid1.GridView.GetFocusedDataRow()
+            If Not IsNothing(row) Then
+                IdLinea = (row("AGG_Id").ToString & "").Trim
+            End If
+
+            If GastoYaIntroducido(IdLinea, LbId.Text, IdGasto, IdAcreedor, IdCentroRecogida) Then
+                MsgBox("No se puede introducir un gasto con el mismo código de gasto, código de acreedor y centro de descarga")
+                Return False
+            End If
+
+        End If
+
+
         'asociar cabecera con lineas
         AgricultorGastos.AGG_IdAgricultor.Valor = TxDato_1.Text
 
@@ -161,6 +185,39 @@ Public Class FrmAgricultores
         CargaLineasGrid(False)
 
         Return MyBase.GuardarLineas(Gr)
+
+    End Function
+
+
+    Private Function GastoYaIntroducido(ByVal IdLinea As String, ByVal IdAgricultor As String, ByVal IdGasto As String, ByVal IdAcreedor As String, ByVal IdCentroRecogida As String) As Boolean
+
+        Dim bRes As Boolean = False
+
+
+        If VaInt(IdGasto) > 0 And VaInt(IdAgricultor) > 0 Then
+
+            Dim sql As String = "SELECT AGG_Id as Id" & vbCrLf
+            sql = sql & " FROM AgricultorGastos" & vbCrLf
+            sql = sql & " WHERE AGG_IdAgricultor = " & IdAgricultor & vbCrLf
+            sql = sql & " And AGG_IdGasto = " & IdGasto & vbCrLf
+            sql = sql & " AND COALESCE(AGG_IdAcreedor,0) = " & VaInt(IdAcreedor).ToString & vbCrLf
+            sql = sql & " AND COALESCE(AGG_IdCentroRec,0) = " & VaInt(IdCentroRecogida).ToString & vbCrLf
+            If VaDec(IdLinea) > 0 Then
+                sql = sql & " AND AGG_Id <> " & IdLinea & vbCrLf
+            End If
+
+            Dim dt As DataTable = Agricultor.MiConexion.ConsultaSQL(sql)
+            If Not IsNothing(dt) Then
+                If dt.Rows.Count > 0 Then
+                    bRes = True
+                End If
+            End If
+
+        End If
+
+
+
+        Return bRes
 
     End Function
 
@@ -438,7 +495,7 @@ Public Class FrmAgricultores
             If OrigenGastos.LeerId(TiposdeGastosAgri.TGA_idgrupo.Valor) Then
                 BtBuscaAcreedor.CL_Filtro = "TIPO='" + OrigenGastos.ORG_tipo.Valor + "'"
             End If
-            If edicion = True Then
+        If edicion = True Then
                 If CbFaccom.SelectedValue Is Nothing Then
                     CbFaccom.SelectedValue = TiposdeGastosAgri.TGA_tipogastofc.Valor
                 End If
