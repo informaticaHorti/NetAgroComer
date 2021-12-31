@@ -1,4 +1,7 @@
-﻿Public Class _FrMPrincipal
+﻿Imports CefSharp.WinForms
+
+
+Public Class _FrMPrincipal
 
 
     Private err As New Errores
@@ -335,7 +338,7 @@
 
                 pnlTabWebBrowser.Visible = True
 
-                _frmWebBrowser = New FrmWebBrowser
+                _frmWebBrowser = New FrmWebBrowser(Me)
                 _frmWebBrowser.MdiParent = Me
                 _frmWebBrowser.Show()
 
@@ -402,9 +405,9 @@
 
                 If control.Length > 0 Then
 
-                    If TypeOf control(0) Is WebBrowser Then
+                    If TypeOf control(0) Is ChromiumWebBrowser Then
 
-                        Dim browser As WebBrowser = CType(control(0), WebBrowser)
+                        Dim browser As ChromiumWebBrowser = CType(control(0), ChromiumWebBrowser)
                         browser.BringToFront()
                         Application.DoEvents()
 
@@ -421,30 +424,35 @@
 
     Private Sub btActualizarWebBrowser_Click(sender As System.Object, e As System.EventArgs) Handles btActualizarWebBrowser.Click
 
-        Dim pagina As TabPage = TabWebBrowser.SelectedTab
-        If Not IsNothing(pagina) Then
+        'Dim pagina As TabPage = TabWebBrowser.SelectedTab
+        'If Not IsNothing(pagina) Then
 
-            Dim NombreTab As String = pagina.Name
-            Dim navegador As String = NombreTab.Replace("Tab", "WebBrowser")
-            Dim control As Control() = _frmWebBrowser.pnlWebBrowser.Controls.Find(navegador, False)
+        '    Dim NombreTab As String = pagina.Name
+        '    Dim navegador As String = NombreTab.Replace("Tab", "WebBrowser")
+        '    Dim control As Control() = _frmWebBrowser.pnlWebBrowser.Controls.Find(navegador, False)
 
-            If control.Length > 0 Then
+        '    If control.Length > 0 Then
 
-                If TypeOf control(0) Is WebBrowser Then
+        '        If TypeOf control(0) Is WebBrowser Then
 
-                    Application.DoEvents()
+        '            Application.DoEvents()
 
-                    Dim browser As WebBrowser = CType(control(0), WebBrowser)
-                    browser.Refresh()
+        '            Dim browser As WebBrowser = CType(control(0), WebBrowser)
+        '            browser.Refresh()
 
-                    Application.DoEvents()
+        '            Application.DoEvents()
 
-                End If
+        '        End If
 
-            End If
+        '    End If
 
 
-        End If
+        'End If
+
+
+        _frmWebBrowser.ActualizaUrl()
+        Application.DoEvents()
+
 
     End Sub
 
@@ -684,7 +692,7 @@
         Dim Frm As New FrmTiposCat
         Frm.MdiParent = Me
         Frm.Show()
-        RaiseEvent AñadeFormulario(frm, "")
+        RaiseEvent AñadeFormulario(Frm, "")
     End Sub
 
     Private Sub BarButtonItem6_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
@@ -2602,7 +2610,7 @@
         RaiseEvent AñadeFormulario(frm, "")
     End Sub
 
-    
+
     Private Sub BarButtonItem32_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem32.ItemClick
         'Calidad/Trazabilidad/Trazabilidad Palet
         Dim frm As New FrmTrazabilidadPalet
@@ -2856,8 +2864,8 @@
     Private Sub BarButtonItem179_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem179.ItemClick
         'Calidad / Trazabilidad / Alb. Salida
         Dim frm As New FrmTrazaSalida
-        frm.Mdiparent = Me
-        frm.show()
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 
     Private Sub BarButtonItem180_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem180.ItemClick
@@ -2877,8 +2885,8 @@
     Private Sub BarButtonItem187_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem187.ItemClick
         'Utiles / Produccion / Generar inspecciones
         Dim frm As New FrmGenerarInspecciones
-        frm.mdiparent = Me
-        frm.show()
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 
     'Private Sub BarButtonItem189_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem189.ItemClick
@@ -2906,8 +2914,8 @@
 
         'Envases / Consultas / Materiales usados en Palets
         Dim frm As New FrmMaterialesEnPalets
-        frm.mdiparent = Me
-        frm.show()
+        frm.MdiParent = Me
+        frm.Show()
 
     End Sub
 
@@ -3079,7 +3087,7 @@
         frm.Show()
     End Sub
 
-   
+
     Private Sub BarButtonItem253_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem253.ItemClick
         'Sujetos / Proveedores de género / Modelo 346 / Conceptos
         Dim frm As New FrmConceptos346
@@ -3147,5 +3155,21 @@
 
     End Sub
 
-    
+    Private Sub picCargandoWebBrowser_Click(sender As Object, e As EventArgs) Handles picCargandoWebBrowser.Click
+        If Not IsNothing(_frmWebBrowser) Then
+            _frmWebBrowser.MuestraNavegador()
+        End If
+    End Sub
+
+
+    Private Sub TrackBar1_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TrackBar1.ValueChanged
+        If Not IsNothing(_frmWebBrowser) Then
+
+            Dim valor As Decimal = TrackBar1.Value / 10
+            _frmWebBrowser.CambiaZoom(valor)
+
+
+        End If
+    End Sub
+
 End Class

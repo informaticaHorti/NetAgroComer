@@ -23,6 +23,7 @@ Partial Class FrmWebBrowser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlWebBrowser = New System.Windows.Forms.Panel()
+        Me.bw = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'pnlWebBrowser
@@ -33,7 +34,9 @@ Partial Class FrmWebBrowser
         Me.pnlWebBrowser.Name = "pnlWebBrowser"
         Me.pnlWebBrowser.Size = New System.Drawing.Size(1007, 600)
         Me.pnlWebBrowser.TabIndex = 15
-        Me.pnlWebBrowser.Visible = False
+        '
+        'bw
+        '
         '
         'FrmWebBrowser
         '
@@ -51,4 +54,5 @@ Partial Class FrmWebBrowser
 
     End Sub
     Public WithEvents pnlWebBrowser As System.Windows.Forms.Panel
+    Friend WithEvents bw As System.ComponentModel.BackgroundWorker
 End Class

@@ -381,6 +381,8 @@ Partial Class _FrMPrincipal
         Me.picCargandoWebBrowser = New System.Windows.Forms.PictureBox()
         Me.btVolver = New System.Windows.Forms.Button()
         Me.btActualizarWebBrowser = New System.Windows.Forms.Button()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.LbZoom = New System.Windows.Forms.Label()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Igasto1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Igasto2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -390,6 +392,7 @@ Partial Class _FrMPrincipal
         Me.pnlTabWebBrowser.SuspendLayout()
         Me.pnlBotonesWebBrowser.SuspendLayout()
         CType(Me.picCargandoWebBrowser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -3058,25 +3061,27 @@ Partial Class _FrMPrincipal
         Me.TabWebBrowser.Location = New System.Drawing.Point(0, 0)
         Me.TabWebBrowser.Name = "TabWebBrowser"
         Me.TabWebBrowser.SelectedIndex = 0
-        Me.TabWebBrowser.Size = New System.Drawing.Size(1382, 22)
+        Me.TabWebBrowser.Size = New System.Drawing.Size(1274, 22)
         Me.TabWebBrowser.TabIndex = 1
         '
         'pnlBotonesWebBrowser
         '
+        Me.pnlBotonesWebBrowser.Controls.Add(Me.TrackBar1)
+        Me.pnlBotonesWebBrowser.Controls.Add(Me.LbZoom)
         Me.pnlBotonesWebBrowser.Controls.Add(Me.picCargandoWebBrowser)
         Me.pnlBotonesWebBrowser.Controls.Add(Me.btVolver)
         Me.pnlBotonesWebBrowser.Controls.Add(Me.btActualizarWebBrowser)
         Me.pnlBotonesWebBrowser.Dock = System.Windows.Forms.DockStyle.Right
-        Me.pnlBotonesWebBrowser.Location = New System.Drawing.Point(1382, 0)
+        Me.pnlBotonesWebBrowser.Location = New System.Drawing.Point(1274, 0)
         Me.pnlBotonesWebBrowser.Name = "pnlBotonesWebBrowser"
-        Me.pnlBotonesWebBrowser.Size = New System.Drawing.Size(68, 22)
+        Me.pnlBotonesWebBrowser.Size = New System.Drawing.Size(176, 22)
         Me.pnlBotonesWebBrowser.TabIndex = 0
         '
         'picCargandoWebBrowser
         '
         Me.picCargandoWebBrowser.Dock = System.Windows.Forms.DockStyle.Right
         Me.picCargandoWebBrowser.Image = Global.NetAgro.My.Resources.Resources.reloj2
-        Me.picCargandoWebBrowser.Location = New System.Drawing.Point(2, 0)
+        Me.picCargandoWebBrowser.Location = New System.Drawing.Point(110, 0)
         Me.picCargandoWebBrowser.Name = "picCargandoWebBrowser"
         Me.picCargandoWebBrowser.Size = New System.Drawing.Size(22, 22)
         Me.picCargandoWebBrowser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -3089,7 +3094,7 @@ Partial Class _FrMPrincipal
         Me.btVolver.FlatAppearance.BorderSize = 0
         Me.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btVolver.Image = Global.NetAgro.My.Resources.Resources.icons8_Return_16
-        Me.btVolver.Location = New System.Drawing.Point(24, 0)
+        Me.btVolver.Location = New System.Drawing.Point(132, 0)
         Me.btVolver.Name = "btVolver"
         Me.btVolver.Size = New System.Drawing.Size(22, 22)
         Me.btVolver.TabIndex = 1
@@ -3101,11 +3106,33 @@ Partial Class _FrMPrincipal
         Me.btActualizarWebBrowser.FlatAppearance.BorderSize = 0
         Me.btActualizarWebBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btActualizarWebBrowser.Image = Global.NetAgro.My.Resources.Resources.arrow_refresh
-        Me.btActualizarWebBrowser.Location = New System.Drawing.Point(46, 0)
+        Me.btActualizarWebBrowser.Location = New System.Drawing.Point(154, 0)
         Me.btActualizarWebBrowser.Name = "btActualizarWebBrowser"
         Me.btActualizarWebBrowser.Size = New System.Drawing.Size(22, 22)
         Me.btActualizarWebBrowser.TabIndex = 0
         Me.btActualizarWebBrowser.UseVisualStyleBackColor = True
+        '
+        'TrackBar1
+        '
+        Me.TrackBar1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TrackBar1.LargeChange = 1
+        Me.TrackBar1.Location = New System.Drawing.Point(36, 0)
+        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Minimum = -100
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(74, 22)
+        Me.TrackBar1.TabIndex = 25
+        Me.TrackBar1.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'LbZoom
+        '
+        Me.LbZoom.Dock = System.Windows.Forms.DockStyle.Left
+        Me.LbZoom.Location = New System.Drawing.Point(0, 0)
+        Me.LbZoom.Name = "LbZoom"
+        Me.LbZoom.Size = New System.Drawing.Size(36, 22)
+        Me.LbZoom.TabIndex = 24
+        Me.LbZoom.Text = "100%"
+        Me.LbZoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         '_FrMPrincipal
         '
@@ -3137,7 +3164,9 @@ Partial Class _FrMPrincipal
         CType(Me.Igasto5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTabWebBrowser.ResumeLayout(False)
         Me.pnlBotonesWebBrowser.ResumeLayout(False)
+        Me.pnlBotonesWebBrowser.PerformLayout()
         CType(Me.picCargandoWebBrowser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3504,6 +3533,7 @@ Partial Class _FrMPrincipal
     Friend WithEvents BarButtonItem261 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem262 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem263 As DevExpress.XtraBars.BarButtonItem
-
+    Friend WithEvents TrackBar1 As TrackBar
+    Friend WithEvents LbZoom As Label
 
 End Class
