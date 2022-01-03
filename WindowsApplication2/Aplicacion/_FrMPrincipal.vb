@@ -198,16 +198,25 @@ Public Class _FrMPrincipal
         PintaMaletin(MiMaletin.IdEmpresaCTB)
 
 
-        Dim dia As String = My.Application.Info.Version.Major.ToString
+        'Dim dia As String = My.Application.Info.Version.Major.ToString
+        'Dim mes As String = My.Application.Info.Version.Minor.ToString
+        'Dim año As String = My.Application.Info.Version.Build.ToString
+        'Dim version As String = My.Application.Info.Version.Revision.ToString
+
+
+        'LbVersion.Caption = "vs. " & dia & "/" & mes & "/" & año & "." & version
+
+
+
+
+        Dim año As String = My.Application.Info.Version.Major.ToString
         Dim mes As String = My.Application.Info.Version.Minor.ToString
-        Dim año As String = My.Application.Info.Version.Build.ToString
-        Dim version As String = My.Application.Info.Version.Revision.ToString
+        Dim v1 As String = My.Application.Info.Version.Build.ToString
+        Dim v2 As String = My.Application.Info.Version.Revision.ToString
 
 
-        LbVersion.Caption = "vs. " & dia & "/" & mes & "/" & año & "." & version
+        LbVersion.Caption = "vs. " & año & "." & mes & "." & v1 & "." & v2
 
-
-        'LbVersion.Caption = "v." & My.Application.Info.Version.ToString()
 
 
     End Sub
