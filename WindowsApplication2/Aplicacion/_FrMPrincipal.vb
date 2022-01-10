@@ -86,6 +86,9 @@ Public Class _FrMPrincipal
 
         Me.RibbonControl.Manager.UseF10KeyForMenu = False
 
+        Me.RibbonControl.Minimized = True
+
+
 
         CompruebaVersionAplicacion()
 
