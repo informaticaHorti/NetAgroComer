@@ -586,6 +586,7 @@ Module C1_CMR_Internacional
 
         Dim bProductoEcologico As Boolean = False
         Dim NumRegistro As String = ""
+        Dim ReglamentoUE As String = ""
 
 
 
@@ -598,6 +599,7 @@ Module C1_CMR_Internacional
                 Dim Ecologico As String = (ValoresPVenta.VPV_EcologicoSN.Valor & "").Trim
                 bProductoEcologico = (Ecologico = "S")
                 NumRegistro = (ValoresPVenta.VPV_NumRegistroEco.Valor & "").Trim
+                ReglamentoUE = (ValoresPVenta.VPV_ReglamentoEcoEU.Valor & "").Trim
 
             End If
 
@@ -608,7 +610,7 @@ Module C1_CMR_Internacional
             Altura = Altura + 4
             Impreso.Detalle.Titulo("SISTEMA DE CONTROL UE: " & NumRegistro, margen_izquierdo, Altura, Ancho, 5, Estilos.Custom, "<", , fuente_media)
             Altura = Altura + 4
-            Impreso.Detalle.Titulo("REGLAMENTO UE-834/2007", margen_izquierdo, Altura, Ancho, 5, Estilos.Custom, "<", , fuente_media)
+            Impreso.Detalle.Titulo("REGLAMENTO UE: " & ReglamentoUE, margen_izquierdo, Altura, Ancho, 5, Estilos.Custom, "<", , fuente_media)
         End If
 
 

@@ -44,6 +44,8 @@ Partial Class FrmValorespventa
         Me.Lb30 = New NetAgro.Lb(Me.components)
         Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TxReglamentoUE = New NetAgro.TxDato(Me.components)
+        Me.LbReglamentoUE = New NetAgro.Lb(Me.components)
         Me.TxNumRegistro = New NetAgro.TxDato(Me.components)
         Me.LbNumRegistro = New NetAgro.Lb(Me.components)
         Me.ChkProductoEcologico = New NetAgro.Chk(Me.components)
@@ -99,6 +101,8 @@ Partial Class FrmValorespventa
         Me.BtBuscaDestinoTransito = New NetAgro.BtBusca(Me.components)
         Me.TxDestinoTransito = New NetAgro.TxDato(Me.components)
         Me.LbDestinoTransito = New NetAgro.Lb(Me.components)
+        Me.TxAOR = New NetAgro.TxDato(Me.components)
+        Me.LbAOR = New NetAgro.Lb(Me.components)
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabControl1.SuspendLayout()
         Me.XtraTabPage3.SuspendLayout()
@@ -134,6 +138,7 @@ Partial Class FrmValorespventa
         'TxDato1
         '
         Me.TxDato1.Autonumerico = False
+        Me.TxDato1.Bloqueado = False
         Me.TxDato1.Buscando = False
         Me.TxDato1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato1.ClForm = Nothing
@@ -161,6 +166,7 @@ Partial Class FrmValorespventa
         '
         Me.BtBuscaFRM.CL_Ancho = 0
         Me.BtBuscaFRM.CL_BuscaAlb = False
+        Me.BtBuscaFRM.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaFRM.CL_campocodigo = Nothing
         Me.BtBuscaFRM.CL_camponombre = Nothing
         Me.BtBuscaFRM.CL_CampoOrden = "Nombre"
@@ -249,7 +255,7 @@ Partial Class FrmValorespventa
         Me.XtraTabControl1.Location = New System.Drawing.Point(12, 156)
         Me.XtraTabControl1.Name = "XtraTabControl1"
         Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage3
-        Me.XtraTabControl1.Size = New System.Drawing.Size(718, 325)
+        Me.XtraTabControl1.Size = New System.Drawing.Size(718, 379)
         Me.XtraTabControl1.TabIndex = 85
         Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2, Me.XtraTabPage3, Me.XtraTabPage4})
         '
@@ -257,7 +263,7 @@ Partial Class FrmValorespventa
         '
         Me.XtraTabPage3.Controls.Add(Me.Panel4)
         Me.XtraTabPage3.Name = "XtraTabPage3"
-        Me.XtraTabPage3.Size = New System.Drawing.Size(710, 297)
+        Me.XtraTabPage3.Size = New System.Drawing.Size(710, 351)
         Me.XtraTabPage3.Text = "Datos de pago facturación"
         '
         'Panel4
@@ -274,14 +280,15 @@ Partial Class FrmValorespventa
         Me.Panel4.Controls.Add(Me.Lb31)
         Me.Panel4.Controls.Add(Me.TxDato30)
         Me.Panel4.Controls.Add(Me.Lb30)
-        Me.Panel4.Location = New System.Drawing.Point(0, 1)
+        Me.Panel4.Location = New System.Drawing.Point(0, 3)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(710, 296)
+        Me.Panel4.Size = New System.Drawing.Size(710, 348)
         Me.Panel4.TabIndex = 2
         '
         'TxDato33
         '
         Me.TxDato33.Autonumerico = False
+        Me.TxDato33.Bloqueado = False
         Me.TxDato33.Buscando = False
         Me.TxDato33.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato33.ClForm = Nothing
@@ -322,6 +329,7 @@ Partial Class FrmValorespventa
         'TxDato32
         '
         Me.TxDato32.Autonumerico = False
+        Me.TxDato32.Bloqueado = False
         Me.TxDato32.Buscando = False
         Me.TxDato32.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato32.ClForm = Nothing
@@ -362,6 +370,7 @@ Partial Class FrmValorespventa
         'TxDato31
         '
         Me.TxDato31.Autonumerico = False
+        Me.TxDato31.Bloqueado = False
         Me.TxDato31.Buscando = False
         Me.TxDato31.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato31.ClForm = Nothing
@@ -402,6 +411,7 @@ Partial Class FrmValorespventa
         'TxDato30
         '
         Me.TxDato30.Autonumerico = False
+        Me.TxDato30.Bloqueado = False
         Me.TxDato30.Buscando = False
         Me.TxDato30.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato30.ClForm = Nothing
@@ -445,7 +455,7 @@ Partial Class FrmValorespventa
         Me.XtraTabPage1.Appearance.PageClient.Options.UseBackColor = True
         Me.XtraTabPage1.Controls.Add(Me.Panel2)
         Me.XtraTabPage1.Name = "XtraTabPage1"
-        Me.XtraTabPage1.Size = New System.Drawing.Size(710, 297)
+        Me.XtraTabPage1.Size = New System.Drawing.Size(710, 351)
         Me.XtraTabPage1.Text = "Datos empresa"
         '
         'Panel2
@@ -454,6 +464,10 @@ Partial Class FrmValorespventa
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.AliceBlue
+        Me.Panel2.Controls.Add(Me.TxAOR)
+        Me.Panel2.Controls.Add(Me.LbAOR)
+        Me.Panel2.Controls.Add(Me.TxReglamentoUE)
+        Me.Panel2.Controls.Add(Me.LbReglamentoUE)
         Me.Panel2.Controls.Add(Me.TxNumRegistro)
         Me.Panel2.Controls.Add(Me.LbNumRegistro)
         Me.Panel2.Controls.Add(Me.ChkProductoEcologico)
@@ -487,12 +501,54 @@ Partial Class FrmValorespventa
         Me.Panel2.Controls.Add(Me.Lb3)
         Me.Panel2.Location = New System.Drawing.Point(0, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(710, 294)
+        Me.Panel2.Size = New System.Drawing.Size(710, 348)
         Me.Panel2.TabIndex = 0
+        '
+        'TxReglamentoUE
+        '
+        Me.TxReglamentoUE.Autonumerico = False
+        Me.TxReglamentoUE.Bloqueado = False
+        Me.TxReglamentoUE.Buscando = False
+        Me.TxReglamentoUE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxReglamentoUE.ClForm = Nothing
+        Me.TxReglamentoUE.ClParam = Nothing
+        Me.TxReglamentoUE.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxReglamentoUE.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxReglamentoUE.GridLin = Nothing
+        Me.TxReglamentoUE.HaCambiado = False
+        Me.TxReglamentoUE.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.TxReglamentoUE.lbbusca = Nothing
+        Me.TxReglamentoUE.Location = New System.Drawing.Point(500, 309)
+        Me.TxReglamentoUE.MiError = False
+        Me.TxReglamentoUE.Name = "TxReglamentoUE"
+        Me.TxReglamentoUE.Orden = 0
+        Me.TxReglamentoUE.SaltoAlfinal = False
+        Me.TxReglamentoUE.Siguiente = 0
+        Me.TxReglamentoUE.Size = New System.Drawing.Size(189, 22)
+        Me.TxReglamentoUE.TabIndex = 100406
+        Me.TxReglamentoUE.TeclaRepetida = False
+        Me.TxReglamentoUE.TxDatoFinalSemana = Nothing
+        Me.TxReglamentoUE.TxDatoInicioSemana = Nothing
+        Me.TxReglamentoUE.UltimoValorValidado = Nothing
+        '
+        'LbReglamentoUE
+        '
+        Me.LbReglamentoUE.AutoSize = True
+        Me.LbReglamentoUE.CL_ControlAsociado = Nothing
+        Me.LbReglamentoUE.CL_ValorFijo = False
+        Me.LbReglamentoUE.ClForm = Nothing
+        Me.LbReglamentoUE.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbReglamentoUE.ForeColor = System.Drawing.Color.Teal
+        Me.LbReglamentoUE.Location = New System.Drawing.Point(378, 312)
+        Me.LbReglamentoUE.Name = "LbReglamentoUE"
+        Me.LbReglamentoUE.Size = New System.Drawing.Size(118, 16)
+        Me.LbReglamentoUE.TabIndex = 100405
+        Me.LbReglamentoUE.Text = "Reglamento UE"
         '
         'TxNumRegistro
         '
         Me.TxNumRegistro.Autonumerico = False
+        Me.TxNumRegistro.Bloqueado = False
         Me.TxNumRegistro.Buscando = False
         Me.TxNumRegistro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNumRegistro.ClForm = Nothing
@@ -503,7 +559,7 @@ Partial Class FrmValorespventa
         Me.TxNumRegistro.HaCambiado = False
         Me.TxNumRegistro.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxNumRegistro.lbbusca = Nothing
-        Me.TxNumRegistro.Location = New System.Drawing.Point(500, 260)
+        Me.TxNumRegistro.Location = New System.Drawing.Point(500, 280)
         Me.TxNumRegistro.MiError = False
         Me.TxNumRegistro.Name = "TxNumRegistro"
         Me.TxNumRegistro.Orden = 0
@@ -524,7 +580,7 @@ Partial Class FrmValorespventa
         Me.LbNumRegistro.ClForm = Nothing
         Me.LbNumRegistro.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbNumRegistro.ForeColor = System.Drawing.Color.Teal
-        Me.LbNumRegistro.Location = New System.Drawing.Point(387, 263)
+        Me.LbNumRegistro.Location = New System.Drawing.Point(378, 283)
         Me.LbNumRegistro.Name = "LbNumRegistro"
         Me.LbNumRegistro.Size = New System.Drawing.Size(110, 16)
         Me.LbNumRegistro.TabIndex = 100403
@@ -540,7 +596,7 @@ Partial Class FrmValorespventa
         Me.ChkProductoEcologico.ForeColor = System.Drawing.Color.Teal
         Me.ChkProductoEcologico.GridLin = Nothing
         Me.ChkProductoEcologico.HaCambiado = False
-        Me.ChkProductoEcologico.Location = New System.Drawing.Point(99, 262)
+        Me.ChkProductoEcologico.Location = New System.Drawing.Point(99, 281)
         Me.ChkProductoEcologico.MiEntidad = Nothing
         Me.ChkProductoEcologico.MiError = False
         Me.ChkProductoEcologico.Name = "ChkProductoEcologico"
@@ -557,6 +613,7 @@ Partial Class FrmValorespventa
         'TxGGN
         '
         Me.TxGGN.Autonumerico = False
+        Me.TxGGN.Bloqueado = False
         Me.TxGGN.Buscando = False
         Me.TxGGN.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxGGN.ClForm = Nothing
@@ -567,7 +624,7 @@ Partial Class FrmValorespventa
         Me.TxGGN.HaCambiado = False
         Me.TxGGN.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxGGN.lbbusca = Nothing
-        Me.TxGGN.Location = New System.Drawing.Point(500, 232)
+        Me.TxGGN.Location = New System.Drawing.Point(500, 222)
         Me.TxGGN.MiError = False
         Me.TxGGN.Name = "TxGGN"
         Me.TxGGN.Orden = 0
@@ -588,7 +645,7 @@ Partial Class FrmValorespventa
         Me.Lb15.ClForm = Nothing
         Me.Lb15.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb15.ForeColor = System.Drawing.Color.Teal
-        Me.Lb15.Location = New System.Drawing.Point(387, 235)
+        Me.Lb15.Location = New System.Drawing.Point(378, 225)
         Me.Lb15.Name = "Lb15"
         Me.Lb15.Size = New System.Drawing.Size(106, 16)
         Me.Lb15.TabIndex = 151
@@ -597,6 +654,7 @@ Partial Class FrmValorespventa
         'TxNif
         '
         Me.TxNif.Autonumerico = False
+        Me.TxNif.Bloqueado = False
         Me.TxNif.Buscando = False
         Me.TxNif.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNif.ClForm = Nothing
@@ -607,7 +665,7 @@ Partial Class FrmValorespventa
         Me.TxNif.HaCambiado = False
         Me.TxNif.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxNif.lbbusca = Nothing
-        Me.TxNif.Location = New System.Drawing.Point(99, 233)
+        Me.TxNif.Location = New System.Drawing.Point(99, 222)
         Me.TxNif.MiError = False
         Me.TxNif.Name = "TxNif"
         Me.TxNif.Orden = 0
@@ -628,7 +686,7 @@ Partial Class FrmValorespventa
         Me.LbNif.ClForm = Nothing
         Me.LbNif.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbNif.ForeColor = System.Drawing.Color.Teal
-        Me.LbNif.Location = New System.Drawing.Point(18, 236)
+        Me.LbNif.Location = New System.Drawing.Point(18, 225)
         Me.LbNif.Name = "LbNif"
         Me.LbNif.Size = New System.Drawing.Size(27, 16)
         Me.LbNif.TabIndex = 147
@@ -637,6 +695,7 @@ Partial Class FrmValorespventa
         'TxDato8
         '
         Me.TxDato8.Autonumerico = False
+        Me.TxDato8.Bloqueado = False
         Me.TxDato8.Buscando = False
         Me.TxDato8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato8.ClForm = Nothing
@@ -647,7 +706,7 @@ Partial Class FrmValorespventa
         Me.TxDato8.HaCambiado = False
         Me.TxDato8.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato8.lbbusca = Nothing
-        Me.TxDato8.Location = New System.Drawing.Point(99, 112)
+        Me.TxDato8.Location = New System.Drawing.Point(99, 106)
         Me.TxDato8.MiError = False
         Me.TxDato8.Name = "TxDato8"
         Me.TxDato8.Orden = 0
@@ -668,7 +727,7 @@ Partial Class FrmValorespventa
         Me.Lb_8.CL_ValorFijo = False
         Me.Lb_8.ClForm = Nothing
         Me.Lb_8.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb_8.Location = New System.Drawing.Point(210, 112)
+        Me.Lb_8.Location = New System.Drawing.Point(210, 106)
         Me.Lb_8.Name = "Lb_8"
         Me.Lb_8.Size = New System.Drawing.Size(235, 23)
         Me.Lb_8.TabIndex = 145
@@ -678,6 +737,7 @@ Partial Class FrmValorespventa
         '
         Me.BtBusca_8.CL_Ancho = 0
         Me.BtBusca_8.CL_BuscaAlb = False
+        Me.BtBusca_8.CL_BuscarEnTodosLosCampos = False
         Me.BtBusca_8.CL_campocodigo = Nothing
         Me.BtBusca_8.CL_camponombre = Nothing
         Me.BtBusca_8.CL_CampoOrden = "Nombre"
@@ -694,7 +754,7 @@ Partial Class FrmValorespventa
         Me.BtBusca_8.cl_ListaW = Nothing
         Me.BtBusca_8.CL_xCentro = False
         Me.BtBusca_8.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBusca_8.Location = New System.Drawing.Point(171, 112)
+        Me.BtBusca_8.Location = New System.Drawing.Point(171, 106)
         Me.BtBusca_8.Name = "BtBusca_8"
         Me.BtBusca_8.Size = New System.Drawing.Size(33, 23)
         Me.BtBusca_8.TabIndex = 144
@@ -703,6 +763,7 @@ Partial Class FrmValorespventa
         'TxDato13
         '
         Me.TxDato13.Autonumerico = False
+        Me.TxDato13.Bloqueado = False
         Me.TxDato13.Buscando = False
         Me.TxDato13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato13.ClForm = Nothing
@@ -713,7 +774,7 @@ Partial Class FrmValorespventa
         Me.TxDato13.HaCambiado = False
         Me.TxDato13.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato13.lbbusca = Nothing
-        Me.TxDato13.Location = New System.Drawing.Point(99, 205)
+        Me.TxDato13.Location = New System.Drawing.Point(99, 193)
         Me.TxDato13.MiError = False
         Me.TxDato13.Name = "TxDato13"
         Me.TxDato13.Orden = 0
@@ -734,7 +795,7 @@ Partial Class FrmValorespventa
         Me.Lb13.ClForm = Nothing
         Me.Lb13.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb13.ForeColor = System.Drawing.Color.Teal
-        Me.Lb13.Location = New System.Drawing.Point(18, 208)
+        Me.Lb13.Location = New System.Drawing.Point(18, 196)
         Me.Lb13.Name = "Lb13"
         Me.Lb13.Size = New System.Drawing.Size(40, 16)
         Me.Lb13.TabIndex = 105
@@ -743,6 +804,7 @@ Partial Class FrmValorespventa
         'TxDato12
         '
         Me.TxDato12.Autonumerico = False
+        Me.TxDato12.Bloqueado = False
         Me.TxDato12.Buscando = False
         Me.TxDato12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato12.ClForm = Nothing
@@ -753,7 +815,7 @@ Partial Class FrmValorespventa
         Me.TxDato12.HaCambiado = False
         Me.TxDato12.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato12.lbbusca = Nothing
-        Me.TxDato12.Location = New System.Drawing.Point(99, 174)
+        Me.TxDato12.Location = New System.Drawing.Point(99, 164)
         Me.TxDato12.MiError = False
         Me.TxDato12.Name = "TxDato12"
         Me.TxDato12.Orden = 0
@@ -774,7 +836,7 @@ Partial Class FrmValorespventa
         Me.Lb12.ClForm = Nothing
         Me.Lb12.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb12.ForeColor = System.Drawing.Color.Teal
-        Me.Lb12.Location = New System.Drawing.Point(18, 177)
+        Me.Lb12.Location = New System.Drawing.Point(18, 167)
         Me.Lb12.Name = "Lb12"
         Me.Lb12.Size = New System.Drawing.Size(48, 16)
         Me.Lb12.TabIndex = 103
@@ -788,7 +850,7 @@ Partial Class FrmValorespventa
         Me.Lb11.ClForm = Nothing
         Me.Lb11.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb11.ForeColor = System.Drawing.Color.Teal
-        Me.Lb11.Location = New System.Drawing.Point(508, 146)
+        Me.Lb11.Location = New System.Drawing.Point(508, 138)
         Me.Lb11.Name = "Lb11"
         Me.Lb11.Size = New System.Drawing.Size(35, 16)
         Me.Lb11.TabIndex = 102
@@ -797,6 +859,7 @@ Partial Class FrmValorespventa
         'TxDato11
         '
         Me.TxDato11.Autonumerico = False
+        Me.TxDato11.Bloqueado = False
         Me.TxDato11.Buscando = False
         Me.TxDato11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato11.ClForm = Nothing
@@ -807,7 +870,7 @@ Partial Class FrmValorespventa
         Me.TxDato11.HaCambiado = False
         Me.TxDato11.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato11.lbbusca = Nothing
-        Me.TxDato11.Location = New System.Drawing.Point(549, 143)
+        Me.TxDato11.Location = New System.Drawing.Point(549, 135)
         Me.TxDato11.MiError = False
         Me.TxDato11.Name = "TxDato11"
         Me.TxDato11.Orden = 0
@@ -823,6 +886,7 @@ Partial Class FrmValorespventa
         'TxDato10
         '
         Me.TxDato10.Autonumerico = False
+        Me.TxDato10.Bloqueado = False
         Me.TxDato10.Buscando = False
         Me.TxDato10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato10.ClForm = Nothing
@@ -833,7 +897,7 @@ Partial Class FrmValorespventa
         Me.TxDato10.HaCambiado = False
         Me.TxDato10.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato10.lbbusca = Nothing
-        Me.TxDato10.Location = New System.Drawing.Point(99, 143)
+        Me.TxDato10.Location = New System.Drawing.Point(99, 135)
         Me.TxDato10.MiError = False
         Me.TxDato10.Name = "TxDato10"
         Me.TxDato10.Orden = 0
@@ -854,7 +918,7 @@ Partial Class FrmValorespventa
         Me.Lb10.ClForm = Nothing
         Me.Lb10.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb10.ForeColor = System.Drawing.Color.Teal
-        Me.Lb10.Location = New System.Drawing.Point(15, 146)
+        Me.Lb10.Location = New System.Drawing.Point(15, 138)
         Me.Lb10.Name = "Lb10"
         Me.Lb10.Size = New System.Drawing.Size(78, 16)
         Me.Lb10.TabIndex = 99
@@ -863,6 +927,7 @@ Partial Class FrmValorespventa
         'TxDato9
         '
         Me.TxDato9.Autonumerico = False
+        Me.TxDato9.Bloqueado = False
         Me.TxDato9.Buscando = False
         Me.TxDato9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato9.ClForm = Nothing
@@ -873,7 +938,7 @@ Partial Class FrmValorespventa
         Me.TxDato9.HaCambiado = False
         Me.TxDato9.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato9.lbbusca = Nothing
-        Me.TxDato9.Location = New System.Drawing.Point(586, 112)
+        Me.TxDato9.Location = New System.Drawing.Point(586, 106)
         Me.TxDato9.MiError = False
         Me.TxDato9.Name = "TxDato9"
         Me.TxDato9.Orden = 0
@@ -894,7 +959,7 @@ Partial Class FrmValorespventa
         Me.Lb9.ClForm = Nothing
         Me.Lb9.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb9.ForeColor = System.Drawing.Color.Teal
-        Me.Lb9.Location = New System.Drawing.Point(463, 115)
+        Me.Lb9.Location = New System.Drawing.Point(463, 109)
         Me.Lb9.Name = "Lb9"
         Me.Lb9.Size = New System.Drawing.Size(117, 16)
         Me.Lb9.TabIndex = 97
@@ -908,7 +973,7 @@ Partial Class FrmValorespventa
         Me.Lb8.ClForm = Nothing
         Me.Lb8.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb8.ForeColor = System.Drawing.Color.Teal
-        Me.Lb8.Location = New System.Drawing.Point(15, 115)
+        Me.Lb8.Location = New System.Drawing.Point(15, 109)
         Me.Lb8.Name = "Lb8"
         Me.Lb8.Size = New System.Drawing.Size(38, 16)
         Me.Lb8.TabIndex = 95
@@ -917,6 +982,7 @@ Partial Class FrmValorespventa
         'TxDato7
         '
         Me.TxDato7.Autonumerico = False
+        Me.TxDato7.Bloqueado = False
         Me.TxDato7.Buscando = False
         Me.TxDato7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato7.ClForm = Nothing
@@ -927,7 +993,7 @@ Partial Class FrmValorespventa
         Me.TxDato7.HaCambiado = False
         Me.TxDato7.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato7.lbbusca = Nothing
-        Me.TxDato7.Location = New System.Drawing.Point(499, 81)
+        Me.TxDato7.Location = New System.Drawing.Point(499, 77)
         Me.TxDato7.MiError = False
         Me.TxDato7.Name = "TxDato7"
         Me.TxDato7.Orden = 0
@@ -948,7 +1014,7 @@ Partial Class FrmValorespventa
         Me.Lb7.ClForm = Nothing
         Me.Lb7.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb7.ForeColor = System.Drawing.Color.Teal
-        Me.Lb7.Location = New System.Drawing.Point(415, 84)
+        Me.Lb7.Location = New System.Drawing.Point(415, 80)
         Me.Lb7.Name = "Lb7"
         Me.Lb7.Size = New System.Drawing.Size(75, 16)
         Me.Lb7.TabIndex = 93
@@ -957,6 +1023,7 @@ Partial Class FrmValorespventa
         'TxDato6
         '
         Me.TxDato6.Autonumerico = False
+        Me.TxDato6.Bloqueado = False
         Me.TxDato6.Buscando = False
         Me.TxDato6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato6.ClForm = Nothing
@@ -967,7 +1034,7 @@ Partial Class FrmValorespventa
         Me.TxDato6.HaCambiado = False
         Me.TxDato6.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato6.lbbusca = Nothing
-        Me.TxDato6.Location = New System.Drawing.Point(99, 81)
+        Me.TxDato6.Location = New System.Drawing.Point(99, 77)
         Me.TxDato6.MiError = False
         Me.TxDato6.Name = "TxDato6"
         Me.TxDato6.Orden = 0
@@ -988,7 +1055,7 @@ Partial Class FrmValorespventa
         Me.Lb6.ClForm = Nothing
         Me.Lb6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb6.ForeColor = System.Drawing.Color.Teal
-        Me.Lb6.Location = New System.Drawing.Point(15, 84)
+        Me.Lb6.Location = New System.Drawing.Point(15, 80)
         Me.Lb6.Name = "Lb6"
         Me.Lb6.Size = New System.Drawing.Size(78, 16)
         Me.Lb6.TabIndex = 91
@@ -1002,7 +1069,7 @@ Partial Class FrmValorespventa
         Me.Lb5.ClForm = Nothing
         Me.Lb5.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb5.ForeColor = System.Drawing.Color.Teal
-        Me.Lb5.Location = New System.Drawing.Point(508, 53)
+        Me.Lb5.Location = New System.Drawing.Point(508, 51)
         Me.Lb5.Name = "Lb5"
         Me.Lb5.Size = New System.Drawing.Size(72, 16)
         Me.Lb5.TabIndex = 90
@@ -1011,6 +1078,7 @@ Partial Class FrmValorespventa
         'TxDato5
         '
         Me.TxDato5.Autonumerico = False
+        Me.TxDato5.Bloqueado = False
         Me.TxDato5.Buscando = False
         Me.TxDato5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato5.ClForm = Nothing
@@ -1021,7 +1089,7 @@ Partial Class FrmValorespventa
         Me.TxDato5.HaCambiado = False
         Me.TxDato5.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato5.lbbusca = Nothing
-        Me.TxDato5.Location = New System.Drawing.Point(586, 50)
+        Me.TxDato5.Location = New System.Drawing.Point(586, 48)
         Me.TxDato5.MiError = False
         Me.TxDato5.Name = "TxDato5"
         Me.TxDato5.Orden = 0
@@ -1037,6 +1105,7 @@ Partial Class FrmValorespventa
         'TxDato4
         '
         Me.TxDato4.Autonumerico = False
+        Me.TxDato4.Bloqueado = False
         Me.TxDato4.Buscando = False
         Me.TxDato4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato4.ClForm = Nothing
@@ -1047,7 +1116,7 @@ Partial Class FrmValorespventa
         Me.TxDato4.HaCambiado = False
         Me.TxDato4.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxDato4.lbbusca = Nothing
-        Me.TxDato4.Location = New System.Drawing.Point(99, 50)
+        Me.TxDato4.Location = New System.Drawing.Point(99, 48)
         Me.TxDato4.MiError = False
         Me.TxDato4.Name = "TxDato4"
         Me.TxDato4.Orden = 0
@@ -1068,7 +1137,7 @@ Partial Class FrmValorespventa
         Me.Lb4.ClForm = Nothing
         Me.Lb4.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb4.ForeColor = System.Drawing.Color.Teal
-        Me.Lb4.Location = New System.Drawing.Point(15, 53)
+        Me.Lb4.Location = New System.Drawing.Point(15, 51)
         Me.Lb4.Name = "Lb4"
         Me.Lb4.Size = New System.Drawing.Size(74, 16)
         Me.Lb4.TabIndex = 87
@@ -1077,6 +1146,7 @@ Partial Class FrmValorespventa
         'TxDato3
         '
         Me.TxDato3.Autonumerico = False
+        Me.TxDato3.Bloqueado = False
         Me.TxDato3.Buscando = False
         Me.TxDato3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato3.ClForm = Nothing
@@ -1118,7 +1188,7 @@ Partial Class FrmValorespventa
         '
         Me.XtraTabPage2.Controls.Add(Me.Panel3)
         Me.XtraTabPage2.Name = "XtraTabPage2"
-        Me.XtraTabPage2.Size = New System.Drawing.Size(710, 297)
+        Me.XtraTabPage2.Size = New System.Drawing.Size(710, 351)
         Me.XtraTabPage2.Text = "Pie Facturas"
         '
         'Panel3
@@ -1129,9 +1199,9 @@ Partial Class FrmValorespventa
         Me.Panel3.BackColor = System.Drawing.Color.AliceBlue
         Me.Panel3.Controls.Add(Me.TxDato20)
         Me.Panel3.Controls.Add(Me.Lb20)
-        Me.Panel3.Location = New System.Drawing.Point(0, 1)
+        Me.Panel3.Location = New System.Drawing.Point(0, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(710, 293)
+        Me.Panel3.Size = New System.Drawing.Size(710, 348)
         Me.Panel3.TabIndex = 1
         '
         'TxDato20
@@ -1140,6 +1210,7 @@ Partial Class FrmValorespventa
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxDato20.Autonumerico = False
+        Me.TxDato20.Bloqueado = False
         Me.TxDato20.Buscando = False
         Me.TxDato20.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato20.ClForm = Nothing
@@ -1157,7 +1228,7 @@ Partial Class FrmValorespventa
         Me.TxDato20.Orden = 0
         Me.TxDato20.SaltoAlfinal = False
         Me.TxDato20.Siguiente = 0
-        Me.TxDato20.Size = New System.Drawing.Size(675, 245)
+        Me.TxDato20.Size = New System.Drawing.Size(675, 300)
         Me.TxDato20.TabIndex = 87
         Me.TxDato20.TeclaRepetida = False
         Me.TxDato20.TxDatoFinalSemana = Nothing
@@ -1184,7 +1255,7 @@ Partial Class FrmValorespventa
         Me.XtraTabPage4.Appearance.PageClient.Options.UseBackColor = True
         Me.XtraTabPage4.Controls.Add(Me.Panel5)
         Me.XtraTabPage4.Name = "XtraTabPage4"
-        Me.XtraTabPage4.Size = New System.Drawing.Size(710, 297)
+        Me.XtraTabPage4.Size = New System.Drawing.Size(710, 351)
         Me.XtraTabPage4.Text = "Texto contrato"
         '
         'Panel5
@@ -1195,9 +1266,9 @@ Partial Class FrmValorespventa
         Me.Panel5.BackColor = System.Drawing.Color.AliceBlue
         Me.Panel5.Controls.Add(Me.TxDato41)
         Me.Panel5.Controls.Add(Me.Lb41)
-        Me.Panel5.Location = New System.Drawing.Point(0, 12)
+        Me.Panel5.Location = New System.Drawing.Point(0, 3)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(710, 285)
+        Me.Panel5.Size = New System.Drawing.Size(710, 348)
         Me.Panel5.TabIndex = 2
         '
         'TxDato41
@@ -1206,6 +1277,7 @@ Partial Class FrmValorespventa
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxDato41.Autonumerico = False
+        Me.TxDato41.Bloqueado = False
         Me.TxDato41.Buscando = False
         Me.TxDato41.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato41.ClForm = Nothing
@@ -1224,7 +1296,7 @@ Partial Class FrmValorespventa
         Me.TxDato41.Orden = 0
         Me.TxDato41.SaltoAlfinal = False
         Me.TxDato41.Siguiente = 0
-        Me.TxDato41.Size = New System.Drawing.Size(675, 229)
+        Me.TxDato41.Size = New System.Drawing.Size(675, 292)
         Me.TxDato41.TabIndex = 87
         Me.TxDato41.TeclaRepetida = False
         Me.TxDato41.TxDatoFinalSemana = Nothing
@@ -1283,6 +1355,7 @@ Partial Class FrmValorespventa
         '
         Me.BtEmpresa.CL_Ancho = 0
         Me.BtEmpresa.CL_BuscaAlb = False
+        Me.BtEmpresa.CL_BuscarEnTodosLosCampos = False
         Me.BtEmpresa.CL_campocodigo = Nothing
         Me.BtEmpresa.CL_camponombre = Nothing
         Me.BtEmpresa.CL_CampoOrden = "Nombre"
@@ -1308,6 +1381,7 @@ Partial Class FrmValorespventa
         'TxEmpresa
         '
         Me.TxEmpresa.Autonumerico = False
+        Me.TxEmpresa.Bloqueado = False
         Me.TxEmpresa.Buscando = False
         Me.TxEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxEmpresa.ClForm = Nothing
@@ -1375,6 +1449,7 @@ Partial Class FrmValorespventa
         '
         Me.BtBuscaCentroCtb.CL_Ancho = 0
         Me.BtBuscaCentroCtb.CL_BuscaAlb = False
+        Me.BtBuscaCentroCtb.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCentroCtb.CL_campocodigo = Nothing
         Me.BtBuscaCentroCtb.CL_camponombre = Nothing
         Me.BtBuscaCentroCtb.CL_CampoOrden = "Nombre"
@@ -1400,6 +1475,7 @@ Partial Class FrmValorespventa
         'TxCentroCtb
         '
         Me.TxCentroCtb.Autonumerico = False
+        Me.TxCentroCtb.Bloqueado = False
         Me.TxCentroCtb.Buscando = False
         Me.TxCentroCtb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCentroCtb.ClForm = Nothing
@@ -1454,6 +1530,7 @@ Partial Class FrmValorespventa
         '
         Me.BtBuscaDestinoTransito.CL_Ancho = 0
         Me.BtBuscaDestinoTransito.CL_BuscaAlb = False
+        Me.BtBuscaDestinoTransito.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDestinoTransito.CL_campocodigo = Nothing
         Me.BtBuscaDestinoTransito.CL_camponombre = Nothing
         Me.BtBuscaDestinoTransito.CL_CampoOrden = "Nombre"
@@ -1479,6 +1556,7 @@ Partial Class FrmValorespventa
         'TxDestinoTransito
         '
         Me.TxDestinoTransito.Autonumerico = False
+        Me.TxDestinoTransito.Bloqueado = False
         Me.TxDestinoTransito.Buscando = False
         Me.TxDestinoTransito.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDestinoTransito.ClForm = Nothing
@@ -1516,11 +1594,52 @@ Partial Class FrmValorespventa
         Me.LbDestinoTransito.TabIndex = 97
         Me.LbDestinoTransito.Text = "Destino tránsito"
         '
+        'TxAOR
+        '
+        Me.TxAOR.Autonumerico = False
+        Me.TxAOR.Bloqueado = False
+        Me.TxAOR.Buscando = False
+        Me.TxAOR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxAOR.ClForm = Nothing
+        Me.TxAOR.ClParam = Nothing
+        Me.TxAOR.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxAOR.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxAOR.GridLin = Nothing
+        Me.TxAOR.HaCambiado = False
+        Me.TxAOR.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.TxAOR.lbbusca = Nothing
+        Me.TxAOR.Location = New System.Drawing.Point(99, 251)
+        Me.TxAOR.MiError = False
+        Me.TxAOR.Name = "TxAOR"
+        Me.TxAOR.Orden = 0
+        Me.TxAOR.SaltoAlfinal = False
+        Me.TxAOR.Siguiente = 0
+        Me.TxAOR.Size = New System.Drawing.Size(189, 22)
+        Me.TxAOR.TabIndex = 100408
+        Me.TxAOR.TeclaRepetida = False
+        Me.TxAOR.TxDatoFinalSemana = Nothing
+        Me.TxAOR.TxDatoInicioSemana = Nothing
+        Me.TxAOR.UltimoValorValidado = Nothing
+        '
+        'LbAOR
+        '
+        Me.LbAOR.AutoSize = True
+        Me.LbAOR.CL_ControlAsociado = Nothing
+        Me.LbAOR.CL_ValorFijo = False
+        Me.LbAOR.ClForm = Nothing
+        Me.LbAOR.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbAOR.ForeColor = System.Drawing.Color.Teal
+        Me.LbAOR.Location = New System.Drawing.Point(18, 254)
+        Me.LbAOR.Name = "LbAOR"
+        Me.LbAOR.Size = New System.Drawing.Size(80, 16)
+        Me.LbAOR.TabIndex = 100407
+        Me.LbAOR.Text = "Num. AOR"
+        '
         'FrmValorespventa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(747, 524)
+        Me.ClientSize = New System.Drawing.Size(747, 578)
         Me.Controls.Add(Me.LbNom_DestinoTransito)
         Me.Controls.Add(Me.BtBuscaDestinoTransito)
         Me.Controls.Add(Me.TxDestinoTransito)
@@ -1666,4 +1785,8 @@ Partial Class FrmValorespventa
     Friend WithEvents BtBuscaDestinoTransito As NetAgro.BtBusca
     Friend WithEvents TxDestinoTransito As NetAgro.TxDato
     Friend WithEvents LbDestinoTransito As NetAgro.Lb
+    Friend WithEvents TxReglamentoUE As TxDato
+    Friend WithEvents LbReglamentoUE As Lb
+    Friend WithEvents TxAOR As TxDato
+    Friend WithEvents LbAOR As Lb
 End Class

@@ -27,9 +27,10 @@
     Public VPV_EcologicoSN As Cdatos.bdcampo
     Public VPV_NumRegistroEco As Cdatos.bdcampo
     Public VPV_CentroCtb As Cdatos.bdcampo
-
     Public VPV_IdDestinoTransito As Cdatos.bdcampo
 
+    Public VPV_ReglamentoEcoEU As Cdatos.bdcampo
+    Public VPV_AutorizacionAduanera As Cdatos.bdcampo
 
     Public VPV_IdUsuarioLog As Cdatos.bdcampo
     Public VPV_FechaLog As Cdatos.bdcampo
@@ -81,8 +82,10 @@
             VPV_EcologicoSN = New Cdatos.bdcampo(CodigoEntidad & "EcologicoSN", Cdatos.TiposCampo.Cadena, 1)
             VPV_NumRegistroEco = New Cdatos.bdcampo(CodigoEntidad & "NumRegistroEco", Cdatos.TiposCampo.Cadena, 25)
             VPV_CentroCtb = New Cdatos.bdcampo(CodigoEntidad & "CentroCtb", Cdatos.TiposCampo.Entero, 2)
-
             VPV_IdDestinoTransito = New Cdatos.bdcampo(CodigoEntidad & "IdDestinoTransito", Cdatos.TiposCampo.Entero, 3)
+
+            VPV_ReglamentoEcoEU = New Cdatos.bdcampo(CodigoEntidad & "ReglamentoEcoEU", Cdatos.TiposCampo.Cadena, 25)
+            VPV_AutorizacionAduanera = New Cdatos.bdcampo(CodigoEntidad & "AutorizacionAduanera", Cdatos.TiposCampo.Cadena, 25)
 
 
             VPV_IdUsuarioLog = New Cdatos.bdcampo(CodigoEntidad & "IdUsuarioLog", Cdatos.TiposCampo.EnteroPositivo, 4)

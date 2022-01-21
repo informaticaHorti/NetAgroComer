@@ -727,10 +727,28 @@ Module C1_ProformaPedido
         End If
 
 
+
+        Dim NumeroAOR As String = ""
+
+
+        Dim IdPuntoVenta As String = (Pedidos.PED_idpuntoventa.Valor & "").Trim
+        If VaInt(IdPuntoVenta) > 0 Then
+
+            Dim ValoresPVenta As New E_valorespventa(Idusuario, cn)
+            If ValoresPVenta.LeerId(IdPuntoVenta) Then
+
+                NumeroAOR = (ValoresPVenta.VPV_AutorizacionAduanera.Valor & "").Trim
+
+            End If
+
+        End If
+
+
+
         altura = altura + 3
         'Impreso.Detalle.Cuadro(Col(4) - 5, altura, 107, 5, ancho_linea, Color.Black)
         'Impreso.Detalle.Cuadro(margen_izquierdo, altura, 190, 10, ancho_linea, Color.Black)
-        Impreso.Detalle.Titulo("El exportador de los productos incluidos en el presente documento (autorización aduanera nº ES/EAOR13001303) declara que, salvo indicación en", margen_izquierdo + 2, altura + 1, 200 - 4, 4, Estilos.Reducida)
+        Impreso.Detalle.Titulo("El exportador de los productos incluidos en el presente documento (autorización aduanera nº " & NumeroAOR & ") declara que, salvo indicación en", margen_izquierdo + 2, altura + 1, 200 - 4, 4, Estilos.Reducida)
         Impreso.Detalle.Titulo("sentido contrario, éstos productos gozan de un origen Preferencial: UNION EUROPEA.", margen_izquierdo + 2, altura + 4, 200 - 4, 4, Estilos.Reducida)
 
 

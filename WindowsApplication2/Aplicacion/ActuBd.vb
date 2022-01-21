@@ -435,6 +435,10 @@
         Actualizador.CreaCampo(Envases.ENV_DescriptorFichero)
 
 
+        Actualizador.CreaCampo(Valorespventa.VPV_ReglamentoEcoEU)
+        Actualizador.CreaCampo(Valorespventa.VPV_AutorizacionAduanera)
+
+
 
         If Not Actualizador.RealizaActualizaciones() Then
             bErrorFatal = True

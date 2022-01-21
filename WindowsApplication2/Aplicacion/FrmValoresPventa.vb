@@ -40,9 +40,13 @@
         ParamTx(TxDato12, Valorespventa.VPV_EmailFacturacion, Lb12)
         ParamTx(TxDato13, Valorespventa.VPV_WebFacturacion, Lb13)
         ParamTx(TxNif, Valorespventa.VPV_Nif, LbNif)
+
+        ParamTx(TxAOR, Valorespventa.VPV_AutorizacionAduanera, LbAOR)
+
         ParamTx(TxGGN, Valorespventa.VPV_GGN, Lb15)
         ParamChk(ChkProductoEcologico, Valorespventa.VPV_EcologicoSN, "S", "N")
         ParamTx(TxNumRegistro, Valorespventa.VPV_NumRegistroEco, LbNumRegistro)
+        ParamTx(TxReglamentoUE, Valorespventa.VPV_ReglamentoEcoEU, LbReglamentoUE)
 
 
         ParamTx(TxDato20, Valorespventa.VPV_LineaDatosFiscales, Lb20)
@@ -218,8 +222,8 @@
 
     End Sub
 
-   
-    Private Sub TxNumRegistro_Valida(edicion As System.Boolean) Handles TxNumRegistro.Valida
+
+    Private Sub TxReglamentoUE_Valida(edicion As System.Boolean) Handles TxReglamentoUE.Valida
 
         If edicion Then
             XtraTabControl1.SelectedTabPage = XtraTabControl1.TabPages(1)
