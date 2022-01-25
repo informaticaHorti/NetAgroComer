@@ -1017,7 +1017,7 @@ Module C1_AlbaranSalida
 
         Dim bProductoEcologico As Boolean = False
         Dim NumRegistro As String = ""
-
+        Dim ReglamentoUE As String = ""
 
 
         Dim IdPuntoVenta As String = (AlbSalida.ASA_idpuntoventa.Valor & "").Trim
@@ -1029,6 +1029,7 @@ Module C1_AlbaranSalida
                 Dim Ecologico As String = (ValoresPVenta.VPV_EcologicoSN.Valor & "").Trim
                 bProductoEcologico = (Ecologico = "S")
                 NumRegistro = (ValoresPVenta.VPV_NumRegistroEco.Valor & "").Trim
+                ReglamentoUE = (ValoresPVenta.VPV_ReglamentoEcoEU.Valor & "").Trim
 
             End If
 
@@ -1037,7 +1038,7 @@ Module C1_AlbaranSalida
 
         If bProductoEcologico Then
             Impreso.Detalle.Titulo("PROCEDENTE DEL CULTIVO ECOLOGICO, SISTEMA DE CONTROL UE: " & NumRegistro, margen_izquierdo + 150, y, 140, 4, Estilos.Reducida)
-            Impreso.Detalle.Titulo("REGLAMENTO UE-834/2007", margen_izquierdo + 150, y + 4, 140, 4, Estilos.Reducida)
+            Impreso.Detalle.Titulo("REGLAMENTO UE: " & ReglamentoUE, margen_izquierdo + 150, y + 4, 140, 4, Estilos.Reducida)
         End If
 
         Impreso.Detalle.Titulo(DatosEmpresa.NombreEmpresa & " no acepta ninguna reclamación pasadas 24 horas de la descarga de la mercancía.", margen_izquierdo, y + 4, 150, 4, Estilos.Reducida)

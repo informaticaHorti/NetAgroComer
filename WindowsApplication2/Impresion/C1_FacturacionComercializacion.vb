@@ -1339,6 +1339,7 @@ Module C1_FacturacionComercializacion
 
         Dim bProductoEcologico As Boolean = False
         Dim NumRegistro As String = ""
+        Dim ReglamentoEU As String = ""
 
 
 
@@ -1351,6 +1352,7 @@ Module C1_FacturacionComercializacion
                 Dim Ecologico As String = (ValoresPVenta.VPV_EcologicoSN.Valor & "").Trim
                 bProductoEcologico = (Ecologico = "S")
                 NumRegistro = (ValoresPVenta.VPV_NumRegistroEco.Valor & "").Trim
+                ReglamentoEU = (ValoresPVenta.VPV_ReglamentoEcoEU.Valor & "").Trim
 
             End If
 
@@ -1358,7 +1360,7 @@ Module C1_FacturacionComercializacion
 
 
         If bProductoEcologico Then
-            Impreso.Detalle.Titulo("PROCEDENTE DEL CULTIVO ECOLOGICO, SISTEMA DE CONTROL UE: " & NumRegistro & "REGLAMENTO UE-834/2007", margen_izquierdo, altura, 185, 4, Estilos.Reducida)
+            Impreso.Detalle.Titulo("PROCEDENTE DEL CULTIVO ECOLOGICO, SISTEMA DE CONTROL UE: " & NumRegistro & " REGLAMENTO UE: " & ReglamentoEU, margen_izquierdo, altura, 185, 4, Estilos.Reducida)
         End If
 
         If bLeyendaControlado Then
