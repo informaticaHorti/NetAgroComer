@@ -40,7 +40,7 @@ Public Class FrmFianzasEnvases
         ParamTx(TxDomicilio, Nothing, LbDescarga, False)
 
         ParamTx(TxSubfamilia, FianzasEnvases.FZE_IdSubFamiliaEnvase, LbSubfamilia, True)
-        ParamTx(TxTipo, FianzasEnvases.FZE_TipoFacturacion, LbTipo, True, , , , "ABC")
+        ParamTx(TxTipo, FianzasEnvases.FZE_TipoFacturacion, LbTipo, True, , , , "ABCDE")
 
         AsociarGrid(ClGrid1, TxDomicilio, TxTipo, FianzasEnvases)
 

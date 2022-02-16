@@ -193,7 +193,8 @@ Public Class FrmEnvioFianzasEnvases
 
                 'Sólo mostrar envases tipo C (No facturar)
                 Dim TipoEnvase As String = E_FianzasEnvases.TipoEnvase(IdCliente, IdDomicilio, IdSubFamiliaEnvase)
-                If TipoEnvase = E_FianzasEnvases.TipoFacturacion.NoFacturar Then
+                If TipoEnvase = E_FianzasEnvases.TipoFacturacion.NoFacturar Or
+                    TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar Then
 
 
                     If RbChep.Checked = True Then

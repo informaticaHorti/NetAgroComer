@@ -44,6 +44,8 @@ Partial Class FrmFianzasEnvases
         Me.BtCliente = New NetAgro.BtBusca(Me.components)
         Me.TxCliente = New NetAgro.TxDato(Me.components)
         Me.LbCliente = New NetAgro.Lb(Me.components)
+        Me.Lb4 = New NetAgro.Lb(Me.components)
+        Me.Lb5 = New NetAgro.Lb(Me.components)
         Me.Panel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -64,7 +66,7 @@ Partial Class FrmFianzasEnvases
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(876, 438)
+        Me.Panel4.Size = New System.Drawing.Size(876, 462)
         Me.Panel4.TabIndex = 72
         '
         'GroupBox1
@@ -72,6 +74,8 @@ Partial Class FrmFianzasEnvases
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Lb5)
+        Me.GroupBox1.Controls.Add(Me.Lb4)
         Me.GroupBox1.Controls.Add(Me.Lb3)
         Me.GroupBox1.Controls.Add(Me.Lb2)
         Me.GroupBox1.Controls.Add(Me.Lb1)
@@ -88,7 +92,7 @@ Partial Class FrmFianzasEnvases
         Me.GroupBox1.Controls.Add(Me.BtSubfamilia)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 55)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(852, 375)
+        Me.GroupBox1.Size = New System.Drawing.Size(852, 399)
         Me.GroupBox1.TabIndex = 199
         Me.GroupBox1.TabStop = False
         '
@@ -152,6 +156,7 @@ Partial Class FrmFianzasEnvases
         '
         Me.BtBuscaDestino.CL_Ancho = 0
         Me.BtBuscaDestino.CL_BuscaAlb = False
+        Me.BtBuscaDestino.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaDestino.CL_campocodigo = Nothing
         Me.BtBuscaDestino.CL_camponombre = Nothing
         Me.BtBuscaDestino.CL_CampoOrden = "Nombre"
@@ -177,6 +182,7 @@ Partial Class FrmFianzasEnvases
         'TxDomicilio
         '
         Me.TxDomicilio.Autonumerico = False
+        Me.TxDomicilio.Bloqueado = False
         Me.TxDomicilio.Buscando = False
         Me.TxDomicilio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDomicilio.ClForm = Nothing
@@ -231,6 +237,7 @@ Partial Class FrmFianzasEnvases
         'TxTipo
         '
         Me.TxTipo.Autonumerico = False
+        Me.TxTipo.Bloqueado = False
         Me.TxTipo.Buscando = False
         Me.TxTipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipo.ClForm = Nothing
@@ -268,7 +275,7 @@ Partial Class FrmFianzasEnvases
         Me.ClGrid1.IdLinea = Nothing
         Me.ClGrid1.LineaBloqueada = False
         Me.ClGrid1.ListaCamposGr = Nothing
-        Me.ClGrid1.Location = New System.Drawing.Point(3, 106)
+        Me.ClGrid1.Location = New System.Drawing.Point(3, 130)
         Me.ClGrid1.MismaLinea = False
         Me.ClGrid1.Name = "ClGrid1"
         Me.ClGrid1.Nlinea = 0
@@ -296,6 +303,7 @@ Partial Class FrmFianzasEnvases
         'TxSubfamilia
         '
         Me.TxSubfamilia.Autonumerico = False
+        Me.TxSubfamilia.Bloqueado = False
         Me.TxSubfamilia.Buscando = False
         Me.TxSubfamilia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxSubfamilia.ClForm = Nothing
@@ -339,6 +347,7 @@ Partial Class FrmFianzasEnvases
         '
         Me.BtSubfamilia.CL_Ancho = 0
         Me.BtSubfamilia.CL_BuscaAlb = False
+        Me.BtSubfamilia.CL_BuscarEnTodosLosCampos = False
         Me.BtSubfamilia.CL_campocodigo = Nothing
         Me.BtSubfamilia.CL_camponombre = Nothing
         Me.BtSubfamilia.CL_CampoOrden = "Nombre"
@@ -381,6 +390,7 @@ Partial Class FrmFianzasEnvases
         '
         Me.BtCliente.CL_Ancho = 0
         Me.BtCliente.CL_BuscaAlb = False
+        Me.BtCliente.CL_BuscarEnTodosLosCampos = False
         Me.BtCliente.CL_campocodigo = Nothing
         Me.BtCliente.CL_camponombre = Nothing
         Me.BtCliente.CL_CampoOrden = "Nombre"
@@ -406,6 +416,7 @@ Partial Class FrmFianzasEnvases
         'TxCliente
         '
         Me.TxCliente.Autonumerico = False
+        Me.TxCliente.Bloqueado = False
         Me.TxCliente.Buscando = False
         Me.TxCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCliente.ClForm = Nothing
@@ -444,11 +455,39 @@ Partial Class FrmFianzasEnvases
         Me.LbCliente.TabIndex = 66
         Me.LbCliente.Text = "Cliente"
         '
+        'Lb4
+        '
+        Me.Lb4.AutoSize = True
+        Me.Lb4.CL_ControlAsociado = Nothing
+        Me.Lb4.CL_ValorFijo = True
+        Me.Lb4.ClForm = Nothing
+        Me.Lb4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb4.ForeColor = System.Drawing.Color.Teal
+        Me.Lb4.Location = New System.Drawing.Point(625, 92)
+        Me.Lb4.Name = "Lb4"
+        Me.Lb4.Size = New System.Drawing.Size(230, 13)
+        Me.Lb4.TabIndex = 212
+        Me.Lb4.Text = "D = En depósito Empresas Locales"
+        '
+        'Lb5
+        '
+        Me.Lb5.AutoSize = True
+        Me.Lb5.CL_ControlAsociado = Nothing
+        Me.Lb5.CL_ValorFijo = True
+        Me.Lb5.ClForm = Nothing
+        Me.Lb5.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb5.ForeColor = System.Drawing.Color.Teal
+        Me.Lb5.Location = New System.Drawing.Point(625, 105)
+        Me.Lb5.Name = "Lb5"
+        Me.Lb5.Size = New System.Drawing.Size(159, 13)
+        Me.Lb5.TabIndex = 213
+        Me.Lb5.Text = "E = Facturar y declarar"
+        '
         'FrmFianzasEnvases
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(876, 472)
+        Me.ClientSize = New System.Drawing.Size(876, 496)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me._PanelCargando)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -484,5 +523,6 @@ Partial Class FrmFianzasEnvases
     Friend WithEvents Lb1 As NetAgro.Lb
     Friend WithEvents Lb3 As NetAgro.Lb
     Friend WithEvents Lb2 As NetAgro.Lb
-
+    Friend WithEvents Lb5 As Lb
+    Friend WithEvents Lb4 As Lb
 End Class

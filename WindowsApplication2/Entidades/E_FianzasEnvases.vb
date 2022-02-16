@@ -18,6 +18,8 @@
         Public Const FacturarEnAlbaran As String = "A"
         Public Const FacturarAparte As String = "B"
         Public Const NoFacturar As String = "C"
+        Public Const DepositoEmpresasLocales As String = "D"
+        Public Const FacturarYDeclarar As String = "E"
 
     End Class
 

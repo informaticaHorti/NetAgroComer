@@ -492,7 +492,8 @@
 
                         precio = ""
                         'If rw("envaseretornable").ToString = "S" And FacturaEnvases = "S" Then
-                        If rw("envaseretornable").ToString = "S" And TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Then
+                        If rw("envaseretornable").ToString = "S" And
+                            (TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Or TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar) Then
                             precio = rw("precio").ToString
                         ElseIf rw("envaseretornable").ToString = "S" And TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarAparte Then
                             preciofianza = rw("precio").ToString
@@ -589,7 +590,8 @@
                                 Dim precioenvase As String = ""
                                 Dim precioenvasefianza As String = ""
                                 'If envaseretornable = "S" And FacturaEnvases = "S" Then
-                                If envaseretornable = "S" And TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Then
+                                If envaseretornable = "S" And
+                                    (TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Or TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar) Then
                                     precioenvase = rw4("precio").ToString
                                 ElseIf envaseretornable = "S" And TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarAparte Then
                                     precioenvasefianza = rw4("precio").ToString
