@@ -3176,4 +3176,24 @@ Public Class FrmPaletsComer
 
     End Sub
 
+    Private Sub btModificarCliente_Click(sender As Object, e As EventArgs) Handles btModificarCliente.Click
+
+        Dim row As DataRow = ClGrid1.GridView.GetFocusedDataRow()
+        If Not IsNothing(row) Then
+
+            Dim IdLinea As String = (row("PLL_idlinea").ToString & "").Trim
+            If VaDec(IdLinea) > 0 Then
+
+                Dim frm As New FrmModificarClienteLineaPalets(IdLinea, TxCliente.Text)
+                frm.ShowDialog()
+                If frm.Resultado = FrmModificarClienteLineaPalets.ResultadoFormulario.Aceptar Then
+                    CargaLineasGrid()
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
 End Class

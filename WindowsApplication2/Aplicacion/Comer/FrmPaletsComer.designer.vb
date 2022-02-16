@@ -236,6 +236,7 @@ Partial Class FrmPaletsComer
         Me.Lb_3 = New NetAgro.Lb(Me.components)
         Me.Lb_2 = New NetAgro.Lb(Me.components)
         Me.TxFecha = New NetAgro.TxDato(Me.components)
+        Me.btModificarCliente = New NetAgro.ClButton()
         Me.Panel2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.PanelTrazabilidad.SuspendLayout()
@@ -267,6 +268,7 @@ Partial Class FrmPaletsComer
         Me.GroupBox5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox5.Controls.Add(Me.btModificarCliente)
         Me.GroupBox5.Controls.Add(Me.PanelTrazabilidad)
         Me.GroupBox5.Controls.Add(Me.BtBuscaCliente)
         Me.GroupBox5.Controls.Add(Me.TxCliente)
@@ -465,6 +467,7 @@ Partial Class FrmPaletsComer
         'TxCampa12
         '
         Me.TxCampa12.Autonumerico = False
+        Me.TxCampa12.Bloqueado = False
         Me.TxCampa12.Buscando = False
         Me.TxCampa12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa12.ClForm = Nothing
@@ -492,6 +495,7 @@ Partial Class FrmPaletsComer
         'TxCampa11
         '
         Me.TxCampa11.Autonumerico = False
+        Me.TxCampa11.Bloqueado = False
         Me.TxCampa11.Buscando = False
         Me.TxCampa11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa11.ClForm = Nothing
@@ -519,6 +523,7 @@ Partial Class FrmPaletsComer
         'TxCampa10
         '
         Me.TxCampa10.Autonumerico = False
+        Me.TxCampa10.Bloqueado = False
         Me.TxCampa10.Buscando = False
         Me.TxCampa10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa10.ClForm = Nothing
@@ -546,6 +551,7 @@ Partial Class FrmPaletsComer
         'TxCampa9
         '
         Me.TxCampa9.Autonumerico = False
+        Me.TxCampa9.Bloqueado = False
         Me.TxCampa9.Buscando = False
         Me.TxCampa9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa9.ClForm = Nothing
@@ -573,6 +579,7 @@ Partial Class FrmPaletsComer
         'TxCampa8
         '
         Me.TxCampa8.Autonumerico = False
+        Me.TxCampa8.Bloqueado = False
         Me.TxCampa8.Buscando = False
         Me.TxCampa8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa8.ClForm = Nothing
@@ -600,6 +607,7 @@ Partial Class FrmPaletsComer
         'TxCampa7
         '
         Me.TxCampa7.Autonumerico = False
+        Me.TxCampa7.Bloqueado = False
         Me.TxCampa7.Buscando = False
         Me.TxCampa7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa7.ClForm = Nothing
@@ -627,6 +635,7 @@ Partial Class FrmPaletsComer
         'TxCampa6
         '
         Me.TxCampa6.Autonumerico = False
+        Me.TxCampa6.Bloqueado = False
         Me.TxCampa6.Buscando = False
         Me.TxCampa6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa6.ClForm = Nothing
@@ -654,6 +663,7 @@ Partial Class FrmPaletsComer
         'TxCampa5
         '
         Me.TxCampa5.Autonumerico = False
+        Me.TxCampa5.Bloqueado = False
         Me.TxCampa5.Buscando = False
         Me.TxCampa5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa5.ClForm = Nothing
@@ -681,6 +691,7 @@ Partial Class FrmPaletsComer
         'TxCampa4
         '
         Me.TxCampa4.Autonumerico = False
+        Me.TxCampa4.Bloqueado = False
         Me.TxCampa4.Buscando = False
         Me.TxCampa4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa4.ClForm = Nothing
@@ -708,6 +719,7 @@ Partial Class FrmPaletsComer
         'TxCampa3
         '
         Me.TxCampa3.Autonumerico = False
+        Me.TxCampa3.Bloqueado = False
         Me.TxCampa3.Buscando = False
         Me.TxCampa3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa3.ClForm = Nothing
@@ -735,6 +747,7 @@ Partial Class FrmPaletsComer
         'TxCampa2
         '
         Me.TxCampa2.Autonumerico = False
+        Me.TxCampa2.Bloqueado = False
         Me.TxCampa2.Buscando = False
         Me.TxCampa2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa2.ClForm = Nothing
@@ -762,6 +775,7 @@ Partial Class FrmPaletsComer
         'TxCampa1
         '
         Me.TxCampa1.Autonumerico = False
+        Me.TxCampa1.Bloqueado = False
         Me.TxCampa1.Buscando = False
         Me.TxCampa1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCampa1.ClForm = Nothing
@@ -817,6 +831,7 @@ Partial Class FrmPaletsComer
         'TxPreca12
         '
         Me.TxPreca12.Autonumerico = False
+        Me.TxPreca12.Bloqueado = False
         Me.TxPreca12.Buscando = False
         Me.TxPreca12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca12.ClForm = Nothing
@@ -844,6 +859,7 @@ Partial Class FrmPaletsComer
         'TxPreca11
         '
         Me.TxPreca11.Autonumerico = False
+        Me.TxPreca11.Bloqueado = False
         Me.TxPreca11.Buscando = False
         Me.TxPreca11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca11.ClForm = Nothing
@@ -871,6 +887,7 @@ Partial Class FrmPaletsComer
         'TxPreca10
         '
         Me.TxPreca10.Autonumerico = False
+        Me.TxPreca10.Bloqueado = False
         Me.TxPreca10.Buscando = False
         Me.TxPreca10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca10.ClForm = Nothing
@@ -898,6 +915,7 @@ Partial Class FrmPaletsComer
         'TxPreca9
         '
         Me.TxPreca9.Autonumerico = False
+        Me.TxPreca9.Bloqueado = False
         Me.TxPreca9.Buscando = False
         Me.TxPreca9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca9.ClForm = Nothing
@@ -925,6 +943,7 @@ Partial Class FrmPaletsComer
         'TxPreca8
         '
         Me.TxPreca8.Autonumerico = False
+        Me.TxPreca8.Bloqueado = False
         Me.TxPreca8.Buscando = False
         Me.TxPreca8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca8.ClForm = Nothing
@@ -952,6 +971,7 @@ Partial Class FrmPaletsComer
         'TxPreca7
         '
         Me.TxPreca7.Autonumerico = False
+        Me.TxPreca7.Bloqueado = False
         Me.TxPreca7.Buscando = False
         Me.TxPreca7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca7.ClForm = Nothing
@@ -979,6 +999,7 @@ Partial Class FrmPaletsComer
         'TxPreca6
         '
         Me.TxPreca6.Autonumerico = False
+        Me.TxPreca6.Bloqueado = False
         Me.TxPreca6.Buscando = False
         Me.TxPreca6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca6.ClForm = Nothing
@@ -1006,6 +1027,7 @@ Partial Class FrmPaletsComer
         'TxPreca5
         '
         Me.TxPreca5.Autonumerico = False
+        Me.TxPreca5.Bloqueado = False
         Me.TxPreca5.Buscando = False
         Me.TxPreca5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca5.ClForm = Nothing
@@ -1033,6 +1055,7 @@ Partial Class FrmPaletsComer
         'TxPreca4
         '
         Me.TxPreca4.Autonumerico = False
+        Me.TxPreca4.Bloqueado = False
         Me.TxPreca4.Buscando = False
         Me.TxPreca4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca4.ClForm = Nothing
@@ -1060,6 +1083,7 @@ Partial Class FrmPaletsComer
         'TxPreca3
         '
         Me.TxPreca3.Autonumerico = False
+        Me.TxPreca3.Bloqueado = False
         Me.TxPreca3.Buscando = False
         Me.TxPreca3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca3.ClForm = Nothing
@@ -1087,6 +1111,7 @@ Partial Class FrmPaletsComer
         'TxPreca2
         '
         Me.TxPreca2.Autonumerico = False
+        Me.TxPreca2.Bloqueado = False
         Me.TxPreca2.Buscando = False
         Me.TxPreca2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca2.ClForm = Nothing
@@ -1114,6 +1139,7 @@ Partial Class FrmPaletsComer
         'TxPreca1
         '
         Me.TxPreca1.Autonumerico = False
+        Me.TxPreca1.Bloqueado = False
         Me.TxPreca1.Buscando = False
         Me.TxPreca1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPreca1.ClForm = Nothing
@@ -1141,6 +1167,7 @@ Partial Class FrmPaletsComer
         'TxLote12
         '
         Me.TxLote12.Autonumerico = False
+        Me.TxLote12.Bloqueado = False
         Me.TxLote12.Buscando = False
         Me.TxLote12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote12.ClForm = Nothing
@@ -1168,6 +1195,7 @@ Partial Class FrmPaletsComer
         'TxLote11
         '
         Me.TxLote11.Autonumerico = False
+        Me.TxLote11.Bloqueado = False
         Me.TxLote11.Buscando = False
         Me.TxLote11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote11.ClForm = Nothing
@@ -1195,6 +1223,7 @@ Partial Class FrmPaletsComer
         'TxLote10
         '
         Me.TxLote10.Autonumerico = False
+        Me.TxLote10.Bloqueado = False
         Me.TxLote10.Buscando = False
         Me.TxLote10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote10.ClForm = Nothing
@@ -1222,6 +1251,7 @@ Partial Class FrmPaletsComer
         'TxLote9
         '
         Me.TxLote9.Autonumerico = False
+        Me.TxLote9.Bloqueado = False
         Me.TxLote9.Buscando = False
         Me.TxLote9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote9.ClForm = Nothing
@@ -1249,6 +1279,7 @@ Partial Class FrmPaletsComer
         'TxLote8
         '
         Me.TxLote8.Autonumerico = False
+        Me.TxLote8.Bloqueado = False
         Me.TxLote8.Buscando = False
         Me.TxLote8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote8.ClForm = Nothing
@@ -1276,6 +1307,7 @@ Partial Class FrmPaletsComer
         'TxLote7
         '
         Me.TxLote7.Autonumerico = False
+        Me.TxLote7.Bloqueado = False
         Me.TxLote7.Buscando = False
         Me.TxLote7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote7.ClForm = Nothing
@@ -1303,6 +1335,7 @@ Partial Class FrmPaletsComer
         'TxLote6
         '
         Me.TxLote6.Autonumerico = False
+        Me.TxLote6.Bloqueado = False
         Me.TxLote6.Buscando = False
         Me.TxLote6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote6.ClForm = Nothing
@@ -1330,6 +1363,7 @@ Partial Class FrmPaletsComer
         'TxLote5
         '
         Me.TxLote5.Autonumerico = False
+        Me.TxLote5.Bloqueado = False
         Me.TxLote5.Buscando = False
         Me.TxLote5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote5.ClForm = Nothing
@@ -1357,6 +1391,7 @@ Partial Class FrmPaletsComer
         'TxLote4
         '
         Me.TxLote4.Autonumerico = False
+        Me.TxLote4.Bloqueado = False
         Me.TxLote4.Buscando = False
         Me.TxLote4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote4.ClForm = Nothing
@@ -1384,6 +1419,7 @@ Partial Class FrmPaletsComer
         'TxLote3
         '
         Me.TxLote3.Autonumerico = False
+        Me.TxLote3.Bloqueado = False
         Me.TxLote3.Buscando = False
         Me.TxLote3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote3.ClForm = Nothing
@@ -1411,6 +1447,7 @@ Partial Class FrmPaletsComer
         'TxLote2
         '
         Me.TxLote2.Autonumerico = False
+        Me.TxLote2.Bloqueado = False
         Me.TxLote2.Buscando = False
         Me.TxLote2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote2.ClForm = Nothing
@@ -1452,6 +1489,7 @@ Partial Class FrmPaletsComer
         'TxLote1
         '
         Me.TxLote1.Autonumerico = False
+        Me.TxLote1.Bloqueado = False
         Me.TxLote1.Buscando = False
         Me.TxLote1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote1.ClForm = Nothing
@@ -1507,6 +1545,7 @@ Partial Class FrmPaletsComer
         'TxBul12
         '
         Me.TxBul12.Autonumerico = False
+        Me.TxBul12.Bloqueado = False
         Me.TxBul12.Buscando = False
         Me.TxBul12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul12.ClForm = Nothing
@@ -1548,6 +1587,7 @@ Partial Class FrmPaletsComer
         'TxPar12
         '
         Me.TxPar12.Autonumerico = False
+        Me.TxPar12.Bloqueado = False
         Me.TxPar12.Buscando = False
         Me.TxPar12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar12.ClForm = Nothing
@@ -1603,6 +1643,7 @@ Partial Class FrmPaletsComer
         'TxBul11
         '
         Me.TxBul11.Autonumerico = False
+        Me.TxBul11.Bloqueado = False
         Me.TxBul11.Buscando = False
         Me.TxBul11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul11.ClForm = Nothing
@@ -1644,6 +1685,7 @@ Partial Class FrmPaletsComer
         'TxPar11
         '
         Me.TxPar11.Autonumerico = False
+        Me.TxPar11.Bloqueado = False
         Me.TxPar11.Buscando = False
         Me.TxPar11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar11.ClForm = Nothing
@@ -1699,6 +1741,7 @@ Partial Class FrmPaletsComer
         'TxBul10
         '
         Me.TxBul10.Autonumerico = False
+        Me.TxBul10.Bloqueado = False
         Me.TxBul10.Buscando = False
         Me.TxBul10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul10.ClForm = Nothing
@@ -1740,6 +1783,7 @@ Partial Class FrmPaletsComer
         'TxPar10
         '
         Me.TxPar10.Autonumerico = False
+        Me.TxPar10.Bloqueado = False
         Me.TxPar10.Buscando = False
         Me.TxPar10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar10.ClForm = Nothing
@@ -1795,6 +1839,7 @@ Partial Class FrmPaletsComer
         'TxBul9
         '
         Me.TxBul9.Autonumerico = False
+        Me.TxBul9.Bloqueado = False
         Me.TxBul9.Buscando = False
         Me.TxBul9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul9.ClForm = Nothing
@@ -1836,6 +1881,7 @@ Partial Class FrmPaletsComer
         'TxPar9
         '
         Me.TxPar9.Autonumerico = False
+        Me.TxPar9.Bloqueado = False
         Me.TxPar9.Buscando = False
         Me.TxPar9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar9.ClForm = Nothing
@@ -1891,6 +1937,7 @@ Partial Class FrmPaletsComer
         'TxBul8
         '
         Me.TxBul8.Autonumerico = False
+        Me.TxBul8.Bloqueado = False
         Me.TxBul8.Buscando = False
         Me.TxBul8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul8.ClForm = Nothing
@@ -1932,6 +1979,7 @@ Partial Class FrmPaletsComer
         'TxPar8
         '
         Me.TxPar8.Autonumerico = False
+        Me.TxPar8.Bloqueado = False
         Me.TxPar8.Buscando = False
         Me.TxPar8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar8.ClForm = Nothing
@@ -1987,6 +2035,7 @@ Partial Class FrmPaletsComer
         'TxBul7
         '
         Me.TxBul7.Autonumerico = False
+        Me.TxBul7.Bloqueado = False
         Me.TxBul7.Buscando = False
         Me.TxBul7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul7.ClForm = Nothing
@@ -2028,6 +2077,7 @@ Partial Class FrmPaletsComer
         'TxPar7
         '
         Me.TxPar7.Autonumerico = False
+        Me.TxPar7.Bloqueado = False
         Me.TxPar7.Buscando = False
         Me.TxPar7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar7.ClForm = Nothing
@@ -2083,6 +2133,7 @@ Partial Class FrmPaletsComer
         'TxBul6
         '
         Me.TxBul6.Autonumerico = False
+        Me.TxBul6.Bloqueado = False
         Me.TxBul6.Buscando = False
         Me.TxBul6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul6.ClForm = Nothing
@@ -2124,6 +2175,7 @@ Partial Class FrmPaletsComer
         'TxPar6
         '
         Me.TxPar6.Autonumerico = False
+        Me.TxPar6.Bloqueado = False
         Me.TxPar6.Buscando = False
         Me.TxPar6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar6.ClForm = Nothing
@@ -2179,6 +2231,7 @@ Partial Class FrmPaletsComer
         'TxBul5
         '
         Me.TxBul5.Autonumerico = False
+        Me.TxBul5.Bloqueado = False
         Me.TxBul5.Buscando = False
         Me.TxBul5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul5.ClForm = Nothing
@@ -2220,6 +2273,7 @@ Partial Class FrmPaletsComer
         'TxPar5
         '
         Me.TxPar5.Autonumerico = False
+        Me.TxPar5.Bloqueado = False
         Me.TxPar5.Buscando = False
         Me.TxPar5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar5.ClForm = Nothing
@@ -2275,6 +2329,7 @@ Partial Class FrmPaletsComer
         'TxBul4
         '
         Me.TxBul4.Autonumerico = False
+        Me.TxBul4.Bloqueado = False
         Me.TxBul4.Buscando = False
         Me.TxBul4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul4.ClForm = Nothing
@@ -2316,6 +2371,7 @@ Partial Class FrmPaletsComer
         'TxPar4
         '
         Me.TxPar4.Autonumerico = False
+        Me.TxPar4.Bloqueado = False
         Me.TxPar4.Buscando = False
         Me.TxPar4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar4.ClForm = Nothing
@@ -2371,6 +2427,7 @@ Partial Class FrmPaletsComer
         'TxBul3
         '
         Me.TxBul3.Autonumerico = False
+        Me.TxBul3.Bloqueado = False
         Me.TxBul3.Buscando = False
         Me.TxBul3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul3.ClForm = Nothing
@@ -2412,6 +2469,7 @@ Partial Class FrmPaletsComer
         'TxPar3
         '
         Me.TxPar3.Autonumerico = False
+        Me.TxPar3.Bloqueado = False
         Me.TxPar3.Buscando = False
         Me.TxPar3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar3.ClForm = Nothing
@@ -2467,6 +2525,7 @@ Partial Class FrmPaletsComer
         'TxBul2
         '
         Me.TxBul2.Autonumerico = False
+        Me.TxBul2.Bloqueado = False
         Me.TxBul2.Buscando = False
         Me.TxBul2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul2.ClForm = Nothing
@@ -2508,6 +2567,7 @@ Partial Class FrmPaletsComer
         'TxPar2
         '
         Me.TxPar2.Autonumerico = False
+        Me.TxPar2.Bloqueado = False
         Me.TxPar2.Buscando = False
         Me.TxPar2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar2.ClForm = Nothing
@@ -2591,6 +2651,7 @@ Partial Class FrmPaletsComer
         'TxBul1
         '
         Me.TxBul1.Autonumerico = False
+        Me.TxBul1.Bloqueado = False
         Me.TxBul1.Buscando = False
         Me.TxBul1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBul1.ClForm = Nothing
@@ -2646,6 +2707,7 @@ Partial Class FrmPaletsComer
         'TxPar1
         '
         Me.TxPar1.Autonumerico = False
+        Me.TxPar1.Bloqueado = False
         Me.TxPar1.Buscando = False
         Me.TxPar1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPar1.ClForm = Nothing
@@ -2699,6 +2761,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaCliente.CL_Ancho = 0
         Me.BtBuscaCliente.CL_BuscaAlb = False
+        Me.BtBuscaCliente.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCliente.CL_campocodigo = Nothing
         Me.BtBuscaCliente.CL_camponombre = Nothing
         Me.BtBuscaCliente.CL_CampoOrden = "Nombre"
@@ -2715,7 +2778,7 @@ Partial Class FrmPaletsComer
         Me.BtBuscaCliente.cl_ListaW = Nothing
         Me.BtBuscaCliente.CL_xCentro = False
         Me.BtBuscaCliente.Image = Global.NetAgro.My.Resources.Resources.App_file_replace_16x16_32
-        Me.BtBuscaCliente.Location = New System.Drawing.Point(742, 46)
+        Me.BtBuscaCliente.Location = New System.Drawing.Point(718, 46)
         Me.BtBuscaCliente.Name = "BtBuscaCliente"
         Me.BtBuscaCliente.Size = New System.Drawing.Size(33, 23)
         Me.BtBuscaCliente.TabIndex = 100398
@@ -2724,6 +2787,7 @@ Partial Class FrmPaletsComer
         'TxCliente
         '
         Me.TxCliente.Autonumerico = False
+        Me.TxCliente.Bloqueado = False
         Me.TxCliente.Buscando = False
         Me.TxCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCliente.ClForm = Nothing
@@ -2734,7 +2798,7 @@ Partial Class FrmPaletsComer
         Me.TxCliente.HaCambiado = False
         Me.TxCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TxCliente.lbbusca = Nothing
-        Me.TxCliente.Location = New System.Drawing.Point(688, 46)
+        Me.TxCliente.Location = New System.Drawing.Point(664, 46)
         Me.TxCliente.MiError = False
         Me.TxCliente.Name = "TxCliente"
         Me.TxCliente.Orden = 0
@@ -2755,7 +2819,7 @@ Partial Class FrmPaletsComer
         Me.LbCliente.ClForm = Nothing
         Me.LbCliente.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbCliente.ForeColor = System.Drawing.Color.Teal
-        Me.LbCliente.Location = New System.Drawing.Point(623, 49)
+        Me.LbCliente.Location = New System.Drawing.Point(599, 49)
         Me.LbCliente.Name = "LbCliente"
         Me.LbCliente.Size = New System.Drawing.Size(59, 16)
         Me.LbCliente.TabIndex = 100396
@@ -2803,6 +2867,7 @@ Partial Class FrmPaletsComer
         'TxControlado
         '
         Me.TxControlado.Autonumerico = False
+        Me.TxControlado.Bloqueado = False
         Me.TxControlado.Buscando = False
         Me.TxControlado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxControlado.ClForm = Nothing
@@ -2830,6 +2895,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaCatTodas.CL_Ancho = 0
         Me.BtBuscaCatTodas.CL_BuscaAlb = False
+        Me.BtBuscaCatTodas.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCatTodas.CL_campocodigo = Nothing
         Me.BtBuscaCatTodas.CL_camponombre = Nothing
         Me.BtBuscaCatTodas.CL_CampoOrden = "Nombre"
@@ -2855,6 +2921,7 @@ Partial Class FrmPaletsComer
         'TxCategoria
         '
         Me.TxCategoria.Autonumerico = False
+        Me.TxCategoria.Bloqueado = False
         Me.TxCategoria.Buscando = False
         Me.TxCategoria.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCategoria.ClForm = Nothing
@@ -2896,6 +2963,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaMarcaMaterial.CL_Ancho = 0
         Me.BtBuscaMarcaMaterial.CL_BuscaAlb = False
+        Me.BtBuscaMarcaMaterial.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaMarcaMaterial.CL_campocodigo = Nothing
         Me.BtBuscaMarcaMaterial.CL_camponombre = Nothing
         Me.BtBuscaMarcaMaterial.CL_CampoOrden = "Nombre"
@@ -2934,6 +3002,7 @@ Partial Class FrmPaletsComer
         'TxMarcaMaterial
         '
         Me.TxMarcaMaterial.Autonumerico = False
+        Me.TxMarcaMaterial.Bloqueado = False
         Me.TxMarcaMaterial.Buscando = False
         Me.TxMarcaMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMarcaMaterial.ClForm = Nothing
@@ -2975,6 +3044,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaMarcaEti.CL_Ancho = 0
         Me.BtBuscaMarcaEti.CL_BuscaAlb = False
+        Me.BtBuscaMarcaEti.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaMarcaEti.CL_campocodigo = Nothing
         Me.BtBuscaMarcaEti.CL_camponombre = Nothing
         Me.BtBuscaMarcaEti.CL_CampoOrden = "Nombre"
@@ -3013,6 +3083,7 @@ Partial Class FrmPaletsComer
         'TxMarcaEti
         '
         Me.TxMarcaEti.Autonumerico = False
+        Me.TxMarcaEti.Bloqueado = False
         Me.TxMarcaEti.Buscando = False
         Me.TxMarcaEti.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMarcaEti.ClForm = Nothing
@@ -3053,6 +3124,7 @@ Partial Class FrmPaletsComer
         'TxCalidad
         '
         Me.TxCalidad.Autonumerico = False
+        Me.TxCalidad.Bloqueado = False
         Me.TxCalidad.Buscando = False
         Me.TxCalidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCalidad.ClForm = Nothing
@@ -3155,6 +3227,7 @@ Partial Class FrmPaletsComer
         'TxNomCategoria
         '
         Me.TxNomCategoria.Autonumerico = False
+        Me.TxNomCategoria.Bloqueado = False
         Me.TxNomCategoria.Buscando = False
         Me.TxNomCategoria.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNomCategoria.ClForm = Nothing
@@ -3265,6 +3338,7 @@ Partial Class FrmPaletsComer
         'TxPxB
         '
         Me.TxPxB.Autonumerico = False
+        Me.TxPxB.Bloqueado = False
         Me.TxPxB.Buscando = False
         Me.TxPxB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPxB.ClForm = Nothing
@@ -3306,6 +3380,7 @@ Partial Class FrmPaletsComer
         'TxKilosBr
         '
         Me.TxKilosBr.Autonumerico = False
+        Me.TxKilosBr.Bloqueado = False
         Me.TxKilosBr.Buscando = False
         Me.TxKilosBr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxKilosBr.ClForm = Nothing
@@ -3389,6 +3464,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaMarca.CL_Ancho = 0
         Me.BtBuscaMarca.CL_BuscaAlb = False
+        Me.BtBuscaMarca.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaMarca.CL_campocodigo = Nothing
         Me.BtBuscaMarca.CL_camponombre = Nothing
         Me.BtBuscaMarca.CL_CampoOrden = "Nombre"
@@ -3414,6 +3490,7 @@ Partial Class FrmPaletsComer
         'TxMarca
         '
         Me.TxMarca.Autonumerico = False
+        Me.TxMarca.Bloqueado = False
         Me.TxMarca.Buscando = False
         Me.TxMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMarca.ClForm = Nothing
@@ -3454,6 +3531,7 @@ Partial Class FrmPaletsComer
         'TxBultos
         '
         Me.TxBultos.Autonumerico = False
+        Me.TxBultos.Bloqueado = False
         Me.TxBultos.Buscando = False
         Me.TxBultos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBultos.ClForm = Nothing
@@ -3509,6 +3587,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaConfecSalidas.CL_Ancho = 0
         Me.BtBuscaConfecSalidas.CL_BuscaAlb = False
+        Me.BtBuscaConfecSalidas.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaConfecSalidas.CL_campocodigo = Nothing
         Me.BtBuscaConfecSalidas.CL_camponombre = Nothing
         Me.BtBuscaConfecSalidas.CL_CampoOrden = "Nombre"
@@ -3534,6 +3613,7 @@ Partial Class FrmPaletsComer
         'TxConfeccion
         '
         Me.TxConfeccion.Autonumerico = False
+        Me.TxConfeccion.Bloqueado = False
         Me.TxConfeccion.Buscando = False
         Me.TxConfeccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxConfeccion.ClForm = Nothing
@@ -3574,6 +3654,7 @@ Partial Class FrmPaletsComer
         'TxKxB
         '
         Me.TxKxB.Autonumerico = False
+        Me.TxKxB.Bloqueado = False
         Me.TxKxB.Buscando = False
         Me.TxKxB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxKxB.ClForm = Nothing
@@ -3616,6 +3697,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaCat.CL_Ancho = 0
         Me.BtBuscaCat.CL_BuscaAlb = False
+        Me.BtBuscaCat.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCat.CL_campocodigo = Nothing
         Me.BtBuscaCat.CL_camponombre = Nothing
         Me.BtBuscaCat.CL_CampoOrden = "Nombre"
@@ -3697,6 +3779,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaGenero.CL_Ancho = 0
         Me.BtBuscaGenero.CL_BuscaAlb = False
+        Me.BtBuscaGenero.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaGenero.CL_campocodigo = Nothing
         Me.BtBuscaGenero.CL_camponombre = Nothing
         Me.BtBuscaGenero.CL_CampoOrden = "Nombre"
@@ -3722,6 +3805,7 @@ Partial Class FrmPaletsComer
         'TxGenero
         '
         Me.TxGenero.Autonumerico = False
+        Me.TxGenero.Bloqueado = False
         Me.TxGenero.Buscando = False
         Me.TxGenero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxGenero.ClForm = Nothing
@@ -3763,6 +3847,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaPresenta.CL_Ancho = 0
         Me.BtBuscaPresenta.CL_BuscaAlb = False
+        Me.BtBuscaPresenta.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaPresenta.CL_campocodigo = Nothing
         Me.BtBuscaPresenta.CL_camponombre = Nothing
         Me.BtBuscaPresenta.CL_CampoOrden = "Nombre"
@@ -3788,6 +3873,7 @@ Partial Class FrmPaletsComer
         'TxPresentacion
         '
         Me.TxPresentacion.Autonumerico = False
+        Me.TxPresentacion.Bloqueado = False
         Me.TxPresentacion.Buscando = False
         Me.TxPresentacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxPresentacion.ClForm = Nothing
@@ -3936,6 +4022,7 @@ Partial Class FrmPaletsComer
         'TxObserva
         '
         Me.TxObserva.Autonumerico = False
+        Me.TxObserva.Bloqueado = False
         Me.TxObserva.Buscando = False
         Me.TxObserva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxObserva.ClForm = Nothing
@@ -4083,6 +4170,7 @@ Partial Class FrmPaletsComer
         'TxLote
         '
         Me.TxLote.Autonumerico = False
+        Me.TxLote.Bloqueado = False
         Me.TxLote.Buscando = False
         Me.TxLote.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxLote.ClForm = Nothing
@@ -4142,6 +4230,7 @@ Partial Class FrmPaletsComer
         'TxMatPropio
         '
         Me.TxMatPropio.Autonumerico = False
+        Me.TxMatPropio.Bloqueado = False
         Me.TxMatPropio.Buscando = False
         Me.TxMatPropio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMatPropio.ClForm = Nothing
@@ -4179,6 +4268,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaAlbaran.CL_Ancho = 0
         Me.BtBuscaAlbaran.CL_BuscaAlb = False
+        Me.BtBuscaAlbaran.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAlbaran.CL_campocodigo = Nothing
         Me.BtBuscaAlbaran.CL_camponombre = Nothing
         Me.BtBuscaAlbaran.CL_CampoOrden = "Nombre"
@@ -4204,6 +4294,7 @@ Partial Class FrmPaletsComer
         'TxEnvPropio
         '
         Me.TxEnvPropio.Autonumerico = False
+        Me.TxEnvPropio.Bloqueado = False
         Me.TxEnvPropio.Buscando = False
         Me.TxEnvPropio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxEnvPropio.ClForm = Nothing
@@ -4272,6 +4363,7 @@ Partial Class FrmPaletsComer
         'TxDato_4
         '
         Me.TxDato_4.Autonumerico = False
+        Me.TxDato_4.Bloqueado = False
         Me.TxDato_4.Buscando = False
         Me.TxDato_4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_4.ClForm = Nothing
@@ -4421,6 +4513,7 @@ Partial Class FrmPaletsComer
         'TxNuPalet
         '
         Me.TxNuPalet.Autonumerico = False
+        Me.TxNuPalet.Bloqueado = False
         Me.TxNuPalet.Buscando = False
         Me.TxNuPalet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxNuPalet.ClForm = Nothing
@@ -4473,6 +4566,7 @@ Partial Class FrmPaletsComer
         '
         Me.BtBuscaTipopalet.CL_Ancho = 0
         Me.BtBuscaTipopalet.CL_BuscaAlb = False
+        Me.BtBuscaTipopalet.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaTipopalet.CL_campocodigo = Nothing
         Me.BtBuscaTipopalet.CL_camponombre = Nothing
         Me.BtBuscaTipopalet.CL_CampoOrden = "Nombre"
@@ -4498,6 +4592,7 @@ Partial Class FrmPaletsComer
         'TxTipoPalet
         '
         Me.TxTipoPalet.Autonumerico = False
+        Me.TxTipoPalet.Bloqueado = False
         Me.TxTipoPalet.Buscando = False
         Me.TxTipoPalet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoPalet.ClForm = Nothing
@@ -4552,6 +4647,7 @@ Partial Class FrmPaletsComer
         'TxFecha
         '
         Me.TxFecha.Autonumerico = False
+        Me.TxFecha.Bloqueado = False
         Me.TxFecha.Buscando = False
         Me.TxFecha.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxFecha.ClForm = Nothing
@@ -4574,6 +4670,18 @@ Partial Class FrmPaletsComer
         Me.TxFecha.TxDatoFinalSemana = Nothing
         Me.TxFecha.TxDatoInicioSemana = Nothing
         Me.TxFecha.UltimoValorValidado = Nothing
+        '
+        'btModificarCliente
+        '
+        Me.btModificarCliente.Image = Global.NetAgro.My.Resources.Resources.arrow_refresh
+        Me.btModificarCliente.Location = New System.Drawing.Point(751, 46)
+        Me.btModificarCliente.Name = "btModificarCliente"
+        Me.btModificarCliente.Orden = 0
+        Me.btModificarCliente.PedirClave = True
+        Me.btModificarCliente.Size = New System.Drawing.Size(23, 23)
+        Me.btModificarCliente.TabIndex = 100399
+        Me.tt.SetToolTip(Me.btModificarCliente, "Buscar pedidos")
+        Me.btModificarCliente.UseVisualStyleBackColor = True
         '
         'FrmPaletsComer
         '
@@ -4815,5 +4923,5 @@ Partial Class FrmPaletsComer
     Friend WithEvents BtBuscaCliente As NetAgro.BtBusca
     Friend WithEvents TxCliente As NetAgro.TxDato
     Friend WithEvents LbCliente As NetAgro.Lb
-
+    Friend WithEvents btModificarCliente As ClButton
 End Class
