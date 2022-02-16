@@ -1049,7 +1049,13 @@ Public Class FrmEntradasConfeccionadas
         End If
 
 
-        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & TxDato6.Text & "' AND NIF = '" & nif & "'"
+
+        Dim fechafiltro As String = TxDato6.Text
+        If VaDate(TxDato6.Text) > VaDate("") Then
+            fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
+        End If
+
+        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & fechafiltro & "' AND NIF = '" & nif & "'"
 
 
     End Sub
@@ -2497,7 +2503,15 @@ Public Class FrmEntradasConfeccionadas
             nif = (Agricultores.AGR_Nif.Valor & "").Trim.Replace("-", "").Replace(".", "").Replace(" ", "")
         End If
 
-        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & TxDato6.Text & "' AND NIF = '" & nif & "'"
+
+
+
+        Dim fechafiltro As String = TxDato6.Text
+        If VaDate(TxDato6.Text) > VaDate("") Then
+            fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
+        End If
+
+        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & fechafiltro & "' AND NIF = '" & nif & "'"
 
     End Sub
 
