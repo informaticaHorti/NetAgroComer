@@ -300,6 +300,7 @@ Partial Class _FrMPrincipal
         Me.BarButtonItem261 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem262 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem263 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem264 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage7 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup19 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -378,11 +379,11 @@ Partial Class _FrMPrincipal
         Me.pnlTabWebBrowser = New System.Windows.Forms.Panel()
         Me.TabWebBrowser = New System.Windows.Forms.TabControl()
         Me.pnlBotonesWebBrowser = New System.Windows.Forms.Panel()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.LbZoom = New System.Windows.Forms.Label()
         Me.picCargandoWebBrowser = New System.Windows.Forms.PictureBox()
         Me.btVolver = New System.Windows.Forms.Button()
         Me.btActualizarWebBrowser = New System.Windows.Forms.Button()
-        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
-        Me.LbZoom = New System.Windows.Forms.Label()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Igasto1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Igasto2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -391,8 +392,8 @@ Partial Class _FrMPrincipal
         CType(Me.Igasto5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTabWebBrowser.SuspendLayout()
         Me.pnlBotonesWebBrowser.SuspendLayout()
-        CType(Me.picCargandoWebBrowser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picCargandoWebBrowser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -403,9 +404,9 @@ Partial Class _FrMPrincipal
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
         Me.RibbonControl.ExpandCollapseItem.Name = ""
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.Familias, Me.BarButtonItem1, Me.Clientes, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem8, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem19, Me.BarButtonItem21, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem30, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.LbEmpresa, Me.BEjercicio, Me.LbEjercicio, Me.BPventa, Me.LbPuntoVenta, Me.LbVersion, Me.BarButtonItem45, Me.BarListItem1, Me.LbCrecogida, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem31, Me.BarButtonItem39, Me.BarButtonGroup1, Me.BarButtonItem69, Me.BarButtonItem71, Me.BarButtonItem72, Me.BarButtonItem75, Me.BarButtonItem76, Me.BarButtonItem77, Me.BarButtonItem20, Me.BarButtonItem78, Me.BarButtonItem79, Me.BarButtonItem80, Me.BarButtonItem81, Me.BarButtonItem82, Me.BarButtonItem84, Me.BarButtonItem86, Me.BarButtonItem87, Me.BarButtonItem88, Me.BarButtonItem89, Me.BarListVentanas, Me.BarButtonItem90, Me.BarButtonItem91, Me.BarButtonItem95, Me.BarButtonItem97, Me.BarButtonItem333, Me.BarButtonItem101, Me.BarButtonItem103, Me.BarButtonItem104, Me.BarButtonItem105, Me.BarButtonItem106, Me.BarButtonItem107, Me.BarButtonItem108, Me.BarButtonItem111, Me.BarButtonItem114, Me.BarButtonItem115, Me.BarButtonItem116, Me.BarButtonItem117, Me.BarButtonItem122, Me.BarButtonItem133, Me.BarButtonItem134, Me.BarButtonItem135, Me.BarButtonItem136, Me.BarButtonItem137, Me.BarButtonItem138, Me.BarButtonItem139, Me.BarButtonItem140, Me.BarButtonItem141, Me.BarButtonItem142, Me.BarButtonItem143, Me.BarButtonItem144, Me.BarButtonItem145, Me.BarButtonItem118, Me.BarButtonItem151, Me.BarButtonItem157, Me.BarButtonItem161, Me.BarButtonItem166, Me.BarButtonItem167, Me.BarButtonItem168, Me.BarButtonItem175, Me.BarButtonItem178, Me.BarButtonItem182, Me.BarButtonItem184, Me.BarButtonItem185, Me.BarButtonItem190, Me.BarButtonItem191, Me.BarButtonItem194, Me.BarButtonItem222, Me.BarButtonItem96, Me.BarButtonItem204, Me.BarButtonItem206, Me.BarButtonItem207, Me.BarButtonItem208, Me.BarButtonItem210, Me.BarButtonItem205, Me.BarButtonItem216, Me.BarButtonItem217, Me.BarButtonItem219, Me.BarButtonItem221, Me.BarButtonItem223, Me.BarButtonItem224, Me.BarButtonItem230, Me.BarButtonItem232, Me.BarButtonItem233, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem15, Me.BarButtonItem18, Me.Bcalidad, Me.LbCalidad, Me.BarButtonItem24, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem33, Me.BarButtonItem38, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem59, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem63, Me.BarButtonItem64, Me.BarButtonItem65, Me.BarButtonItem66, Me.BarMdiChildrenListItem1, Me.BarButtonItem67, Me.BarButtonItem68, Me.BarButtonItem70, Me.BarButtonItem73, Me.BarButtonItem85, Me.BarButtonItem92, Me.BarButtonItem94, Me.BarButtonItem25, Me.BarButtonItem62, Me.BarButtonItem98, Me.BarButtonItem74, Me.BarButtonItem99, Me.BarButtonItem100, Me.BarButtonItem124, Me.BarButtonItem127, Me.BarButtonItem146, Me.BarButtonItem147, Me.BarButtonItem148, Me.BarButtonItem149, Me.BarButtonItem150, Me.BarButtonItem152, Me.BarButtonItem153, Me.BarButtonItem154, Me.BarButtonItem155, Me.BarButtonItem158, Me.BarButtonItem160, Me.BarButtonItem164, Me.BarButtonItem165, Me.BarButtonItem170, Me.BarButtonItem171, Me.BarButtonItem174, Me.BarButtonItem176, Me.BarButtonItem177, Me.BarButtonItem181, Me.BarButtonItem186, Me.BEmpresa, Me.BarButtonItem188, Me.BarButtonItem192, Me.BarButtonItem193, Me.BarButtonItem195, Me.BarButtonItem196, Me.BarButtonItem197, Me.BarButtonItem198, Me.BarButtonItem199, Me.BarButtonItem200, Me.BarButtonItem201, Me.BarButtonItem202, Me.BarButtonItem203, Me.BarButtonItem214, Me.BarButtonItem215, Me.BarButtonItem218, Me.BarButtonItem220, Me.BarButtonItem225, Me.BarButtonItem229, Me.BarButtonItem123, Me.BarButtonItem32, Me.BarStaticItem1, Me.lbOperador, Me.BarButtonItem54, Me.BarButtonItem83, Me.BarButtonItem93, Me.BarButtonItem102, Me.BarButtonItem109, Me.BarButtonItem110, Me.BarButtonItem112, Me.BarButtonItem113, Me.BarButtonItem119, Me.BarButtonItem120, Me.BarButtonItem121, Me.BarButtonItem128, Me.BarButtonItem129, Me.BarButtonItem130, Me.BarButtonItem131, Me.BarButtonItem132, Me.BarButtonItem156, Me.BarButtonItem159, Me.BarButtonItem162, Me.BarButtonItem163, Me.BarButtonItem169, Me.BarButtonItem172, Me.BarButtonItem173, Me.BarButtonItem179, Me.BarButtonItem180, Me.BarButtonItem183, Me.BarButtonItem187, Me.BarButtonItem189, Me.BarButtonItem209, Me.BarButtonItem211, Me.BarButtonItem212, Me.BarButtonItem213, Me.BarButtonItem226, Me.BarButtonItem227, Me.BarButtonItem228, Me.BarButtonItem231, Me.BarButtonItem234, Me.BarButtonItem235, Me.BarButtonItem236, Me.BarButtonItem237, Me.BarButtonItem238, Me.BarButtonItem239, Me.BarButtonItem240, Me.BarButtonItem241, Me.BarButtonItem242, Me.BarButtonItem243, Me.BarButtonItem244, Me.BarButtonItem245, Me.BarButtonItem246, Me.BarButtonItem247, Me.BarButtonItem248, Me.BarButtonItem249, Me.BarButtonItem250, Me.BarButtonItem251, Me.BarButtonItem252, Me.BarSubItem1, Me.BarButtonItem253, Me.BarButtonItem254, Me.BarButtonItem255, Me.BarButtonItem256, Me.BarButtonItem257, Me.BarButtonItem258, Me.BarButtonItem259, Me.BarButtonItem260, Me.BarButtonItem261, Me.BarButtonItem262, Me.BarButtonItem263})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.Familias, Me.BarButtonItem1, Me.Clientes, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem8, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem19, Me.BarButtonItem21, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem30, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.LbEmpresa, Me.BEjercicio, Me.LbEjercicio, Me.BPventa, Me.LbPuntoVenta, Me.LbVersion, Me.BarButtonItem45, Me.BarListItem1, Me.LbCrecogida, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem31, Me.BarButtonItem39, Me.BarButtonGroup1, Me.BarButtonItem69, Me.BarButtonItem71, Me.BarButtonItem72, Me.BarButtonItem75, Me.BarButtonItem76, Me.BarButtonItem77, Me.BarButtonItem20, Me.BarButtonItem78, Me.BarButtonItem79, Me.BarButtonItem80, Me.BarButtonItem81, Me.BarButtonItem82, Me.BarButtonItem84, Me.BarButtonItem86, Me.BarButtonItem87, Me.BarButtonItem88, Me.BarButtonItem89, Me.BarListVentanas, Me.BarButtonItem90, Me.BarButtonItem91, Me.BarButtonItem95, Me.BarButtonItem97, Me.BarButtonItem333, Me.BarButtonItem101, Me.BarButtonItem103, Me.BarButtonItem104, Me.BarButtonItem105, Me.BarButtonItem106, Me.BarButtonItem107, Me.BarButtonItem108, Me.BarButtonItem111, Me.BarButtonItem114, Me.BarButtonItem115, Me.BarButtonItem116, Me.BarButtonItem117, Me.BarButtonItem122, Me.BarButtonItem133, Me.BarButtonItem134, Me.BarButtonItem135, Me.BarButtonItem136, Me.BarButtonItem137, Me.BarButtonItem138, Me.BarButtonItem139, Me.BarButtonItem140, Me.BarButtonItem141, Me.BarButtonItem142, Me.BarButtonItem143, Me.BarButtonItem144, Me.BarButtonItem145, Me.BarButtonItem118, Me.BarButtonItem151, Me.BarButtonItem157, Me.BarButtonItem161, Me.BarButtonItem166, Me.BarButtonItem167, Me.BarButtonItem168, Me.BarButtonItem175, Me.BarButtonItem178, Me.BarButtonItem182, Me.BarButtonItem184, Me.BarButtonItem185, Me.BarButtonItem190, Me.BarButtonItem191, Me.BarButtonItem194, Me.BarButtonItem222, Me.BarButtonItem96, Me.BarButtonItem204, Me.BarButtonItem206, Me.BarButtonItem207, Me.BarButtonItem208, Me.BarButtonItem210, Me.BarButtonItem205, Me.BarButtonItem216, Me.BarButtonItem217, Me.BarButtonItem219, Me.BarButtonItem221, Me.BarButtonItem223, Me.BarButtonItem224, Me.BarButtonItem230, Me.BarButtonItem232, Me.BarButtonItem233, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem15, Me.BarButtonItem18, Me.Bcalidad, Me.LbCalidad, Me.BarButtonItem24, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem33, Me.BarButtonItem38, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem59, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem63, Me.BarButtonItem64, Me.BarButtonItem65, Me.BarButtonItem66, Me.BarMdiChildrenListItem1, Me.BarButtonItem67, Me.BarButtonItem68, Me.BarButtonItem70, Me.BarButtonItem73, Me.BarButtonItem85, Me.BarButtonItem92, Me.BarButtonItem94, Me.BarButtonItem25, Me.BarButtonItem62, Me.BarButtonItem98, Me.BarButtonItem74, Me.BarButtonItem99, Me.BarButtonItem100, Me.BarButtonItem124, Me.BarButtonItem127, Me.BarButtonItem146, Me.BarButtonItem147, Me.BarButtonItem148, Me.BarButtonItem149, Me.BarButtonItem150, Me.BarButtonItem152, Me.BarButtonItem153, Me.BarButtonItem154, Me.BarButtonItem155, Me.BarButtonItem158, Me.BarButtonItem160, Me.BarButtonItem164, Me.BarButtonItem165, Me.BarButtonItem170, Me.BarButtonItem171, Me.BarButtonItem174, Me.BarButtonItem176, Me.BarButtonItem177, Me.BarButtonItem181, Me.BarButtonItem186, Me.BEmpresa, Me.BarButtonItem188, Me.BarButtonItem192, Me.BarButtonItem193, Me.BarButtonItem195, Me.BarButtonItem196, Me.BarButtonItem197, Me.BarButtonItem198, Me.BarButtonItem199, Me.BarButtonItem200, Me.BarButtonItem201, Me.BarButtonItem202, Me.BarButtonItem203, Me.BarButtonItem214, Me.BarButtonItem215, Me.BarButtonItem218, Me.BarButtonItem220, Me.BarButtonItem225, Me.BarButtonItem229, Me.BarButtonItem123, Me.BarButtonItem32, Me.BarStaticItem1, Me.lbOperador, Me.BarButtonItem54, Me.BarButtonItem83, Me.BarButtonItem93, Me.BarButtonItem102, Me.BarButtonItem109, Me.BarButtonItem110, Me.BarButtonItem112, Me.BarButtonItem113, Me.BarButtonItem119, Me.BarButtonItem120, Me.BarButtonItem121, Me.BarButtonItem128, Me.BarButtonItem129, Me.BarButtonItem130, Me.BarButtonItem131, Me.BarButtonItem132, Me.BarButtonItem156, Me.BarButtonItem159, Me.BarButtonItem162, Me.BarButtonItem163, Me.BarButtonItem169, Me.BarButtonItem172, Me.BarButtonItem173, Me.BarButtonItem179, Me.BarButtonItem180, Me.BarButtonItem183, Me.BarButtonItem187, Me.BarButtonItem189, Me.BarButtonItem209, Me.BarButtonItem211, Me.BarButtonItem212, Me.BarButtonItem213, Me.BarButtonItem226, Me.BarButtonItem227, Me.BarButtonItem228, Me.BarButtonItem231, Me.BarButtonItem234, Me.BarButtonItem235, Me.BarButtonItem236, Me.BarButtonItem237, Me.BarButtonItem238, Me.BarButtonItem239, Me.BarButtonItem240, Me.BarButtonItem241, Me.BarButtonItem242, Me.BarButtonItem243, Me.BarButtonItem244, Me.BarButtonItem245, Me.BarButtonItem246, Me.BarButtonItem247, Me.BarButtonItem248, Me.BarButtonItem249, Me.BarButtonItem250, Me.BarButtonItem251, Me.BarButtonItem252, Me.BarSubItem1, Me.BarButtonItem253, Me.BarButtonItem254, Me.BarButtonItem255, Me.BarButtonItem256, Me.BarButtonItem257, Me.BarButtonItem258, Me.BarButtonItem259, Me.BarButtonItem260, Me.BarButtonItem261, Me.BarButtonItem262, Me.BarButtonItem263, Me.BarButtonItem264})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 458
+        Me.RibbonControl.MaxItemId = 459
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage7, Me.RibbonPage8, Me.RibbonPage2, Me.RibbonPage5, Me.RibbonPage11, Me.RibbonPage3, Me.RibbonPage1, Me.RibbonPage9, Me.RibbonPage12, Me.RibbonPage4, Me.RibbonPage13, Me.RibbonPage6, Me.pagAdministracion, Me.RibbonPage14})
         Me.RibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
@@ -2352,6 +2353,13 @@ Partial Class _FrMPrincipal
         Me.BarButtonItem263.Id = 457
         Me.BarButtonItem263.Name = "BarButtonItem263"
         '
+        'BarButtonItem264
+        '
+        Me.BarButtonItem264.Caption = "Consulta pedidos"
+        Me.BarButtonItem264.Glyph = Global.NetAgro.My.Resources.Resources.Documents_16
+        Me.BarButtonItem264.Id = 458
+        Me.BarButtonItem264.Name = "BarButtonItem264"
+        '
         'RibbonPage7
         '
         Me.RibbonPage7.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup19, Me.RibbonPageGroup5, Me.RibbonPageGroup3, Me.RibbonPageGroup29})
@@ -2488,6 +2496,7 @@ Partial Class _FrMPrincipal
         'RibbonPageGroup39
         '
         Me.RibbonPageGroup39.ItemLinks.Add(Me.BarButtonItem82)
+        Me.RibbonPageGroup39.ItemLinks.Add(Me.BarButtonItem264)
         Me.RibbonPageGroup39.ItemLinks.Add(Me.BarButtonItem161)
         Me.RibbonPageGroup39.ItemLinks.Add(Me.BarButtonItem55)
         Me.RibbonPageGroup39.ItemLinks.Add(Me.BarButtonItem222)
@@ -3077,6 +3086,28 @@ Partial Class _FrMPrincipal
         Me.pnlBotonesWebBrowser.Size = New System.Drawing.Size(176, 22)
         Me.pnlBotonesWebBrowser.TabIndex = 0
         '
+        'TrackBar1
+        '
+        Me.TrackBar1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TrackBar1.LargeChange = 1
+        Me.TrackBar1.Location = New System.Drawing.Point(36, 0)
+        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Minimum = -100
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(74, 22)
+        Me.TrackBar1.TabIndex = 25
+        Me.TrackBar1.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'LbZoom
+        '
+        Me.LbZoom.Dock = System.Windows.Forms.DockStyle.Left
+        Me.LbZoom.Location = New System.Drawing.Point(0, 0)
+        Me.LbZoom.Name = "LbZoom"
+        Me.LbZoom.Size = New System.Drawing.Size(36, 22)
+        Me.LbZoom.TabIndex = 24
+        Me.LbZoom.Text = "100%"
+        Me.LbZoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'picCargandoWebBrowser
         '
         Me.picCargandoWebBrowser.Dock = System.Windows.Forms.DockStyle.Right
@@ -3112,28 +3143,6 @@ Partial Class _FrMPrincipal
         Me.btActualizarWebBrowser.TabIndex = 0
         Me.btActualizarWebBrowser.UseVisualStyleBackColor = True
         '
-        'TrackBar1
-        '
-        Me.TrackBar1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TrackBar1.LargeChange = 1
-        Me.TrackBar1.Location = New System.Drawing.Point(36, 0)
-        Me.TrackBar1.Maximum = 100
-        Me.TrackBar1.Minimum = -100
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(74, 22)
-        Me.TrackBar1.TabIndex = 25
-        Me.TrackBar1.TickStyle = System.Windows.Forms.TickStyle.None
-        '
-        'LbZoom
-        '
-        Me.LbZoom.Dock = System.Windows.Forms.DockStyle.Left
-        Me.LbZoom.Location = New System.Drawing.Point(0, 0)
-        Me.LbZoom.Name = "LbZoom"
-        Me.LbZoom.Size = New System.Drawing.Size(36, 22)
-        Me.LbZoom.TabIndex = 24
-        Me.LbZoom.Text = "100%"
-        Me.LbZoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         '_FrMPrincipal
         '
         Me.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -3165,8 +3174,8 @@ Partial Class _FrMPrincipal
         Me.pnlTabWebBrowser.ResumeLayout(False)
         Me.pnlBotonesWebBrowser.ResumeLayout(False)
         Me.pnlBotonesWebBrowser.PerformLayout()
-        CType(Me.picCargandoWebBrowser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picCargandoWebBrowser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3535,5 +3544,5 @@ Partial Class _FrMPrincipal
     Friend WithEvents BarButtonItem263 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents TrackBar1 As TrackBar
     Friend WithEvents LbZoom As Label
-
+    Friend WithEvents BarButtonItem264 As DevExpress.XtraBars.BarButtonItem
 End Class

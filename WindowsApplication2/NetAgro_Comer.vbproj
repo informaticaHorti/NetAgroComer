@@ -251,6 +251,12 @@
     <Compile Include="Aplicacion\Comer\FrmFacturaEnvases.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Comer\FrmConsultaPedidosAlmacen.Designer.vb">
+      <DependentUpon>FrmConsultaPedidosAlmacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Comer\FrmConsultaPedidosAlmacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Comer\FrmSemanaConfPorPalet.Designer.vb">
       <DependentUpon>FrmSemanaConfPorPalet.vb</DependentUpon>
     </Compile>
@@ -1372,6 +1378,12 @@
       <DependentUpon>FrmActualizarDatosTransferenciaAgricultores.vb</DependentUpon>
     </Compile>
     <Compile Include="frmAdmon\FrmActualizarDatosTransferenciaAgricultores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\FrmModificarClienteLineaPalets.Designer.vb">
+      <DependentUpon>FrmModificarClienteLineaPalets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\FrmModificarClienteLineaPalets.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdmon\FrmGenerarInspecciones.Designer.vb">
@@ -2567,6 +2579,9 @@
     <EmbeddedResource Include="Aplicacion\Comer\FrmFacturaEnvases.resx">
       <DependentUpon>FrmFacturaEnvases.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Comer\FrmConsultaPedidosAlmacen.resx">
+      <DependentUpon>FrmConsultaPedidosAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Comer\FrmSemanaConfPorPalet.resx">
       <DependentUpon>FrmSemanaConfPorPalet.vb</DependentUpon>
     </EmbeddedResource>
@@ -3068,6 +3083,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmon\FrmActualizarDatosTransferenciaAgricultores.resx">
       <DependentUpon>FrmActualizarDatosTransferenciaAgricultores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\FrmModificarClienteLineaPalets.resx">
+      <DependentUpon>FrmModificarClienteLineaPalets.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmon\FrmGenerarInspecciones.resx">
       <DependentUpon>FrmGenerarInspecciones.vb</DependentUpon>

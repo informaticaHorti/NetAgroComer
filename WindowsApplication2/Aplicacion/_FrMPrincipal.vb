@@ -1152,6 +1152,15 @@ Public Class _FrMPrincipal
     End Sub
 
 
+    Private Sub BarButtonItem264_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem264.ItemClick
+        'Produccion/Produccion/Consulta pedidos
+        Dim Frm As New FrmConsultaPedidosAlmacen
+        Frm.MdiParent = Me
+        Frm.Show()
+        RaiseEvent AñadeFormulario(Frm, "")
+    End Sub
+
+
     Private Sub BarButtonItem83_ItemClick(sender As System.Object, e As DevExpress.XtraBars.ItemClickEventArgs)
 
         'ADM Aplicacion/Test/Prueba grid editable
@@ -3183,5 +3192,6 @@ Public Class _FrMPrincipal
 
         End If
     End Sub
+
 
 End Class
