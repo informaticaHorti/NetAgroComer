@@ -26,6 +26,8 @@ Partial Class FrmFianzasEnvases
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFianzasEnvases))
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Lb5 = New NetAgro.Lb(Me.components)
+        Me.Lb4 = New NetAgro.Lb(Me.components)
         Me.Lb3 = New NetAgro.Lb(Me.components)
         Me.Lb2 = New NetAgro.Lb(Me.components)
         Me.Lb1 = New NetAgro.Lb(Me.components)
@@ -44,8 +46,6 @@ Partial Class FrmFianzasEnvases
         Me.BtCliente = New NetAgro.BtBusca(Me.components)
         Me.TxCliente = New NetAgro.TxDato(Me.components)
         Me.LbCliente = New NetAgro.Lb(Me.components)
-        Me.Lb4 = New NetAgro.Lb(Me.components)
-        Me.Lb5 = New NetAgro.Lb(Me.components)
         Me.Panel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -92,9 +92,37 @@ Partial Class FrmFianzasEnvases
         Me.GroupBox1.Controls.Add(Me.BtSubfamilia)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 55)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(852, 399)
+        Me.GroupBox1.Size = New System.Drawing.Size(864, 399)
         Me.GroupBox1.TabIndex = 199
         Me.GroupBox1.TabStop = False
+        '
+        'Lb5
+        '
+        Me.Lb5.AutoSize = True
+        Me.Lb5.CL_ControlAsociado = Nothing
+        Me.Lb5.CL_ValorFijo = True
+        Me.Lb5.ClForm = Nothing
+        Me.Lb5.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb5.ForeColor = System.Drawing.Color.Teal
+        Me.Lb5.Location = New System.Drawing.Point(625, 105)
+        Me.Lb5.Name = "Lb5"
+        Me.Lb5.Size = New System.Drawing.Size(159, 13)
+        Me.Lb5.TabIndex = 213
+        Me.Lb5.Text = "E = Facturar y declarar"
+        '
+        'Lb4
+        '
+        Me.Lb4.AutoSize = True
+        Me.Lb4.CL_ControlAsociado = Nothing
+        Me.Lb4.CL_ValorFijo = True
+        Me.Lb4.ClForm = Nothing
+        Me.Lb4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb4.ForeColor = System.Drawing.Color.Teal
+        Me.Lb4.Location = New System.Drawing.Point(625, 92)
+        Me.Lb4.Name = "Lb4"
+        Me.Lb4.Size = New System.Drawing.Size(230, 13)
+        Me.Lb4.TabIndex = 212
+        Me.Lb4.Text = "D = En depósito Empresas Locales"
         '
         'Lb3
         '
@@ -282,7 +310,7 @@ Partial Class FrmFianzasEnvases
         Me.ClGrid1.OcultarCeros = False
         Me.ClGrid1.PrimerControl = 0
         Me.ClGrid1.Saliendo = False
-        Me.ClGrid1.Size = New System.Drawing.Size(846, 266)
+        Me.ClGrid1.Size = New System.Drawing.Size(858, 266)
         Me.ClGrid1.TabIndex = 198
         Me.ClGrid1.UltimoControl = 0
         '
@@ -340,7 +368,7 @@ Partial Class FrmFianzasEnvases
         Me.LbNomSubfamilia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LbNomSubfamilia.Location = New System.Drawing.Point(202, 49)
         Me.LbNomSubfamilia.Name = "LbNomSubfamilia"
-        Me.LbNomSubfamilia.Size = New System.Drawing.Size(252, 23)
+        Me.LbNomSubfamilia.Size = New System.Drawing.Size(264, 23)
         Me.LbNomSubfamilia.TabIndex = 74
         '
         'BtSubfamilia
@@ -454,34 +482,6 @@ Partial Class FrmFianzasEnvases
         Me.LbCliente.Size = New System.Drawing.Size(59, 16)
         Me.LbCliente.TabIndex = 66
         Me.LbCliente.Text = "Cliente"
-        '
-        'Lb4
-        '
-        Me.Lb4.AutoSize = True
-        Me.Lb4.CL_ControlAsociado = Nothing
-        Me.Lb4.CL_ValorFijo = True
-        Me.Lb4.ClForm = Nothing
-        Me.Lb4.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb4.ForeColor = System.Drawing.Color.Teal
-        Me.Lb4.Location = New System.Drawing.Point(625, 92)
-        Me.Lb4.Name = "Lb4"
-        Me.Lb4.Size = New System.Drawing.Size(230, 13)
-        Me.Lb4.TabIndex = 212
-        Me.Lb4.Text = "D = En depósito Empresas Locales"
-        '
-        'Lb5
-        '
-        Me.Lb5.AutoSize = True
-        Me.Lb5.CL_ControlAsociado = Nothing
-        Me.Lb5.CL_ValorFijo = True
-        Me.Lb5.ClForm = Nothing
-        Me.Lb5.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lb5.ForeColor = System.Drawing.Color.Teal
-        Me.Lb5.Location = New System.Drawing.Point(625, 105)
-        Me.Lb5.Name = "Lb5"
-        Me.Lb5.Size = New System.Drawing.Size(159, 13)
-        Me.Lb5.TabIndex = 213
-        Me.Lb5.Text = "E = Facturar y declarar"
         '
         'FrmFianzasEnvases
         '
