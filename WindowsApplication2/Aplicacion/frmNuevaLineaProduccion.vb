@@ -30,7 +30,7 @@ Public Class frmNuevaLineaProduccion
     Dim _bCambio As Boolean = False
 
 
-    Dim _HoraInicio As Date = VaDate("")
+    'Dim _HoraInicio As Date = VaDate("")
 
 
     Public Sub New()
@@ -59,7 +59,14 @@ Public Class frmNuevaLineaProduccion
         _bPermitirPrecalibrado = bPermitirPrecalibrado
 
         If VaDate(HoraInicio) > VaDate("") Then
-            _HoraInicio = HoraInicio
+            TxHoraInicio.Text = HoraInicio.ToString("HH:mm")
+            updownHora.Value = HoraInicio.Hour
+            updownMinutos.Value = HoraInicio.Minute
+        Else
+            Dim ahora As DateTime = Now
+            TxHoraInicio.Text = ahora.ToString("HH:mm")
+            updownHora.Value = ahora.Hour
+            updownMinutos.Value = ahora.Minute
         End If
 
 
@@ -179,9 +186,18 @@ Public Class frmNuevaLineaProduccion
                 Produccion.PRD_IdCentro.Valor = _IdPventa
                 Produccion.PRD_IdLinea.Valor = _IdLinea
 
-                If _HoraInicio > VaDate("") Then
-                    Produccion.PRD_HoraInicio.Valor = _HoraInicio.ToString("HH:mm:ss")
-                    Produccion.PRD_HoraInicialCompleta.Valor = _HoraInicio.ToString("dd/MM/yyyy HH:mm:ss")
+
+                Dim HoraInicio As DateTime = VaDate("")
+                Dim texto_hora_inicio As String() = Split(TxHoraInicio.Text, ":")
+                If texto_hora_inicio.Length = 2 And VaInt(texto_hora_inicio(0)) > -1 And VaInt(texto_hora_inicio(0)) < 24 And VaInt(texto_hora_inicio(1)) > -1 And VaInt(texto_hora_inicio(1)) < 60 Then
+                    HoraInicio = New DateTime(Now.Year, Now.Month, Now.Day, VaInt(texto_hora_inicio(0)), VaInt(texto_hora_inicio(1)), 0)
+                Else
+                    HoraInicio = New DateTime(Now.Year, Now.Month, Now.Day, Now.Hour, Now.Minute, 0)
+                End If
+
+                If HoraInicio > VaDate("") Then
+                    Produccion.PRD_HoraInicio.Valor = HoraInicio.ToString("HH:mm:ss")
+                    Produccion.PRD_HoraInicialCompleta.Valor = HoraInicio.ToString("dd/MM/yyyy HH:mm:ss")
                 Else
                     Produccion.PRD_HoraInicio.Valor = Now.ToString("HH:mm:ss")
                     Produccion.PRD_HoraInicialCompleta.Valor = Now.ToString("dd/MM/yyyy HH:mm:ss")
@@ -751,6 +767,37 @@ Public Class frmNuevaLineaProduccion
             End If
 
         End If
+
+    End Sub
+
+    Private Sub updownHora_ValueChanged(sender As Object, e As EventArgs) Handles updownHora.ValueChanged
+
+        If updownHora.Value > 23 Then
+            updownHora.Value = 0
+        ElseIf updownHora.value < 0 Then
+            updownHora.Value = 23
+        End If
+
+        MostrarHora()
+
+    End Sub
+
+    Private Sub updownMinutos_ValueChanged(sender As Object, e As EventArgs) Handles updownMinutos.ValueChanged
+
+        If updownMinutos.Value > 59 Then
+            updownMinutos.Value = 0
+        ElseIf updownMinutos.Value < 0 Then
+            updownMinutos.Value = 59
+        End If
+
+        MostrarHora()
+
+    End Sub
+
+
+    Private Sub MostrarHora()
+
+        TxHoraInicio.Text = updownHora.Value.ToString("00") & ":" & updownMinutos.Value.ToString("00")
 
     End Sub
 

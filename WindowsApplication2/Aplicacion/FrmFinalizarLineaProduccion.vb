@@ -131,6 +131,14 @@ Public Class FrmFinalizarLineaProduccion
 
         MuestraDatosLinea()
 
+
+        Dim ahora As DateTime = Now
+        TxHoraFin.Text = ahora.ToString("HH:mm")
+        updownHora.Value = ahora.Hour
+        updownMinutos.Value = ahora.Minute
+
+
+
     End Sub
 
 
@@ -255,7 +263,15 @@ Public Class FrmFinalizarLineaProduccion
             Dim Produccion As New E_Produccion(Idusuario, cn)
             If Produccion.LeerId(Id) Then
 
-                Dim HoraFin As Date = Now
+                Dim HoraFin As Date = VaDate("")
+                Dim texto_hora_fin As String() = Split(TxHoraFin.Text, ":")
+                If texto_hora_fin.Length = 2 And VaInt(texto_hora_fin(0)) > -1 And VaInt(texto_hora_fin(0)) < 24 And VaInt(texto_hora_fin(1)) > -1 And VaInt(texto_hora_fin(1)) < 60 Then
+                    HoraFin = New DateTime(Now.Year, Now.Month, Now.Day, VaInt(texto_hora_fin(0)), VaInt(texto_hora_fin(1)), 0)
+                Else
+                    HoraFin = New DateTime(Now.Year, Now.Month, Now.Day, Now.Hour, Now.Minute, 0)
+                End If
+
+
 
                 Produccion.PRD_KilosConsumidos.Valor = VaInt(TxKilosConsumidos.Text).ToString
                 Produccion.PRD_HoraFinal.Valor = HoraFin.ToString("HH:mm:ss")
@@ -361,4 +377,39 @@ Public Class FrmFinalizarLineaProduccion
 
         End If
     End Sub
+
+
+
+    Private Sub updownHora_ValueChanged(sender As Object, e As EventArgs) Handles updownHora.ValueChanged
+
+        If updownHora.Value > 23 Then
+            updownHora.Value = 0
+        ElseIf updownHora.Value < 0 Then
+            updownHora.Value = 23
+        End If
+
+        MostrarHora()
+
+    End Sub
+
+    Private Sub updownMinutos_ValueChanged(sender As Object, e As EventArgs) Handles updownMinutos.ValueChanged
+
+        If updownMinutos.Value > 59 Then
+            updownMinutos.Value = 0
+        ElseIf updownMinutos.Value < 0 Then
+            updownMinutos.Value = 59
+        End If
+
+        MostrarHora()
+
+    End Sub
+
+
+    Private Sub MostrarHora()
+
+        TxHoraFin.Text = updownHora.Value.ToString("00") & ":" & updownMinutos.Value.ToString("00")
+
+    End Sub
+
+
 End Class

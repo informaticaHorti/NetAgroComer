@@ -799,9 +799,14 @@
 
 
         Dim dt As DataTable = Produccion.MiConexion.ConsultaSQL(sql)
-        dt.Columns.Add(New DataColumn("Tiempo", GetType(Decimal)))
-        dt.Columns.Add(New DataColumn("KgxHora", GetType(Decimal)))
-        dt = CompletarGrid(dt)
+        If Not IsNothing(dt) Then
+
+            dt.Columns.Add(New DataColumn("Tiempo", GetType(Decimal)))
+            dt.Columns.Add(New DataColumn("KgxHora", GetType(Decimal)))
+            dt = CompletarGrid(dt)
+
+        End If
+
 
 
         grid.DataSource = dt

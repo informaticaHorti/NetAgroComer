@@ -24,6 +24,10 @@ Partial Class FrmFinalizarLineaProduccion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.pnlSerieFactura = New System.Windows.Forms.Panel()
+        Me.TxHoraFin = New System.Windows.Forms.TextBox()
+        Me.updownHora = New System.Windows.Forms.NumericUpDown()
+        Me.updownMinutos = New System.Windows.Forms.NumericUpDown()
+        Me.Lb7 = New NetAgro.Lb(Me.components)
         Me.TxObservaciones = New NetAgro.TxDato(Me.components)
         Me.LbObservaciones = New NetAgro.Lb(Me.components)
         Me.ChkNoFinalizar = New System.Windows.Forms.CheckBox()
@@ -49,6 +53,8 @@ Partial Class FrmFinalizarLineaProduccion
         Me.btCancelar = New NetAgro.ClButton()
         Me.BtAceptar = New NetAgro.ClButton()
         Me.pnlSerieFactura.SuspendLayout()
+        CType(Me.updownHora, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.updownMinutos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLineas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewLineas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -58,6 +64,10 @@ Partial Class FrmFinalizarLineaProduccion
         '
         Me.pnlSerieFactura.BackColor = System.Drawing.Color.LightBlue
         Me.pnlSerieFactura.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlSerieFactura.Controls.Add(Me.TxHoraFin)
+        Me.pnlSerieFactura.Controls.Add(Me.updownHora)
+        Me.pnlSerieFactura.Controls.Add(Me.updownMinutos)
+        Me.pnlSerieFactura.Controls.Add(Me.Lb7)
         Me.pnlSerieFactura.Controls.Add(Me.TxObservaciones)
         Me.pnlSerieFactura.Controls.Add(Me.LbObservaciones)
         Me.pnlSerieFactura.Controls.Add(Me.ChkNoFinalizar)
@@ -85,10 +95,53 @@ Partial Class FrmFinalizarLineaProduccion
         Me.pnlSerieFactura.Size = New System.Drawing.Size(785, 413)
         Me.pnlSerieFactura.TabIndex = 179
         '
+        'TxHoraFin
+        '
+        Me.TxHoraFin.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.TxHoraFin.Location = New System.Drawing.Point(386, 15)
+        Me.TxHoraFin.Name = "TxHoraFin"
+        Me.TxHoraFin.ReadOnly = True
+        Me.TxHoraFin.Size = New System.Drawing.Size(50, 22)
+        Me.TxHoraFin.TabIndex = 209
+        '
+        'updownHora
+        '
+        Me.updownHora.Location = New System.Drawing.Point(368, 16)
+        Me.updownHora.Maximum = New Decimal(New Integer() {24, 0, 0, 0})
+        Me.updownHora.Minimum = New Decimal(New Integer() {1, 0, 0, -2147483648})
+        Me.updownHora.Name = "updownHora"
+        Me.updownHora.Size = New System.Drawing.Size(17, 20)
+        Me.updownHora.TabIndex = 208
+        Me.updownHora.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left
+        '
+        'updownMinutos
+        '
+        Me.updownMinutos.Location = New System.Drawing.Point(437, 16)
+        Me.updownMinutos.Maximum = New Decimal(New Integer() {60, 0, 0, 0})
+        Me.updownMinutos.Minimum = New Decimal(New Integer() {1, 0, 0, -2147483648})
+        Me.updownMinutos.Name = "updownMinutos"
+        Me.updownMinutos.Size = New System.Drawing.Size(17, 20)
+        Me.updownMinutos.TabIndex = 207
+        '
+        'Lb7
+        '
+        Me.Lb7.AutoSize = True
+        Me.Lb7.CL_ControlAsociado = Nothing
+        Me.Lb7.CL_ValorFijo = True
+        Me.Lb7.ClForm = Nothing
+        Me.Lb7.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb7.ForeColor = System.Drawing.Color.Black
+        Me.Lb7.Location = New System.Drawing.Point(233, 18)
+        Me.Lb7.Name = "Lb7"
+        Me.Lb7.Size = New System.Drawing.Size(129, 16)
+        Me.Lb7.TabIndex = 206
+        Me.Lb7.Text = "Hora finalización"
+        '
         'TxObservaciones
         '
         Me.TxObservaciones.Autonumerico = False
         Me.TxObservaciones.BackColor = System.Drawing.Color.White
+        Me.TxObservaciones.Bloqueado = False
         Me.TxObservaciones.Buscando = False
         Me.TxObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxObservaciones.ClForm = Nothing
@@ -108,6 +161,8 @@ Partial Class FrmFinalizarLineaProduccion
         Me.TxObservaciones.Size = New System.Drawing.Size(606, 26)
         Me.TxObservaciones.TabIndex = 205
         Me.TxObservaciones.TeclaRepetida = False
+        Me.TxObservaciones.TxDatoFinalSemana = Nothing
+        Me.TxObservaciones.TxDatoInicioSemana = Nothing
         Me.TxObservaciones.UltimoValorValidado = Nothing
         '
         'LbObservaciones
@@ -363,7 +418,7 @@ Partial Class FrmFinalizarLineaProduccion
         Me.LbFecha.ClForm = Nothing
         Me.LbFecha.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LbFecha.Location = New System.Drawing.Point(92, 15)
+        Me.LbFecha.Location = New System.Drawing.Point(71, 15)
         Me.LbFecha.Name = "LbFecha"
         Me.LbFecha.Size = New System.Drawing.Size(120, 23)
         Me.LbFecha.TabIndex = 187
@@ -398,6 +453,7 @@ Partial Class FrmFinalizarLineaProduccion
         'TxKilosConsumidos
         '
         Me.TxKilosConsumidos.Autonumerico = False
+        Me.TxKilosConsumidos.Bloqueado = False
         Me.TxKilosConsumidos.Buscando = False
         Me.TxKilosConsumidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxKilosConsumidos.ClForm = Nothing
@@ -418,6 +474,8 @@ Partial Class FrmFinalizarLineaProduccion
         Me.TxKilosConsumidos.TabIndex = 80
         Me.TxKilosConsumidos.TeclaRepetida = False
         Me.TxKilosConsumidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TxKilosConsumidos.TxDatoFinalSemana = Nothing
+        Me.TxKilosConsumidos.TxDatoInicioSemana = Nothing
         Me.TxKilosConsumidos.UltimoValorValidado = Nothing
         '
         'btCancelar
@@ -466,6 +524,8 @@ Partial Class FrmFinalizarLineaProduccion
         Me.Text = "Finalizar linea de produccion"
         Me.pnlSerieFactura.ResumeLayout(False)
         Me.pnlSerieFactura.PerformLayout()
+        CType(Me.updownHora, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.updownMinutos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLineas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewLineas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -498,4 +558,8 @@ Partial Class FrmFinalizarLineaProduccion
     Friend WithEvents ChkNoFinalizar As System.Windows.Forms.CheckBox
     Friend WithEvents LbObservaciones As NetAgro.Lb
     Friend WithEvents TxObservaciones As NetAgro.TxDato
+    Friend WithEvents TxHoraFin As TextBox
+    Friend WithEvents updownHora As NumericUpDown
+    Friend WithEvents updownMinutos As NumericUpDown
+    Friend WithEvents Lb7 As Lb
 End Class

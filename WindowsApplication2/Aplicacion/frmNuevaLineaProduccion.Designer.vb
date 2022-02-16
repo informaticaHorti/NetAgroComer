@@ -24,11 +24,9 @@ Partial Class frmNuevaLineaProduccion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.pnlSerieFactura = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.rdbPrecalibrado = New System.Windows.Forms.RadioButton()
-        Me.rdbLote = New System.Windows.Forms.RadioButton()
-        Me.rdbPartida = New System.Windows.Forms.RadioButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TxHoraInicio = New System.Windows.Forms.TextBox()
+        Me.updownHora = New System.Windows.Forms.NumericUpDown()
+        Me.Lb6 = New NetAgro.Lb(Me.components)
         Me.TxCampa = New NetAgro.TxDato(Me.components)
         Me.Lb4 = New NetAgro.Lb(Me.components)
         Me.LbFecha = New NetAgro.Lb(Me.components)
@@ -37,9 +35,14 @@ Partial Class frmNuevaLineaProduccion
         Me.Lb1 = New NetAgro.Lb(Me.components)
         Me.LbProducto = New NetAgro.Lb(Me.components)
         Me.btCancelar = New NetAgro.ClButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rdbPrecalibrado = New System.Windows.Forms.RadioButton()
+        Me.rdbLote = New System.Windows.Forms.RadioButton()
+        Me.rdbPartida = New System.Windows.Forms.RadioButton()
         Me.BtAceptar = New NetAgro.ClButton()
         Me.Lb23 = New NetAgro.Lb(Me.components)
         Me.TxNumero = New NetAgro.TxDato(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Lb9 = New NetAgro.Lb(Me.components)
         Me.LbKilosPendientes = New NetAgro.Lb(Me.components)
         Me.Lb7 = New NetAgro.Lb(Me.components)
@@ -48,15 +51,22 @@ Partial Class frmNuevaLineaProduccion
         Me.LbKilosPartidaLote = New NetAgro.Lb(Me.components)
         Me.Lb3 = New NetAgro.Lb(Me.components)
         Me.LbKilos = New NetAgro.Lb(Me.components)
+        Me.updownMinutos = New System.Windows.Forms.NumericUpDown()
         Me.pnlSerieFactura.SuspendLayout()
+        CType(Me.updownHora, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.updownMinutos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSerieFactura
         '
         Me.pnlSerieFactura.BackColor = System.Drawing.Color.LightBlue
         Me.pnlSerieFactura.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlSerieFactura.Controls.Add(Me.TxHoraInicio)
+        Me.pnlSerieFactura.Controls.Add(Me.updownHora)
+        Me.pnlSerieFactura.Controls.Add(Me.updownMinutos)
+        Me.pnlSerieFactura.Controls.Add(Me.Lb6)
         Me.pnlSerieFactura.Controls.Add(Me.TxCampa)
         Me.pnlSerieFactura.Controls.Add(Me.Lb4)
         Me.pnlSerieFactura.Controls.Add(Me.LbFecha)
@@ -76,75 +86,38 @@ Partial Class frmNuevaLineaProduccion
         Me.pnlSerieFactura.Size = New System.Drawing.Size(411, 379)
         Me.pnlSerieFactura.TabIndex = 179
         '
-        'GroupBox1
+        'TxHoraInicio
         '
-        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.rdbPrecalibrado)
-        Me.GroupBox1.Controls.Add(Me.rdbLote)
-        Me.GroupBox1.Controls.Add(Me.rdbPartida)
-        Me.GroupBox1.Location = New System.Drawing.Point(79, 50)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(321, 41)
-        Me.GroupBox1.TabIndex = 87
-        Me.GroupBox1.TabStop = False
+        Me.TxHoraInicio.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.TxHoraInicio.Location = New System.Drawing.Point(318, 11)
+        Me.TxHoraInicio.Name = "TxHoraInicio"
+        Me.TxHoraInicio.ReadOnly = True
+        Me.TxHoraInicio.Size = New System.Drawing.Size(50, 22)
+        Me.TxHoraInicio.TabIndex = 192
         '
-        'rdbPrecalibrado
+        'updownHora
         '
-        Me.rdbPrecalibrado.AutoSize = True
-        Me.rdbPrecalibrado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbPrecalibrado.ForeColor = System.Drawing.Color.Teal
-        Me.rdbPrecalibrado.Location = New System.Drawing.Point(191, 14)
-        Me.rdbPrecalibrado.Name = "rdbPrecalibrado"
-        Me.rdbPrecalibrado.Size = New System.Drawing.Size(116, 20)
-        Me.rdbPrecalibrado.TabIndex = 3
-        Me.rdbPrecalibrado.Text = "Precalibrado"
-        Me.rdbPrecalibrado.UseVisualStyleBackColor = True
+        Me.updownHora.Location = New System.Drawing.Point(300, 12)
+        Me.updownHora.Maximum = New Decimal(New Integer() {24, 0, 0, 0})
+        Me.updownHora.Minimum = New Decimal(New Integer() {1, 0, 0, -2147483648})
+        Me.updownHora.Name = "updownHora"
+        Me.updownHora.Size = New System.Drawing.Size(17, 20)
+        Me.updownHora.TabIndex = 190
+        Me.updownHora.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left
         '
-        'rdbLote
+        'Lb6
         '
-        Me.rdbLote.AutoSize = True
-        Me.rdbLote.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbLote.ForeColor = System.Drawing.Color.Teal
-        Me.rdbLote.Location = New System.Drawing.Point(116, 14)
-        Me.rdbLote.Name = "rdbLote"
-        Me.rdbLote.Size = New System.Drawing.Size(56, 20)
-        Me.rdbLote.TabIndex = 2
-        Me.rdbLote.Text = "Lote"
-        Me.rdbLote.UseVisualStyleBackColor = True
-        '
-        'rdbPartida
-        '
-        Me.rdbPartida.AutoSize = True
-        Me.rdbPartida.Checked = True
-        Me.rdbPartida.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbPartida.ForeColor = System.Drawing.Color.Teal
-        Me.rdbPartida.Location = New System.Drawing.Point(21, 14)
-        Me.rdbPartida.Name = "rdbPartida"
-        Me.rdbPartida.Size = New System.Drawing.Size(76, 20)
-        Me.rdbPartida.TabIndex = 1
-        Me.rdbPartida.TabStop = True
-        Me.rdbPartida.Text = "Partida"
-        Me.rdbPartida.UseVisualStyleBackColor = True
-        '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.Azure
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Lb9)
-        Me.Panel1.Controls.Add(Me.LbKilosPendientes)
-        Me.Panel1.Controls.Add(Me.Lb7)
-        Me.Panel1.Controls.Add(Me.LbKilosConsumidos)
-        Me.Panel1.Controls.Add(Me.Lb5)
-        Me.Panel1.Controls.Add(Me.LbKilosPartidaLote)
-        Me.Panel1.Controls.Add(Me.Lb3)
-        Me.Panel1.Controls.Add(Me.LbKilos)
-        Me.Panel1.Location = New System.Drawing.Point(13, 203)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(384, 135)
-        Me.Panel1.TabIndex = 184
+        Me.Lb6.AutoSize = True
+        Me.Lb6.CL_ControlAsociado = Nothing
+        Me.Lb6.CL_ValorFijo = True
+        Me.Lb6.ClForm = Nothing
+        Me.Lb6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb6.ForeColor = System.Drawing.Color.Black
+        Me.Lb6.Location = New System.Drawing.Point(211, 14)
+        Me.Lb6.Name = "Lb6"
+        Me.Lb6.Size = New System.Drawing.Size(85, 16)
+        Me.Lb6.TabIndex = 188
+        Me.Lb6.Text = "Hora inicio"
         '
         'TxCampa
         '
@@ -196,7 +169,7 @@ Partial Class frmNuevaLineaProduccion
         Me.LbFecha.ClForm = Nothing
         Me.LbFecha.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LbFecha.Location = New System.Drawing.Point(89, 11)
+        Me.LbFecha.Location = New System.Drawing.Point(68, 11)
         Me.LbFecha.Name = "LbFecha"
         Me.LbFecha.Size = New System.Drawing.Size(120, 23)
         Me.LbFecha.TabIndex = 185
@@ -277,6 +250,56 @@ Partial Class frmNuevaLineaProduccion
         Me.btCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btCancelar.UseVisualStyleBackColor = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.rdbPrecalibrado)
+        Me.GroupBox1.Controls.Add(Me.rdbLote)
+        Me.GroupBox1.Controls.Add(Me.rdbPartida)
+        Me.GroupBox1.Location = New System.Drawing.Point(79, 50)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(321, 41)
+        Me.GroupBox1.TabIndex = 87
+        Me.GroupBox1.TabStop = False
+        '
+        'rdbPrecalibrado
+        '
+        Me.rdbPrecalibrado.AutoSize = True
+        Me.rdbPrecalibrado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbPrecalibrado.ForeColor = System.Drawing.Color.Teal
+        Me.rdbPrecalibrado.Location = New System.Drawing.Point(191, 14)
+        Me.rdbPrecalibrado.Name = "rdbPrecalibrado"
+        Me.rdbPrecalibrado.Size = New System.Drawing.Size(116, 20)
+        Me.rdbPrecalibrado.TabIndex = 3
+        Me.rdbPrecalibrado.Text = "Precalibrado"
+        Me.rdbPrecalibrado.UseVisualStyleBackColor = True
+        '
+        'rdbLote
+        '
+        Me.rdbLote.AutoSize = True
+        Me.rdbLote.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbLote.ForeColor = System.Drawing.Color.Teal
+        Me.rdbLote.Location = New System.Drawing.Point(116, 14)
+        Me.rdbLote.Name = "rdbLote"
+        Me.rdbLote.Size = New System.Drawing.Size(56, 20)
+        Me.rdbLote.TabIndex = 2
+        Me.rdbLote.Text = "Lote"
+        Me.rdbLote.UseVisualStyleBackColor = True
+        '
+        'rdbPartida
+        '
+        Me.rdbPartida.AutoSize = True
+        Me.rdbPartida.Checked = True
+        Me.rdbPartida.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbPartida.ForeColor = System.Drawing.Color.Teal
+        Me.rdbPartida.Location = New System.Drawing.Point(21, 14)
+        Me.rdbPartida.Name = "rdbPartida"
+        Me.rdbPartida.Size = New System.Drawing.Size(76, 20)
+        Me.rdbPartida.TabIndex = 1
+        Me.rdbPartida.TabStop = True
+        Me.rdbPartida.Text = "Partida"
+        Me.rdbPartida.UseVisualStyleBackColor = True
+        '
         'BtAceptar
         '
         Me.BtAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -334,6 +357,26 @@ Partial Class frmNuevaLineaProduccion
         Me.TxNumero.TxDatoFinalSemana = Nothing
         Me.TxNumero.TxDatoInicioSemana = Nothing
         Me.TxNumero.UltimoValorValidado = Nothing
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.Azure
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Lb9)
+        Me.Panel1.Controls.Add(Me.LbKilosPendientes)
+        Me.Panel1.Controls.Add(Me.Lb7)
+        Me.Panel1.Controls.Add(Me.LbKilosConsumidos)
+        Me.Panel1.Controls.Add(Me.Lb5)
+        Me.Panel1.Controls.Add(Me.LbKilosPartidaLote)
+        Me.Panel1.Controls.Add(Me.Lb3)
+        Me.Panel1.Controls.Add(Me.LbKilos)
+        Me.Panel1.Location = New System.Drawing.Point(13, 203)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(384, 135)
+        Me.Panel1.TabIndex = 184
         '
         'Lb9
         '
@@ -455,6 +498,15 @@ Partial Class frmNuevaLineaProduccion
         Me.LbKilos.TabIndex = 184
         Me.LbKilos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'updownMinutos
+        '
+        Me.updownMinutos.Location = New System.Drawing.Point(369, 12)
+        Me.updownMinutos.Maximum = New Decimal(New Integer() {60, 0, 0, 0})
+        Me.updownMinutos.Minimum = New Decimal(New Integer() {1, 0, 0, -2147483648})
+        Me.updownMinutos.Name = "updownMinutos"
+        Me.updownMinutos.Size = New System.Drawing.Size(17, 20)
+        Me.updownMinutos.TabIndex = 189
+        '
         'frmNuevaLineaProduccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -467,10 +519,12 @@ Partial Class frmNuevaLineaProduccion
         Me.Text = "Nueva linea de produccion"
         Me.pnlSerieFactura.ResumeLayout(False)
         Me.pnlSerieFactura.PerformLayout()
+        CType(Me.updownHora, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.updownMinutos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -499,4 +553,8 @@ Partial Class frmNuevaLineaProduccion
     Friend WithEvents Lb4 As NetAgro.Lb
     Friend WithEvents LbFecha As NetAgro.Lb
     Friend WithEvents TxCampa As NetAgro.TxDato
+    Friend WithEvents updownHora As NumericUpDown
+    Friend WithEvents Lb6 As Lb
+    Friend WithEvents TxHoraInicio As TextBox
+    Friend WithEvents updownMinutos As NumericUpDown
 End Class
