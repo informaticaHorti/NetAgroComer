@@ -1033,7 +1033,7 @@ Public Class FrmEntradas
             fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
         End If
 
-        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & fechafiltro & "' AND NIF = '" & nif & "'"
+        BtBuscaLocalizador.CL_Filtro = "Fecha >= '" & fechafiltro & "' AND NIF = '" & nif & "'"
 
 
     End Sub
@@ -1666,7 +1666,7 @@ Public Class FrmEntradas
                 End If
             End If
 
-            End If
+        End If
 
     End Sub
 
@@ -1702,7 +1702,7 @@ Public Class FrmEntradas
                 End If
             End If
 
-            End If
+        End If
 
     End Sub
 
@@ -2541,7 +2541,7 @@ Public Class FrmEntradas
             End If
 
 
-            
+
             If Controlado.Trim.ToUpper = "S" Then
                 TxControlado.Text = "S"
             Else
@@ -3031,7 +3031,7 @@ Public Class FrmEntradas
             fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
         End If
 
-        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & fechafiltro & "' AND NIF = '" & nif & "'"
+        BtBuscaLocalizador.CL_Filtro = "Fecha >= '" & fechafiltro & "' AND NIF = '" & nif & "'"
 
     End Sub
 
@@ -3070,8 +3070,8 @@ Public Class FrmEntradas
 
     End Sub
 
-    
-    
+
+
     Private Sub TxLocalizadorDAT_Valida(edicion As System.Boolean) Handles TxLocalizadorDAT.Valida
 
         If edicion Then
@@ -3115,7 +3115,7 @@ Public Class FrmEntradas
 
             End If
 
-            
+
 
 
 

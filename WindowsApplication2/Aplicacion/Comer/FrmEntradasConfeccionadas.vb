@@ -1055,7 +1055,7 @@ Public Class FrmEntradasConfeccionadas
             fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
         End If
 
-        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & fechafiltro & "' AND NIF = '" & nif & "'"
+        BtBuscaLocalizador.CL_Filtro = "Fecha >= '" & fechafiltro & "' AND NIF = '" & nif & "'"
 
 
     End Sub
@@ -2511,7 +2511,7 @@ Public Class FrmEntradasConfeccionadas
             fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
         End If
 
-        BtBuscaLocalizador.CL_Filtro = "Fecha = '" & fechafiltro & "' AND NIF = '" & nif & "'"
+        BtBuscaLocalizador.CL_Filtro = "Fecha >= '" & fechafiltro & "' AND NIF = '" & nif & "'"
 
     End Sub
 
