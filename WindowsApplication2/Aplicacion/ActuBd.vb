@@ -439,6 +439,9 @@
         Actualizador.CreaCampo(Valorespventa.VPV_AutorizacionAduanera)
 
 
+        Actualizador.CreaCampo(Palets.PAL_Flejado)
+
+
 
         If Not Actualizador.RealizaActualizaciones() Then
             bErrorFatal = True

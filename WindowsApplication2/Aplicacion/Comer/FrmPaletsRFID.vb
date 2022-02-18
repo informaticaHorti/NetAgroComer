@@ -149,6 +149,8 @@ Public Class FrmPaletsRFID
             Dim IdLinea As String = (row("IdLinea").ToString & "").Trim
             Dim Bultos As Integer = VaInt(row("Bultos"))
 
+            Dim IdPalet As String = ""
+
 
             Dim Palets_Lineas As New E_palets_lineas(Idusuario, cn)
             If Palets_Lineas.LeerId(IdLinea) Then
@@ -166,7 +168,18 @@ Public Class FrmPaletsRFID
                 End If
 
 
+                IdPalet = (Palets_Lineas.PLL_idpalet.Valor & "").Trim
+
                 Palets_Lineas.Actualizar()
+
+
+                If VaDec(IdPalet) > 0 Then
+                    Dim Palets As New E_palets(Idusuario, cn)
+                    If Palets.LeerId(IdPalet) Then
+                        Palets.PAL_Flejado.Valor = "S"
+                        Palets.Actualizar()
+                    End If
+                End If
 
 
                 '2) Actualizar Palets_traza

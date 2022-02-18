@@ -31,6 +31,8 @@
     Public PAL_SufijoGGN3 As Cdatos.bdcampo
     Public PAL_SufijoGGN4 As Cdatos.bdcampo
 
+    Public PAL_Flejado As Cdatos.bdcampo
+
     Public PAL_IdUsuarioLog As Cdatos.bdcampo
     Public PAL_FechaLog As Cdatos.bdcampo
     Public PAL_HoraLog As Cdatos.bdcampo
@@ -96,6 +98,8 @@
             PAL_SufijoGGN2 = New Cdatos.bdcampo(CodigoEntidad & "SufijoGGN2", Cdatos.TiposCampo.Cadena, 2)
             PAL_SufijoGGN3 = New Cdatos.bdcampo(CodigoEntidad & "SufijoGGN3", Cdatos.TiposCampo.Cadena, 2)
             PAL_SufijoGGN4 = New Cdatos.bdcampo(CodigoEntidad & "SufijoGGN4", Cdatos.TiposCampo.Cadena, 2)
+
+            PAL_Flejado = New Cdatos.bdcampo(CodigoEntidad & "Flejado", Cdatos.TiposCampo.Cadena, 1)
 
             PAL_IdUsuarioLog = New Cdatos.bdcampo(CodigoEntidad & "IdUsuarioLog", Cdatos.TiposCampo.EnteroPositivo, 4)
             PAL_FechaLog = New Cdatos.bdcampo(CodigoEntidad & "FechaLog", Cdatos.TiposCampo.Fecha, 15)
