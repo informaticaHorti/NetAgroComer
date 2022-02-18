@@ -98,6 +98,25 @@ Partial Class FrmConsultaPedidosAlmacen
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rbTodos = New System.Windows.Forms.RadioButton()
         Me.rbSalidos = New System.Windows.Forms.RadioButton()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btCartelones = New System.Windows.Forms.Button()
+        Me.btNuevoPaletStock = New System.Windows.Forms.Button()
+        Me.PanelBotones = New System.Windows.Forms.Panel()
+        Me.btNuevoPalet = New System.Windows.Forms.Button()
+        Me.BtVerPedido = New System.Windows.Forms.Button()
+        Me.BtMuestra = New System.Windows.Forms.Button()
+        Me.BtVerEtiqueta = New System.Windows.Forms.Button()
+        Me.LbExceso = New NetAgro.Lb(Me.components)
+        Me.Lb11 = New NetAgro.Lb(Me.components)
+        Me.LbPtes = New NetAgro.Lb(Me.components)
+        Me.Lb7 = New NetAgro.Lb(Me.components)
+        Me.LbStock = New NetAgro.Lb(Me.components)
+        Me.Lb18 = New NetAgro.Lb(Me.components)
+        Me.LbReserv = New NetAgro.Lb(Me.components)
+        Me.Lb10 = New NetAgro.Lb(Me.components)
+        Me.LbPalets = New NetAgro.Lb(Me.components)
+        Me.Lb17 = New NetAgro.Lb(Me.components)
         Me.PanelCabecera.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cbPuntoVenta.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +131,9 @@ Partial Class FrmConsultaPedidosAlmacen
         CType(Me.GridViewDesglosePedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.PanelBotones.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelCabecera
@@ -1237,21 +1259,267 @@ Partial Class FrmConsultaPedidosAlmacen
         Me.rbSalidos.Text = "Salidos"
         Me.rbSalidos.UseVisualStyleBackColor = True
         '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel6.Controls.Add(Me.Panel5)
+        Me.Panel6.Controls.Add(Me.LbExceso)
+        Me.Panel6.Controls.Add(Me.Lb11)
+        Me.Panel6.Controls.Add(Me.LbPtes)
+        Me.Panel6.Controls.Add(Me.Lb7)
+        Me.Panel6.Controls.Add(Me.LbStock)
+        Me.Panel6.Controls.Add(Me.Lb18)
+        Me.Panel6.Controls.Add(Me.LbReserv)
+        Me.Panel6.Controls.Add(Me.Lb10)
+        Me.Panel6.Controls.Add(Me.LbPalets)
+        Me.Panel6.Controls.Add(Me.Lb17)
+        Me.Panel6.Location = New System.Drawing.Point(1070, 446)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(300, 160)
+        Me.Panel6.TabIndex = 100324
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.btCartelones)
+        Me.Panel5.Controls.Add(Me.btNuevoPaletStock)
+        Me.Panel5.Controls.Add(Me.PanelBotones)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel5.Location = New System.Drawing.Point(203, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(97, 160)
+        Me.Panel5.TabIndex = 128
+        '
+        'btCartelones
+        '
+        Me.btCartelones.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btCartelones.Location = New System.Drawing.Point(0, 137)
+        Me.btCartelones.Name = "btCartelones"
+        Me.btCartelones.Size = New System.Drawing.Size(97, 23)
+        Me.btCartelones.TabIndex = 89
+        Me.btCartelones.Text = "Cartelones"
+        Me.btCartelones.UseVisualStyleBackColor = True
+        '
+        'btNuevoPaletStock
+        '
+        Me.btNuevoPaletStock.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btNuevoPaletStock.Location = New System.Drawing.Point(0, 102)
+        Me.btNuevoPaletStock.Name = "btNuevoPaletStock"
+        Me.btNuevoPaletStock.Size = New System.Drawing.Size(97, 35)
+        Me.btNuevoPaletStock.TabIndex = 88
+        Me.btNuevoPaletStock.Text = "NUEVO PALET STOCK"
+        Me.btNuevoPaletStock.UseVisualStyleBackColor = True
+        '
+        'PanelBotones
+        '
+        Me.PanelBotones.Controls.Add(Me.btNuevoPalet)
+        Me.PanelBotones.Controls.Add(Me.BtVerPedido)
+        Me.PanelBotones.Controls.Add(Me.BtMuestra)
+        Me.PanelBotones.Controls.Add(Me.BtVerEtiqueta)
+        Me.PanelBotones.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelBotones.Location = New System.Drawing.Point(0, 0)
+        Me.PanelBotones.Name = "PanelBotones"
+        Me.PanelBotones.Size = New System.Drawing.Size(97, 102)
+        Me.PanelBotones.TabIndex = 87
+        '
+        'btNuevoPalet
+        '
+        Me.btNuevoPalet.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btNuevoPalet.Location = New System.Drawing.Point(0, 72)
+        Me.btNuevoPalet.Name = "btNuevoPalet"
+        Me.btNuevoPalet.Size = New System.Drawing.Size(97, 30)
+        Me.btNuevoPalet.TabIndex = 86
+        Me.btNuevoPalet.Text = "NUEVO PALET"
+        Me.btNuevoPalet.UseVisualStyleBackColor = True
+        '
+        'BtVerPedido
+        '
+        Me.BtVerPedido.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtVerPedido.Location = New System.Drawing.Point(0, 48)
+        Me.BtVerPedido.Name = "BtVerPedido"
+        Me.BtVerPedido.Size = New System.Drawing.Size(97, 24)
+        Me.BtVerPedido.TabIndex = 83
+        Me.BtVerPedido.Text = "Ver pedido"
+        Me.BtVerPedido.UseVisualStyleBackColor = True
+        '
+        'BtMuestra
+        '
+        Me.BtMuestra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtMuestra.Location = New System.Drawing.Point(0, 24)
+        Me.BtMuestra.Name = "BtMuestra"
+        Me.BtMuestra.Size = New System.Drawing.Size(97, 24)
+        Me.BtMuestra.TabIndex = 85
+        Me.BtMuestra.Text = "Muestra"
+        Me.BtMuestra.UseVisualStyleBackColor = True
+        '
+        'BtVerEtiqueta
+        '
+        Me.BtVerEtiqueta.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtVerEtiqueta.Location = New System.Drawing.Point(0, 0)
+        Me.BtVerEtiqueta.Name = "BtVerEtiqueta"
+        Me.BtVerEtiqueta.Size = New System.Drawing.Size(97, 24)
+        Me.BtVerEtiqueta.TabIndex = 84
+        Me.BtVerEtiqueta.Text = "Etiq.Cliente"
+        Me.BtVerEtiqueta.UseVisualStyleBackColor = True
+        '
+        'LbExceso
+        '
+        Me.LbExceso.BackColor = System.Drawing.Color.White
+        Me.LbExceso.CL_ControlAsociado = Nothing
+        Me.LbExceso.CL_ValorFijo = False
+        Me.LbExceso.ClForm = Nothing
+        Me.LbExceso.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbExceso.ForeColor = System.Drawing.Color.Blue
+        Me.LbExceso.Location = New System.Drawing.Point(130, 104)
+        Me.LbExceso.Name = "LbExceso"
+        Me.LbExceso.Size = New System.Drawing.Size(63, 22)
+        Me.LbExceso.TabIndex = 127
+        Me.LbExceso.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Lb11
+        '
+        Me.Lb11.AutoSize = True
+        Me.Lb11.CL_ControlAsociado = Nothing
+        Me.Lb11.CL_ValorFijo = True
+        Me.Lb11.ClForm = Nothing
+        Me.Lb11.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb11.ForeColor = System.Drawing.Color.Teal
+        Me.Lb11.Location = New System.Drawing.Point(7, 107)
+        Me.Lb11.Name = "Lb11"
+        Me.Lb11.Size = New System.Drawing.Size(117, 16)
+        Me.Lb11.TabIndex = 126
+        Me.Lb11.Text = "Sobrante stock"
+        '
+        'LbPtes
+        '
+        Me.LbPtes.BackColor = System.Drawing.Color.White
+        Me.LbPtes.CL_ControlAsociado = Nothing
+        Me.LbPtes.CL_ValorFijo = False
+        Me.LbPtes.ClForm = Nothing
+        Me.LbPtes.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbPtes.ForeColor = System.Drawing.Color.Blue
+        Me.LbPtes.Location = New System.Drawing.Point(130, 80)
+        Me.LbPtes.Name = "LbPtes"
+        Me.LbPtes.Size = New System.Drawing.Size(63, 22)
+        Me.LbPtes.TabIndex = 125
+        Me.LbPtes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Lb7
+        '
+        Me.Lb7.AutoSize = True
+        Me.Lb7.CL_ControlAsociado = Nothing
+        Me.Lb7.CL_ValorFijo = True
+        Me.Lb7.ClForm = Nothing
+        Me.Lb7.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb7.ForeColor = System.Drawing.Color.Teal
+        Me.Lb7.Location = New System.Drawing.Point(7, 83)
+        Me.Lb7.Name = "Lb7"
+        Me.Lb7.Size = New System.Drawing.Size(89, 16)
+        Me.Lb7.TabIndex = 124
+        Me.Lb7.Text = "Palets ptes"
+        '
+        'LbStock
+        '
+        Me.LbStock.BackColor = System.Drawing.Color.White
+        Me.LbStock.CL_ControlAsociado = Nothing
+        Me.LbStock.CL_ValorFijo = False
+        Me.LbStock.ClForm = Nothing
+        Me.LbStock.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbStock.ForeColor = System.Drawing.Color.Blue
+        Me.LbStock.Location = New System.Drawing.Point(130, 56)
+        Me.LbStock.Name = "LbStock"
+        Me.LbStock.Size = New System.Drawing.Size(63, 22)
+        Me.LbStock.TabIndex = 123
+        Me.LbStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Lb18
+        '
+        Me.Lb18.AutoSize = True
+        Me.Lb18.CL_ControlAsociado = Nothing
+        Me.Lb18.CL_ValorFijo = True
+        Me.Lb18.ClForm = Nothing
+        Me.Lb18.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb18.ForeColor = System.Drawing.Color.Teal
+        Me.Lb18.Location = New System.Drawing.Point(7, 59)
+        Me.Lb18.Name = "Lb18"
+        Me.Lb18.Size = New System.Drawing.Size(96, 16)
+        Me.Lb18.TabIndex = 122
+        Me.Lb18.Text = "Palets stock"
+        '
+        'LbReserv
+        '
+        Me.LbReserv.BackColor = System.Drawing.Color.White
+        Me.LbReserv.CL_ControlAsociado = Nothing
+        Me.LbReserv.CL_ValorFijo = False
+        Me.LbReserv.ClForm = Nothing
+        Me.LbReserv.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbReserv.ForeColor = System.Drawing.Color.Blue
+        Me.LbReserv.Location = New System.Drawing.Point(130, 32)
+        Me.LbReserv.Name = "LbReserv"
+        Me.LbReserv.Size = New System.Drawing.Size(63, 22)
+        Me.LbReserv.TabIndex = 121
+        Me.LbReserv.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Lb10
+        '
+        Me.Lb10.AutoSize = True
+        Me.Lb10.CL_ControlAsociado = Nothing
+        Me.Lb10.CL_ValorFijo = True
+        Me.Lb10.ClForm = Nothing
+        Me.Lb10.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb10.ForeColor = System.Drawing.Color.Teal
+        Me.Lb10.Location = New System.Drawing.Point(7, 35)
+        Me.Lb10.Name = "Lb10"
+        Me.Lb10.Size = New System.Drawing.Size(109, 16)
+        Me.Lb10.TabIndex = 120
+        Me.Lb10.Text = "Palets reserv."
+        '
+        'LbPalets
+        '
+        Me.LbPalets.BackColor = System.Drawing.Color.White
+        Me.LbPalets.CL_ControlAsociado = Nothing
+        Me.LbPalets.CL_ValorFijo = False
+        Me.LbPalets.ClForm = Nothing
+        Me.LbPalets.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbPalets.ForeColor = System.Drawing.Color.Blue
+        Me.LbPalets.Location = New System.Drawing.Point(130, 8)
+        Me.LbPalets.Name = "LbPalets"
+        Me.LbPalets.Size = New System.Drawing.Size(63, 22)
+        Me.LbPalets.TabIndex = 119
+        Me.LbPalets.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Lb17
+        '
+        Me.Lb17.AutoSize = True
+        Me.Lb17.CL_ControlAsociado = Nothing
+        Me.Lb17.CL_ValorFijo = True
+        Me.Lb17.ClForm = Nothing
+        Me.Lb17.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lb17.ForeColor = System.Drawing.Color.Teal
+        Me.Lb17.Location = New System.Drawing.Point(7, 11)
+        Me.Lb17.Name = "Lb17"
+        Me.Lb17.Size = New System.Drawing.Size(114, 16)
+        Me.Lb17.TabIndex = 118
+        Me.Lb17.Text = "Palets pedidos"
+        '
         'FrmConsultaPedidosAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1370, 642)
+        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me._PanelCargando)
         Me.Controls.Add(Me.XtraTabControl1)
         Me.IncluirTodosLosCamposVisible = True
         Me.ListaEtiquetas = CType(resources.GetObject("$this.ListaEtiquetas"), System.Collections.Generic.List(Of Object))
         Me.Name = "FrmConsultaPedidosAlmacen"
-        Me.Text = "Pedidos Almacén"
+        Me.Text = "Consulta pedidos"
         Me.Controls.SetChildIndex(Me.XtraTabControl1, 0)
         Me.Controls.SetChildIndex(Me._PanelCargando, 0)
         Me.Controls.SetChildIndex(Me.PanelCabecera, 0)
         Me.Controls.SetChildIndex(Me.PanelConsulta, 0)
+        Me.Controls.SetChildIndex(Me.Panel6, 0)
         Me.PanelCabecera.ResumeLayout(False)
         Me.PanelCabecera.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1269,6 +1537,10 @@ Partial Class FrmConsultaPedidosAlmacen
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.PanelBotones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1346,4 +1618,23 @@ Partial Class FrmConsultaPedidosAlmacen
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents rbTodos As RadioButton
     Friend WithEvents rbSalidos As RadioButton
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents btCartelones As Button
+    Friend WithEvents btNuevoPaletStock As Button
+    Friend WithEvents PanelBotones As Panel
+    Friend WithEvents btNuevoPalet As Button
+    Friend WithEvents BtVerPedido As Button
+    Friend WithEvents BtMuestra As Button
+    Friend WithEvents BtVerEtiqueta As Button
+    Friend WithEvents LbExceso As Lb
+    Friend WithEvents Lb11 As Lb
+    Friend WithEvents LbPtes As Lb
+    Friend WithEvents Lb7 As Lb
+    Friend WithEvents LbStock As Lb
+    Friend WithEvents Lb18 As Lb
+    Friend WithEvents LbReserv As Lb
+    Friend WithEvents Lb10 As Lb
+    Friend WithEvents LbPalets As Lb
+    Friend WithEvents Lb17 As Lb
 End Class

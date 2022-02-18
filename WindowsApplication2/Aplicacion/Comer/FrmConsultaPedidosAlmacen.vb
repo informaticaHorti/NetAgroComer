@@ -1280,52 +1280,6 @@ Public Class FrmConsultaPedidosAlmacen
     End Sub
 
 
-    Private Sub BtVerEtiqueta_Click(sender As System.Object, e As System.EventArgs)
-
-        Dim row As DataRow = GridView1.GetFocusedDataRow()
-        If Not IsNothing(row) Then
-
-            Dim IdLinea As Integer = VaInt(row("IdLinea"))
-            If IdLinea > 0 Then
-
-                Timer1.Stop()
-
-                Dim frm As New FrDocs
-                frm.Init(Pedidos.NombreBd, pedidos_lineas.NombreTabla, IdLinea.ToString)
-                frm.ShowDialog()
-
-                Timer1.Start()
-
-            End If
-
-        End If
-
-    End Sub
-
-
-    Private Sub BtMuestra_Click(sender As System.Object, e As System.EventArgs)
-
-        Dim row As DataRow = GridView1.GetFocusedDataRow()
-        If Not IsNothing(row) Then
-
-            Dim IdLinea As Integer = VaInt(row("IdLinea"))
-            If IdLinea > 0 Then
-
-                Timer1.Stop()
-
-                Dim frm As New FrDocs
-                frm.Init(Pedidos.NombreBd, Pedidos_Almacen.NombreTabla, IdLinea.ToString)
-                frm.ShowDialog()
-
-                Timer1.Start()
-
-            End If
-
-        End If
-
-    End Sub
-
-
     Protected Overrides Sub RowCellStyle(row As System.Data.DataRow, column As DevExpress.XtraGrid.Columns.GridColumn, sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs)
         MyBase.RowCellStyle(row, column, sender, e)
 
@@ -1415,86 +1369,6 @@ Public Class FrmConsultaPedidosAlmacen
     End Sub
 
 
-    Private Sub BtVerPedido_Click(sender As System.Object, e As System.EventArgs)
-
-        Dim row As DataRow = GridView1.GetFocusedDataRow()
-        If Not IsNothing(row) Then
-
-            Dim IdPedido As Integer = VaInt(row("IdPedido"))
-            If IdPedido > 0 Then
-
-                Timer1.Stop()
-
-                Dim frm As New FrDocs
-                frm.Init(Pedidos.NombreBd, Pedidos.NombreTabla, IdPedido.ToString)
-                frm.ShowDialog()
-
-                Timer1.Start()
-
-            End If
-
-        End If
-
-
-    End Sub
-
-
-    Private Sub cbCentro_EditValueChanged(sender As System.Object, e As System.EventArgs) Handles cbPuntoVenta.EditValueChanged
-        CargaLineas()
-    End Sub
-
-
-    Private Sub btNuevoPalet_Click(sender As System.Object, e As System.EventArgs)
-
-        Timer1.Stop()
-
-        'Dim row As DataRow = GridView1.GetFocusedDataRow()
-        Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
-        If Not IsNothing(row) Then
-
-            Dim IdLinea As Integer = VaInt(row("IdLinea"))
-            If IdLinea = 0 Then
-
-                'Vemos si es una agrupación de pedidos
-                Dim ListaLineas As String = (row("ListaLineas").ToString & "").Trim
-                If ListaLineas.Trim <> "" Then
-
-                    Dim Lineas As String() = Split(ListaLineas, "|;|")
-                    If Lineas.Length > 0 Then
-                        'Cogemos la primera línea de pedido, de ahí podemos tomar los datos para crear un nuevo pedido
-                        IdLinea = VaInt(Lineas(0))
-                    End If
-
-                End If
-
-
-            End If
-
-
-            If IdLinea > 0 Then
-
-                Dim frm As New FrmPaletsComer
-                frm.InitPedido(IdLinea)
-                frm.ShowDialog()
-
-                Application.DoEvents()
-                GridView1.RefreshData()
-                Application.DoEvents()
-
-                Consultar()
-
-            Else
-                Timer1.Start()
-            End If
-
-        Else
-            Timer1.Start()
-        End If
-
-
-    End Sub
-
-
     Private Sub chkMostrarStock_CheckedChanged(sender As System.Object, e As System.EventArgs)
         If _bCargado Then
             Consultar()
@@ -1530,15 +1404,6 @@ Public Class FrmConsultaPedidosAlmacen
     Private Sub BConsultar_Click(sender As System.Object, e As System.EventArgs) Handles BConsultar.Click
 
         Timer1.Start()
-
-    End Sub
-
-
-    Private Sub btNuevoPaletStock_Click(sender As System.Object, e As System.EventArgs)
-
-        Dim frm As New FrmPaletsComer
-        frm.MdiParent = Me.MdiParent
-        frm.Show()
 
     End Sub
 
@@ -1616,5 +1481,180 @@ Public Class FrmConsultaPedidosAlmacen
         If _bCargado Then
             Consultar()
         End If
+    End Sub
+
+    Private Sub BtVerEtiqueta_Click(sender As System.Object, e As System.EventArgs) Handles BtVerEtiqueta.Click
+
+        Dim row As DataRow = GridView1.GetFocusedDataRow()
+        If Not IsNothing(row) Then
+
+            Dim IdLinea As Integer = VaInt(row("IdLinea"))
+            If IdLinea > 0 Then
+
+                Timer1.Stop()
+
+                Dim frm As New FrDocs
+                frm.Init(Pedidos.NombreBd, pedidos_lineas.NombreTabla, IdLinea.ToString)
+                frm.ShowDialog()
+
+                Timer1.Start()
+
+            End If
+
+        End If
+
+    End Sub
+
+
+    Private Sub BtMuestra_Click(sender As System.Object, e As System.EventArgs) Handles BtMuestra.Click
+
+        Dim row As DataRow = GridView1.GetFocusedDataRow()
+        If Not IsNothing(row) Then
+
+            Dim IdLinea As Integer = VaInt(row("IdLinea"))
+            If IdLinea > 0 Then
+
+                Timer1.Stop()
+
+                Dim frm As New FrDocs
+                frm.Init(Pedidos.NombreBd, Pedidos_Almacen.NombreTabla, IdLinea.ToString)
+                frm.ShowDialog()
+
+                Timer1.Start()
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub BtVerPedido_Click(sender As System.Object, e As System.EventArgs) Handles BtVerPedido.Click
+
+        Dim row As DataRow = GridView1.GetFocusedDataRow()
+        If Not IsNothing(row) Then
+
+            Dim IdPedido As Integer = VaInt(row("IdPedido"))
+            If IdPedido > 0 Then
+
+                Timer1.Stop()
+
+                Dim frm As New FrDocs
+                frm.Init(Pedidos.NombreBd, Pedidos.NombreTabla, IdPedido.ToString)
+                frm.ShowDialog()
+
+                Timer1.Start()
+
+            End If
+
+        End If
+
+
+    End Sub
+
+    Private Sub btNuevoPalet_Click(sender As System.Object, e As System.EventArgs) Handles btNuevoPalet.Click
+
+        Timer1.Stop()
+
+        'Dim row As DataRow = GridView1.GetFocusedDataRow()
+        Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+        If Not IsNothing(row) Then
+
+            Dim IdLinea As Integer = VaInt(row("IdLinea"))
+            If IdLinea = 0 Then
+
+                'Vemos si es una agrupación de pedidos
+                Dim ListaLineas As String = (row("ListaLineas").ToString & "").Trim
+                If ListaLineas.Trim <> "" Then
+
+                    Dim Lineas As String() = Split(ListaLineas, "|;|")
+                    If Lineas.Length > 0 Then
+                        'Cogemos la primera línea de pedido, de ahí podemos tomar los datos para crear un nuevo pedido
+                        IdLinea = VaInt(Lineas(0))
+                    End If
+
+                End If
+
+
+            End If
+
+
+            If IdLinea > 0 Then
+
+                Dim frm As New FrmPaletsComer
+                frm.InitPedido(IdLinea)
+                frm.ShowDialog()
+
+                Application.DoEvents()
+                GridView1.RefreshData()
+                Application.DoEvents()
+
+                Consultar()
+
+            Else
+                Timer1.Start()
+            End If
+
+        Else
+            Timer1.Start()
+        End If
+
+
+    End Sub
+
+    Private Sub btNuevoPaletStock_Click(sender As System.Object, e As System.EventArgs) Handles btNuevoPaletStock.Click
+
+        Dim frm As New FrmPaletsComer
+        frm.MdiParent = Me.MdiParent
+        frm.Show()
+
+    End Sub
+
+    Private Sub btCartelones_Click(sender As System.Object, e As System.EventArgs) Handles btCartelones.Click
+
+        Dim row As DataRow = GridView1.GetFocusedDataRow()
+        Dim dt As DataTable = Grid.DataSource
+
+        If Not IsNothing(row) Then
+
+
+            Dim ListaLineas As String = (row("ListaLineas").ToString & "").Trim
+            Dim Lineas As String() = Split(ListaLineas, "|;|")
+
+            If Lineas.Length > 0 Then
+                Dim IdLinea As Integer = VaInt(Lineas(0))
+
+                If IdLinea > 0 Then
+
+                    'Pedido
+                    Dim frm As New FrmCartelones
+                    frm.InitPedido(IdLinea)
+                    frm.ShowDialog()
+                    Exit Sub
+
+                End If
+
+            End If
+
+
+            ''Si no es una línea con pedidos
+            'Dim LineasPalets As String = (row("LineasPalet").ToString & "").Trim
+            'Dim LineasP As String() = Split(LineasPalets, "|;|")
+
+            'If LineasP.Length > 0 Then
+
+            '    Dim IdLinea As Integer = VaInt(LineasP(0))
+            '    If IdLinea > 0 Then
+
+            '        Dim frm As New FrmCartelones
+            '        frm.InitPalet(IdLinea)
+            '        frm.ShowDialog()
+
+            '    End If
+
+            'End If
+
+
+        End If
+
     End Sub
 End Class
