@@ -1153,21 +1153,21 @@ Public Class FrmConsultaPedidosAlmacen
             Dim confecpalet As New E_ConfecPalet(Idusuario, cn)
             Dim generossalida As New E_GenerosSalida(Idusuario, cn)
 
-            LbPedido.Text = row("pedido").ToString
-            LbCliente.Text = row("cliente").ToString
-            LbGenero.Text = row("Genero").ToString
-            LbCalidad.Text = row("Calidad").ToString
+            LbPedido.Text = (row("pedido").ToString & "").Trim
+            LbCliente.Text = (row("cliente").ToString & "").Trim
+            LbGenero.Text = (row("Genero").ToString & "").Trim
+            LbCalidad.Text = (row("Calidad").ToString & "").Trim
             Dim Estado As Integer = 0
-            LbEstadoEtiqueta.Text = Valor(row("EstadoEtiqueta").ToString)
-            LbEnvase.Text = row("Envase").ToString
+            LbEstadoEtiqueta.Text = Valor(row("EstadoEtiqueta").ToString & "")
+            LbEnvase.Text = (row("Envase").ToString & "").Trim
             LbFecha.Text = VaDate(row("Fecha")).ToString("dd/MM/yyyy")
-            LbReferencia.Text = Valor(row("ListaReferencias").ToString)
-            LbMarca.Text = row("marca").ToString
-            LbEtiquetaCesta.Text = Valor(row("EtiquetaCesta").ToString)
-            LbMarcaEtiqueta.Text = Valor(row("MarcaCesta").ToString)
-            LbEtiquetaCaja.Text = Valor(row("EtiquetaCaja").ToString)
-            LbMarcaMaterial.Text = Valor(row("MarcaMaterial").ToString)
-            LbCategoria.Text = row("categoria").ToString
+            LbReferencia.Text = Valor(row("ListaReferencias").ToString & "")
+            LbMarca.Text = (row("marca").ToString & "").Trim
+            LbEtiquetaCesta.Text = Valor(row("EtiquetaCesta").ToString & "")
+            LbMarcaEtiqueta.Text = Valor(row("MarcaCesta").ToString & "")
+            LbEtiquetaCaja.Text = Valor(row("EtiquetaCaja").ToString & "")
+            LbMarcaMaterial.Text = Valor(row("MarcaMaterial").ToString & "")
+            LbCategoria.Text = (row("categoria").ToString & "").Trim
             LbTipoPalet.Text = ""
             LbPresentacion.Text = ""
 
@@ -1176,13 +1176,13 @@ Public Class FrmConsultaPedidosAlmacen
 
             IdPedido = VaInt(row("idpedido"))
 
-            LbTipoPalet.Text = row("TipoPalet").ToString & ""
-            LbPresentacion.Text = row("Presentacion").ToString & ""
-            LbBultosxPalet.Text = row("BxP").ToString & ""
-            LbLote.Text = Valor(row("Lote").ToString)
-            LbObs1.Text = Valor(row("Conf1").ToString)
-            LbObs2.Text = Valor(row("Conf2").ToString)
-            LbPiezasxBulto.Text = Valor(row("PxB").ToString)
+            LbTipoPalet.Text = (row("TipoPalet").ToString & "").Trim
+            LbPresentacion.Text = (row("Presentacion").ToString & "").Trim
+            LbBultosxPalet.Text = (row("BxP").ToString & "").Trim
+            LbLote.Text = Valor(row("Lote").ToString & "")
+            LbObs1.Text = Valor(row("Conf1").ToString & "")
+            LbObs2.Text = Valor(row("Conf2").ToString & "")
+            LbPiezasxBulto.Text = Valor(row("PxB").ToString & "")
 
 
             MuestraDesglosePedido(row)
@@ -1332,20 +1332,43 @@ Public Class FrmConsultaPedidosAlmacen
             'Color de marca según estado etiqueta
             If e.Column.FieldName.ToUpper.Trim = "MARCA" Then
 
-                Dim Estado As Integer = 0
-                EstadoEtiqueta(row("IdLinea").ToString & "", Estado)
-                Select Case Estado
+                'Dim Estado As Integer = 0
+                ''EstadoEtiqueta(row("IdLinea").ToString & "", Estado)
+                'Select Case Estado
 
-                    Case 9
+                '    Case 9
+                '        e.Appearance.BackColor = Color.LightGreen
+                '    Case 2
+                '        e.Appearance.BackColor = Color.Cyan
+                '    Case 1
+                '        e.Appearance.BackColor = Color.Yellow
+                '    Case 0
+                '        e.Appearance.BackColor = Color.Red
+                '    Case Else
+                '        e.Appearance.BackColor = Color.White
+
+                'End Select
+
+
+                Dim EstadoEtiqueta As String = (row("EstadoEtiqueta") & "").trim
+                Select Case EstadoEtiqueta.Trim.ToUpper
+
+
+                    Case "FINALIZADA"   '9
                         e.Appearance.BackColor = Color.LightGreen
-                    Case 2
+
+                    Case "PTE. IMPRIMIR"    '2
                         e.Appearance.BackColor = Color.Cyan
-                    Case 1
+
+                    Case "PTE. CONF. CLIENTE"   '1
                         e.Appearance.BackColor = Color.Yellow
-                    Case 0
+
+                    Case "PTE. ENVIO MUESTRA"   '0
                         e.Appearance.BackColor = Color.Red
+
                     Case Else
                         e.Appearance.BackColor = Color.White
+
 
                 End Select
 
