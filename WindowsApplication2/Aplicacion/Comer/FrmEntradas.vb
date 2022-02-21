@@ -1030,7 +1030,7 @@ Public Class FrmEntradas
 
         Dim fechafiltro As String = TxDato6.Text
         If VaDate(TxDato6.Text) > VaDate("") Then
-            fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
+            fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text))
         End If
 
         BtBuscaLocalizador.CL_Filtro = "Fecha >= '" & fechafiltro & "' AND NIF = '" & nif & "'"
@@ -3028,7 +3028,7 @@ Public Class FrmEntradas
 
         Dim fechafiltro As String = TxDato6.Text
         If VaDate(TxDato6.Text) > VaDate("") Then
-            fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text)).ToString("dd/MM/yyyy")
+            fechafiltro = DateAdd(DateInterval.Day, -1, VaDate(TxDato6.Text))
         End If
 
         BtBuscaLocalizador.CL_Filtro = "Fecha >= '" & fechafiltro & "' AND NIF = '" & nif & "'"
