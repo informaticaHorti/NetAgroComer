@@ -324,7 +324,7 @@ Module Agro
         cadenaconexionodbc = LeerConfig(inifile, "ConexionNetAgro")
         cn = New Cdatos.Conexion(cadenaconexionodbc)
 
-        cadenaconexionComun = LeerConfig(inifile, "ConexionComun")
+        cadenaconexionComun = CadenaConexionComun_UsuarioEscritorioRemoto(LeerConfig(inifile, "ConexionComun"))
         CnComun = New Cdatos.Conexion(cadenaconexionComun)
 
         cadenaconexionCtb = LeerConfig(inifile, "ConexionCtb") ' dejo esta por si acaso

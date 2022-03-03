@@ -1213,6 +1213,7 @@
     <Compile Include="Aplicacion\Utilidades\Utilidades_miguel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CLAVEi\Control de licencias\Licencias.vb" />
     <Compile Include="Componentes\CalendarioSemanal.Designer.vb">
       <DependentUpon>CalendarioSemanal.vb</DependentUpon>
     </Compile>
