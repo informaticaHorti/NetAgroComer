@@ -29,38 +29,40 @@ Module Licencias
 
         Dim bRes As Boolean = False
 
-
-        Dim NombreServidor As String = ObtenerServidorConexion(cadenaconexion)
-        Dim cadenaservidor As String() = Split(NombreServidor, "\")
-        If cadenaservidor.Length > 0 Then
-            NombreServidor = cadenaservidor(0)
-        End If
+        bRes = System.Windows.Forms.SystemInformation.TerminalServerSession
 
 
-        Dim IP_Servidor As String = ObtenerIP(NombreServidor)
+        '    Dim NombreServidor As String = ObtenerServidorConexion(cadenaconexion)
+        '    Dim cadenaservidor As String() = Split(NombreServidor, "\")
+        '    If cadenaservidor.Length > 0 Then
+        '        NombreServidor = cadenaservidor(0)
+        '    End If
 
 
-        Try
-
-            Dim Host As String = Dns.GetHostName
-
-            Dim IPs As IPHostEntry = Dns.GetHostEntry(Host)
-            Dim Direcciones As IPAddress() = IPs.AddressList
+        '    Dim IP_Servidor As String = ObtenerIP(NombreServidor)
 
 
-            For Each ip As IPAddress In Direcciones
-                If ip.AddressFamily = Sockets.AddressFamily.InterNetwork Then
-                    If ip.ToString = IP_Servidor Then
-                        bRes = True
-                        Exit For
-                    End If
-                End If
-            Next
+        '    Try
+
+        '        Dim Host As String = Dns.GetHostName
+
+        '        Dim IPs As IPHostEntry = Dns.GetHostEntry(Host)
+        '        Dim Direcciones As IPAddress() = IPs.AddressList
 
 
-        Catch ex As Exception
+        '        For Each ip As IPAddress In Direcciones
+        '            If ip.AddressFamily = Sockets.AddressFamily.InterNetwork Then
+        '                If ip.ToString = IP_Servidor Then
+        '                    bRes = True
+        '                    Exit For
+        '                End If
+        '            End If
+        '        Next
 
-        End Try
+
+        '    Catch ex As Exception
+
+        '    End Try
 
 
 
@@ -70,111 +72,111 @@ Module Licencias
     End Function
 
 
-    Public Function ObtenerServidorConexion(ByVal conexion As Cdatos.Conexion) As String
+    'Public Function ObtenerServidorConexion(ByVal conexion As Cdatos.Conexion) As String
 
-        Dim res As String = ""
-
-
-        Dim cadenaconexion As String = conexion.CadenaConexion.ToLower
-        Return ObtenerServidorConexion(cadenaconexion)
+    '    Dim res As String = ""
 
 
-    End Function
+    '    Dim cadenaconexion As String = conexion.CadenaConexion.ToLower
+    '    Return ObtenerServidorConexion(cadenaconexion)
 
 
-
-    Public Function ObtenerServidorConexion(ByVal cadenaconexion As String) As String
-
-        Dim res As String = ""
-
-
-        Dim params As String() = Split(cadenaconexion.ToLower(), ";")
-
-        For Each param As String In params
-            If param.StartsWith("server=") Then
-
-                Dim valor As String() = Split(param, "=")
-                If valor.Length = 2 Then
-                    res = valor(1)
-                End If
-
-            End If
-        Next
+    'End Function
 
 
 
-        Return res
+    'Public Function ObtenerServidorConexion(ByVal cadenaconexion As String) As String
 
-    End Function
-
-
-    Public Function ObtenerIP(ByVal nombre As String) As String
-
-        Dim ip As String = ""
-        Dim bEsIP As Boolean = False
+    '    Dim res As String = ""
 
 
-        Dim digitos() As String = Split(nombre, ".")
-        If digitos.Length = 4 AndAlso IsNumeric(digitos(0)) AndAlso IsNumeric(digitos(1)) AndAlso IsNumeric(digitos(2)) AndAlso IsNumeric(digitos(3)) AndAlso
-            VaInt(digitos(0)) >= 0 AndAlso VaInt(digitos(0)) <= 255 AndAlso
-            VaInt(digitos(1)) >= 0 AndAlso VaInt(digitos(1)) <= 255 AndAlso
-            VaInt(digitos(2)) >= 0 AndAlso VaInt(digitos(2)) <= 255 AndAlso
-            VaInt(digitos(3)) >= 0 AndAlso VaInt(digitos(3)) <= 255 Then
+    '    Dim params As String() = Split(cadenaconexion.ToLower(), ";")
 
-            Return nombre
-        End If
+    '    For Each param As String In params
+    '        If param.StartsWith("server=") Then
 
+    '            Dim valor As String() = Split(param, "=")
+    '            If valor.Length = 2 Then
+    '                res = valor(1)
+    '            End If
 
-        Dim bLocal As Boolean = False
-        If nombre.Trim.ToUpper = Dns.GetHostName().Trim.ToUpper Then
-            bLocal = True
-        End If
+    '        End If
+    '    Next
 
 
 
-        If nombre.Trim <> "" Then
+    '    Return res
 
-            If Not bLocal Then
-
-                Dim IPs_Servidor As IPHostEntry = Dns.GetHostEntry(nombre)
-                ip = IPs_Servidor.AddressList.Where(Function(a As IPAddress) Not a.IsIPv6LinkLocal AndAlso Not a.IsIPv6Multicast AndAlso Not a.IsIPv6SiteLocal AndAlso a.AddressFamily = Sockets.AddressFamily.InterNetwork).First().ToString()
-
-            Else
-
-                For Each networkCard As NetworkInterface In NetworkInterface.GetAllNetworkInterfaces
-                    ' Find network cards with gateway information (this may show more than one network card depending on computer)
-
-                    For Each gatewayAddr As GatewayIPAddressInformation In networkCard.GetIPProperties.GatewayAddresses
-                        ' if gateway address is NOT 0.0.0.0 and the network card status is UP then we've found the main network card
-                        If gatewayAddr.Address.ToString <> "0.0.0.0" And networkCard.OperationalStatus.ToString() = "Up" Then
-
-                            If Not IsNothing(networkCard.GetIPProperties.UnicastAddresses) Then
-
-                                For Each IpAddressAndSubnet In networkCard.GetIPProperties.UnicastAddresses
-                                    If IpAddressAndSubnet.DuplicateAddressDetectionState = DuplicateAddressDetectionState.Preferred Then
-                                        ip = IpAddressAndSubnet.Address.ToString
-                                        Return ip
-                                    End If
-                                Next
-
-                            End If
-
-                        End If
-
-                    Next
-
-                Next
-
-            End If
+    'End Function
 
 
-        End If
+    'Public Function ObtenerIP(ByVal nombre As String) As String
+
+    '    Dim ip As String = ""
+    '    Dim bEsIP As Boolean = False
+
+
+    '    Dim digitos() As String = Split(nombre, ".")
+    '    If digitos.Length = 4 AndAlso IsNumeric(digitos(0)) AndAlso IsNumeric(digitos(1)) AndAlso IsNumeric(digitos(2)) AndAlso IsNumeric(digitos(3)) AndAlso
+    '        VaInt(digitos(0)) >= 0 AndAlso VaInt(digitos(0)) <= 255 AndAlso
+    '        VaInt(digitos(1)) >= 0 AndAlso VaInt(digitos(1)) <= 255 AndAlso
+    '        VaInt(digitos(2)) >= 0 AndAlso VaInt(digitos(2)) <= 255 AndAlso
+    '        VaInt(digitos(3)) >= 0 AndAlso VaInt(digitos(3)) <= 255 Then
+
+    '        Return nombre
+    '    End If
+
+
+    '    Dim bLocal As Boolean = False
+    '    If nombre.Trim.ToUpper = Dns.GetHostName().Trim.ToUpper Then
+    '        bLocal = True
+    '    End If
 
 
 
-        Return ip
+    '    If nombre.Trim <> "" Then
 
-    End Function
+    '        If Not bLocal Then
+
+    '            Dim IPs_Servidor As IPHostEntry = Dns.GetHostEntry(nombre)
+    '            ip = IPs_Servidor.AddressList.Where(Function(a As IPAddress) Not a.IsIPv6LinkLocal AndAlso Not a.IsIPv6Multicast AndAlso Not a.IsIPv6SiteLocal AndAlso a.AddressFamily = Sockets.AddressFamily.InterNetwork).First().ToString()
+
+    '        Else
+
+    '            For Each networkCard As NetworkInterface In NetworkInterface.GetAllNetworkInterfaces
+    '                ' Find network cards with gateway information (this may show more than one network card depending on computer)
+
+    '                For Each gatewayAddr As GatewayIPAddressInformation In networkCard.GetIPProperties.GatewayAddresses
+    '                    ' if gateway address is NOT 0.0.0.0 and the network card status is UP then we've found the main network card
+    '                    If gatewayAddr.Address.ToString <> "0.0.0.0" And networkCard.OperationalStatus.ToString() = "Up" Then
+
+    '                        If Not IsNothing(networkCard.GetIPProperties.UnicastAddresses) Then
+
+    '                            For Each IpAddressAndSubnet In networkCard.GetIPProperties.UnicastAddresses
+    '                                If IpAddressAndSubnet.DuplicateAddressDetectionState = DuplicateAddressDetectionState.Preferred Then
+    '                                    ip = IpAddressAndSubnet.Address.ToString
+    '                                    Return ip
+    '                                End If
+    '                            Next
+
+    '                        End If
+
+    '                    End If
+
+    '                Next
+
+    '            Next
+
+    '        End If
+
+
+    '    End If
+
+
+
+    '    Return ip
+
+    'End Function
 
 
 End Module
