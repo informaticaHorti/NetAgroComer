@@ -493,7 +493,7 @@
                         precio = ""
                         'If rw("envaseretornable").ToString = "S" And FacturaEnvases = "S" Then
                         If rw("envaseretornable").ToString = "S" And
-                            (TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Or TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar Or TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar) Then
+                            (TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Or TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar) Then
                             precio = rw("precio").ToString
                         ElseIf rw("envaseretornable").ToString = "S" And TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarAparte Then
                             preciofianza = rw("precio").ToString
@@ -624,7 +624,7 @@
                 preciofianza = ""
 
                 'If clave.Retornable = "S" And FacturaEnvases = "S" Then
-                If clave.Retornable = "S" And clave.TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Then
+                If clave.Retornable = "S" And (clave.TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarEnAlbaran Or clave.TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarYDeclarar) Then
                     precio = clave.Precio.ToString
                 ElseIf clave.Retornable = "S" And clave.TipoEnvase = E_FianzasEnvases.TipoFacturacion.FacturarAparte Then
                     preciofianza = clave.PrecioFianza.ToString
