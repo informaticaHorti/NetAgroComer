@@ -1,14 +1,14 @@
-ConexionNetAgro=Driver={SQL Server Native Client 10.0};Server=192.168.24.40\SQL2016;Database=NETAGROCOMER;Uid=sa;Pwd=Adminis;Persist Security Info=true;
-ConexionComun=Driver={SQL Server Native Client 10.0};server=192.168.24.40\SQL2016;database=Comun;uid=sa;pwd=Adminis;Persist Security Info=true;
-ConexionCTB_1=Driver={SQL Server Native Client 10.0};server=192.168.24.40\SQL2016;database=Contabilidad;uid=sa;pwd=Adminis;Persist Security INfo=true;
---ConexionCTB_2=Driver={SQL Server Native Client 10.0};server=192.168.24.40\SQL2016;database=Contabilidad_2;uid=sa;pwd=Adminis;Persist Security INfo=true;
---ConexionCTB_10=Driver={SQL Server Native Client 10.0};server=192.168.24.40\SQL2016;database=Contabilidad_10;uid=sa;pwd=Adminis;Persist Security INfo=true;
---ConexionDoc=Driver={SQL Server Native Client 10.0};Server=192.168.24.28\sa;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
-ConexionDoc=Driver={SQL Server Native Client 10.0};Server=192.168.24.40\SQL2016;Database=Documentos;Uid=sa;Pwd=Adminis;Persist Security Info=true;
---ConexionFincas=Driver={SQL Server Native Client 10.0};Server=192.168.24.40\SQL2016;Database=TecnicosSql;Uid=sa;Pwd=Adminis;Persist Security Info=true;
---ConexionCalidad=Driver={SQL Server Native Client 10.0};Server=192.168.24.40\SQL2016;Database=CalidadNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
-ConexionFincasNET=Driver={SQL Server Native Client 10.0};Server=192.168.24.40\SQL2016;Database=TecnicosNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
-ConexionFincas=Driver={SQL Server Native Client 10.0};Server=192.168.24.40\SQL2016;Database=TecnicosNet;Uid=sa;Pwd=Adminis;Persist Security Info=true;
+ConexionNetAgro=Driver={SQL Server Native Client 10.0};Server=192.168.2.36;Database=NETAGROCOMER;Uid=sa;Pwd=;Persist Security Info=true;
+ConexionComun=Driver={SQL Server Native Client 10.0};server=192.168.2.36;database=Comun;uid=sa;pwd=;Persist Security Info=true;
+ConexionCTB_1=Driver={SQL Server Native Client 10.0};server=192.168.2.36;database=Contabilidad;uid=sa;pwd=;Persist Security INfo=true;
+--ConexionCTB_2=Driver={SQL Server Native Client 10.0};server=192.168.2.36;database=Contabilidad_2;uid=sa;pwd=;Persist Security INfo=true;
+--ConexionCTB_10=Driver={SQL Server Native Client 10.0};server=192.168.2.36;database=Contabilidad_10;uid=sa;pwd=;Persist Security INfo=true;
+--ConexionDoc=Driver={SQL Server Native Client 10.0};Server=192.168.24.2.36;Database=Documentos;Uid=sa;Pwd=;Persist Security Info=true;
+ConexionDoc=Driver={SQL Server Native Client 10.0};Server=192.168.2.36;Database=Documentos;Uid=sa;Pwd=;Persist Security Info=true;
+--ConexionFincas=Driver={SQL Server Native Client 10.0};Server=192.168.2.36;Database=TecnicosSql;Uid=sa;Pwd=;Persist Security Info=true;
+--ConexionCalidad=Driver={SQL Server Native Client 10.0};Server=192.168.2.36;Database=CalidadNet;Uid=sa;Pwd=;Persist Security Info=true;
+ConexionFincasNET=Driver={SQL Server Native Client 10.0};Server=192.168.2.36;Database=TecnicosNet;Uid=sa;Pwd=;Persist Security Info=true;
+ConexionFincas=Driver={SQL Server Native Client 10.0};Server=192.168.2.36;Database=TecnicosNet;Uid=sa;Pwd=;Persist Security Info=true;
 SeparadorCtb=|
 BloqueoUsuarios=0
 procesosusuarios=1

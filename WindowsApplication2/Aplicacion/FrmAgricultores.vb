@@ -1450,4 +1450,8 @@ Public Class FrmAgricultores
 
         End If
     End Sub
+
+    Private Sub ClGrid1_Load(sender As Object, e As EventArgs) Handles ClGrid1.Load
+
+    End Sub
 End Class

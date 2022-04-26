@@ -283,6 +283,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaAgri.CL_Ancho = 0
         Me.BtBuscaAgri.CL_BuscaAlb = False
+        Me.BtBuscaAgri.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAgri.CL_campocodigo = Nothing
         Me.BtBuscaAgri.CL_camponombre = Nothing
         Me.BtBuscaAgri.CL_CampoOrden = "Nombre"
@@ -308,6 +309,7 @@ Partial Class FrmAgricultores
         'TxDato_1
         '
         Me.TxDato_1.Autonumerico = False
+        Me.TxDato_1.Bloqueado = False
         Me.TxDato_1.Buscando = False
         Me.TxDato_1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_1.ClForm = Nothing
@@ -341,13 +343,14 @@ Partial Class FrmAgricultores
         Me.Lb_2.ForeColor = System.Drawing.Color.Teal
         Me.Lb_2.Location = New System.Drawing.Point(344, 9)
         Me.Lb_2.Name = "Lb_2"
-        Me.Lb_2.Size = New System.Drawing.Size(27, 16)
+        Me.Lb_2.Size = New System.Drawing.Size(26, 16)
         Me.Lb_2.TabIndex = 27
         Me.Lb_2.Text = "Nif"
         '
         'TxDato_2
         '
         Me.TxDato_2.Autonumerico = False
+        Me.TxDato_2.Bloqueado = False
         Me.TxDato_2.Buscando = False
         Me.TxDato_2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_2.ClForm = Nothing
@@ -381,13 +384,14 @@ Partial Class FrmAgricultores
         Me.Lb_3.ForeColor = System.Drawing.Color.Teal
         Me.Lb_3.Location = New System.Drawing.Point(12, 36)
         Me.Lb_3.Name = "Lb_3"
-        Me.Lb_3.Size = New System.Drawing.Size(65, 16)
+        Me.Lb_3.Size = New System.Drawing.Size(64, 16)
         Me.Lb_3.TabIndex = 25
         Me.Lb_3.Text = "Nombre"
         '
         'TxDato_3
         '
         Me.TxDato_3.Autonumerico = False
+        Me.TxDato_3.Bloqueado = False
         Me.TxDato_3.Buscando = False
         Me.TxDato_3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_3.ClForm = Nothing
@@ -431,7 +435,7 @@ Partial Class FrmAgricultores
         Me.Lb_1.ForeColor = System.Drawing.Color.Teal
         Me.Lb_1.Location = New System.Drawing.Point(12, 9)
         Me.Lb_1.Name = "Lb_1"
-        Me.Lb_1.Size = New System.Drawing.Size(58, 16)
+        Me.Lb_1.Size = New System.Drawing.Size(57, 16)
         Me.Lb_1.TabIndex = 22
         Me.Lb_1.Text = "Código"
         '
@@ -451,7 +455,7 @@ Partial Class FrmAgricultores
         Me.ChkNoFacturar.Name = "ChkNoFacturar"
         Me.ChkNoFacturar.Orden = 0
         Me.ChkNoFacturar.SaltoAlfinal = False
-        Me.ChkNoFacturar.Size = New System.Drawing.Size(127, 20)
+        Me.ChkNoFacturar.Size = New System.Drawing.Size(126, 20)
         Me.ChkNoFacturar.TabIndex = 216
         Me.ChkNoFacturar.Text = "NO FACTURAR"
         Me.ChkNoFacturar.UseVisualStyleBackColor = True
@@ -578,7 +582,7 @@ Partial Class FrmAgricultores
         Me.ChkAsignarAcreedor.Name = "ChkAsignarAcreedor"
         Me.ChkAsignarAcreedor.Orden = 0
         Me.ChkAsignarAcreedor.SaltoAlfinal = False
-        Me.ChkAsignarAcreedor.Size = New System.Drawing.Size(234, 20)
+        Me.ChkAsignarAcreedor.Size = New System.Drawing.Size(233, 20)
         Me.ChkAsignarAcreedor.TabIndex = 112
         Me.ChkAsignarAcreedor.Text = "Asignar acreedor de entrada"
         Me.ChkAsignarAcreedor.UseVisualStyleBackColor = True
@@ -603,6 +607,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaCentroRec.CL_Ancho = 0
         Me.BtBuscaCentroRec.CL_BuscaAlb = False
+        Me.BtBuscaCentroRec.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCentroRec.CL_campocodigo = Nothing
         Me.BtBuscaCentroRec.CL_camponombre = Nothing
         Me.BtBuscaCentroRec.CL_CampoOrden = "Nombre"
@@ -628,6 +633,7 @@ Partial Class FrmAgricultores
         'TxDato_45
         '
         Me.TxDato_45.Autonumerico = False
+        Me.TxDato_45.Bloqueado = False
         Me.TxDato_45.Buscando = False
         Me.TxDato_45.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_45.ClForm = Nothing
@@ -662,7 +668,7 @@ Partial Class FrmAgricultores
         Me.Lb_45.ForeColor = System.Drawing.Color.Teal
         Me.Lb_45.Location = New System.Drawing.Point(57, 214)
         Me.Lb_45.Name = "Lb_45"
-        Me.Lb_45.Size = New System.Drawing.Size(87, 16)
+        Me.Lb_45.Size = New System.Drawing.Size(86, 16)
         Me.Lb_45.TabIndex = 108
         Me.Lb_45.Text = "Centro Rec"
         '
@@ -676,7 +682,7 @@ Partial Class FrmAgricultores
         Me.Lb8.ForeColor = System.Drawing.Color.Teal
         Me.Lb8.Location = New System.Drawing.Point(57, 121)
         Me.Lb8.Name = "Lb8"
-        Me.Lb8.Size = New System.Drawing.Size(38, 16)
+        Me.Lb8.Size = New System.Drawing.Size(37, 16)
         Me.Lb8.TabIndex = 107
         Me.Lb8.Text = "Tipo"
         '
@@ -713,6 +719,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaAcreedor.CL_Ancho = 0
         Me.BtBuscaAcreedor.CL_BuscaAlb = False
+        Me.BtBuscaAcreedor.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaAcreedor.CL_campocodigo = Nothing
         Me.BtBuscaAcreedor.CL_camponombre = Nothing
         Me.BtBuscaAcreedor.CL_CampoOrden = "Nombre"
@@ -738,6 +745,7 @@ Partial Class FrmAgricultores
         'TxDato_44
         '
         Me.TxDato_44.Autonumerico = False
+        Me.TxDato_44.Bloqueado = False
         Me.TxDato_44.Buscando = False
         Me.TxDato_44.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_44.ClForm = Nothing
@@ -772,7 +780,7 @@ Partial Class FrmAgricultores
         Me.Lb_44.ForeColor = System.Drawing.Color.Teal
         Me.Lb_44.Location = New System.Drawing.Point(57, 153)
         Me.Lb_44.Name = "Lb_44"
-        Me.Lb_44.Size = New System.Drawing.Size(74, 16)
+        Me.Lb_44.Size = New System.Drawing.Size(73, 16)
         Me.Lb_44.TabIndex = 102
         Me.Lb_44.Text = "Acreedor"
         '
@@ -792,7 +800,7 @@ Partial Class FrmAgricultores
         Me.Chprin.Name = "Chprin"
         Me.Chprin.Orden = 0
         Me.Chprin.SaltoAlfinal = False
-        Me.Chprin.Size = New System.Drawing.Size(155, 20)
+        Me.Chprin.Size = New System.Drawing.Size(154, 20)
         Me.Chprin.TabIndex = 101
         Me.Chprin.Text = "Pedir en entradas"
         Me.Chprin.UseVisualStyleBackColor = True
@@ -816,7 +824,7 @@ Partial Class FrmAgricultores
         Me.ChFija.Name = "ChFija"
         Me.ChFija.Orden = 0
         Me.ChFija.SaltoAlfinal = False
-        Me.ChFija.Size = New System.Drawing.Size(100, 20)
+        Me.ChFija.Size = New System.Drawing.Size(99, 20)
         Me.ChFija.TabIndex = 100
         Me.ChFija.Text = "Gasto Fijo"
         Me.ChFija.UseVisualStyleBackColor = True
@@ -827,6 +835,7 @@ Partial Class FrmAgricultores
         'TxDato_43
         '
         Me.TxDato_43.Autonumerico = False
+        Me.TxDato_43.Bloqueado = False
         Me.TxDato_43.Buscando = False
         Me.TxDato_43.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_43.ClForm = Nothing
@@ -861,7 +870,7 @@ Partial Class FrmAgricultores
         Me.Lb_43.ForeColor = System.Drawing.Color.Teal
         Me.Lb_43.Location = New System.Drawing.Point(57, 92)
         Me.Lb_43.Name = "Lb_43"
-        Me.Lb_43.Size = New System.Drawing.Size(46, 16)
+        Me.Lb_43.Size = New System.Drawing.Size(45, 16)
         Me.Lb_43.TabIndex = 77
         Me.Lb_43.Text = "Valor"
         '
@@ -882,6 +891,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaGasto.CL_Ancho = 0
         Me.BtBuscaGasto.CL_BuscaAlb = False
+        Me.BtBuscaGasto.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaGasto.CL_campocodigo = Nothing
         Me.BtBuscaGasto.CL_camponombre = Nothing
         Me.BtBuscaGasto.CL_CampoOrden = "Nombre"
@@ -907,6 +917,7 @@ Partial Class FrmAgricultores
         'TxDato_42
         '
         Me.TxDato_42.Autonumerico = False
+        Me.TxDato_42.Bloqueado = False
         Me.TxDato_42.Buscando = False
         Me.TxDato_42.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_42.ClForm = Nothing
@@ -941,7 +952,7 @@ Partial Class FrmAgricultores
         Me.Lb_42.ForeColor = System.Drawing.Color.Teal
         Me.Lb_42.Location = New System.Drawing.Point(57, 65)
         Me.Lb_42.Name = "Lb_42"
-        Me.Lb_42.Size = New System.Drawing.Size(103, 16)
+        Me.Lb_42.Size = New System.Drawing.Size(102, 16)
         Me.Lb_42.TabIndex = 73
         Me.Lb_42.Text = "Código gasto"
         '
@@ -1076,7 +1087,7 @@ Partial Class FrmAgricultores
         Me.Lb1.ForeColor = System.Drawing.Color.Blue
         Me.Lb1.Location = New System.Drawing.Point(24, 15)
         Me.Lb1.Name = "Lb1"
-        Me.Lb1.Size = New System.Drawing.Size(173, 16)
+        Me.Lb1.Size = New System.Drawing.Size(172, 16)
         Me.Lb1.TabIndex = 173
         Me.Lb1.Text = "Agricultores asociados"
         '
@@ -1173,13 +1184,14 @@ Partial Class FrmAgricultores
         Me.LbEmailCalidad.ForeColor = System.Drawing.Color.Teal
         Me.LbEmailCalidad.Location = New System.Drawing.Point(9, 166)
         Me.LbEmailCalidad.Name = "LbEmailCalidad"
-        Me.LbEmailCalidad.Size = New System.Drawing.Size(95, 16)
+        Me.LbEmailCalidad.Size = New System.Drawing.Size(94, 16)
         Me.LbEmailCalidad.TabIndex = 100309
         Me.LbEmailCalidad.Text = "Mail Calidad"
         '
         'TxEmailCalidad
         '
         Me.TxEmailCalidad.Autonumerico = False
+        Me.TxEmailCalidad.Bloqueado = False
         Me.TxEmailCalidad.Buscando = False
         Me.TxEmailCalidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxEmailCalidad.ClForm = Nothing
@@ -1287,13 +1299,14 @@ Partial Class FrmAgricultores
         Me.LbIBAN.ForeColor = System.Drawing.Color.Teal
         Me.LbIBAN.Location = New System.Drawing.Point(21, 50)
         Me.LbIBAN.Name = "LbIBAN"
-        Me.LbIBAN.Size = New System.Drawing.Size(44, 16)
+        Me.LbIBAN.Size = New System.Drawing.Size(43, 16)
         Me.LbIBAN.TabIndex = 100305
         Me.LbIBAN.Text = "IBAN"
         '
         'TxIBAN
         '
         Me.TxIBAN.Autonumerico = False
+        Me.TxIBAN.Bloqueado = False
         Me.TxIBAN.Buscando = False
         Me.TxIBAN.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxIBAN.ClForm = Nothing
@@ -1337,6 +1350,7 @@ Partial Class FrmAgricultores
         '
         Me.TxDiasVto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxDiasVto.Autonumerico = False
+        Me.TxDiasVto.Bloqueado = False
         Me.TxDiasVto.Buscando = False
         Me.TxDiasVto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDiasVto.ClForm = Nothing
@@ -1369,7 +1383,7 @@ Partial Class FrmAgricultores
         Me.LbDiasVto.ForeColor = System.Drawing.Color.Teal
         Me.LbDiasVto.Location = New System.Drawing.Point(13, 11)
         Me.LbDiasVto.Name = "LbDiasVto"
-        Me.LbDiasVto.Size = New System.Drawing.Size(68, 16)
+        Me.LbDiasVto.Size = New System.Drawing.Size(67, 16)
         Me.LbDiasVto.TabIndex = 100327
         Me.LbDiasVto.Text = "Dias Vto"
         '
@@ -1392,6 +1406,7 @@ Partial Class FrmAgricultores
         '
         Me.TxTipoDoc.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxTipoDoc.Autonumerico = False
+        Me.TxTipoDoc.Bloqueado = False
         Me.TxTipoDoc.Buscando = False
         Me.TxTipoDoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxTipoDoc.ClForm = Nothing
@@ -1418,6 +1433,7 @@ Partial Class FrmAgricultores
         Me.BtBuscaTipoDoc.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtBuscaTipoDoc.CL_Ancho = 0
         Me.BtBuscaTipoDoc.CL_BuscaAlb = False
+        Me.BtBuscaTipoDoc.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaTipoDoc.CL_campocodigo = Nothing
         Me.BtBuscaTipoDoc.CL_camponombre = Nothing
         Me.BtBuscaTipoDoc.CL_CampoOrden = "Nombre"
@@ -1451,7 +1467,7 @@ Partial Class FrmAgricultores
         Me.LbTipoDoc.ForeColor = System.Drawing.Color.Teal
         Me.LbTipoDoc.Location = New System.Drawing.Point(138, 36)
         Me.LbTipoDoc.Name = "LbTipoDoc"
-        Me.LbTipoDoc.Size = New System.Drawing.Size(67, 16)
+        Me.LbTipoDoc.Size = New System.Drawing.Size(66, 16)
         Me.LbTipoDoc.TabIndex = 100323
         Me.LbTipoDoc.Text = "Tipo doc"
         '
@@ -1474,6 +1490,7 @@ Partial Class FrmAgricultores
         '
         Me.TxSitCartera.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxSitCartera.Autonumerico = False
+        Me.TxSitCartera.Bloqueado = False
         Me.TxSitCartera.Buscando = False
         Me.TxSitCartera.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxSitCartera.ClForm = Nothing
@@ -1500,6 +1517,7 @@ Partial Class FrmAgricultores
         Me.BtBuscaSitCartera.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtBuscaSitCartera.CL_Ancho = 0
         Me.BtBuscaSitCartera.CL_BuscaAlb = False
+        Me.BtBuscaSitCartera.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaSitCartera.CL_campocodigo = Nothing
         Me.BtBuscaSitCartera.CL_camponombre = Nothing
         Me.BtBuscaSitCartera.CL_CampoOrden = "Nombre"
@@ -1533,7 +1551,7 @@ Partial Class FrmAgricultores
         Me.LbSitCartera.ForeColor = System.Drawing.Color.Teal
         Me.LbSitCartera.Location = New System.Drawing.Point(138, 10)
         Me.LbSitCartera.Name = "LbSitCartera"
-        Me.LbSitCartera.Size = New System.Drawing.Size(90, 16)
+        Me.LbSitCartera.Size = New System.Drawing.Size(89, 16)
         Me.LbSitCartera.TabIndex = 100319
         Me.LbSitCartera.Text = "Sit. Cartera"
         '
@@ -1554,6 +1572,7 @@ Partial Class FrmAgricultores
         '
         Me.BtCentro.CL_Ancho = 0
         Me.BtCentro.CL_BuscaAlb = False
+        Me.BtCentro.CL_BuscarEnTodosLosCampos = False
         Me.BtCentro.CL_campocodigo = Nothing
         Me.BtCentro.CL_camponombre = Nothing
         Me.BtCentro.CL_CampoOrden = "Nombre"
@@ -1579,6 +1598,7 @@ Partial Class FrmAgricultores
         'TxCentro
         '
         Me.TxCentro.Autonumerico = False
+        Me.TxCentro.Bloqueado = False
         Me.TxCentro.Buscando = False
         Me.TxCentro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCentro.ClForm = Nothing
@@ -1612,7 +1632,7 @@ Partial Class FrmAgricultores
         Me.LbCentro.ForeColor = System.Drawing.Color.Teal
         Me.LbCentro.Location = New System.Drawing.Point(9, 376)
         Me.LbCentro.Name = "LbCentro"
-        Me.LbCentro.Size = New System.Drawing.Size(57, 16)
+        Me.LbCentro.Size = New System.Drawing.Size(56, 16)
         Me.LbCentro.TabIndex = 221
         Me.LbCentro.Text = "Centro"
         '
@@ -1633,6 +1653,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBanco.CL_Ancho = 0
         Me.BtBanco.CL_BuscaAlb = False
+        Me.BtBanco.CL_BuscarEnTodosLosCampos = False
         Me.BtBanco.CL_campocodigo = Nothing
         Me.BtBanco.CL_camponombre = Nothing
         Me.BtBanco.CL_CampoOrden = "Nombre"
@@ -1658,6 +1679,7 @@ Partial Class FrmAgricultores
         'TxBanco
         '
         Me.TxBanco.Autonumerico = False
+        Me.TxBanco.Bloqueado = False
         Me.TxBanco.Buscando = False
         Me.TxBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxBanco.ClForm = Nothing
@@ -1691,7 +1713,7 @@ Partial Class FrmAgricultores
         Me.LbBanco.ForeColor = System.Drawing.Color.Teal
         Me.LbBanco.Location = New System.Drawing.Point(559, 356)
         Me.LbBanco.Name = "LbBanco"
-        Me.LbBanco.Size = New System.Drawing.Size(53, 16)
+        Me.LbBanco.Size = New System.Drawing.Size(52, 16)
         Me.LbBanco.TabIndex = 217
         Me.LbBanco.Text = "Banco"
         '
@@ -1705,13 +1727,14 @@ Partial Class FrmAgricultores
         Me.LbSerie.ForeColor = System.Drawing.Color.Teal
         Me.LbSerie.Location = New System.Drawing.Point(414, 141)
         Me.LbSerie.Name = "LbSerie"
-        Me.LbSerie.Size = New System.Drawing.Size(45, 16)
+        Me.LbSerie.Size = New System.Drawing.Size(44, 16)
         Me.LbSerie.TabIndex = 215
         Me.LbSerie.Text = "Serie"
         '
         'TxSerie
         '
         Me.TxSerie.Autonumerico = False
+        Me.TxSerie.Bloqueado = False
         Me.TxSerie.Buscando = False
         Me.TxSerie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxSerie.ClForm = Nothing
@@ -1744,13 +1767,14 @@ Partial Class FrmAgricultores
         Me.LbAltaopfh.ForeColor = System.Drawing.Color.Teal
         Me.LbAltaopfh.Location = New System.Drawing.Point(559, 327)
         Me.LbAltaopfh.Name = "LbAltaopfh"
-        Me.LbAltaopfh.Size = New System.Drawing.Size(81, 16)
+        Me.LbAltaopfh.Size = New System.Drawing.Size(80, 16)
         Me.LbAltaopfh.TabIndex = 213
         Me.LbAltaopfh.Text = "Alta OPFH"
         '
         'TxAltaOpFH
         '
         Me.TxAltaOpFH.Autonumerico = False
+        Me.TxAltaOpFH.Bloqueado = False
         Me.TxAltaOpFH.Buscando = False
         Me.TxAltaOpFH.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxAltaOpFH.ClForm = Nothing
@@ -1789,6 +1813,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaCRecogida.CL_Ancho = 0
         Me.BtBuscaCRecogida.CL_BuscaAlb = False
+        Me.BtBuscaCRecogida.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCRecogida.CL_campocodigo = Nothing
         Me.BtBuscaCRecogida.CL_camponombre = Nothing
         Me.BtBuscaCRecogida.CL_CampoOrden = "Nombre"
@@ -1814,6 +1839,7 @@ Partial Class FrmAgricultores
         'TxCrecogida
         '
         Me.TxCrecogida.Autonumerico = False
+        Me.TxCrecogida.Bloqueado = False
         Me.TxCrecogida.Buscando = False
         Me.TxCrecogida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCrecogida.ClForm = Nothing
@@ -1847,7 +1873,7 @@ Partial Class FrmAgricultores
         Me.LbCrecogida.ForeColor = System.Drawing.Color.Teal
         Me.LbCrecogida.Location = New System.Drawing.Point(9, 350)
         Me.LbCrecogida.Name = "LbCrecogida"
-        Me.LbCrecogida.Size = New System.Drawing.Size(89, 16)
+        Me.LbCrecogida.Size = New System.Drawing.Size(88, 16)
         Me.LbCrecogida.TabIndex = 208
         Me.LbCrecogida.Text = "C.Recogida"
         '
@@ -1868,6 +1894,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaEmpresa.CL_Ancho = 0
         Me.BtBuscaEmpresa.CL_BuscaAlb = False
+        Me.BtBuscaEmpresa.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaEmpresa.CL_campocodigo = Nothing
         Me.BtBuscaEmpresa.CL_camponombre = Nothing
         Me.BtBuscaEmpresa.CL_CampoOrden = "Nombre"
@@ -1893,6 +1920,7 @@ Partial Class FrmAgricultores
         'TxEmpresa
         '
         Me.TxEmpresa.Autonumerico = False
+        Me.TxEmpresa.Bloqueado = False
         Me.TxEmpresa.Buscando = False
         Me.TxEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxEmpresa.ClForm = Nothing
@@ -1926,7 +1954,7 @@ Partial Class FrmAgricultores
         Me.LbEmpresa.ForeColor = System.Drawing.Color.Teal
         Me.LbEmpresa.Location = New System.Drawing.Point(9, 325)
         Me.LbEmpresa.Name = "LbEmpresa"
-        Me.LbEmpresa.Size = New System.Drawing.Size(72, 16)
+        Me.LbEmpresa.Size = New System.Drawing.Size(71, 16)
         Me.LbEmpresa.TabIndex = 204
         Me.LbEmpresa.Text = "Empresa"
         '
@@ -1947,6 +1975,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaCenvases.CL_Ancho = 0
         Me.BtBuscaCenvases.CL_BuscaAlb = False
+        Me.BtBuscaCenvases.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaCenvases.CL_campocodigo = Nothing
         Me.BtBuscaCenvases.CL_camponombre = Nothing
         Me.BtBuscaCenvases.CL_CampoOrden = "Nombre"
@@ -1972,6 +2001,7 @@ Partial Class FrmAgricultores
         'TxCenvases
         '
         Me.TxCenvases.Autonumerico = False
+        Me.TxCenvases.Bloqueado = False
         Me.TxCenvases.Buscando = False
         Me.TxCenvases.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCenvases.ClForm = Nothing
@@ -2005,7 +2035,7 @@ Partial Class FrmAgricultores
         Me.LbCenvases.ForeColor = System.Drawing.Color.Teal
         Me.LbCenvases.Location = New System.Drawing.Point(9, 300)
         Me.LbCenvases.Name = "LbCenvases"
-        Me.LbCenvases.Size = New System.Drawing.Size(84, 16)
+        Me.LbCenvases.Size = New System.Drawing.Size(83, 16)
         Me.LbCenvases.TabIndex = 200
         Me.LbCenvases.Text = "C.Envases"
         '
@@ -2019,13 +2049,14 @@ Partial Class FrmAgricultores
         Me.Lb3.ForeColor = System.Drawing.Color.Teal
         Me.Lb3.Location = New System.Drawing.Point(698, 141)
         Me.Lb3.Name = "Lb3"
-        Me.Lb3.Size = New System.Drawing.Size(253, 16)
+        Me.Lb3.Size = New System.Drawing.Size(252, 16)
         Me.Lb3.TabIndex = 199
         Me.Lb3.Text = "* Firme-Comision-S/Clasificacion"
         '
         'TxDato1
         '
         Me.TxDato1.Autonumerico = False
+        Me.TxDato1.Bloqueado = False
         Me.TxDato1.Buscando = False
         Me.TxDato1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato1.ClForm = Nothing
@@ -2057,13 +2088,14 @@ Partial Class FrmAgricultores
         Me.Lb2.ForeColor = System.Drawing.Color.Teal
         Me.Lb2.Location = New System.Drawing.Point(603, 141)
         Me.Lb2.Name = "Lb2"
-        Me.Lb2.Size = New System.Drawing.Size(54, 16)
+        Me.Lb2.Size = New System.Drawing.Size(53, 16)
         Me.Lb2.TabIndex = 197
         Me.Lb2.Text = "F/C/S"
         '
         'TxMensaje
         '
         Me.TxMensaje.Autonumerico = False
+        Me.TxMensaje.Bloqueado = False
         Me.TxMensaje.Buscando = False
         Me.TxMensaje.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxMensaje.ClForm = Nothing
@@ -2102,7 +2134,7 @@ Partial Class FrmAgricultores
         Me.ChkMostrarMensaje.Name = "ChkMostrarMensaje"
         Me.ChkMostrarMensaje.Orden = 0
         Me.ChkMostrarMensaje.SaltoAlfinal = False
-        Me.ChkMostrarMensaje.Size = New System.Drawing.Size(150, 20)
+        Me.ChkMostrarMensaje.Size = New System.Drawing.Size(149, 20)
         Me.ChkMostrarMensaje.TabIndex = 195
         Me.ChkMostrarMensaje.Text = "Mostrar mensaje"
         Me.ChkMostrarMensaje.UseVisualStyleBackColor = True
@@ -2126,7 +2158,7 @@ Partial Class FrmAgricultores
         Me.ChkBloqueoPagos.Name = "ChkBloqueoPagos"
         Me.ChkBloqueoPagos.Orden = 0
         Me.ChkBloqueoPagos.SaltoAlfinal = False
-        Me.ChkBloqueoPagos.Size = New System.Drawing.Size(134, 20)
+        Me.ChkBloqueoPagos.Size = New System.Drawing.Size(133, 20)
         Me.ChkBloqueoPagos.TabIndex = 194
         Me.ChkBloqueoPagos.Text = "Bloqueo pagos"
         Me.ChkBloqueoPagos.UseVisualStyleBackColor = True
@@ -2144,13 +2176,14 @@ Partial Class FrmAgricultores
         Me.Lb_25.ForeColor = System.Drawing.Color.Teal
         Me.Lb_25.Location = New System.Drawing.Point(726, 65)
         Me.Lb_25.Name = "Lb_25"
-        Me.Lb_25.Size = New System.Drawing.Size(85, 16)
+        Me.Lb_25.Size = New System.Drawing.Size(84, 16)
         Me.Lb_25.TabIndex = 191
         Me.Lb_25.Text = "Fecha Alta"
         '
         'TxDato_25
         '
         Me.TxDato_25.Autonumerico = False
+        Me.TxDato_25.Bloqueado = False
         Me.TxDato_25.Buscando = False
         Me.TxDato_25.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_25.ClForm = Nothing
@@ -2175,6 +2208,7 @@ Partial Class FrmAgricultores
         'TxDato_26
         '
         Me.TxDato_26.Autonumerico = False
+        Me.TxDato_26.Bloqueado = False
         Me.TxDato_26.Buscando = False
         Me.TxDato_26.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_26.ClForm = Nothing
@@ -2206,13 +2240,14 @@ Partial Class FrmAgricultores
         Me.Lb_26.ForeColor = System.Drawing.Color.Teal
         Me.Lb_26.Location = New System.Drawing.Point(559, 300)
         Me.Lb_26.Name = "Lb_26"
-        Me.Lb_26.Size = New System.Drawing.Size(48, 16)
+        Me.Lb_26.Size = New System.Drawing.Size(47, 16)
         Me.Lb_26.TabIndex = 188
         Me.Lb_26.Text = "Email"
         '
         'TxDato_24
         '
         Me.TxDato_24.Autonumerico = False
+        Me.TxDato_24.Bloqueado = False
         Me.TxDato_24.Buscando = False
         Me.TxDato_24.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_24.ClForm = Nothing
@@ -2244,13 +2279,14 @@ Partial Class FrmAgricultores
         Me.Lb_24.ForeColor = System.Drawing.Color.Teal
         Me.Lb_24.Location = New System.Drawing.Point(726, 91)
         Me.Lb_24.Name = "Lb_24"
-        Me.Lb_24.Size = New System.Drawing.Size(78, 16)
+        Me.Lb_24.Size = New System.Drawing.Size(77, 16)
         Me.Lb_24.TabIndex = 185
         Me.Lb_24.Text = "Tel. movil"
         '
         'TxDato_23
         '
         Me.TxDato_23.Autonumerico = False
+        Me.TxDato_23.Bloqueado = False
         Me.TxDato_23.Buscando = False
         Me.TxDato_23.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_23.ClForm = Nothing
@@ -2282,7 +2318,7 @@ Partial Class FrmAgricultores
         Me.Lb_23.ForeColor = System.Drawing.Color.Teal
         Me.Lb_23.Location = New System.Drawing.Point(464, 91)
         Me.Lb_23.Name = "Lb_23"
-        Me.Lb_23.Size = New System.Drawing.Size(97, 16)
+        Me.Lb_23.Size = New System.Drawing.Size(96, 16)
         Me.Lb_23.TabIndex = 183
         Me.Lb_23.Text = "Telefono fijo"
         '
@@ -2310,7 +2346,7 @@ Partial Class FrmAgricultores
         Me.Lb42.ForeColor = System.Drawing.Color.Teal
         Me.Lb42.Location = New System.Drawing.Point(211, 141)
         Me.Lb42.Name = "Lb42"
-        Me.Lb42.Size = New System.Drawing.Size(55, 16)
+        Me.Lb42.Size = New System.Drawing.Size(54, 16)
         Me.Lb42.TabIndex = 177
         Me.Lb42.Text = "% RET"
         '
@@ -2338,7 +2374,7 @@ Partial Class FrmAgricultores
         Me.Lb40.ForeColor = System.Drawing.Color.Teal
         Me.Lb40.Location = New System.Drawing.Point(9, 141)
         Me.Lb40.Name = "Lb40"
-        Me.Lb40.Size = New System.Drawing.Size(55, 16)
+        Me.Lb40.Size = New System.Drawing.Size(54, 16)
         Me.Lb40.TabIndex = 175
         Me.Lb40.Text = "% IVA"
         '
@@ -2359,6 +2395,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaPrinci.CL_Ancho = 0
         Me.BtBuscaPrinci.CL_BuscaAlb = False
+        Me.BtBuscaPrinci.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaPrinci.CL_campocodigo = Nothing
         Me.BtBuscaPrinci.CL_camponombre = Nothing
         Me.BtBuscaPrinci.CL_CampoOrden = "Nombre"
@@ -2384,6 +2421,7 @@ Partial Class FrmAgricultores
         'TxDato_14
         '
         Me.TxDato_14.Autonumerico = False
+        Me.TxDato_14.Bloqueado = False
         Me.TxDato_14.Buscando = False
         Me.TxDato_14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_14.ClForm = Nothing
@@ -2417,13 +2455,14 @@ Partial Class FrmAgricultores
         Me.Lb_14.ForeColor = System.Drawing.Color.Teal
         Me.Lb_14.Location = New System.Drawing.Point(9, 276)
         Me.Lb_14.Name = "Lb_14"
-        Me.Lb_14.Size = New System.Drawing.Size(85, 16)
+        Me.Lb_14.Size = New System.Drawing.Size(84, 16)
         Me.Lb_14.TabIndex = 145
         Me.Lb_14.Text = "C.Principal"
         '
         'TxDato_12
         '
         Me.TxDato_12.Autonumerico = False
+        Me.TxDato_12.Bloqueado = False
         Me.TxDato_12.Buscando = False
         Me.TxDato_12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_12.ClForm = Nothing
@@ -2455,13 +2494,14 @@ Partial Class FrmAgricultores
         Me.Lb_11.ForeColor = System.Drawing.Color.Teal
         Me.Lb_11.Location = New System.Drawing.Point(119, 195)
         Me.Lb_11.Name = "Lb_11"
-        Me.Lb_11.Size = New System.Drawing.Size(114, 16)
+        Me.Lb_11.Size = New System.Drawing.Size(113, 16)
         Me.Lb_11.TabIndex = 137
         Me.Lb_11.Text = "Texto Mensaje"
         '
         'TxDato_11
         '
         Me.TxDato_11.Autonumerico = False
+        Me.TxDato_11.Bloqueado = False
         Me.TxDato_11.Buscando = False
         Me.TxDato_11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_11.ClForm = Nothing
@@ -2499,7 +2539,7 @@ Partial Class FrmAgricultores
         Me.ChBloqueo.Name = "ChBloqueo"
         Me.ChBloqueo.Orden = 0
         Me.ChBloqueo.SaltoAlfinal = False
-        Me.ChBloqueo.Size = New System.Drawing.Size(104, 20)
+        Me.ChBloqueo.Size = New System.Drawing.Size(103, 20)
         Me.ChBloqueo.TabIndex = 135
         Me.ChBloqueo.Text = "Bloqueado"
         Me.ChBloqueo.UseVisualStyleBackColor = True
@@ -2524,6 +2564,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaTipoProv.CL_Ancho = 0
         Me.BtBuscaTipoProv.CL_BuscaAlb = False
+        Me.BtBuscaTipoProv.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaTipoProv.CL_campocodigo = Nothing
         Me.BtBuscaTipoProv.CL_camponombre = Nothing
         Me.BtBuscaTipoProv.CL_CampoOrden = "Nombre"
@@ -2549,6 +2590,7 @@ Partial Class FrmAgricultores
         'TxDato_10
         '
         Me.TxDato_10.Autonumerico = False
+        Me.TxDato_10.Bloqueado = False
         Me.TxDato_10.Buscando = False
         Me.TxDato_10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_10.ClForm = Nothing
@@ -2582,7 +2624,7 @@ Partial Class FrmAgricultores
         Me.Lb_10.ForeColor = System.Drawing.Color.Teal
         Me.Lb_10.Location = New System.Drawing.Point(9, 116)
         Me.Lb_10.Name = "Lb_10"
-        Me.Lb_10.Size = New System.Drawing.Size(62, 16)
+        Me.Lb_10.Size = New System.Drawing.Size(61, 16)
         Me.Lb_10.TabIndex = 131
         Me.Lb_10.Text = "Tipo pr."
         '
@@ -2596,13 +2638,14 @@ Partial Class FrmAgricultores
         Me.Lb_13.ForeColor = System.Drawing.Color.Teal
         Me.Lb_13.Location = New System.Drawing.Point(559, 275)
         Me.Lb_13.Name = "Lb_13"
-        Me.Lb_13.Size = New System.Drawing.Size(88, 16)
+        Me.Lb_13.Size = New System.Drawing.Size(87, 16)
         Me.Lb_13.TabIndex = 130
         Me.Lb_13.Text = "P.Contacto"
         '
         'TxDato_13
         '
         Me.TxDato_13.Autonumerico = False
+        Me.TxDato_13.Bloqueado = False
         Me.TxDato_13.Buscando = False
         Me.TxDato_13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_13.ClForm = Nothing
@@ -2641,6 +2684,7 @@ Partial Class FrmAgricultores
         '
         Me.BtBuscaPais.CL_Ancho = 0
         Me.BtBuscaPais.CL_BuscaAlb = False
+        Me.BtBuscaPais.CL_BuscarEnTodosLosCampos = False
         Me.BtBuscaPais.CL_campocodigo = Nothing
         Me.BtBuscaPais.CL_camponombre = Nothing
         Me.BtBuscaPais.CL_CampoOrden = "Nombre"
@@ -2666,6 +2710,7 @@ Partial Class FrmAgricultores
         'TxDato_9
         '
         Me.TxDato_9.Autonumerico = False
+        Me.TxDato_9.Bloqueado = False
         Me.TxDato_9.Buscando = False
         Me.TxDato_9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_9.ClForm = Nothing
@@ -2699,7 +2744,7 @@ Partial Class FrmAgricultores
         Me.Lb_9.ForeColor = System.Drawing.Color.Teal
         Me.Lb_9.Location = New System.Drawing.Point(9, 91)
         Me.Lb_9.Name = "Lb_9"
-        Me.Lb_9.Size = New System.Drawing.Size(38, 16)
+        Me.Lb_9.Size = New System.Drawing.Size(37, 16)
         Me.Lb_9.TabIndex = 125
         Me.Lb_9.Text = "País"
         '
@@ -2713,13 +2758,14 @@ Partial Class FrmAgricultores
         Me.Lb_8.ForeColor = System.Drawing.Color.Teal
         Me.Lb_8.Location = New System.Drawing.Point(464, 65)
         Me.Lb_8.Name = "Lb_8"
-        Me.Lb_8.Size = New System.Drawing.Size(68, 16)
+        Me.Lb_8.Size = New System.Drawing.Size(67, 16)
         Me.Lb_8.TabIndex = 124
         Me.Lb_8.Text = "C.Postal"
         '
         'TxDato_8
         '
         Me.TxDato_8.Autonumerico = False
+        Me.TxDato_8.Bloqueado = False
         Me.TxDato_8.Buscando = False
         Me.TxDato_8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_8.ClForm = Nothing
@@ -2751,13 +2797,14 @@ Partial Class FrmAgricultores
         Me.Lb_7.ForeColor = System.Drawing.Color.Teal
         Me.Lb_7.Location = New System.Drawing.Point(9, 65)
         Me.Lb_7.Name = "Lb_7"
-        Me.Lb_7.Size = New System.Drawing.Size(75, 16)
+        Me.Lb_7.Size = New System.Drawing.Size(74, 16)
         Me.Lb_7.TabIndex = 122
         Me.Lb_7.Text = "Provincia"
         '
         'TxDato_7
         '
         Me.TxDato_7.Autonumerico = False
+        Me.TxDato_7.Bloqueado = False
         Me.TxDato_7.Buscando = False
         Me.TxDato_7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_7.ClForm = Nothing
@@ -2789,13 +2836,14 @@ Partial Class FrmAgricultores
         Me.Lb_6.ForeColor = System.Drawing.Color.Teal
         Me.Lb_6.Location = New System.Drawing.Point(464, 40)
         Me.Lb_6.Name = "Lb_6"
-        Me.Lb_6.Size = New System.Drawing.Size(78, 16)
+        Me.Lb_6.Size = New System.Drawing.Size(77, 16)
         Me.Lb_6.TabIndex = 120
         Me.Lb_6.Text = "Población"
         '
         'TxDato_6
         '
         Me.TxDato_6.Autonumerico = False
+        Me.TxDato_6.Bloqueado = False
         Me.TxDato_6.Buscando = False
         Me.TxDato_6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_6.ClForm = Nothing
@@ -2827,13 +2875,14 @@ Partial Class FrmAgricultores
         Me.Lb_4.ForeColor = System.Drawing.Color.Teal
         Me.Lb_4.Location = New System.Drawing.Point(9, 15)
         Me.Lb_4.Name = "Lb_4"
-        Me.Lb_4.Size = New System.Drawing.Size(74, 16)
+        Me.Lb_4.Size = New System.Drawing.Size(73, 16)
         Me.Lb_4.TabIndex = 118
         Me.Lb_4.Text = "Domicilio"
         '
         'TxDato_4
         '
         Me.TxDato_4.Autonumerico = False
+        Me.TxDato_4.Bloqueado = False
         Me.TxDato_4.Buscando = False
         Me.TxDato_4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_4.ClForm = Nothing
@@ -2872,6 +2921,7 @@ Partial Class FrmAgricultores
         '
         Me.btBuscaZona.CL_Ancho = 0
         Me.btBuscaZona.CL_BuscaAlb = False
+        Me.btBuscaZona.CL_BuscarEnTodosLosCampos = False
         Me.btBuscaZona.CL_campocodigo = Nothing
         Me.btBuscaZona.CL_camponombre = Nothing
         Me.btBuscaZona.CL_CampoOrden = "Nombre"
@@ -2897,6 +2947,7 @@ Partial Class FrmAgricultores
         'TxDato_5
         '
         Me.TxDato_5.Autonumerico = False
+        Me.TxDato_5.Bloqueado = False
         Me.TxDato_5.Buscando = False
         Me.TxDato_5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxDato_5.ClForm = Nothing
@@ -2930,7 +2981,7 @@ Partial Class FrmAgricultores
         Me.Lb_5.ForeColor = System.Drawing.Color.Teal
         Me.Lb_5.Location = New System.Drawing.Point(9, 40)
         Me.Lb_5.Name = "Lb_5"
-        Me.Lb_5.Size = New System.Drawing.Size(44, 16)
+        Me.Lb_5.Size = New System.Drawing.Size(43, 16)
         Me.Lb_5.TabIndex = 83
         Me.Lb_5.Text = "Zona"
         '
